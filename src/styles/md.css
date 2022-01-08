@@ -1,0 +1,84 @@
+@import 'prism-theme-vars/base.css';
+
+.prose {
+	--prism-font-family: -apple-system, BlinkMacSystemFont,
+		Segoe UI, Helvetica, Arial, sans-serif,
+		Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+.prose pre {
+	font-weight: 500;
+	font-size: 1rem;
+}
+
+html:not(.dark) {
+	--prism-foreground: #393a34;
+	--prism-background: #f8f8f8;
+
+	--prism-comment: #868e96;
+	--prism-namespace: #444444;
+	--prism-string: #bc8671;
+	--prism-punctuation: #80817d;
+	--prism-literal: #36acaa;
+	--prism-keyword: #d73a49;
+	--prism-function: #0c4c7d;
+	--prism-deleted: #9a050f;
+	--prism-class: #2b91af;
+	--prism-builtin: #800000;
+	--prism-property: #ce9178;
+	--prism-regex: #ad502b;
+}
+
+html.dark {
+	--prism-foreground: #d4d4d4;
+	--prism-background: #1e1e1e;
+
+	--prism-namespace: #aaaaaa;
+	--prism-comment: #868e96;
+	--prism-namespace: #444444;
+	--prism-string: #ce9178;
+	--prism-punctuation: #d4d4d4;
+	--prism-literal: #36acaa;
+	--prism-keyword: #0ca678;
+	--prism-function: #dcdcaa;
+	--prism-deleted: #9a050f;
+	--prism-class: #4ec9b0;
+	--prism-builtin: #d16969;
+	--prism-property: #ce9178;
+	--prism-regex: #ad502b;
+}
+ol {
+	padding-left: 15px;
+}
+
+.prose blockquote p:first-of-type::before {
+	content: none;
+}
+
+.prose pre {
+	color: #495057;
+	background: #f8f9fa;
+}
+
+.prose-sm p {
+	font-weight: 500;
+}
+
+.prose blockquote {
+	margin: 0;
+	font-style: normal;
+}
+
+html.dark .prose blockquote {
+	color: white;
+}
+
+html.dark .prose pre {
+	color: #f8f9fa;
+	background: #495057;
+}
+
+.token.comment {
+	font-style: normal;
+	font-size: 0.5rem;
+}

@@ -1,0 +1,63 @@
+@import './md.css';
+
+html,
+body,
+#app {
+	height: 110vh;
+	margin: 0;
+	padding: 0;
+
+	@apply transition-colors ease-in-out duration-700;
+}
+
+html.dark {
+	background: #121212;
+}
+
+.prose {
+	scroll-behavior: smooth;
+}
+
+#nprogress {
+	pointer-events: none;
+}
+
+#nprogress .bar {
+	@apply bg-purple-700 bg-opacity-75;
+
+	position: fixed;
+	z-index: 1031;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 2px;
+}
+
+/*
+* 全局滚动条
+*/
+::-webkit-scrollbar {
+	width: 11px;
+	height: 11px;
+	background-color: rgb(246, 247, 248);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgb(217, 217, 217);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgb(246, 247, 248);
+	border-radius: 10px;
+}
+
+html.dark ::-webkit-scrollbar,
+html.dark ::-webkit-scrollbar-track {
+	background-color: #212529;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+	background-color: #343a40;
+}
