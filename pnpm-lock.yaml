@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@iconify-json/mdi': ^1.0.12
   '@types/nprogress': ^0.2.0
   '@vitejs/plugin-vue': ^2.0.1
   '@vueuse/components': ^7.5.3
@@ -35,6 +36,7 @@ dependencies:
   vue: 3.2.26
 
 devDependencies:
+  '@iconify-json/mdi': 1.0.12
   '@types/nprogress': 0.2.0
   '@vitejs/plugin-vue': 2.0.1_vite@2.7.10+vue@3.2.26
   '@vueuse/components': 7.5.3_vue@3.2.26
@@ -121,6 +123,12 @@ packages:
 
   /@emmetio/scanner/1.0.0:
     resolution: {integrity: sha512-8HqW8EVqjnCmWXVpqAOZf+EGESdkR27odcMMMGefgKXtar00SoYNSryGv//TELI4T3QFsECo78p+0lmalk/CFA==}
+    dev: true
+
+  /@iconify-json/mdi/1.0.12:
+    resolution: {integrity: sha512-smYQpxDqSCUdySFSYZpH0BAEVbgFnU4IE/Hb36zavseOl3zFlKDvGOEFPC7djkEabrIWi9KDAUdbtIREcgVE8A==}
+    dependencies:
+      '@iconify/types': 1.0.12
     dev: true
 
   /@iconify/types/1.0.12:

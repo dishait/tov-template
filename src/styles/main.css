@@ -6,11 +6,10 @@ body,
 	height: 110vh;
 	margin: 0;
 	padding: 0;
-
-	@apply transition-colors ease-in-out duration-700;
 }
 
 html.dark {
+	color: #e5e7eb;
 	background: #121212;
 }
 
@@ -44,7 +43,7 @@ html.dark {
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: rgb(217, 217, 217);
+	background-color: rgb(233, 236, 239);
 	border-radius: 10px;
 }
 

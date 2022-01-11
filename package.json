@@ -15,6 +15,7 @@
     "vue": "^3.2.26"
   },
   "devDependencies": {
+    "@iconify-json/mdi": "^1.0.12",
     "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "^2.0.1",
     "@vueuse/components": "^7.5.3",
