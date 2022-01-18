@@ -27,6 +27,7 @@
 18. 插件自动加载支持
 19. Vitest 单元测试支持
 20. 支持 Markdown 渲染
+21. 路径别名 `~` 支持
 
 <br />
 <br />
@@ -716,3 +717,17 @@ pnpm coverage
 <br />
 
 
+
+### 21. 路径别名 `~` 支持
+
+`~` 路径将被导向项目的 `src` 目录。
+
+```html
+<!-- src/pages/index.vue -->
+<script lang="ts" setup>
+    import { isDark, toggleDark } from "~/composables/dark"
+
+// 等价于
+// import { isDark, toggleDark } from "../composables/dark"
+</script>
+```
