@@ -5,10 +5,11 @@
   "scripts": {
     "dev": "vite",
     "test": "vitest",
+    "build": "vite build",
     "preview": "vite preview",
     "coverage": "vitest --coverage",
     "analysis": "windicss-analysis",
-    "build": "vue-tsc --noEmit && vite build",
+    "typecheck": "vue-tsc --noEmit",
     "analysis:build": "windicss-analysis --html dist"
   },
   "dependencies": {

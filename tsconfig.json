@@ -1,6 +1,7 @@
 {
 	"compilerOptions": {
 		"target": "esnext",
+		"skipLibCheck": true,
 		"useDefineForClassFields": true,
 		"module": "esnext",
 		"moduleResolution": "node",
@@ -17,5 +18,6 @@
 		"src/**/*.tsx",
 		"src/**/*.vue",
 		"presets"
-	]
+	],
+	"exclude": ["node_modules", "dist"]
 }
