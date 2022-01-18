@@ -76,6 +76,12 @@ pnpm analysis
 pnpm analysis:build
 ```
 
+9. 类型检查
+
+```shell
+pnpm typecheck
+```
+
 <br />
 <br />
 
