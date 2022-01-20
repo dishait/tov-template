@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.0.12",
-    "@markthree/node-shared": "^1.2.0",
+    "@markthree/node-shared": "^1.2.1",
     "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "^2.0.1",
     "@vueuse/components": "^7.5.3",
