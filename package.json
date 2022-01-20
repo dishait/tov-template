@@ -10,6 +10,7 @@
     "coverage": "vitest --coverage",
     "analysis": "windicss-analysis",
     "typecheck": "vue-tsc --noEmit",
+    "auto:create": "esno scripts/create.ts",
     "analysis:build": "windicss-analysis --html dist"
   },
   "dependencies": {
@@ -17,11 +18,13 @@
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.0.12",
+    "@markthree/node-shared": "^1.2.0",
     "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "^2.0.1",
     "@vueuse/components": "^7.5.3",
     "@vueuse/core": "^7.5.3",
     "c8": "^7.11.0",
+    "esno": "^0.14.0",
     "markdown-it-anchor": "^8.4.1",
     "markdown-it-prism": "^2.2.2",
     "mockjs": "^1.1.0",
