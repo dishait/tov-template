@@ -52,10 +52,11 @@ const run = async () => {
 
 	const genZh = showGenZh(type)
 	const cTip = `😥 存在相同命名的${type}${genZh}文件，是否覆盖?`
-	const shouldGen = await Promise.all([
+	const shouldGens = await Promise.all([
 		isWillCreate(mdDest, cTip),
 		isWillCreate(vueDest, cTip)
 	])
+	const shouldGen = shouldGens.every(v => v)
 	if (shouldGen) {
 		await gen(p(`./template/shared.${type}`), dest, {
 			name,
