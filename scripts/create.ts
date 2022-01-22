@@ -1,14 +1,13 @@
+import { noticeSuccess, noticeFail } from './shared/log'
 import {
 	useInquirerList,
 	useInquirerConfirm,
 	useInquirerQuestion
 } from '@markthree/ilazy'
 import {
-	copy,
 	createPath,
 	createFile,
 	readFileSync,
-	terminalColor,
 	pathExistsSync,
 	templateCompile
 } from '@markthree/node-shared'
@@ -17,14 +16,6 @@ const p = createPath(__dirname)
 
 const useDestDirPath = (type: string) =>
 	p(`../src/${type}s`)
-
-const noticeSuccess = (msg = '创建成功') => {
-	console.log(terminalColor.green(msg))
-}
-
-const noticeFail = (msg = '创建失败') => {
-	console.log(terminalColor.red(msg))
-}
 
 const showGenZh = (t: string) => {
 	const types = {
@@ -61,8 +52,10 @@ const run = async () => {
 
 	const genZh = showGenZh(type)
 	const cTip = `😥 存在相同命名的${type}${genZh}文件，是否覆盖?`
-	const shouldGen =
-		isWillCover(mdDest, cTip) || isWillCover(vueDest, cTip)
+	const shouldGen = await Promise.all([
+		isWillCreate(mdDest, cTip),
+		isWillCreate(vueDest, cTip)
+	])
 	if (shouldGen) {
 		await gen(p(`./template/shared.${type}`), dest, {
 			name,
@@ -75,7 +68,7 @@ const run = async () => {
 run()
 
 // 是否将覆盖
-const isWillCover = async (
+const isWillCreate = async (
 	dest: string,
 	msg: string = '文件已存在，是否覆盖?'
 ) => {
