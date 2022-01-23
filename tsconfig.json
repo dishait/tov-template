@@ -17,11 +17,12 @@
 		}
 	},
 	"include": [
+		"srcipts",
+		"presets",
 		"src/**/*.ts",
 		"src/**/*.d.ts",
 		"src/**/*.tsx",
-		"src/**/*.vue",
-		"presets"
+		"src/**/*.vue"
 	],
 	"exclude": ["node_modules", "dist"]
 }
