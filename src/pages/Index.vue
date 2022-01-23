@@ -5,5 +5,4 @@ import { isDark, toggleDark } from "~/composables/dark";
 <template>
     <div m="6">Hello，This is the tov template！！</div>
     <div m="6" cursor="pointer" @click="toggleDark()">light: {{ isDark }} click me!!</div>
-    <el-button>你好</el-button>
 </template>
