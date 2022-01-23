@@ -733,6 +733,9 @@ pnpm run coverage
 </script>
 ```
 
+<br />
+<br />
+
 ### 22. 命令行自动创建与删除
 
 只要输入 👇，即可创建一个标准的页面或组件
@@ -743,3 +746,15 @@ pnpm run auto:create
 ```shell
 pnpm run auto:remove
 ```
+
+<br />
+<br />
+<br />
+
+## License
+
+Made with markthree
+
+Published under [MIT License](./LICENSE).
+
+<br />
