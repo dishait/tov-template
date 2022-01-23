@@ -28,6 +28,7 @@
 19. Vitest 单元测试支持
 20. 支持 Markdown 渲染
 21. 路径别名 `~` 支持
+22. 命令行自动创建与删除
 
 <br />
 <br />
@@ -41,46 +42,46 @@ pnpm install
 
 2. 开发
 ```shell
-pnpm dev 
+pnpm run dev 
 ```
 
 3. 预览
 ```shell
-pnpm preview
+pnpm run preview
 ```
 
 4. 打包
 
 ```shell
-pnpm build
+pnpm run build
 ```
 
 5. 单元测试
 ```shell
-pnpm test
+pnpm run test
 ```
 
 6. 单元测试报告生成
 ```shell
-pnpm coverage
+pnpm run coverage
 ```
 
 7. 样式报告预览
 
 ```shell
-pnpm analysis
+pnpm run analysis
 ```
 
 8. 样式报告打包
 
 ```shell
-pnpm analysis:build
+pnpm run analysis:build
 ```
 
 9. 类型检查
 
 ```shell
-pnpm typecheck
+pnpm run typecheck
 ```
 
 <br />
@@ -454,11 +455,11 @@ pnpm add naive-ui
 
 在终端中输入命令，即可看到报告
 ```shell
-pnpm analysis
+pnpm run analysis
 ```
 或者打包输出该报告
 ```shell
-pnpm analysis:build
+pnpm run analysis:build
 ```
 
 具体可见 👉 [Windi CSS](https://cn.windicss.org/)
@@ -606,7 +607,7 @@ export const useCounterStore = defineStore('counter', {
 
 启动项目
 ```shell
-pnpm dev
+pnpm run dev
 ```
 可以看到一个 `url`
 
@@ -682,13 +683,13 @@ describe('suite name', () => {
 然后在终端中输入命令即可测试
 
 ```shell
-pnpm test
+pnpm run test
 ```
 
 或者生成报告
 
 ```shell
-pnpm coverage
+pnpm run coverage
 ```
 
 具体可见 👉 [Vitest](https://vitest.dev/guide/#configuring-vitest)
@@ -730,4 +731,15 @@ pnpm coverage
 // 等价于
 // import { isDark, toggleDark } from "../composables/dark"
 </script>
+```
+
+### 22. 命令行自动创建与删除
+
+只要输入 👇，即可创建一个标准的页面或组件
+```shell
+pnpm run auto:create
+```
+当然也可以进行删除 👇
+```shell
+pnpm run auto:remove
 ```
