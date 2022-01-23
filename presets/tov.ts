@@ -1,3 +1,4 @@
+import { resolve } from "path"
 import Pages from 'vite-plugin-pages'
 import Icons from 'unplugin-icons/vite'
 import Inspect from 'vite-plugin-inspect'
@@ -44,14 +45,15 @@ export default () => {
 			autoInstall: true
 		}),
 		Components({
+			dts: resolve(__dirname, "./types/components.d.ts"),
 			extensions: ['vue', 'md'],
 			include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
 			resolvers: [
+				ElementPlusResolver(),
 				IconsResolver({
-					componentPrefix: ''
+					prefix: ''
 				}),
 				NaiveUiResolver(),
-				ElementPlusResolver(),
 				VueUseComponentsResolver()
 			]
 		}),
