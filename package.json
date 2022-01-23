@@ -11,6 +11,7 @@
     "analysis": "windicss-analysis",
     "typecheck": "vue-tsc --noEmit",
     "auto:create": "esno scripts/create.ts",
+    "auto:remove": "esno scripts/remove.ts",
     "analysis:build": "windicss-analysis --html dist"
   },
   "dependencies": {
