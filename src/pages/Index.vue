@@ -1,8 +1,16 @@
 <script setup lang="ts">
 import { isDark, toggleDark } from "~/composables/dark";
+
+const { t, locale } = useI18n()
+
+const toggleLocale = () => {
+    locale.value = locale.value === 'zh-CN' ? 'en' : 'zh-CN'
+} 
 </script>
 
 <template>
     <div m="6">Hello，This is the tov template！！</div>
     <div m="6" cursor="pointer" @click="toggleDark()">light: {{ isDark }} click me!!</div>
+
+    <div m="6" cursor="pointer" @click="toggleLocale()">language: {{ t('index') }} click me!!</div>
 </template>

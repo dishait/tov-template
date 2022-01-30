@@ -1,4 +1,4 @@
-import { resolve } from "path"
+import { resolve } from 'path'
 import Pages from 'vite-plugin-pages'
 import Icons from 'unplugin-icons/vite'
 import Inspect from 'vite-plugin-inspect'
@@ -16,6 +16,7 @@ import { viteMockServe } from 'vite-plugin-mock'
 import Markdown from 'vite-plugin-md'
 import Vue from '@vitejs/plugin-vue'
 import Prism from 'markdown-it-prism'
+import I18n from '@intlify/vite-plugin-vue-i18n'
 
 const markdownWrapperClasses =
 	'prose md:prose-lg lg:prose-lg dark:prose-invert text-left p-10 prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600'
@@ -45,7 +46,7 @@ export default () => {
 			autoInstall: true
 		}),
 		Components({
-			dts: resolve(__dirname, "./types/components.d.ts"),
+			dts: resolve(__dirname, './types/components.d.ts'),
 			extensions: ['vue', 'md'],
 			include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
 			resolvers: [
@@ -62,10 +63,16 @@ export default () => {
 			imports: [
 				'vue',
 				'pinia',
+				'vue-i18n',
 				'vue-router',
 				'@vueuse/core'
 			],
 			resolvers: [ElementPlusResolver()]
+		}),
+		I18n({
+			runtimeOnly: true,
+			compositionOnly: true,
+			include: [resolve(__dirname, '../locales/**')]
 		})
 	]
 }
