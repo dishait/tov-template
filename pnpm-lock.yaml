@@ -25,6 +25,7 @@ specifiers:
   vite-plugin-md: ^0.11.7
   vite-plugin-mock: ^2.9.6
   vite-plugin-pages: ^0.19.9
+  vite-plugin-restart: ^0.1.1
   vite-plugin-vue-layouts: ^0.5.0
   vite-plugin-windicss: ^1.6.3
   vitest: ^0.0.131
@@ -64,6 +65,7 @@ devDependencies:
   vite-plugin-md: 0.11.7_vite@2.7.13
   vite-plugin-mock: 2.9.6_mockjs@1.1.0+vite@2.7.13
   vite-plugin-pages: 0.19.9_vite@2.7.13
+  vite-plugin-restart: 0.1.1_vite@2.7.13
   vite-plugin-vue-layouts: 0.5.0_5be28afadb16af157591decefdfd37a0
   vite-plugin-windicss: 1.6.3_vite@2.7.13
   vitest: 0.0.131_c8@7.11.0
@@ -3304,6 +3306,15 @@ packages:
       yaml: 2.0.0-10
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /vite-plugin-restart/0.1.1_vite@2.7.13:
+    resolution: {integrity: sha512-kBxOqRrdbjVmC0PiT2KNXZogpgqA2epMkny//VjWnOS2k9NV/vXA7PYgf8/1lmBCZsC+iMj1C1ODuAR/9Sig4A==}
+    peerDependencies:
+      vite: ^2.0.0
+    dependencies:
+      micromatch: 4.0.4
+      vite: 2.7.13
     dev: true
 
   /vite-plugin-vue-layouts/0.5.0_5be28afadb16af157591decefdfd37a0:

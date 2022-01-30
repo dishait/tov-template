@@ -42,6 +42,7 @@
     "vite-plugin-md": "^0.11.7",
     "vite-plugin-mock": "^2.9.6",
     "vite-plugin-pages": "^0.19.9",
+    "vite-plugin-restart": "^0.1.1",
     "vite-plugin-vue-layouts": "^0.5.0",
     "vite-plugin-windicss": "^1.6.3",
     "vitest": "^0.0.131",
