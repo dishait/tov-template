@@ -29,6 +29,7 @@
 20. 支持 Markdown 渲染
 21. 路径别名 `~` 支持
 22. 命令行自动创建与删除
+23. `i18n` 国际化支持
 
 <br />
 <br />
@@ -746,6 +747,60 @@ pnpm run auto:create
 ```shell
 pnpm run auto:remove
 ```
+
+<br />
+<br />
+
+### [23. i18n 国际化支持](https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n)
+
+在日常的业务当中，可能会存在一些需要国际化的场景。那么只需要在根目录下的 `locales` 中定义不同语言的 `yml` 即可在项目中做到开箱即用的国际化支持。
+
+比如 `locales/en.yml` 中用来定义需要国际化支持的英文内容。
+```yml
+# locales/en.yml
+# English
+
+index: index
+about: about
+not-found: Notfound
+```
+又如 `locales/zh-CN.yml` 中用来定义需要国际化支持的中文内容。
+
+```yml
+# locales/zh-CN.yml
+# 中文
+
+index: 主页
+about: 关于
+not-found: 未找到页面
+```
+
+此时在组件中即可这样用 👇
+```html
+<script setup>
+// 该api是全局按需引入的，所以可以直接用
+// t 用来绑定特定的语块
+const { t, locale } = useI18n()
+
+const toggleLocale = () => {
+     // locale.value 用来表示当前所属语言，可修改进行语言切换
+     locale.value = locale.value === 'zh-CN' ? 'en' : 'zh-CN'
+}
+</script>
+
+<template>
+    <div m="6" cursor="pointer" @click="toggleLocale()">language: {{ t('index') }} click me!!</div>
+</template>
+```
+
+更详细的说明可见用到的 `vite 插件` 👉 [@intlify/vite-plugin-vue-i18n](https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n) 与 `vue插件` [vue-i18n](https://github.com/intlify/vue-i18n-next)。
+
+另外 `yml` 是目前前端中流行的配置文件格式，语法可见阮一峰先生的 👉 [YAML 语言教程](http://www.ruanyifeng.com/blog/2016/07/yaml.html)。
+
+`vscode` 插件推荐: 
+
+- 多合一的 `i18n` 支持 [i18n Ally](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally)  
+
 
 <br />
 <br />
