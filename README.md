@@ -30,6 +30,7 @@
 21. 路径别名 `~` 支持
 22. 命令行自动创建与删除
 23. `i18n` 国际化支持
+24. 漂亮的 `404页` 支持
 
 <br />
 <br />
@@ -800,6 +801,45 @@ const toggleLocale = () => {
 `vscode` 插件推荐: 
 
 - 多合一的 `i18n` 支持 [i18n Ally](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally)  
+
+<br />
+<br />
+
+### 24. 漂亮的 `404` 页支持
+在日常业务中，当用户访问不存在的页面时，应该给到我们的用户一个不存在的信息提示，而这个提示的页面就是 `404` 页。
+
+你可以随便访问一个不存在的页面，例如 `/bucunzai`
+
+![notFound](public/docs/notFound.png)
+
+当然还有暗黑模式适应。
+
+![notFound-dark](public/docs/notFound-dark.png)
+
+同时支持简单的响应式适应，例如在移动端中。
+![notFound-h5](public/docs/notFound-h5.png)
+
+如果这个 `404` 的封面不符合你的口味，那么可以在 `pages/[...notFound].vue` 中修改 `img` 标签的 `src`。默认是 `32.svg`，支持 `1 ~ 33` 的 `svg`。
+
+例如，默认 👇
+```html
+<!-- 省略各种代码 -->
+<template>
+    <img src="/notFound/32.svg" class="cover" alt="page not found" />
+</template>
+```
+
+修改 `/notFound/32.svg` 为 `/notFound/33.svg`
+
+```html
+<!-- 省略各种代码 -->
+<template>
+    <img src="/notFound/33.svg" class="cover" alt="page not found" />
+</template>
+```
+即可切换封面为 👇
+
+![notFound-other](public/docs/notFound-other.png)
 
 
 <br />
