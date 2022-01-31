@@ -31,8 +31,8 @@
 22. 命令行自动创建与删除
 23. `i18n` 国际化支持
 24. 漂亮的 `404页` 支持
-25. `svg` 组件支持
-26. `tsx` 支持
+25. `tsx` 支持
+26. `gzip` 资源压缩支持
 
 <br />
 <br />
@@ -868,26 +868,8 @@ const toggleLocale = () => {
 <br />
 <br />
 
-### 25. [`svg` 组件支持](https://github.com/jpkleemans/vite-svg-loader)
 
-只需要 `svg` 文件放在 `src/components` 下，即可直接在模板中使用。
-
-例如你有一个 `src/components/foo.svg` 文件，那么即可直接在模板中使用。
-
-```html
-<template>
-    <foo />
-</template>
-```
-
-具体可见 👉 [vite-svg-loader](https://github.com/jpkleemans/vite-svg-loader)
-
-
-<br />
-<br />
-
-
-### 26. [`tsx` 支持](https://github.com/vitejs/vite/tree/main/packages/plugin-vue-jsx)
+### 25. [`tsx` 支持](https://github.com/vitejs/vite/tree/main/packages/plugin-vue-jsx)
 
 只需要 `tsx` 文件放在 `src/components` 下，即可直接在模板中使用。
 
@@ -909,6 +891,15 @@ export default defineComponent({
 ```
 
 具体可见 👉 [@vitejs/plugin-vue-jsx](https://github.com/vitejs/vite/tree/main/packages/plugin-vue-jsx)
+
+<br />
+<br />
+
+### 26. [`gzip` 资源压缩支持](https://github.com/vbenjs/vite-plugin-compression)
+
+生产环境下开箱即用的 `gzip` 资源压缩，无需配置。
+
+具体可见 👉 [vite-plugin-compression](https://github.com/vbenjs/vite-plugin-compression)
 
 <br />
 <br />
