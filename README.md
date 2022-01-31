@@ -908,7 +908,7 @@ export default defineComponent({
 </template>
 ```
 
-具体可见 👉 [vite-svg-loader](https://github.com/jpkleemans/vite-svg-loader)
+具体可见 👉 [@vitejs/plugin-vue-jsx](https://github.com/vitejs/vite/tree/main/packages/plugin-vue-jsx)
 
 <br />
 <br />
