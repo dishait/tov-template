@@ -4,12 +4,14 @@ specifiers:
   '@intlify/vite-plugin-vue-i18n': ^3.2.1
   '@markthree/ilazy': ^1.0.2
   '@markthree/node-shared': ^1.3.2
+  '@types/ityped': ^1.0.1
   '@types/nprogress': ^0.2.0
   '@vitejs/plugin-vue': ^2.1.0
   '@vueuse/components': ^7.5.5
   '@vueuse/core': ^7.5.5
   c8: ^7.11.0
   esno: ^0.14.0
+  ityped: ^1.0.3
   markdown-it-anchor: ^8.4.1
   markdown-it-prism: ^2.2.2
   mockjs: ^1.1.0
@@ -44,12 +46,14 @@ devDependencies:
   '@intlify/vite-plugin-vue-i18n': 3.2.1_36165866a34c9f905638d23ec7e60ae4
   '@markthree/ilazy': 1.0.2
   '@markthree/node-shared': 1.3.2
+  '@types/ityped': 1.0.1
   '@types/nprogress': 0.2.0
   '@vitejs/plugin-vue': 2.1.0_vite@2.7.13+vue@3.2.29
   '@vueuse/components': 7.5.5_vue@3.2.29
   '@vueuse/core': 7.5.5_vue@3.2.29
   c8: 7.11.0
   esno: 0.14.0_typescript@4.5.5
+  ityped: 1.0.3
   markdown-it-anchor: 8.4.1
   markdown-it-prism: 2.2.2
   mockjs: 1.1.0
@@ -352,6 +356,10 @@ packages:
 
   /@types/istanbul-lib-coverage/2.0.4:
     resolution: {integrity: sha512-z/QT1XN4K4KYuslS23k62yDIDLwLFkzxOuMplDtObz0+y7VqJCaO2o+SPwHCvLFZh7xazvvoor2tA/hPz9ee7g==}
+    dev: true
+
+  /@types/ityped/1.0.1:
+    resolution: {integrity: sha512-7K9uPwFcvYeqvA7IBCSC4YE1nkkubyyx2IhFnZp4P62OCX2zg07qMn04QVdbhGwfiIzJx+UFFLsjunRdim1/Tw==}
     dev: true
 
   /@types/linkify-it/3.0.2:
@@ -2134,6 +2142,10 @@ packages:
     dependencies:
       html-escaper: 2.0.2
       istanbul-lib-report: 3.0.0
+    dev: true
+
+  /ityped/1.0.3:
+    resolution: {integrity: sha512-46Qnh3qs+6EJlWDHmvWRW6qiz5jFy2mkh9UvtTvQmLJMZIjKrdz4du68le7hLX4tAWCp6QTKiq/OuLv6huHxZg==}
     dev: true
 
   /jiti/1.12.15:
