@@ -846,6 +846,17 @@ const toggleLocale = () => {
 
 ### 25. [`svg` 组件支持](https://github.com/jpkleemans/vite-svg-loader)
 
+只需要 `svg` 文件放在 `src/components` 下，即可直接在模板中使用。
+
+例如你有一个 `src/components/foo.svg` 文件，那么即可直接在模板中使用。
+
+```html
+<template>
+    <foo />
+</template>
+```
+
+具体可见 👉 [vite-svg-loader](https://github.com/jpkleemans/vite-svg-loader)
 
 
 <br />
