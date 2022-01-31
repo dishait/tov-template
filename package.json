@@ -24,6 +24,7 @@
     "@types/ityped": "^1.0.1",
     "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "^2.1.0",
+    "@vitejs/plugin-vue-jsx": "^1.3.3",
     "@vueuse/components": "^7.5.5",
     "@vueuse/core": "^7.5.5",
     "c8": "^7.11.0",

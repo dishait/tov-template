@@ -3,7 +3,9 @@
 // Read more: https://github.com/vuejs/vue-next/pull/3399
 
 declare module 'vue' {
-	export interface GlobalComponents {}
+  export interface GlobalComponents {
+    Foo: typeof import('./../../src/components/foo.tsx')['default']
+  }
 }
 
-export {}
+export { }
