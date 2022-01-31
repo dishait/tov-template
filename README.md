@@ -1,6 +1,6 @@
 # tov-template
 
-一个 **vite + vue3 + ts** 开箱即用现代开发模板
+一个 ` vite + vue3 + ts ` 开箱即用现代开发模板
 
 <br />
 <br />
@@ -33,6 +33,29 @@
 24. 漂亮的 `404页` 支持
 25. `svg` 组件支持
 26. `tsx` 支持
+
+<br />
+<br />
+
+## 克隆模板 🦕
+
+1. Github
+
+```shell
+git clone git@github.com:dishait/tov-template.git
+```
+2. Gitee
+
+```shell
+git clone git@gitee.com:dishait/tov-template.git
+```
+
+3. degit
+
+```shell
+npx degit https://github.com/dishait/tov-template#main
+```
+4. 新的 `Github` 仓库 👉 [Use this template](https://github.com/dishait/tov-template/generate)
 
 <br />
 <br />
