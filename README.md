@@ -31,6 +31,7 @@
 22. 命令行自动创建与删除
 23. `i18n` 国际化支持
 24. 漂亮的 `404页` 支持
+25. `svg` 组件支持
 
 <br />
 <br />
@@ -839,6 +840,12 @@ const toggleLocale = () => {
 即可切换封面为 👇
 
 ![notFound-other](public/docs/notFound-other.png)
+
+<br />
+<br />
+
+### 25. [`svg` 组件支持](https://github.com/jpkleemans/vite-svg-loader)
+
 
 
 <br />

@@ -18,6 +18,7 @@ import Vue from '@vitejs/plugin-vue'
 import Prism from 'markdown-it-prism'
 import I18n from '@intlify/vite-plugin-vue-i18n'
 import ViteRestart from 'vite-plugin-restart'
+import svgLoader from 'vite-svg-loader'
 
 const markdownWrapperClasses =
 	'prose md:prose-lg lg:prose-lg dark:prose-invert text-left p-10 prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600'
@@ -48,8 +49,8 @@ export default () => {
 		}),
 		Components({
 			dts: resolve(__dirname, './types/components.d.ts'),
-			extensions: ['vue', 'md'],
-			include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+			extensions: ['vue', 'md', 'svg'],
+			include: [/\.vue$/, /\.vue\?vue/, /\.md$/, /\.svg$/],
 			resolvers: [
 				ElementPlusResolver(),
 				IconsResolver({
@@ -77,6 +78,7 @@ export default () => {
 		}),
 		ViteRestart({
 			restart: ['presets/tov.[jt]s']
-		})
+		}),
+		svgLoader()
 	]
 }

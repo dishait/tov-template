@@ -47,6 +47,7 @@
     "vite-plugin-restart": "^0.1.1",
     "vite-plugin-vue-layouts": "^0.5.0",
     "vite-plugin-windicss": "^1.6.3",
+    "vite-svg-loader": "^3.1.2",
     "vitest": "^0.0.131",
     "vue-i18n": "^9.2.0-beta.30",
     "vue-request": "^1.2.4",
