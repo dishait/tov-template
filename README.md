@@ -816,10 +816,9 @@ const toggleLocale = () => {
 
 ![notFound-dark](public/docs/notFound-dark.png)
 
-同时支持简单的响应式适应，例如在移动端中。
-![notFound-h5](public/docs/notFound-h5.png)
+也支持简单的响应式适应。例如移动端浏览器上会有正确的显示。
 
-如果这个 `404` 的封面不符合你的口味，那么可以在 `pages/[...notFound].vue` 中修改 `img` 标签的 `src`。默认是 `32.svg`，支持 `1 ~ 33` 的 `svg`。
+当然如果这个 `404` 的封面不符合你的口味，那么可以在 `pages/[...notFound].vue` 中修改 `img` 标签的 `src`。默认是 `32.svg`，支持 `1 ~ 33` 的 `svg`。
 
 例如，默认 👇
 ```html
