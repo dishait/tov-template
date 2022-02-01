@@ -29,10 +29,10 @@
 20. 支持 Markdown 渲染
 21. 路径别名 `~` 支持
 22. 命令行自动创建与删除
-23. `i18n` 国际化支持
-24. 漂亮的 `404页` 支持
-25. `tsx` 支持
-26. `gzip` 资源压缩支持
+23. i18n 国际化支持
+24. 漂亮的 404页 支持
+25. tsx 支持
+26. gzip 资源压缩支持
 
 <br />
 <br />
@@ -327,7 +327,61 @@ const doubled = computed(() => count.value * 2)
 1. vue
 2. pinia
 3. vueuse
-4. vue-router
+4. vue-i18n
+5. vue-router
+
+当然还有项目中的自动引入，只需要满足以下规范即可。
+
+1. `src/composables` 下凡是 `use` 开头的模块，同时里边有与模块相同的命名导出，该导出就可以按需自动引入。
+
+例如有个 `src/composables/useFoo.ts`
+
+```ts
+// src/composables/useFoo.ts
+
+// 与模块相同命名的导出
+export const useFoo = () => 100
+```
+
+此时就不再需要 `import`了
+
+```html
+<script setup lang="ts">
+    const foo = useFoo()
+    console.log(foo) // 将输出 100
+</script>
+```
+
+2. `src/stores` 下凡是 `Store` 结尾的模块，同时里边有与模块相同的命名导出，该导出就可以按需自动引入。
+
+例如有个 `src/stores/counterStore.ts`
+
+```ts
+// 与模块相同命名的导出
+export const counterStore = defineStore('counter', {
+    state() {
+        return {
+            counter: 1
+        }
+    },
+    actions: {
+        inc() {
+            this.counter++
+        }
+    }
+})
+```
+此时就不再需要 `import`了
+
+```html
+<script setup lang="ts">
+    const store = counterStore()
+</script>
+
+<template>
+    <div @click="store.inc()">{{store.counter}}</div>
+</template>
+```
 
 <br />
 
@@ -500,21 +554,27 @@ pnpm run analysis:build
 
 `src/composables` 目录用来存储 `composition-api` 模块。
 
-该目录下预设了`dark` 模块，该模块导出 `isDark` 和 `toggleDark` 用来显示和切换暗黑模式。
+该目录下预设了`useDarks` 模块，该模块导出 `isDark` 和 `toggleDark` 用来显示和切换暗黑模式。
 
 ```ts
-// src/composables/dark.ts
+// src/composables/useDarks.ts
 
-// vueuse的api会自动按需引入，无需import
+// vueuse的 api 会自动按需引入，无需import
 export const isDark = useDark()
 export const toggleDark = useToggle(isDark)
+
+// 符合自动引入标准
+export const useDarks = () => ({ isDark, toggleDark })
 ```
 
 模板中即可直接用
 
 ```html
 <script setup lang="ts">
-import { isDark, toggleDark } from "../composables/dark";
+import { isDark, toggleDark } from "../composables/useDarks";
+
+// 或者使用自动按需引入
+// const { isDark, toggleDark } = useDarks()
 </script>
 
 <template>

@@ -20,6 +20,10 @@ import I18n from '@intlify/vite-plugin-vue-i18n'
 import ViteRestart from 'vite-plugin-restart'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import viteCompression from 'vite-plugin-compression'
+import {
+	StoresResolver,
+	ComposablesResolver
+} from './shared/resolvers'
 
 const markdownWrapperClasses =
 	'prose md:prose-lg lg:prose-lg dark:prose-invert text-left p-10 prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600'
@@ -70,7 +74,11 @@ export default () => {
 				'vue-router',
 				'@vueuse/core'
 			],
-			resolvers: [ElementPlusResolver()]
+			resolvers: [
+				StoresResolver,
+				ComposablesResolver,
+				ElementPlusResolver()
+			]
 		}),
 		I18n({
 			runtimeOnly: true,
@@ -78,7 +86,7 @@ export default () => {
 			include: [resolve(__dirname, '../locales/**')]
 		}),
 		ViteRestart({
-			restart: ['presets/tov.[jt]s']
+			restart: ['presets/tov.[jt]s', 'presets/shared/**/*']
 		}),
 		vueJsx(),
 		viteCompression()
