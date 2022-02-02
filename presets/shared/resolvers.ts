@@ -1,4 +1,4 @@
-import { Resolver } from 'unplugin-auto-import/dist/types'
+import type { Resolver } from 'unplugin-auto-import/dist/types'
 
 /**
  * 组合式 api 自动引入解析器

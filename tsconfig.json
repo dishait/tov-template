@@ -6,6 +6,7 @@
 		"module": "esnext",
 		"sourceMap": true,
 		"skipLibCheck": true,
+		"isolatedModules": true,
 		"esModuleInterop": true,
 		"lib": ["esnext", "dom"],
 		"resolveJsonModule": true,
