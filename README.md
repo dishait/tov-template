@@ -77,24 +77,42 @@ npx degit https://github.com/dishait/tov-template#main
 ```shell
 pnpm install
 
-// 或者 npm install
-// 或者 yarn
+# 或者 npm install
+# 或者 yarn
 ```
 
 2. 开发
 ```shell
 pnpm dev 
+# 或者 npm run dev
+# 或者 yarn dev
 
-// 或者 npm run dev
-// 或者 yarn dev
+# 开启 host
+pnpm dev:host  
+# 或者 npm run dev:host 
+# 或者 yarn dev:host
+
+# 自动打开浏览器
+pnpm dev:open
+# 或者 npm run dev:open
+# 或者 yarn dev:open
 ```
 
 3. 预览
 ```shell
 pnpm preview
+# 或者 npm run preview
+# 或者 yarn preview
 
-// 或者 npm run preview
-// 或者 yarn preview
+# 开启 host
+pnpm preview:host
+# 或者 npm run preview:host
+# 或者 yarn preview:host
+
+# 自动打开浏览器
+pnpm preview:open
+# 或者 npm run preview:open
+# 或者 yarn preview:open
 ```
 
 4. 打包
@@ -102,24 +120,24 @@ pnpm preview
 ```shell
 pnpm build
 
-// 或者 npm run build
-// 或者 yarn build
+# 或者 npm run build
+# 或者 yarn build
 ```
 
 5. 单元测试
 ```shell
 pnpm test
 
-// 或者 npm run test
-// 或者 yarn test
+# 或者 npm run test
+# 或者 yarn test
 ```
 
 6. 单元测试报告生成
 ```shell
 pnpm coverage
 
-// 或者 npm run coverage
-// 或者 yarn coverage
+# 或者 npm run coverage
+# 或者 yarn coverage
 ```
 
 7. 样式报告预览
@@ -127,8 +145,8 @@ pnpm coverage
 ```shell
 pnpm analysis
 
-// 或者 npm run analysis
-// 或者 yarn analysis
+# 或者 npm run analysis
+# 或者 yarn analysis
 ```
 
 8. 样式报告打包
@@ -136,8 +154,8 @@ pnpm analysis
 ```shell
 pnpm analysis:build
 
-// 或者 npm run analysis:build
-// 或者 yarn analysis:build
+# 或者 npm run analysis:build
+# 或者 yarn analysis:build
 ```
 
 9. 类型检查
@@ -145,8 +163,8 @@ pnpm analysis:build
 ```shell
 pnpm typecheck
 
-// 或者 npm run typecheck
-// 或者 yarn typecheck
+# 或者 npm run typecheck
+# 或者 yarn typecheck
 ```
 
 10. 自动创建
@@ -154,8 +172,8 @@ pnpm typecheck
 ```shell
 pnpm auto:create
 
-// 或者 npm run auto:create
-// 或者 yarn auto:create
+# 或者 npm run auto:create
+# 或者 yarn auto:create
 ```
 
 11. 自动移除
@@ -163,8 +181,8 @@ pnpm auto:create
 ```shell
 pnpm auto:remove
 
-// 或者 npm run auto:remove
-// 或者 yarn auto:remove
+# 或者 npm run auto:remove
+# 或者 yarn auto:remove
 ```
 
 <br />
@@ -471,8 +489,8 @@ export const counterStore = defineStore('counter', {
 ```shell
 pnpm add naive-ui
 
-// 或者 npm i naive-ui
-// 或者 yarn add naive-ui
+# 或者 npm i naive-ui
+# 或者 yarn add naive-ui
 ```
 即可在模板中使用。
 
@@ -597,15 +615,15 @@ pnpm add naive-ui
 ```shell
 pnpm analysis
 
-// 或者 npm run analysis
-// 或者 yarn analysis
+# 或者 npm run analysis
+# 或者 yarn analysis
 ```
 或者打包输出该报告
 ```shell
 pnpm analysis:build
 
-// 或者 npm run analysis:build
-// 或者 yarn analysis:build
+# 或者 npm run analysis:build
+# 或者 yarn analysis:build
 ```
 
 具体可见 👉 [Windi CSS](https://cn.windicss.org/)
@@ -761,8 +779,8 @@ export const useCounterStore = defineStore('counter', {
 ```shell
 pnpm dev
 
-// 或者 npm run dev
-// 或者 yarn dev
+# 或者 npm run dev
+# 或者 yarn dev
 ```
 可以看到一个 `url`
 
@@ -840,8 +858,8 @@ describe('suite name', () => {
 ```shell
 pnpm test
 
-// 或者 npm run test
-// 或者 yarn test
+# 或者 npm run test
+# 或者 yarn test
 ```
 
 或者生成报告
@@ -849,8 +867,8 @@ pnpm test
 ```shell
 pnpm coverage
 
-// 或者 npm run coverage
-// 或者 yarn coverage
+# 或者 npm run coverage
+# 或者 yarn coverage
 ```
 
 具体可见 👉 [Vitest](https://vitest.dev/guide/#configuring-vitest)
@@ -903,15 +921,15 @@ pnpm coverage
 ```shell
 pnpm auto:create
 
-// 或者 npm run auto:create
-// 或者 yarn auto:create
+# 或者 npm run auto:create
+# 或者 yarn auto:create
 ```
 当然也可以进行删除 👇
 ```shell
 pnpm auto:remove
 
-// 或者 npm run auto:remove
-// 或者 yarn auto:remove
+# 或者 npm run auto:remove
+# 或者 yarn auto:remove
 ```
 
 <br />
