@@ -59,56 +59,112 @@ npx degit https://github.com/dishait/tov-template#main
 
 <br />
 <br />
+<br />
+
+## `node` 版本推荐 🐎
+
+因为该模板完全面向现代，所以推荐大家使用 `node` 当前的长期维护版本 `v16`， 大于 `v16.13.1` 即可。
+
+<br />
+<br />
+<br />
 
 ## 使用 🐂
+
+> 该模板不限定大家使用某一特定的包管理器，npm，yarn 和 pnpm 都行，推荐用pnpm。同时注意 npm 的版本应该尽量的新。
 
 1. 安装依赖
 ```shell
 pnpm install
+
+// 或者 npm install
+// 或者 yarn
 ```
 
 2. 开发
 ```shell
-pnpm run dev 
+pnpm dev 
+
+// 或者 npm run dev
+// 或者 yarn dev
 ```
 
 3. 预览
 ```shell
-pnpm run preview
+pnpm preview
+
+// 或者 npm run preview
+// 或者 yarn preview
 ```
 
 4. 打包
 
 ```shell
-pnpm run build
+pnpm build
+
+// 或者 npm run build
+// 或者 yarn build
 ```
 
 5. 单元测试
 ```shell
-pnpm run test
+pnpm test
+
+// 或者 npm run test
+// 或者 yarn test
 ```
 
 6. 单元测试报告生成
 ```shell
-pnpm run coverage
+pnpm coverage
+
+// 或者 npm run coverage
+// 或者 yarn coverage
 ```
 
 7. 样式报告预览
 
 ```shell
-pnpm run analysis
+pnpm analysis
+
+// 或者 npm run analysis
+// 或者 yarn analysis
 ```
 
 8. 样式报告打包
 
 ```shell
-pnpm run analysis:build
+pnpm analysis:build
+
+// 或者 npm run analysis:build
+// 或者 yarn analysis:build
 ```
 
 9. 类型检查
 
 ```shell
-pnpm run typecheck
+pnpm typecheck
+
+// 或者 npm run typecheck
+// 或者 yarn typecheck
+```
+
+10. 自动创建
+
+```shell
+pnpm auto:create
+
+// 或者 npm run auto:create
+// 或者 yarn auto:create
+```
+
+11. 自动移除
+
+```shell
+pnpm auto:remove
+
+// 或者 npm run auto:remove
+// 或者 yarn auto:remove
 ```
 
 <br />
@@ -414,6 +470,9 @@ export const counterStore = defineStore('counter', {
 
 ```shell
 pnpm add naive-ui
+
+// 或者 npm i naive-ui
+// 或者 yarn add naive-ui
 ```
 即可在模板中使用。
 
@@ -536,11 +595,17 @@ pnpm add naive-ui
 
 在终端中输入命令，即可看到报告
 ```shell
-pnpm run analysis
+pnpm analysis
+
+// 或者 npm run analysis
+// 或者 yarn analysis
 ```
 或者打包输出该报告
 ```shell
-pnpm run analysis:build
+pnpm analysis:build
+
+// 或者 npm run analysis:build
+// 或者 yarn analysis:build
 ```
 
 具体可见 👉 [Windi CSS](https://cn.windicss.org/)
@@ -694,7 +759,10 @@ export const useCounterStore = defineStore('counter', {
 
 启动项目
 ```shell
-pnpm run dev
+pnpm dev
+
+// 或者 npm run dev
+// 或者 yarn dev
 ```
 可以看到一个 `url`
 
@@ -770,13 +838,19 @@ describe('suite name', () => {
 然后在终端中输入命令即可测试
 
 ```shell
-pnpm run test
+pnpm test
+
+// 或者 npm run test
+// 或者 yarn test
 ```
 
 或者生成报告
 
 ```shell
-pnpm run coverage
+pnpm coverage
+
+// 或者 npm run coverage
+// 或者 yarn coverage
 ```
 
 具体可见 👉 [Vitest](https://vitest.dev/guide/#configuring-vitest)
@@ -827,11 +901,17 @@ pnpm run coverage
 
 只要输入 👇，即可创建一个标准的页面或组件
 ```shell
-pnpm run auto:create
+pnpm auto:create
+
+// 或者 npm run auto:create
+// 或者 yarn auto:create
 ```
 当然也可以进行删除 👇
 ```shell
-pnpm run auto:remove
+pnpm auto:remove
+
+// 或者 npm run auto:remove
+// 或者 yarn auto:remove
 ```
 
 <br />
