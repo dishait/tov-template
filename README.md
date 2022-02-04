@@ -412,13 +412,13 @@ const doubled = computed(() => count.value * 2)
 当然还有项目中的自动引入，只需要满足以下规范即可。
 
 
-1. `src/stores` 下凡是 `Store` 结尾的模块，同时里边有与模块相同的命名导出，该导出就可以按需自动引入。
+1. `src/stores` 下凡是 `Store` 结尾的模块，同时里边有 `default` 导出，该导出就可以按需自动引入。
 
 例如有个 `src/stores/counterStore.ts`
 
 ```ts
-// 与模块相同命名的导出
-export const counterStore = defineStore('counter', {
+// default 导出
+export default defineStore('counter', {
     state() {
         return {
             counter: 1

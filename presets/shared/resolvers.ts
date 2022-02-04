@@ -7,7 +7,8 @@ export const StoresResolver: Resolver = name => {
 	const inStores = name.endsWith('Store')
 	if (inStores) {
 		return {
-			path: `~/stores/${name}`
+			path: `~/stores/${name}`,
+			importName: 'default'
 		}
 	}
 }
