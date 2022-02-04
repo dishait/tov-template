@@ -38,7 +38,7 @@
     "markdown-it-prism": "^2.2.2",
     "mockjs": "^1.1.0",
     "nprogress": "^0.2.0",
-    "pinia": "^2.0.10",
+    "pinia": "^2.0.11",
     "prism-theme-vars": "^0.2.2",
     "typescript": "^4.5.5",
     "unplugin-auto-import": "^0.5.11",
