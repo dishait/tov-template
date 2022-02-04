@@ -73,6 +73,8 @@ npx degit https://github.com/dishait/tov-template#main
 
 > 该模板不限定大家使用某一特定的包管理器，npm，yarn 和 pnpm 都行，推荐用pnpm。同时注意 npm 的版本应该尽量的新。
 
+强烈推荐使用更快更合理的 `pnpm` 包管理器 👉 [安装教程](https://pnpm.io/zh/installation)
+
 1. 安装依赖
 ```shell
 pnpm install
@@ -406,27 +408,8 @@ const doubled = computed(() => count.value * 2)
 
 当然还有项目中的自动引入，只需要满足以下规范即可。
 
-1. `src/composables` 下凡是 `use` 开头的模块，同时里边有与模块相同的命名导出，该导出就可以按需自动引入。
 
-例如有个 `src/composables/useFoo.ts`
-
-```ts
-// src/composables/useFoo.ts
-
-// 与模块相同命名的导出
-export const useFoo = () => 100
-```
-
-此时就不再需要 `import`了
-
-```html
-<script setup lang="ts">
-    const foo = useFoo()
-    console.log(foo) // 将输出 100
-</script>
-```
-
-2. `src/stores` 下凡是 `Store` 结尾的模块，同时里边有与模块相同的命名导出，该导出就可以按需自动引入。
+1. `src/stores` 下凡是 `Store` 结尾的模块，同时里边有与模块相同的命名导出，该导出就可以按需自动引入。
 
 例如有个 `src/stores/counterStore.ts`
 
@@ -502,7 +485,7 @@ pnpm add naive-ui
 ```
 目前支持的组件库有:
 
-- [Naive ui](https://www.naiveui.com/zh-CN/os-theme)
+- [naive ui](https://www.naiveui.com/zh-CN/os-theme)
 - [element-plus](https://element-plus.gitee.io/zh-CN/)
 - [@vueuse/components](https://vueuse.org/guide/components.html)
 
@@ -524,15 +507,26 @@ pnpm add naive-ui
 
 ![icons-second-step](public/docs/icons-third-step.png)
 
-在模板中即可直接用组件的形式直接使用。
+在模板中即可直接用组件的形式直接使用，注意加上前缀 `i-`。
 
 ```html
 <template>
-    <mdi:account-box-multiple />
+    <i-mdi:account-box-multiple />
 </template>
 ```
 
-保存后等待自动下载该图标库后，就可以在页面中看到对应图标。
+保存后等待自动下载该图标库后，就可以在页面中看到对应图标。  
+
+注意自动下载图标需要 `pnpm` 包管理器支持，如果你是其他包管理器需要手动安装图标集 👇👇👇
+
+图标集名称为 `@iconify/` 加 `:` 前缀，例如上边的图标是 `mdi:account-box-multiple`，图标集名称就为 `@iconify/mdi`。
+
+```shell
+npm i @iconify/mdi -D
+
+# 或者 yarn add @iconify/mdi -D
+```
+
 
 同时推荐你使用 `vscode` 插件 [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify)。  
 
@@ -541,7 +535,7 @@ pnpm add naive-ui
 ```html
 <!-- 模板中代码 -->
 <template>
-    <mdi:account-box-multiple />
+    <i-mdi:account-box-multiple />
 </template>
 ```
 将在 `vscode` 中得到图标预览
@@ -596,7 +590,7 @@ pnpm add naive-ui
 ```
 上述模板将渲染红色背景白色的字。
 
-同时支持 [属性化模式](https://cn.windicss.org/features/attributify.html#attributify-mode)，即可以用简写。
+同时支持 [属性化模式](https://cn.windicss.org/features/attributify.html#attributify-mode)，即可以用简写。该功能默认关闭，可在 `windi.config.ts` 中 设置 `attributify` 为 `true` 开启。 
 
 ```html
 <template>
