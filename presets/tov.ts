@@ -9,6 +9,7 @@ import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
 import {
 	NaiveUiResolver,
+	AntDesignVueResolver,
 	ElementPlusResolver,
 	VueUseComponentsResolver
 } from 'unplugin-vue-components/resolvers'
@@ -65,6 +66,7 @@ export default () => {
 				IconsResolver(),
 				NaiveUiResolver(),
 				ElementPlusResolver(),
+				AntDesignVueResolver(),
 				VueUseComponentsResolver()
 			]
 		}),

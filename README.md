@@ -490,6 +490,7 @@ pnpm add naive-ui
 
 - [naive ui](https://www.naiveui.com/zh-CN/os-theme)
 - [element-plus](https://element-plus.gitee.io/zh-CN/)
+- [ant design of vue](https://next.antdv.com/docs/vue/introduce-cn/)
 - [@vueuse/components](https://vueuse.org/guide/components.html)
 
 具体可见 👉 [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)
