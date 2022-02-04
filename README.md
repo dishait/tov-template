@@ -71,9 +71,9 @@ npx degit https://github.com/dishait/tov-template#main
 
 ## 使用 🐂
 
-> 该模板不限定大家使用某一特定的包管理器，npm，yarn 和 pnpm 都行，推荐用pnpm。同时注意 npm 的版本应该尽量的新。
+> 该模板不限定大家使用某一特定的包管理器，npm，yarn 和 pnpm 都行。同时注意 npm 的版本应该尽量的新。
 
-强烈推荐使用更快更合理的 `pnpm` 包管理器 👉 [安装教程](https://pnpm.io/zh/installation)
+强烈推荐大家使用更快更合理的 `pnpm` 包管理器 👉 [安装教程](https://pnpm.io/zh/installation)
 
 1. 安装依赖
 ```shell
@@ -86,16 +86,19 @@ pnpm install
 2. 开发
 ```shell
 pnpm dev 
+
 # 或者 npm run dev
 # 或者 yarn dev
 
 # 开启 host
 pnpm dev:host  
+
 # 或者 npm run dev:host 
 # 或者 yarn dev:host
 
 # 自动打开浏览器
 pnpm dev:open
+
 # 或者 npm run dev:open
 # 或者 yarn dev:open
 ```
@@ -103,16 +106,19 @@ pnpm dev:open
 3. 预览
 ```shell
 pnpm preview
+
 # 或者 npm run preview
 # 或者 yarn preview
 
 # 开启 host
 pnpm preview:host
+
 # 或者 npm run preview:host
 # 或者 yarn preview:host
 
 # 自动打开浏览器
 pnpm preview:open
+
 # 或者 npm run preview:open
 # 或者 yarn preview:open
 ```
@@ -143,7 +149,6 @@ pnpm coverage
 ```
 
 7. 样式报告预览
-
 ```shell
 pnpm analysis
 
@@ -152,7 +157,6 @@ pnpm analysis
 ```
 
 8. 样式报告打包
-
 ```shell
 pnpm analysis:build
 
@@ -161,7 +165,6 @@ pnpm analysis:build
 ```
 
 9. 类型检查
-
 ```shell
 pnpm typecheck
 
@@ -170,7 +173,6 @@ pnpm typecheck
 ```
 
 10. 自动创建
-
 ```shell
 pnpm auto:create
 
@@ -206,7 +208,7 @@ pnpm auto:remove
 什么时候你应该用? 
 
 1. 不想浪费时间在项目配置上
-2. 希望尝试用更现代的方式开发 web 应用，提高开发效率
+2. 希望尝试用更现代的方式开发 `web` 应用，提高开发效率
 
 <br />
 <br />
@@ -259,7 +261,7 @@ eg:
 - `src/pages/users/profile.vue` => `/users/profile`
 - `src/pages/users/[id].vue` => `/users/:id`
 - `src/pages/[user]/settings.vue` => `/:user/settings`
--  `src/pages/[...NoFound].vue` => 404 路由
+-  `src/pages/[...notFound].vue` => 404 路由
 
 具体可见 👉 [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages#file-system-routing)
 
@@ -286,7 +288,7 @@ eg:
     <div>我是首页</div> 
 </template>
 ``` 
-路由到 `/`时， 页面将渲染
+路由到 `/`时，页面将渲染
 ```html
 我是默认布局
 我是首页
@@ -331,6 +333,7 @@ meta:
 </route>
 ```
 此时路由到 `/`, 页面将渲染
+
 ```html
 我是非默认布局custom
 我是首页
@@ -640,7 +643,6 @@ pnpm analysis:build
 export const isDark = useDark()
 export const toggleDark = useToggle(isDark)
 
-// 符合自动引入标准
 export const useDarks = () => ({ isDark, toggleDark })
 ```
 
@@ -648,10 +650,9 @@ export const useDarks = () => ({ isDark, toggleDark })
 
 ```html
 <script setup lang="ts">
-import { isDark, toggleDark } from "../composables/useDarks";
+import { useDarks } from "../composables/useDarks";
 
-// 或者使用自动按需引入
-// const { isDark, toggleDark } = useDarks()
+const { isDark, toggleDark } = useDarks()
 </script>
 
 <template>
@@ -899,10 +900,10 @@ pnpm coverage
 ```html
 <!-- src/pages/index.vue -->
 <script lang="ts" setup>
-    import { isDark, toggleDark } from "~/composables/dark"
+    import { useDarks } from "~/composables/dark"
 
 // 等价于
-// import { isDark, toggleDark } from "../composables/dark"
+// import { useDarks } from "../composables/dark"
 </script>
 ```
 
