@@ -26,6 +26,7 @@ declare global {
   const effectScope: typeof import('vue')['effectScope']
   const EffectScope: typeof import('vue')['EffectScope']
   const extendRef: typeof import('@vueuse/core')['extendRef']
+  const fooStore: typeof import('~/stores/fooStore')['default']
   const getActivePinia: typeof import('pinia')['getActivePinia']
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
