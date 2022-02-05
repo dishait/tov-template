@@ -33,6 +33,7 @@
     "@vueuse/components": "^7.5.5",
     "@vueuse/core": "^7.5.5",
     "c8": "^7.11.0",
+    "chokidar": "^3.5.3",
     "esno": "^0.14.0",
     "ityped": "^1.0.3",
     "markdown-it-anchor": "^8.4.1",

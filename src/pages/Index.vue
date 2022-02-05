@@ -6,7 +6,7 @@ const { isDark, toggleDark } = useDarks()
 
 const toggleLocale = () => {
     locale.value = locale.value === 'zh-CN' ? 'en' : 'zh-CN'
-} 
+}
 </script>
 
 <template>
