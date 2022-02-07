@@ -9,6 +9,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
 import {
+	ArcoResolver,
 	NaiveUiResolver,
 	AntDesignVueResolver,
 	ElementPlusResolver,
@@ -64,6 +65,7 @@ export default () => {
 			include: [/\.md$/, /\.vue$/, /\.tsx$/],
 			dts: resolve(__dirname, './types/components.d.ts'),
 			resolvers: [
+				ArcoResolver(),
 				IconsResolver(),
 				NaiveUiResolver(),
 				ElementPlusResolver(),

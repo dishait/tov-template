@@ -489,6 +489,7 @@ pnpm add naive-ui
 目前支持的组件库有:
 
 - [naive ui](https://www.naiveui.com/zh-CN/os-theme)
+- [arco.design](https://arco.design/)
 - [element-plus](https://element-plus.gitee.io/zh-CN/)
 - [ant design of vue](https://next.antdv.com/docs/vue/introduce-cn/)
 - [@vueuse/components](https://vueuse.org/guide/components.html)
