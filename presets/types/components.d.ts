@@ -4,7 +4,7 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Asdasd: typeof import('./../../src/components/asdasd.vue')['default']
+    
   }
 }
 

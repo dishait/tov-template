@@ -24,7 +24,7 @@ specifiers:
   typescript: ^4.5.5
   unplugin-auto-import: ^0.5.11
   unplugin-icons: ^0.13.0
-  unplugin-vue-components: ^0.17.16
+  unplugin-vue-components: ^0.17.17
   vite: ^2.7.13
   vite-plugin-compression: ^0.5.1
   vite-plugin-inspect: ^0.3.13
@@ -70,7 +70,7 @@ devDependencies:
   typescript: registry.npmmirror.com/typescript/4.5.5
   unplugin-auto-import: registry.npmmirror.com/unplugin-auto-import/0.5.11_@vueuse+core@7.5.5+vite@2.7.13
   unplugin-icons: registry.npmmirror.com/unplugin-icons/0.13.0_vite@2.7.13
-  unplugin-vue-components: registry.npmmirror.com/unplugin-vue-components/0.17.16_vite@2.7.13+vue@3.2.29
+  unplugin-vue-components: registry.npmmirror.com/unplugin-vue-components/0.17.17_vite@2.7.13+vue@3.2.29
   vite: registry.npmmirror.com/vite/2.7.13
   vite-plugin-compression: registry.npmmirror.com/vite-plugin-compression/0.5.1_vite@2.7.13
   vite-plugin-inspect: registry.npmmirror.com/vite-plugin-inspect/0.3.13_vite@2.7.13
@@ -4631,11 +4631,11 @@ packages:
       - webpack
     dev: true
 
-  registry.npmmirror.com/unplugin-vue-components/0.17.16_vite@2.7.13+vue@3.2.29:
-    resolution: {integrity: sha512-WGQdPAZ6uzx00gRQuhTVxY91dxVz6VD5CpeBjVSrzwghki4fShk3l6h3N/jWQDWCi1ej+JnjYOwND4SLoujDGg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/unplugin-vue-components/-/unplugin-vue-components-0.17.16.tgz}
-    id: registry.npmmirror.com/unplugin-vue-components/0.17.16
+  registry.npmmirror.com/unplugin-vue-components/0.17.17_vite@2.7.13+vue@3.2.29:
+    resolution: {integrity: sha512-XaaCbsdXGazTOl0nH4+PVsuGOXmYcrqLT8B8vO9Jzz9OaUq+S9Tz4KjzUNs7bhkp83SQWaKKF0+noAynYDa/Cg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/unplugin-vue-components/-/unplugin-vue-components-0.17.17.tgz}
+    id: registry.npmmirror.com/unplugin-vue-components/0.17.17
     name: unplugin-vue-components
-    version: 0.17.16
+    version: 0.17.17
     engines: {node: '>=14'}
     peerDependencies:
       '@babel/parser': ^7.15.8
