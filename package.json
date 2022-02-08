@@ -19,14 +19,14 @@
     "analysis:build": "windicss-analysis --html dist"
   },
   "dependencies": {
-    "vue": "^3.2.29"
+    "vue": "^3.2.30"
   },
   "devDependencies": {
-    "@intlify/vite-plugin-vue-i18n": "^3.2.1",
+    "@intlify/vite-plugin-vue-i18n": "^3.2.2",
     "@markthree/ilazy": "^1.0.2",
     "@markthree/node-shared": "^1.3.2",
     "@types/ityped": "^1.0.1",
-    "@types/node": "^17.0.15",
+    "@types/node": "^17.0.16",
     "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "^2.1.0",
     "@vitejs/plugin-vue-jsx": "^1.3.3",
@@ -34,7 +34,7 @@
     "@vueuse/core": "^7.5.5",
     "c8": "^7.11.0",
     "chokidar": "^3.5.3",
-    "esno": "^0.14.0",
+    "esno": "^0.14.1",
     "ityped": "^1.0.3",
     "markdown-it-anchor": "^8.4.1",
     "markdown-it-prism": "^2.2.2",
@@ -54,7 +54,7 @@
     "vite-plugin-pages": "^0.19.9",
     "vite-plugin-restart": "^0.1.1",
     "vite-plugin-vue-layouts": "^0.5.0",
-    "vite-plugin-windicss": "^1.6.3",
+    "vite-plugin-windicss": "^1.7.0",
     "vitest": "^0.0.131",
     "vue-i18n": "^9.2.0-beta.30",
     "vue-request": "^1.2.4",
