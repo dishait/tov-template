@@ -1,3 +1,4 @@
+import './shared/watcher'
 import { resolve } from 'path'
 import Pages from 'vite-plugin-pages'
 import Icons from 'unplugin-icons/vite'

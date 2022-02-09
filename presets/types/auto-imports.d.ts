@@ -9,7 +9,6 @@ declare global {
   const computedInject: typeof import('@vueuse/core')['computedInject']
   const controlledComputed: typeof import('@vueuse/core')['controlledComputed']
   const controlledRef: typeof import('@vueuse/core')['controlledRef']
-  const counterStore: typeof import('/@fs/src/stores/counterStore')['default']
   const createApp: typeof import('vue')['createApp']
   const createEventHook: typeof import('@vueuse/core')['createEventHook']
   const createGlobalState: typeof import('@vueuse/core')['createGlobalState']
