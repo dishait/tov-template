@@ -411,8 +411,28 @@ const doubled = computed(() => count.value * 2)
 
 当然还有项目中的自动引入，只需要满足以下规范即可。
 
+1. `src/composables` 下凡是 `use` 开头的模块，同时里边有 `default` 导出，该导出就可以被按需自动引入。
 
-1. `src/stores` 下凡是 `Store` 结尾的模块，同时里边有 `default` 导出，该导出就可以按需自动引入。
+例如有个 `src/composables/foo.ts`
+
+```ts
+// default 导出
+export default 1000
+```
+
+此时就不再需要 `import`了
+
+```html
+<script setup lang="ts">
+    console.log(foo) // 输出 1000
+</script>
+
+<template>
+    <div @click="store.inc()">{{store.counter}}</div>
+</template>
+```
+
+2. `src/stores` 下凡是 `Store` 结尾的模块，同时里边有 `default` 导出，该导出就可以按需自动引入。
 
 例如有个 `src/stores/counterStore.ts`
 

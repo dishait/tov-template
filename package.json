@@ -47,6 +47,7 @@
     "unplugin-icons": "^0.13.0",
     "unplugin-vue-components": "^0.17.17",
     "vite": "^2.7.13",
+    "vite-auto-import-resolvers": "^2.0.0",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-inspect": "^0.3.13",
     "vite-plugin-md": "^0.11.7",

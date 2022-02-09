@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useDarks } from '~/composables/useDarks'
-
 const { t, locale } = useI18n()
 const { isDark, toggleDark } = useDarks()
 
@@ -8,9 +6,7 @@ const toggleLocale = () => {
     locale.value = locale.value === 'zh-CN' ? 'en' : 'zh-CN'
 }
 
-const router = useRouter()
-
-console.log(router.getRoutes())
+const store = counterStore()
 </script>
 
 <template>

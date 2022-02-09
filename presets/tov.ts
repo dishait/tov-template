@@ -1,4 +1,3 @@
-import './shared/global'
 import { resolve } from 'path'
 import Pages from 'vite-plugin-pages'
 import Icons from 'unplugin-icons/vite'
@@ -23,7 +22,7 @@ import I18n from '@intlify/vite-plugin-vue-i18n'
 import ViteRestart from 'vite-plugin-restart'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import viteCompression from 'vite-plugin-compression'
-import { StoresResolver } from './shared/resolvers'
+import { dirResolver } from 'vite-auto-import-resolvers'
 
 const markdownWrapperClasses =
 	'prose md:prose-lg lg:prose-lg dark:prose-invert text-left p-10 prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600'
@@ -83,7 +82,14 @@ export default () => {
 				'vue-router',
 				'@vueuse/core'
 			],
-			resolvers: [StoresResolver, ElementPlusResolver()]
+			resolvers: [
+				ElementPlusResolver(),
+				dirResolver({ prefix: 'use' }),
+				dirResolver({
+					target: 'stores',
+					suffix: 'Store'
+				})
+			]
 		}),
 		// i18n 国际化支持
 		I18n({
