@@ -14,8 +14,7 @@
 		"useDefineForClassFields": true,
 		"baseUrl": ".",
 		"paths": {
-			"~/*": ["src/*"],
-			"/@fs/src/*": ["src/*"]
+			"~/*": ["src/*"]
 		}
 	},
 	"include": [
