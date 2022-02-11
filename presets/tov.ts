@@ -24,6 +24,7 @@ import ViteRestart from 'vite-plugin-restart'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import viteCompression from 'vite-plugin-compression'
 import { dirResolver } from 'vite-auto-import-resolvers'
+import { exit } from 'process'
 
 const markdownWrapperClasses =
 	'prose md:prose-lg lg:prose-lg dark:prose-invert text-left p-10 prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600'
@@ -105,6 +106,10 @@ export default () => {
 		// tsx 支持
 		vueJsx(),
 		// 生产环境资源压缩
-		viteCompression()
+		viteCompression({
+			success() {
+				setImmediate(exit)
+			}
+		})
 	]
 }
