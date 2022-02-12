@@ -136,7 +136,6 @@ declare global {
   const useFetch: typeof import('@vueuse/core')['useFetch']
   const useFocus: typeof import('@vueuse/core')['useFocus']
   const useFocusWithin: typeof import('@vueuse/core')['useFocusWithin']
-  const useFoo: typeof import('~/composables/useFoo')['default']
   const useFps: typeof import('@vueuse/core')['useFps']
   const useFullscreen: typeof import('@vueuse/core')['useFullscreen']
   const useGeolocation: typeof import('@vueuse/core')['useGeolocation']

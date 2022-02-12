@@ -1,13 +1,26 @@
-import './shared/watcher'
 import { resolve } from 'path'
+import Vue from '@vitejs/plugin-vue'
+import Prism from 'markdown-it-prism'
+import Markdown from 'vite-plugin-md'
 import Pages from 'vite-plugin-pages'
 import Icons from 'unplugin-icons/vite'
 import Inspect from 'vite-plugin-inspect'
+import Watcher from 'vite-plugin-watcher'
 import Windicss from 'vite-plugin-windicss'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+import ViteRestart from 'vite-plugin-restart'
 import Layouts from 'vite-plugin-vue-layouts'
+import I18n from '@intlify/vite-plugin-vue-i18n'
+import { viteMockServe } from 'vite-plugin-mock'
 import AutoImport from 'unplugin-auto-import/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
+import viteCompression from 'vite-plugin-compression'
+
+import {
+	dirResolver,
+	DirResolverHelper
+} from 'vite-auto-import-resolvers'
 import {
 	ArcoResolver,
 	NaiveUiResolver,
@@ -15,19 +28,7 @@ import {
 	ElementPlusResolver,
 	VueUseComponentsResolver
 } from 'unplugin-vue-components/resolvers'
-import { viteMockServe } from 'vite-plugin-mock'
-import Markdown from 'vite-plugin-md'
-import Vue from '@vitejs/plugin-vue'
-import Prism from 'markdown-it-prism'
-import I18n from '@intlify/vite-plugin-vue-i18n'
-import ViteRestart from 'vite-plugin-restart'
-import vueJsx from '@vitejs/plugin-vue-jsx'
-import viteCompression from 'vite-plugin-compression'
-import {
-	dirResolver,
-	DirResolverHelper
-} from 'vite-auto-import-resolvers'
-import { exit } from 'process'
+import { restart } from './shared/restart'
 
 const markdownWrapperClasses =
 	'prose md:prose-lg lg:prose-lg dark:prose-invert text-left p-10 prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600'
@@ -51,6 +52,12 @@ export default () => {
 		}),
 		// 布局系统
 		Layouts(),
+		// layouts 目录下文件新增重启
+		// fix: vite-plugin-vue-layouts 在dev Server时新建报错问题
+		Watcher(w => {
+			w.add('./src/layouts')
+			w.on('add', restart)
+		}),
 		// 调试工具
 		Inspect(),
 		// windicss 插件
@@ -77,6 +84,7 @@ export default () => {
 				VueUseComponentsResolver()
 			]
 		}),
+		// 目录下 api 按需自动引入辅助插件
 		DirResolverHelper(),
 		// api 自动按需引入
 		AutoImport({
@@ -110,10 +118,6 @@ export default () => {
 		// tsx 支持
 		vueJsx(),
 		// 生产环境资源压缩
-		viteCompression({
-			success() {
-				setImmediate(exit)
-			}
-		})
+		viteCompression()
 	]
 }
