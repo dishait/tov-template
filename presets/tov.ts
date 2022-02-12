@@ -23,7 +23,10 @@ import I18n from '@intlify/vite-plugin-vue-i18n'
 import ViteRestart from 'vite-plugin-restart'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import viteCompression from 'vite-plugin-compression'
-import { dirResolver } from 'vite-auto-import-resolvers'
+import {
+	dirResolver,
+	DirResolverHelper
+} from 'vite-auto-import-resolvers'
 import { exit } from 'process'
 
 const markdownWrapperClasses =
@@ -74,6 +77,7 @@ export default () => {
 				VueUseComponentsResolver()
 			]
 		}),
+		DirResolverHelper(),
 		// api 自动按需引入
 		AutoImport({
 			dts: './presets/types/auto-imports.d.ts',
