@@ -463,6 +463,8 @@ export default defineStore('counter', {
 </template>
 ```
 
+具体可见 👉 [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import) 与 [vite-auto-import-resolvers](https://github.com/dishait/vite-auto-import-resolvers)
+
 <br />
 
 ### [7. 组件自动引入](https://github.com/antfu/unplugin-auto-import)
