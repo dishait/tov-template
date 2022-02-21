@@ -5,7 +5,6 @@ specifiers:
   '@markthree/ilazy': ^1.0.2
   '@markthree/node-shared': ^1.3.2
   '@types/ityped': ^1.0.1
-  '@types/markdown-it': ^12.2.3
   '@types/node': ^17.0.18
   '@types/nprogress': ^0.2.0
   '@vitejs/plugin-vue': ^2.2.2
@@ -13,17 +12,14 @@ specifiers:
   '@vueuse/components': ^7.6.2
   '@vueuse/core': ^7.6.2
   c8: ^7.11.0
-  chokidar: ^3.5.3
   esno: ^0.14.1
   ityped: ^1.0.3
-  markdown-it: ^12.3.2
   markdown-it-anchor: ^8.4.1
   markdown-it-prism: ^2.2.3
   mockjs: ^1.1.0
   nprogress: ^0.2.0
   pinia: ^2.0.11
   prism-theme-vars: ^0.2.2
-  rollup: ^2.67.3
   typescript: ^4.5.5
   unplugin-auto-import: ^0.5.11
   unplugin-icons: ^0.13.2
@@ -56,7 +52,6 @@ devDependencies:
   '@markthree/ilazy': 1.0.2
   '@markthree/node-shared': 1.3.2
   '@types/ityped': 1.0.1
-  '@types/markdown-it': 12.2.3
   '@types/node': 17.0.18
   '@types/nprogress': 0.2.0
   '@vitejs/plugin-vue': 2.2.2_vite@2.8.4+vue@3.2.31
@@ -64,27 +59,24 @@ devDependencies:
   '@vueuse/components': 7.6.2_vue@3.2.31
   '@vueuse/core': 7.6.2_vue@3.2.31
   c8: 7.11.0
-  chokidar: 3.5.3
   esno: 0.14.1
   ityped: 1.0.3
-  markdown-it: 12.3.2
-  markdown-it-anchor: 8.4.1_d643ca6eb40ae68ab966a77bead78073
+  markdown-it-anchor: 8.4.1
   markdown-it-prism: 2.2.3
   mockjs: 1.1.0
   nprogress: 0.2.0
   pinia: 2.0.11_typescript@4.5.5+vue@3.2.31
   prism-theme-vars: 0.2.2
-  rollup: 2.67.3
   typescript: 4.5.5
-  unplugin-auto-import: 0.5.11_297626ee10c373dc88ceb6b90126caba
-  unplugin-icons: 0.13.2_rollup@2.67.3+vite@2.8.4
-  unplugin-vue-components: 0.17.18_854bf3decc2fb6f07df69f37f8e0d372
+  unplugin-auto-import: 0.5.11_@vueuse+core@7.6.2+vite@2.8.4
+  unplugin-icons: 0.13.2_vite@2.8.4
+  unplugin-vue-components: 0.17.18_vite@2.8.4+vue@3.2.31
   vite: 2.8.4
   vite-auto-import-resolvers: 2.0.4
   vite-plugin-compression: 0.5.1_vite@2.8.4
   vite-plugin-inspect: 0.3.14_vite@2.8.4
   vite-plugin-md: 0.11.8_vite@2.8.4
-  vite-plugin-mock: 2.9.6_ac8b2f49de6634fd823c999e20fcdda7
+  vite-plugin-mock: 2.9.6_mockjs@1.1.0+vite@2.8.4
   vite-plugin-pages: 0.19.9_vite@2.8.4
   vite-plugin-restart: 0.1.1_vite@2.8.4
   vite-plugin-vue-layouts: 0.5.0_38d013b3483c2295d006adc17a4cc10f
@@ -646,31 +638,35 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
 
-  /@rollup/plugin-node-resolve/13.1.3_rollup@2.67.3:
+  /@rollup/plugin-node-resolve/13.1.3:
     resolution: {integrity: sha512-BdxNk+LtmElRo5d06MGY4zoepyrXX1tkzX2hrnPEZ53k78GuOMWLqmJDGIIOPwVRIFZrLQOo+Yr6KtCuLIA0AQ==}
     engines: {node: '>= 10.0.0'}
     peerDependencies:
       rollup: ^2.42.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
     dependencies:
-      '@rollup/pluginutils': 3.1.0_rollup@2.67.3
+      '@rollup/pluginutils': 3.1.0
       '@types/resolve': 1.17.1
       builtin-modules: 3.2.0
       deepmerge: 4.2.2
       is-module: 1.0.0
       resolve: 1.22.0
-      rollup: 2.67.3
     dev: true
 
-  /@rollup/pluginutils/3.1.0_rollup@2.67.3:
+  /@rollup/pluginutils/3.1.0:
     resolution: {integrity: sha512-GksZ6pr6TpIjHm8h9lSQ8pi8BE9VeubNT0OMJ3B5uZJ8pz73NPiqOtCog/x2/QzM1ENChPKxMDhiQuRHsqc+lg==}
     engines: {node: '>= 8.0.0'}
     peerDependencies:
       rollup: ^1.20.0||^2.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
     dependencies:
       '@types/estree': 0.0.39
       estree-walker: 1.0.1
       picomatch: 2.3.1
-      rollup: 2.67.3
     dev: true
 
   /@rollup/pluginutils/4.1.2:
@@ -2617,14 +2613,16 @@ packages:
       semver: 6.3.0
     dev: true
 
-  /markdown-it-anchor/8.4.1_d643ca6eb40ae68ab966a77bead78073:
+  /markdown-it-anchor/8.4.1:
     resolution: {integrity: sha512-sLODeRetZ/61KkKLJElaU3NuU2z7MhXf12Ml1WJMSdwpngeofneCRF+JBbat8HiSqhniOMuTemXMrsI7hA6XyA==}
     peerDependencies:
       '@types/markdown-it': '*'
       markdown-it: '*'
-    dependencies:
-      '@types/markdown-it': 12.2.3
-      markdown-it: 12.3.2
+    peerDependenciesMeta:
+      '@types/markdown-it':
+        optional: true
+      markdown-it:
+        optional: true
     dev: true
 
   /markdown-it-prism/2.2.3:
@@ -3461,7 +3459,7 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /unplugin-auto-import/0.5.11_297626ee10c373dc88ceb6b90126caba:
+  /unplugin-auto-import/0.5.11_@vueuse+core@7.6.2+vite@2.8.4:
     resolution: {integrity: sha512-MJ3POLe/IysRHF4yd32FkKDoxqSRoiuIHm89ys67B8FLuz2Pvh9poeqTVe6IhJsNxwv0+GSdFfj5Dpq24lhm4g==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -3476,7 +3474,7 @@ packages:
       local-pkg: 0.4.1
       magic-string: 0.25.7
       resolve: 1.22.0
-      unplugin: 0.3.2_rollup@2.67.3+vite@2.8.4
+      unplugin: 0.3.2_vite@2.8.4
     transitivePeerDependencies:
       - esbuild
       - rollup
@@ -3484,7 +3482,7 @@ packages:
       - webpack
     dev: true
 
-  /unplugin-icons/0.13.2_rollup@2.67.3+vite@2.8.4:
+  /unplugin-icons/0.13.2_vite@2.8.4:
     resolution: {integrity: sha512-Dwfn5DkKrp/BpZV0R/2wgU39j+kjkeuIQ54PmJ9LhXNpNAS+Huf6Fl/PUmUrlWOvMAz0uPo3y/5lQKZUBjBkBQ==}
     peerDependencies:
       '@svgr/core': '>=5.5.0'
@@ -3507,7 +3505,7 @@ packages:
       debug: 4.3.3
       kolorist: 1.5.1
       local-pkg: 0.4.1
-      unplugin: 0.3.2_rollup@2.67.3+vite@2.8.4
+      unplugin: 0.3.2_vite@2.8.4
     transitivePeerDependencies:
       - esbuild
       - rollup
@@ -3516,7 +3514,7 @@ packages:
       - webpack
     dev: true
 
-  /unplugin-vue-components/0.17.18_854bf3decc2fb6f07df69f37f8e0d372:
+  /unplugin-vue-components/0.17.18_vite@2.8.4+vue@3.2.31:
     resolution: {integrity: sha512-4wvJnSShTXCnZpO1G6h0DlHjBXap0JqzFyU84guMT6EH0shUZZ3TAta4pDa8nNeWAtcJVTF9uQswePq1elhpKQ==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -3538,7 +3536,7 @@ packages:
       magic-string: 0.25.7
       minimatch: 3.1.2
       resolve: 1.22.0
-      unplugin: 0.3.2_rollup@2.67.3+vite@2.8.4
+      unplugin: 0.3.2_vite@2.8.4
       vue: 3.2.31
     transitivePeerDependencies:
       - esbuild
@@ -3548,7 +3546,7 @@ packages:
       - webpack
     dev: true
 
-  /unplugin/0.3.2_rollup@2.67.3+vite@2.8.4:
+  /unplugin/0.3.2_vite@2.8.4:
     resolution: {integrity: sha512-5d0DMYNKZU+S9eZUiBfw6Co32eRg8myUgBPoWSqG/wDFCUE/WznfSsJnZWi1P9l69x4uLJqt2qVq1xW/AsXFrw==}
     peerDependencies:
       esbuild: '>=0.13'
@@ -3565,7 +3563,6 @@ packages:
       webpack:
         optional: true
     dependencies:
-      rollup: 2.67.3
       vite: 2.8.4
       webpack-virtual-modules: 0.4.3
     dev: true
@@ -3641,14 +3638,14 @@ packages:
       vite: 2.8.4
     dev: true
 
-  /vite-plugin-mock/2.9.6_ac8b2f49de6634fd823c999e20fcdda7:
+  /vite-plugin-mock/2.9.6_mockjs@1.1.0+vite@2.8.4:
     resolution: {integrity: sha512-/Rm59oPppe/ncbkSrUuAxIQihlI2YcBmnbR4ST1RA2VzM1C0tEQc1KlbQvnUGhXECAGTaQN2JyasiwXP6EtKgg==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       mockjs: '>=1.1.0'
       vite: '>=2.0.0'
     dependencies:
-      '@rollup/plugin-node-resolve': 13.1.3_rollup@2.67.3
+      '@rollup/plugin-node-resolve': 13.1.3
       '@types/mockjs': 1.0.6
       chalk: 4.1.2
       chokidar: 3.5.3
