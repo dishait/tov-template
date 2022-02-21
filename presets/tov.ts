@@ -29,12 +29,18 @@ import {
 	VueUseComponentsResolver
 } from 'unplugin-vue-components/resolvers'
 import { restart } from './shared/restart'
+import OptimizationPersist from 'vite-plugin-optimize-persist'
+import PkgConfig from 'vite-plugin-package-config'
 
 const markdownWrapperClasses =
 	'prose md:prose-lg lg:prose-lg dark:prose-invert text-left p-10 prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600'
 
 export default () => {
 	return [
+		// 将包信息文件作为 vite 的配置文件之一，为 vite-plugin-optimize-persist 所用
+		PkgConfig(),
+		// 依赖预构建分析，提高大型项目性能
+		OptimizationPersist(),
 		// vue 官方插件，用来解析 sfc
 		Vue({
 			include: [/\.vue$/, /\.md$/]

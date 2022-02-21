@@ -30,6 +30,8 @@ specifiers:
   vite-plugin-inspect: ^0.3.14
   vite-plugin-md: ^0.11.8
   vite-plugin-mock: ^2.9.6
+  vite-plugin-optimize-persist: ^0.1.2
+  vite-plugin-package-config: ^0.1.1
   vite-plugin-pages: ^0.19.9
   vite-plugin-restart: ^0.1.1
   vite-plugin-vue-layouts: ^0.5.0
@@ -77,6 +79,8 @@ devDependencies:
   vite-plugin-inspect: 0.3.14_vite@2.8.4
   vite-plugin-md: 0.11.8_vite@2.8.4
   vite-plugin-mock: 2.9.6_mockjs@1.1.0+vite@2.8.4
+  vite-plugin-optimize-persist: 0.1.2_c5cd0a15ea9fe070c9e7d92508f58b60
+  vite-plugin-package-config: 0.1.1_vite@2.8.4
   vite-plugin-pages: 0.19.9_vite@2.8.4
   vite-plugin-restart: 0.1.1_vite@2.8.4
   vite-plugin-vue-layouts: 0.5.0_38d013b3483c2295d006adc17a4cc10f
@@ -3658,6 +3662,31 @@ packages:
       vite: 2.8.4
     transitivePeerDependencies:
       - rollup
+      - supports-color
+    dev: true
+
+  /vite-plugin-optimize-persist/0.1.2_c5cd0a15ea9fe070c9e7d92508f58b60:
+    resolution: {integrity: sha512-H/Ebn2kZO8PvwUF08SsT5K5xMJNCWKoGX71+e9/ER3yNj7GHiFjNQlvGg5ih/zEx09MZ9m7WCxOwmEKbeIVzww==}
+    peerDependencies:
+      vite: ^2.0.0
+      vite-plugin-package-config: ^0.1.0
+    dependencies:
+      debug: 4.3.3
+      fs-extra: 10.0.0
+      vite: 2.8.4
+      vite-plugin-package-config: 0.1.1_vite@2.8.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /vite-plugin-package-config/0.1.1_vite@2.8.4:
+    resolution: {integrity: sha512-w9B3I8ZnqoyhlbzimXjXNk85imrMZgvI9m8f6j3zonK5IVA5KXzpT+PZOHlDz8lqh1vqvoEI1uhy+ZDoLAiA/w==}
+    peerDependencies:
+      vite: ^2.0.0
+    dependencies:
+      debug: 4.3.3
+      vite: 2.8.4
+    transitivePeerDependencies:
       - supports-color
     dev: true
 
