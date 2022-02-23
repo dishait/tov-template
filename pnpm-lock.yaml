@@ -25,7 +25,7 @@ specifiers:
   unplugin-icons: ^0.13.2
   unplugin-vue-components: ^0.17.20
   vite: ^2.8.4
-  vite-auto-import-resolvers: ^2.1.4
+  vite-auto-import-resolvers: ^2.1.5
   vite-plugin-compression: ^0.5.1
   vite-plugin-inspect: ^0.3.15
   vite-plugin-md: ^0.11.8
@@ -74,7 +74,7 @@ devDependencies:
   unplugin-icons: 0.13.2_vite@2.8.4
   unplugin-vue-components: 0.17.20_vite@2.8.4+vue@3.2.31
   vite: 2.8.4
-  vite-auto-import-resolvers: 2.1.4_@vueuse+core@7.6.2
+  vite-auto-import-resolvers: 2.1.5_@vueuse+core@7.6.2
   vite-plugin-compression: 0.5.1_vite@2.8.4
   vite-plugin-inspect: 0.3.15_vite@2.8.4
   vite-plugin-md: 0.11.8_vite@2.8.4
@@ -3594,8 +3594,8 @@ packages:
       source-map: 0.7.3
     dev: true
 
-  /vite-auto-import-resolvers/2.1.4_@vueuse+core@7.6.2:
-    resolution: {integrity: sha512-SJmCTwQNnJKrbi/UyBcn053AqOQDeVb37tf/f6gkR9n8socUpV9o4wWcicsA52zAjCCdTJgiYmBOfod0oHZ2vw==}
+  /vite-auto-import-resolvers/2.1.5_@vueuse+core@7.6.2:
+    resolution: {integrity: sha512-UBM/w/R2cdfqGu8WqlizLrV1YI0lHlILr/KI1oc3LJULNho7zvyi7TJqxR+tinw7V4jdd3rezQQwJCA7dUuY1A==}
     dependencies:
       '@types/node': 17.0.19
       fast-glob: 3.2.11
