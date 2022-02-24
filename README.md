@@ -189,6 +189,41 @@ pnpm auto:remove
 # 或者 yarn auto:remove
 ```
 
+12. 依赖更新
+
+```shell
+# 安全版本更新
+pnpm deps:fresh
+
+# 或者 npm run deps:fresh
+# 或者 yarn deps:fresh
+
+# 主版本更新，可能是破坏性更新，谨慎使用，做好测试
+pnpm deps:fresh:major
+
+# 或者 npm run deps:fresh:major
+# 或者 yarn deps:fresh:major
+
+# 次版本更新，可能是破坏性更新，谨慎使用，做好测试
+pnpm deps:fresh:minor
+
+# 或者 npm run deps:fresh:minor
+# 或者 yarn deps:fresh:minor
+
+# 补丁版本更新
+pnpm deps:fresh:patch
+
+# 或者 npm run deps:fresh:patch
+# 或者 yarn deps:fresh:patch
+```
+```shell
+# 以上命令仅对包信息 package.json 进行写入，需要重新执行包安装命令
+pnpm i
+
+# 或者 npm i
+# 或者 yarn
+```
+
 <br />
 <br />
 
