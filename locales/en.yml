@@ -3,3 +3,7 @@
 index: index
 about: about
 not-found: Notfound
+
+nesting:
+  sir: man
+  lady: lady
