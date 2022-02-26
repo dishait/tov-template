@@ -27,7 +27,7 @@ specifiers:
   vite: ^2.8.4
   vite-auto-import-resolvers: ^2.1.5
   vite-plugin-compression: ^0.5.1
-  vite-plugin-inspect: ^0.3.15
+  vite-plugin-inspect: ^0.4.1
   vite-plugin-md: ^0.11.8
   vite-plugin-mock: ^2.9.6
   vite-plugin-optimize-persist: ^0.1.2
@@ -76,7 +76,7 @@ devDependencies:
   vite: 2.8.4
   vite-auto-import-resolvers: 2.1.5_@vueuse+core@7.6.2
   vite-plugin-compression: 0.5.1_vite@2.8.4
-  vite-plugin-inspect: 0.3.15_vite@2.8.4
+  vite-plugin-inspect: 0.4.1_vite@2.8.4
   vite-plugin-md: 0.11.8_vite@2.8.4
   vite-plugin-mock: 2.9.6_mockjs@1.1.0+vite@2.8.4
   vite-plugin-optimize-persist: 0.1.2_c5cd0a15ea9fe070c9e7d92508f58b60
@@ -3430,8 +3430,8 @@ packages:
     resolution: {integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==}
     dev: true
 
-  /ufo/0.7.10:
-    resolution: {integrity: sha512-YTnDRlE1cIofRqOFN8ioAbz9qenDvkgVMSn0cnxvIDjM9sfEOMKB0ybMr+otSlCXMfQ/X35haYRoI7Nua82RrA==}
+  /ufo/0.7.11:
+    resolution: {integrity: sha512-IT3q0lPvtkqQ8toHQN/BkOi4VIqoqheqM1FnkNWT9y0G8B3xJhwnoKBu5OHx8zHDOvveQzfKuFowJ0VSARiIDg==}
     dev: true
 
   /uglify-js/3.15.1:
@@ -3624,8 +3624,8 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-inspect/0.3.15_vite@2.8.4:
-    resolution: {integrity: sha512-WlAnh0L14jtQA3q6+6cbhU3+ZcOE5iOeNuyQqUAK/T3IKsv1PwDwpHUSWjpP25uBO0WTbw2zsY0R3Hpbtfw+AA==}
+  /vite-plugin-inspect/0.4.1_vite@2.8.4:
+    resolution: {integrity: sha512-rEfDRJwbsZjAxcsWJSlKkbiHkotoQFk63TykvCIc0vSq+fgcH4K1mi2cXI3U6Qyl7XooFYYwRit+t9QLvy008w==}
     engines: {node: '>=14'}
     peerDependencies:
       vite: ^2.0.0
@@ -3634,7 +3634,7 @@ packages:
       debug: 4.3.3
       kolorist: 1.5.1
       sirv: 2.0.2
-      ufo: 0.7.10
+      ufo: 0.7.11
       vite: 2.8.4
     transitivePeerDependencies:
       - supports-color
