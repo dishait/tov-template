@@ -119,7 +119,8 @@ export default () => {
 		}),
 		// 预设热重启服务
 		ViteRestart({
-			restart: ['presets/tov.[jt]s', 'presets/shared/**/*']
+			restart: ['presets/tov.[jt]s', 'presets/shared/**/*'],
+			reload: ['src/layouts/**/*.vue']
 		}),
 		// tsx 支持
 		vueJsx(),
