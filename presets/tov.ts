@@ -119,7 +119,7 @@ export default () => {
 		// 生产环境资源压缩
 		viteCompression(),
 		// 对 vite-plugin-vue-layouts 的 hmr 问题的临时处理
-		// 如果  被接受的话，未来可能会移除
+		// 如果 https://github.com/JohnCampionJr/vite-plugin-vue-layouts/pull/58 被接受的话，未来可能会移除
 		FixLayoutsModuleHmr()
 	]
 }
