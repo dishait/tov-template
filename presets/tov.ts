@@ -1,3 +1,4 @@
+import { env } from './shared/env'
 import { resolve } from 'path'
 import Vue from '@vitejs/plugin-vue'
 import Prism from 'markdown-it-prism'
@@ -61,7 +62,9 @@ export default () => {
 		// 布局系统
 		Layouts(),
 		// 调试工具
-		Inspect(),
+		Inspect({
+			enabled: env.VITE_APP_INSPECT
+		}),
 		// windicss 插件
 		Windicss({
 			safelist: markdownWrapperClasses
