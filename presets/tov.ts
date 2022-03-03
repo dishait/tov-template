@@ -30,12 +30,15 @@ import {
 import OptimizationPersist from 'vite-plugin-optimize-persist'
 import PkgConfig from 'vite-plugin-package-config'
 import { FixLayoutsModuleHmr } from './shared/module'
+import { GenerateTitle } from './shared/html'
 
 const markdownWrapperClasses =
 	'prose md:prose-lg lg:prose-lg dark:prose-invert text-left p-10 prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600'
 
 export default () => {
 	return [
+		// 环境变量
+		GenerateTitle(),
 		// 将包信息文件作为 vite 的配置文件之一，为 vite-plugin-optimize-persist 所用
 		PkgConfig(),
 		// 依赖预构建分析，提高大型项目性能
@@ -112,7 +115,11 @@ export default () => {
 		}),
 		// 预设热重启服务
 		ViteRestart({
-			restart: ['presets/tov.[jt]s', 'presets/shared/**/*']
+			restart: [
+				'.env*',
+				'presets/tov.[jt]s',
+				'presets/shared/**/*'
+			]
 		}),
 		// tsx 支持
 		vueJsx(),
