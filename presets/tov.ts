@@ -29,15 +29,15 @@ import {
 } from 'unplugin-vue-components/resolvers'
 import OptimizationPersist from 'vite-plugin-optimize-persist'
 import PkgConfig from 'vite-plugin-package-config'
-import { FixLayoutsModuleHmr } from './shared/module'
 import { GenerateTitle } from './shared/html'
+import { FixLayoutsHmr } from './shared/layouts'
 
 const markdownWrapperClasses =
 	'prose md:prose-lg lg:prose-lg dark:prose-invert text-left p-10 prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600'
 
 export default () => {
 	return [
-		// 环境变量
+		// 生成 title
 		GenerateTitle(),
 		// 将包信息文件作为 vite 的配置文件之一，为 vite-plugin-optimize-persist 所用
 		PkgConfig(),
@@ -127,6 +127,6 @@ export default () => {
 		viteCompression(),
 		// 对 vite-plugin-vue-layouts 的 hmr 问题的临时处理
 		// 如果 https://github.com/JohnCampionJr/vite-plugin-vue-layouts/pull/58 被接受的话，未来可能会移除
-		FixLayoutsModuleHmr()
+		FixLayoutsHmr()
 	]
 }

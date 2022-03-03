@@ -8,6 +8,8 @@ const toggleLocale = () => {
 
 const language = computed(() => locale.value === 'zh-CN' ? '中文' : 'English')
 
+console.log(100)
+
 const theme = computed(() => isDark.value ? 'dark' : 'light')
 </script>
 

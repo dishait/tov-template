@@ -7,7 +7,7 @@ interface Options {
 
 // 对 vite-plugin-vue-layouts 的 hmr 问题的临时处理
 // 如果 https://github.com/JohnCampionJr/vite-plugin-vue-layouts/pull/58 被接受的话，未来可能会移除
-export const FixLayoutsModuleHmr = (
+export const FixLayoutsHmr = (
 	options?: Options
 ): Plugin => {
 	const { layoutsDirs = 'src/layouts' } = options || {}
