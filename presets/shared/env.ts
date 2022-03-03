@@ -2,10 +2,14 @@ import { loadEnv } from 'vite'
 
 const { NODE_ENV } = process.env
 
+// 是否是开发环境
 export const isDevelopment = NODE_ENV === 'development'
+
+// 是否是生产环境
 export const isProduction = NODE_ENV === 'production'
 
-const generateEnv = () => {
+// 获取环境变量
+const useEnv = () => {
 	const env = isProduction
 		? loadEnv('production', '.')
 		: loadEnv('development', '.')
@@ -18,4 +22,4 @@ const generateEnv = () => {
 	return newEnv
 }
 
-export const env = generateEnv()
+export const env = useEnv()
