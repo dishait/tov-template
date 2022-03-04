@@ -933,7 +933,7 @@ packages:
     dependencies:
       '@vue/runtime-core': 3.2.31
       '@vue/shared': 3.2.31
-      csstype: 2.6.19
+      csstype: 2.6.20
     dev: false
 
   /@vue/server-renderer/3.2.31_vue@3.2.31:
@@ -1432,8 +1432,8 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /csstype/2.6.19:
-    resolution: {integrity: sha512-ZVxXaNy28/k3kJg0Fou5MiYpp88j7H9hLZp8PDC3jV0WFjfH5E9xHb56L0W59cPbKbcHXeP4qyT8PrHp8t6LcQ==}
+  /csstype/2.6.20:
+    resolution: {integrity: sha512-/WwNkdXfckNgw6S5R125rrW8ez139lBHWouiBvX8dfMFtcn6V81REDqnH7+CRpRipfYlyU1CmOnOxrmGcFOjeA==}
     dev: false
 
   /debug/2.6.9:

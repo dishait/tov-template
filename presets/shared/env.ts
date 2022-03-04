@@ -13,10 +13,11 @@ const useEnv = () => {
 	const env = isProduction
 		? loadEnv('production', '.')
 		: loadEnv('development', '.')
+
 	const newEnv = {
 		VITE_APP_TITLE: env.VITE_APP_TITLE,
 		VITE_APP_INSPECT: Boolean(
-			env.VITE_APP_Inspect === 'true' || false
+			env.VITE_APP_INSPECT === 'true' || false
 		)
 	}
 	return newEnv
