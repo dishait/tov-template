@@ -93,19 +93,20 @@ export default () => {
 			]
 		}),
 		// 目录下 api 按需自动引入辅助插件
-		DirResolverHelper(),
+		env.VITE_APP_DIR_API_AUTO_IMPORT && DirResolverHelper(),
 		// api 自动按需引入
-		AutoImport({
-			dts: './presets/types/auto-imports.d.ts',
-			imports: [
-				'vue',
-				'pinia',
-				'vue-i18n',
-				'vue-router',
-				'@vueuse/core'
-			],
-			resolvers: AutoImportResolvers
-		}),
+		env.VITE_APP_MOCK_IN_PRODUCTION &&
+			AutoImport({
+				dts: './presets/types/auto-imports.d.ts',
+				imports: [
+					'vue',
+					'pinia',
+					'vue-i18n',
+					'vue-router',
+					'@vueuse/core'
+				],
+				resolvers: AutoImportResolvers
+			}),
 		// i18n 国际化支持
 		I18n({
 			runtimeOnly: true,
