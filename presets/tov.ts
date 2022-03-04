@@ -1,4 +1,4 @@
-import { env } from './shared/env'
+import { env, isProduction } from './shared/env'
 import { resolve } from 'path'
 import Vue from '@vitejs/plugin-vue'
 import Prism from 'markdown-it-prism'
@@ -70,7 +70,9 @@ export default () => {
 			safelist: markdownWrapperClasses
 		}),
 		// mock 服务
-		viteMockServe(),
+		viteMockServe({
+			prodEnabled: env.VITE_APP_MOCK_IN_PRODUCTION
+		}),
 		// https://icones.netlify.app/
 		Icons({
 			autoInstall: true

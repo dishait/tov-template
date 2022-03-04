@@ -83,10 +83,13 @@
       "include": [
         "@vueuse/core",
         "ityped",
+        "mockjs",
         "nprogress",
         "pinia",
+        "vite-plugin-mock/es/createProdMockServer",
         "vue",
         "vue-i18n",
+        "vue-request",
         "vue-router"
       ]
     }
