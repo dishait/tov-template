@@ -1,5 +1,5 @@
-import { env, isProduction } from './shared/env'
 import { resolve } from 'path'
+import { env } from './shared/env'
 import Vue from '@vitejs/plugin-vue'
 import Prism from 'markdown-it-prism'
 import Markdown from 'vite-plugin-md'
@@ -32,6 +32,7 @@ import OptimizationPersist from 'vite-plugin-optimize-persist'
 import PkgConfig from 'vite-plugin-package-config'
 import { GenerateTitle } from './shared/html'
 import { FixLayoutsHmr } from './shared/layouts'
+import { AutoImportResolvers } from './shared/resolvers'
 
 const markdownWrapperClasses =
 	'prose md:prose-lg lg:prose-lg dark:prose-invert text-left p-10 prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600'
@@ -103,14 +104,7 @@ export default () => {
 				'vue-router',
 				'@vueuse/core'
 			],
-			resolvers: [
-				ElementPlusResolver(),
-				dirResolver({ prefix: 'use' }),
-				dirResolver({
-					target: 'stores',
-					suffix: 'Store'
-				})
-			]
+			resolvers: AutoImportResolvers
 		}),
 		// i18n 国际化支持
 		I18n({
