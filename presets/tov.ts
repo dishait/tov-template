@@ -17,10 +17,7 @@ import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
 import viteCompression from 'vite-plugin-compression'
 
-import {
-	dirResolver,
-	DirResolverHelper
-} from 'vite-auto-import-resolvers'
+import { DirResolverHelper } from 'vite-auto-import-resolvers'
 import {
 	ArcoResolver,
 	NaiveUiResolver,
@@ -95,7 +92,7 @@ export default () => {
 		// 目录下 api 按需自动引入辅助插件
 		env.VITE_APP_DIR_API_AUTO_IMPORT && DirResolverHelper(),
 		// api 自动按需引入
-		env.VITE_APP_MOCK_IN_PRODUCTION &&
+		env.VITE_APP_API_AUTO_IMPORT &&
 			AutoImport({
 				dts: './presets/types/auto-imports.d.ts',
 				imports: [

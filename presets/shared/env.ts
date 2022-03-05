@@ -25,6 +25,7 @@ const useEnv = () => {
 		VITE_APP_MOCK_IN_PRODUCTION,
 		VITE_APP_DIR_API_AUTO_IMPORT
 	} = env
+
 	const newEnv = {
 		VITE_APP_TITLE,
 		VITE_APP_INSPECT: stringToBoolean(VITE_APP_INSPECT),
