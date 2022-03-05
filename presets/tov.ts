@@ -27,8 +27,8 @@ import {
 } from 'unplugin-vue-components/resolvers'
 import OptimizationPersist from 'vite-plugin-optimize-persist'
 import PkgConfig from 'vite-plugin-package-config'
-import { GenerateTitle } from './shared/html'
-import { FixLayoutsHmr } from './shared/layouts'
+import { GenerateTitle } from './plugins/html'
+import { FixLayoutsHmr } from './plugins/layouts'
 import { AutoImportResolvers } from './shared/resolvers'
 
 const markdownWrapperClasses =
@@ -90,7 +90,9 @@ export default () => {
 			]
 		}),
 		// 目录下 api 按需自动引入辅助插件
-		env.VITE_APP_DIR_API_AUTO_IMPORT && DirResolverHelper(),
+		env.VITE_APP_API_AUTO_IMPORT &&
+			env.VITE_APP_DIR_API_AUTO_IMPORT &&
+			DirResolverHelper(),
 		// api 自动按需引入
 		env.VITE_APP_API_AUTO_IMPORT &&
 			AutoImport({
