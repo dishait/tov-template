@@ -1,11 +1,11 @@
+import { markdownWrapperClasses } from './plugins/markdown'
 import { resolve } from 'path'
 import { env } from './shared/env'
 import Vue from '@vitejs/plugin-vue'
-import Prism from 'markdown-it-prism'
-import Markdown from 'vite-plugin-md'
 import Pages from 'vite-plugin-pages'
 import Icons from 'unplugin-icons/vite'
 import Inspect from 'vite-plugin-inspect'
+import Markdown from './plugins/markdown'
 import Windicss from 'vite-plugin-windicss'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import ViteRestart from 'vite-plugin-restart'
@@ -25,14 +25,11 @@ import {
 	ElementPlusResolver,
 	VueUseComponentsResolver
 } from 'unplugin-vue-components/resolvers'
-import OptimizationPersist from 'vite-plugin-optimize-persist'
-import PkgConfig from 'vite-plugin-package-config'
 import { GenerateTitle } from './plugins/html'
 import { FixLayoutsHmr } from './plugins/layouts'
+import PkgConfig from 'vite-plugin-package-config'
 import { AutoImportResolvers } from './shared/resolvers'
-
-const markdownWrapperClasses =
-	'prose md:prose-lg lg:prose-lg dark:prose-invert text-left p-10 prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600'
+import OptimizationPersist from 'vite-plugin-optimize-persist'
 
 export default () => {
 	return [
@@ -47,12 +44,7 @@ export default () => {
 			include: [/\.vue$/, /\.md$/]
 		}),
 		// markdown 编译插件
-		Markdown({
-			wrapperClasses: markdownWrapperClasses,
-			markdownItSetup(md) {
-				md.use(Prism)
-			}
-		}),
+		Markdown(),
 		// 文件路由
 		Pages({
 			extensions: ['vue', 'md', 'tsx']
