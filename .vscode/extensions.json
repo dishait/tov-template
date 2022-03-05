@@ -1,0 +1,14 @@
+{
+	"recommendations": [
+		"antfu.iconify",
+		"mikestead.dotenv",
+		"redhat.vscode-yaml",
+		"lokalise.i18n-ally",
+		"johnsoncodehk.volar",
+		"steoates.autoimport",
+		"esbenp.prettier-vscode",
+		"formulahendry.auto-close-tag",
+		"formulahendry.auto-rename-tag",
+		"shd101wyy.markdown-preview-enhanced"
+	]
+}
