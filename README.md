@@ -33,6 +33,7 @@
 24. 漂亮的 404页 支持
 25. tsx 支持
 26. gzip 资源压缩支持
+27. 环境变量配置支持
 
 <br />
 <br />
@@ -1112,6 +1113,15 @@ export default defineComponent({
 生产环境下开箱即用的 `gzip` 资源压缩，无需配置。
 
 具体可见 👉 [vite-plugin-compression](https://github.com/vbenjs/vite-plugin-compression)
+
+<br />
+<br />
+<br />
+
+### 27. [环境变量配置支持](https://cn.vitejs.dev/guide/env-and-mode.html)
+
+根目录下有三个环境变量配置文件 `.env`，`.env.development` 和 `.env.production` 用来对项目进行配置。
+
 
 <br />
 <br />
