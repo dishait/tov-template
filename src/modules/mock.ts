@@ -6,7 +6,7 @@ import { createFetchSever } from '../../presets/shared/mock'
 
 const shouldCreateServer =
 	!import.meta.env.DEV &&
-	import.meta.env.VITE_APP_MOCK_IN_PRODUCTION
+	import.meta.env.VITE_APP_MOCK_IN_PRODUCTION === 'true'
 
 // 生产环境时才创建服务
 if (shouldCreateServer) {
