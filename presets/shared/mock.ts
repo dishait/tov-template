@@ -6,7 +6,10 @@
 import Mock from 'mockjs'
 
 export function createFetchSever(mockList: any[]) {
-	if (!window['originFetch']) {
+	if (
+		!window['originFetch'] &&
+		import.meta.env.VITE_APP_MOCK_IN_PRODUCTION
+	) {
 		window['originFetch'] = window.fetch
 		window.fetch = function (
 			fetchUrl: string,
