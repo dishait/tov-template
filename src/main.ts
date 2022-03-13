@@ -7,15 +7,11 @@ import 'virtual:windi-utilities.css'
 import 'virtual:windi-devtools'
 
 import App from './App.vue'
+import { useModules } from 'virtual:modules'
 
 const app = createApp(App)
 
 // 插件自动加载
-const modules = import.meta.globEager('./modules/*.ts')
-Object.values(modules).forEach(v => {
-	if (typeof v.default === 'function') {
-		v.default(app)
-	}
-})
+useModules(app)
 
 app.mount('#app')

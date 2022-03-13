@@ -35,6 +35,7 @@ specifiers:
   vite-plugin-package-config: ^0.1.1
   vite-plugin-pages: ^0.21.4
   vite-plugin-restart: ^0.1.1
+  vite-plugin-use-modules: ^1.0.1
   vite-plugin-vue-layouts: ^0.6.0
   vite-plugin-windicss: ^1.8.3
   vitest: ^0.6.0
@@ -84,6 +85,7 @@ devDependencies:
   vite-plugin-package-config: 0.1.1_vite@2.8.6
   vite-plugin-pages: 0.21.4_vite@2.8.6
   vite-plugin-restart: 0.1.1_vite@2.8.6
+  vite-plugin-use-modules: 1.0.1
   vite-plugin-vue-layouts: 0.6.0_a4592832fd4441821c40bfaa7d2d3166
   vite-plugin-windicss: 1.8.3_vite@2.8.6
   vitest: 0.6.0_c8@7.11.0
@@ -3781,6 +3783,10 @@ packages:
     dependencies:
       micromatch: 4.0.4
       vite: 2.8.6
+    dev: true
+
+  /vite-plugin-use-modules/1.0.1:
+    resolution: {integrity: sha512-P+lQN6/+hU07nbfY9Dw7KabBct+NYU2xIrpovBuLl62fHMoJP0tHybpyWfWELXYkH0ldjzTpBsqMecBq13VP0Q==}
     dev: true
 
   /vite-plugin-vue-layouts/0.6.0_a4592832fd4441821c40bfaa7d2d3166:
