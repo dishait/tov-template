@@ -1,22 +1,21 @@
-const { lightRed } = require('kolorist')
-const { pathExistsSync } = require('fs-extra')
+import fse from 'fs-extra'
 
-const {
+import {
 	showExt,
 	showDir,
 	moduleTypes
-} = require('./shared/base')
+} from './shared/base.js'
 
 /**
- * 模板生成
+ * 自动创建
  * @param {import('plop').NodePlopAPI} plop
  */
-const create = function (plop) {
+function create(plop) {
 	let exist = null
 	let modulePath = null
 
 	plop.setGenerator('controller', {
-		description: '生成器',
+		description: '自动创建',
 		prompts: [
 			{
 				name: 'type',
@@ -54,7 +53,7 @@ const create = function (plop) {
 					const dir = showDir(type)
 					const ext = showExt(type, isMarkdown)
 					modulePath = `src/${dir}/${name}.${ext}`
-					exist = pathExistsSync(modulePath)
+					exist = fse.pathExistsSync(modulePath)
 					if (exist) {
 						return true
 					}
@@ -64,7 +63,7 @@ const create = function (plop) {
 		actions(answer) {
 			const { type, shouldReset } = answer
 			if (exist && !shouldReset) {
-				console.log(lightRed(`${type} 创建失败`))
+				throw new Error(`${type} 创建失败`)
 				return []
 			}
 			return [
@@ -79,4 +78,4 @@ const create = function (plop) {
 	})
 }
 
-module.exports = create
+export default create

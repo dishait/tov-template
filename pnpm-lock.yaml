@@ -11,13 +11,14 @@ specifiers:
   '@vueuse/core': ^7.7.1
   axios: ^0.26.1
   c8: ^7.11.0
+  fast-glob: ^3.2.11
   fs-extra: ^10.0.1
   ityped: ^1.0.3
-  kolorist: ^1.5.1
   markdown-it-anchor: ^8.4.1
   markdown-it-prism: ^2.2.3
   mockjs: ^1.1.0
   nprogress: ^0.2.0
+  ora: ^6.1.0
   pinia: ^2.0.12
   plop: ^3.0.5
   prism-theme-vars: ^0.2.2
@@ -61,13 +62,14 @@ devDependencies:
   '@vueuse/core': registry.npmmirror.com/@vueuse/core/7.7.1_vue@3.2.31
   axios: registry.npmmirror.com/axios/0.26.1
   c8: registry.npmmirror.com/c8/7.11.0
+  fast-glob: registry.npmmirror.com/fast-glob/3.2.11
   fs-extra: registry.npmmirror.com/fs-extra/10.0.1
   ityped: registry.npmmirror.com/ityped/1.0.3
-  kolorist: registry.npmmirror.com/kolorist/1.5.1
   markdown-it-anchor: registry.npmmirror.com/markdown-it-anchor/8.4.1
   markdown-it-prism: registry.npmmirror.com/markdown-it-prism/2.2.3
   mockjs: registry.npmmirror.com/mockjs/1.1.0
   nprogress: registry.npmmirror.com/nprogress/0.2.0
+  ora: registry.npmmirror.com/ora/6.1.0
   pinia: registry.npmmirror.com/pinia/2.0.12_typescript@4.6.2+vue@3.2.31
   plop: registry.npmmirror.com/plop/3.0.5
   prism-theme-vars: registry.npmmirror.com/prism-theme-vars/0.2.2
