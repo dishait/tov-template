@@ -4,7 +4,7 @@
  * @param {boolean} isMarkdown 是否是 markdown，默认为 false
  * @returns {string} 扩展名
  */
-export const showExt = (type, isMarkdown = false) => {
+const showExt = (type, isMarkdown = false) => {
 	const isTs =
 		type === 'api' || type === 'store' || type === 'module'
 	const ext = isMarkdown ? 'md' : isTs ? 'ts' : 'vue'
@@ -14,7 +14,7 @@ export const showExt = (type, isMarkdown = false) => {
 /**
  * 模块类型
  */
-export const moduleTypes = [
+const moduleTypes = [
 	'api',
 	'page',
 	'store',
@@ -28,9 +28,14 @@ export const moduleTypes = [
  * 获取目录
  * @param {string} type 类型
  */
-export const showDir = type => {
+const showDir = type => {
 	if (type === 'api') {
 		return 'api'
 	}
 	return `${type}s`
+}
+
+module.exports = {
+	showExt,
+	showDir
 }

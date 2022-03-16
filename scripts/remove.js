@@ -1,16 +1,13 @@
-import ora from 'ora'
-import fg from 'fast-glob'
-import fse from 'fs-extra'
-import { basename } from 'path'
-import { showDir, moduleTypes } from './shared/base.js'
+const fg = require('fast-glob')
+const fse = require('fs-extra')
+const { basename } = require('path')
+const { showDir, moduleTypes } = require('./shared/base')
 
 /**
  * 自动删除
  * @param {import('plop').NodePlopAPI} plop
  */
 function remove(plop) {
-	const spinner = ora()
-
 	plop.setActionType('remove', (answers, config, plop) => {
 		const { name, type, shouldRemove } = answers
 		const dir = showDir(type)
@@ -37,7 +34,6 @@ function remove(plop) {
 						const dir = showDir(type)
 						return dirs.includes(`./src/${dir}`)
 					})
-					spinner.stop()
 					return types
 				}
 			},
@@ -48,7 +44,6 @@ function remove(plop) {
 					return `请选择您要删除的 ${type} 模块`
 				},
 				async choices({ type }) {
-					spinner.start(`读取现有 ${type} 模块中~~`)
 					const dir = showDir(type)
 					let modules = await fg(`./src/${dir}/*.*`, {
 						deep: 1,
@@ -57,7 +52,6 @@ function remove(plop) {
 					modules = modules.map(module => {
 						return basename(module)
 					})
-					spinner.stop()
 					return modules
 				}
 			},

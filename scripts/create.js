@@ -1,10 +1,10 @@
-import fse from 'fs-extra'
+const fse = require('fs-extra')
 
-import {
-	showExt,
+const {
 	showDir,
+	showExt,
 	moduleTypes
-} from './shared/base.js'
+} = require('./shared/base')
 
 /**
  * 自动创建
@@ -78,4 +78,4 @@ function create(plop) {
 	})
 }
 
-export default create
+module.exports = create
