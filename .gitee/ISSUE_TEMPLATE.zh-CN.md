@@ -1,8 +1,3 @@
----
-name: bug template
-about: 请提供系统详细信息
----
-
 ## 信息
 
 ### nodejs 版本
