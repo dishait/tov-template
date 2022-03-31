@@ -1129,7 +1129,7 @@ export default defineComponent({
 
 ## License
 
-Made with markthree
+Made with [markthree](./LICENSE)
 
 Published under [MIT License](./LICENSE).
 
