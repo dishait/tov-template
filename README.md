@@ -1,6 +1,10 @@
-# tov-template
+<div align="center">
+    <img width="200px" height="200px" src="./public/logo.png" />
+    <h1>tov-template</h1>
+    <p>vite + vue3 + ts 开箱即用现代开发模板</p>
+</div>
 
-一个 ` vite + vue3 + ts ` 开箱即用现代开发模板
+
 
 <br />
 <br />
