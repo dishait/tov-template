@@ -59,7 +59,7 @@
     "vite-plugin-pages": "^0.22.0",
     "vite-plugin-restart": "^0.1.1",
     "vite-plugin-use-modules": "^1.0.1",
-    "vite-plugin-vue-layouts": "^0.6.0",
+    "vite-plugin-vue-meta-layouts": "^0.0.2",
     "vite-plugin-windicss": "^1.8.3",
     "vitest": "^0.8.1",
     "vue-i18n": "^9.1.9",

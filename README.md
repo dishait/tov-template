@@ -307,7 +307,7 @@ eg:
 
 <br />
 
-### [4. 布局系统](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
+### [4. 布局系统](https://github.com/dishait/vite-plugin-vue-meta-layouts)
 
 #### 默认布局
 
@@ -379,7 +379,7 @@ meta:
 我是首页
 ```
 
-具体可见 👉 [vite-plugin-vue-layouts](https://github.com/JohnCampionJr/vite-plugin-vue-layouts#overview) 
+具体可见 👉 [vite-plugin-vue-meta-layouts](https://github.com/dishait/vite-plugin-vue-meta-layouts) 
 
 <br />
 

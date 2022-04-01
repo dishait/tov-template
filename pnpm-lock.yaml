@@ -35,6 +35,7 @@ specifiers:
   vite-plugin-restart: ^0.1.1
   vite-plugin-use-modules: ^1.0.1
   vite-plugin-vue-layouts: ^0.6.0
+  vite-plugin-vue-meta-layouts: ^0.0.2
   vite-plugin-windicss: ^1.8.3
   vitest: ^0.8.1
   vue: ^3.2.31
@@ -83,6 +84,7 @@ devDependencies:
   vite-plugin-restart: 0.1.1_vite@2.9.1
   vite-plugin-use-modules: 1.0.1
   vite-plugin-vue-layouts: 0.6.0_7751236df27102a4c49ccda658860b98
+  vite-plugin-vue-meta-layouts: 0.0.2_vue-router@4.0.14
   vite-plugin-windicss: 1.8.3_vite@2.9.1
   vitest: 0.8.1_c8@7.11.0
   vue-i18n: 9.1.9_vue@3.2.31
@@ -3980,6 +3982,14 @@ packages:
       vue-router: 4.0.14_vue@3.2.31
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /vite-plugin-vue-meta-layouts/0.0.2_vue-router@4.0.14:
+    resolution: {integrity: sha512-z6gmHdvNc7yT2ET1erzWjxHV/7BKISiB545P57UPi/s6xMCJwRcpPIRdTSXbeQnd8AWCNZ+z5LTRnkvR787LxA==}
+    peerDependencies:
+      vue-router: '>=4.0.14'
+    dependencies:
+      vue-router: 4.0.14_vue@3.2.31
     dev: true
 
   /vite-plugin-windicss/1.8.3_vite@2.9.1:
