@@ -4,8 +4,6 @@
     <p>vite + vue3 + ts 开箱即用现代开发模板</p>
 </div>
 
-
-
 <br />
 <br />
 
@@ -15,11 +13,11 @@
 2. Vue3 的
 3. 文件路由
 4. 布局系统
-5.  Mock 支持
+5. Mock 支持
 6. Api 自动引入
 7. 组件自动引入
 8. 图标自动引入
-9.  VueUse 支持
+9. VueUse 支持
 10. TypeScript 的
 11. Windi CSS 的
 12. 暗黑模式支持
@@ -34,7 +32,7 @@
 21. 路径别名 `~` 支持
 22. 命令行自动创建与删除
 23. i18n 国际化支持
-24. 漂亮的 404页 支持
+24. 漂亮的 404 页 支持
 25. tsx 支持
 26. gzip 资源压缩支持
 27. 环境变量配置支持
@@ -49,6 +47,7 @@
 ```shell
 git clone git@github.com:dishait/tov-template.git
 ```
+
 2. Gitee
 
 ```shell
@@ -60,6 +59,7 @@ git clone git@gitee.com:dishait/tov-template.git
 ```shell
 npx degit https://github.com/dishait/tov-template#main
 ```
+
 4. 新的 `Github` 仓库 👉 [Use this template](https://github.com/dishait/tov-template/generate)
 
 <br />
@@ -81,6 +81,7 @@ npx degit https://github.com/dishait/tov-template#main
 强烈推荐大家使用更快更合理的 `pnpm` 包管理器 👉 [安装教程](https://pnpm.io/zh/installation)
 
 1. 安装依赖
+
 ```shell
 pnpm install
 
@@ -89,16 +90,17 @@ pnpm install
 ```
 
 2. 开发
+
 ```shell
-pnpm dev 
+pnpm dev
 
 # 或者 npm run dev
 # 或者 yarn dev
 
 # 开启 host
-pnpm dev:host  
+pnpm dev:host
 
-# 或者 npm run dev:host 
+# 或者 npm run dev:host
 # 或者 yarn dev:host
 
 # 自动打开浏览器
@@ -109,6 +111,7 @@ pnpm dev:open
 ```
 
 3. 预览
+
 ```shell
 pnpm preview
 
@@ -138,6 +141,7 @@ pnpm build
 ```
 
 5. 单元测试
+
 ```shell
 pnpm test
 
@@ -146,6 +150,7 @@ pnpm test
 ```
 
 6. 单元测试报告生成
+
 ```shell
 pnpm coverage
 
@@ -154,6 +159,7 @@ pnpm coverage
 ```
 
 7. 样式报告预览
+
 ```shell
 pnpm analysis
 
@@ -162,6 +168,7 @@ pnpm analysis
 ```
 
 8. 样式报告打包
+
 ```shell
 pnpm analysis:build
 
@@ -170,6 +177,7 @@ pnpm analysis:build
 ```
 
 9. 类型检查
+
 ```shell
 pnpm typecheck
 
@@ -178,6 +186,7 @@ pnpm typecheck
 ```
 
 10. 自动创建
+
 ```shell
 pnpm auto:create
 
@@ -221,6 +230,7 @@ pnpm deps:fresh:patch
 # 或者 npm run deps:fresh:patch
 # 或者 yarn deps:fresh:patch
 ```
+
 ```shell
 # 以上命令仅对包信息 package.json 进行写入，需要重新执行包安装命令
 pnpm i
@@ -231,7 +241,6 @@ pnpm i
 
 <br />
 <br />
-
 
 ## 动机 🐗
 
@@ -245,7 +254,7 @@ pnpm i
 
 ## 使用场景 🐻
 
-什么时候你应该用? 
+什么时候你应该用?
 
 1. 不想浪费时间在项目配置上
 2. 希望尝试用更现代的方式开发 `web` 应用，提高开发效率
@@ -260,11 +269,10 @@ pnpm i
 <br />
 <br />
 
-
-
 ## 组织 🦔
 
 欢迎关注 **帝莎编程**
+
 - [官网](http://dishaxy.dishait.cn/)
 - [Gitee](https://gitee.com/dishait)
 
@@ -275,12 +283,11 @@ pnpm i
 <br />
 <br />
 
-
 ## 详情 🐳
 
 ### [1. Vite 的](https://cn.vitejs.dev/)
 
-该模板采用 **[vite](https://cn.vitejs.dev/)** 作为构建工具，你可以在根目录下的 `vite.config.ts` 对项目的构建进行配置。  
+该模板采用 **[vite](https://cn.vitejs.dev/)** 作为构建工具，你可以在根目录下的 `vite.config.ts` 对项目的构建进行配置。
 
 对于众多主流插件的引入和繁杂配置已经整合到根目录下的预设 `presets` 中，大多数情况下你是不需要重新对它们进行配置的。
 
@@ -294,14 +301,15 @@ pnpm i
 
 目录结构即路由。
 
-eg: 
+eg:
+
 - `src/pages/index.vue` => `/`
 - `src/pages/about.vue` => `/about`
 - `src/pages/users/index.vue` => `/users`
 - `src/pages/users/profile.vue` => `/users/profile`
 - `src/pages/users/[id].vue` => `/users/:id`
 - `src/pages/[user]/settings.vue` => `/:user/settings`
--  `src/pages/[...notFound].vue` => 404 路由
+- `src/pages/[...notFound].vue` => 404 路由
 
 具体可见 👉 [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages#file-system-routing)
 
@@ -311,50 +319,59 @@ eg:
 
 #### 默认布局
 
-
 `src/layouts/default.vue` 将作为默认布局。
+
 ```html
 <!-- src/layouts/default.vue -->
 <template>
-    我是默认布局
-    <router-view /> <!-- 页面视图出口 -->
+	我是默认布局
+	<router-view />
+	<!-- 页面视图出口 -->
 </template>
 ```
 
-此时 `src/pages/index.vue` 
+此时 `src/pages/index.vue`
+
 ```html
 <!-- src/pages/index.vue -->
 <template>
-    <div>我是首页</div> 
+	<div>我是首页</div>
 </template>
-``` 
-路由到 `/`时，页面将渲染
-```html
-我是默认布局
-我是首页
 ```
+
+路由到 `/`时，页面将渲染
+
+```html
+我是默认布局 我是首页
+```
+
 此时 `src/pages/about.vue`
+
 ```html
 <!-- src/pages/about.vue -->
 <template>
-    <div>我是关于页</div> 
+	<div>我是关于页</div>
 </template>
 ```
+
 路由到 `/about` 时，页面将渲染
+
 ```html
-我是默认布局
-我是关于页
+我是默认布局 我是关于页
 ```
 
 <br />
 
 #### 非默认布局
+
 随便创建一个 `src/layouts/custom.vue`
+
 ```html
 <!-- src/layouts/custom.vue -->
 <template>
-    我是非默认布局custom
-    <router-view /> <!-- 页面视图出口 -->
+	我是非默认布局custom
+	<router-view />
+	<!-- 页面视图出口 -->
 </template>
 ```
 
@@ -363,23 +380,20 @@ eg:
 ```html
 <!-- src/pages/index.vue -->
 <template>
-    <div>我是首页</div> 
+	<div>我是首页</div>
 </template>
 
 <!-- 添加自定义块 👇 -->
-<route lang="yaml">
-meta:
-  layout: custom
-</route>
+<route lang="yaml"> meta: layout: custom </route>
 ```
+
 此时路由到 `/`, 页面将渲染
 
 ```html
-我是非默认布局custom
-我是首页
+我是非默认布局custom 我是首页
 ```
 
-具体可见 👉 [vite-plugin-vue-meta-layouts](https://github.com/dishait/vite-plugin-vue-meta-layouts) 
+具体可见 👉 [vite-plugin-vue-meta-layouts](https://github.com/dishait/vite-plugin-vue-meta-layouts)
 
 <br />
 
@@ -388,40 +402,42 @@ meta:
 在根目录下的 `mock` 目录下，可以在模块中导出默认的 `api` 资源。
 
 例如 `mock/test.ts` 内导出
+
 ```ts
 import { MockMethod } from 'vite-plugin-mock'
 export default [
-    {
-        url: '/api/get',
-        method: 'get',
-        response: () => {
-            return {
-                code: 0,
-                data: {
-                    name: 'vben'
-                }
-            }
-        }
-    }
+	{
+		url: '/api/get',
+		method: 'get',
+		response: () => {
+			return {
+				code: 0,
+				data: {
+					name: 'vben'
+				}
+			}
+		}
+	}
 ] as MockMethod[]
 ```
+
 在 `src` 中就可以进行模拟请求。
 
 ```html
 <script setup lang="ts">
-    import { useRequest } from "vue-request"
-    // 请求接口 /api/get
-    const { data, loading, error } = useRequest('/api/get') 
+	import { useRequest } from 'vue-request'
+	// 请求接口 /api/get
+	const { data, loading, error } = useRequest('/api/get')
 </script>
 
 <template>
-    <div>data: {{data}}</div>
-    <div>loading: {{loading}}</div>
-    <div>error: {{error}}</div>
+	<div>data: {{data}}</div>
+	<div>loading: {{loading}}</div>
+	<div>error: {{error}}</div>
 </template>
 ```
 
-这里用到 [vue-request](https://cn.attojs.org/) 去做请求，不过因为该 `mock` 拦截的是一整个接口，所以换成 `axios` 等请求库也是可以的。  
+这里用到 [vue-request](https://cn.attojs.org/) 去做请求，不过因为该 `mock` 拦截的是一整个接口，所以换成 `axios` 等请求库也是可以的。
 
 更多 `mock` 设置可见 👉 [vite-plugin-mock](https://github.com/vbenjs/vite-plugin-mock)
 
@@ -430,19 +446,24 @@ export default [
 ### [6. Api 自动引入](https://github.com/antfu/unplugin-auto-import)
 
 原本 `vue` 的 `api` 需要自行 `import`。
+
 ```ts
 import { ref, computed } from 'vue'
 const count = ref(0)
 const doubled = computed(() => count.value * 2)
 ```
+
 现在可以直接使用。
+
 ```ts
 const count = ref(0)
 const doubled = computed(() => count.value * 2)
 ```
+
 而且上边的 `api` 是按需自动引入的。
 
 目前模板支持自动引入 `api` 的库列表包括:
+
 1. vue
 2. pinia
 3. vueuse
@@ -464,11 +485,11 @@ export default 1000
 
 ```html
 <script setup lang="ts">
-    console.log(foo) // 输出 1000
+	console.log(foo) // 输出 1000
 </script>
 
 <template>
-    <div @click="store.inc()">{{store.counter}}</div>
+	<div @click="store.inc()">{{store.counter}}</div>
 </template>
 ```
 
@@ -479,27 +500,28 @@ export default 1000
 ```ts
 // default 导出
 export default defineStore('counter', {
-    state() {
-        return {
-            counter: 1
-        }
-    },
-    actions: {
-        inc() {
-            this.counter++
-        }
-    }
+	state() {
+		return {
+			counter: 1
+		}
+	},
+	actions: {
+		inc() {
+			this.counter++
+		}
+	}
 })
 ```
+
 此时就不再需要 `import`了
 
 ```html
 <script setup lang="ts">
-    const store = counterStore()
+	const store = counterStore()
 </script>
 
 <template>
-    <div @click="store.inc()">{{store.counter}}</div>
+	<div @click="store.inc()">{{store.counter}}</div>
 </template>
 ```
 
@@ -510,14 +532,15 @@ export default defineStore('counter', {
 ### [7. 组件自动引入](https://github.com/antfu/unplugin-auto-import)
 
 原来需要 `import`
+
 ```html
 <!-- src/pages/index.vue -->
 <script setup lang="ts">
-    import Hello from "../components/Hello.vue"
+	import Hello from '../components/Hello.vue'
 </script>
 
 <template>
-    <Hello />
+	<Hello />
 </template>
 ```
 
@@ -526,7 +549,7 @@ export default defineStore('counter', {
 ```html
 <!-- src/pages/index.vue -->
 <template>
-    <Hello />
+	<Hello />
 </template>
 ```
 
@@ -540,14 +563,16 @@ pnpm add naive-ui
 # 或者 npm i naive-ui
 # 或者 yarn add naive-ui
 ```
+
 即可在模板中使用。
 
 ```html
 <!-- src/pages/index.vue -->
 <template>
-    <n-button type="success">Success</n-button>
+	<n-button type="success">Success</n-button>
 </template>
 ```
+
 目前支持的组件库有:
 
 - [naive ui](https://www.naiveui.com/zh-CN/os-theme)
@@ -578,11 +603,11 @@ pnpm add naive-ui
 
 ```html
 <template>
-    <i-mdi:account-box-multiple />
+	<i-mdi:account-box-multiple />
 </template>
 ```
 
-保存后等待自动下载该图标库后，就可以在页面中看到对应图标。  
+保存后等待自动下载该图标库后，就可以在页面中看到对应图标。
 
 注意自动下载图标需要 `pnpm` 包管理器支持，如果你是其他包管理器需要手动安装图标集 👇👇👇
 
@@ -594,23 +619,22 @@ npm i @iconify/mdi -D
 # 或者 yarn add @iconify/mdi -D
 ```
 
-
-同时推荐你使用 `vscode` 插件 [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify)。  
+同时推荐你使用 `vscode` 插件 [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify)。
 
 该插件会在模板中显示图标的预览。就像这样 👇
 
 ```html
 <!-- 模板中代码 -->
 <template>
-    <i-mdi:account-box-multiple />
+	<i-mdi:account-box-multiple />
 </template>
 ```
+
 将在 `vscode` 中得到图标预览
 
 ![icons-preview](public/docs/icons-preview.png)
 
 具体可见 👉 [unplugin-icons](https://github.com/antfu/unplugin-icons)
-
 
 <br />
 
@@ -620,25 +644,23 @@ npm i @iconify/mdi -D
 
 ```html
 <script setup lang="ts">
-    // useMouse 被自动按需引入了，不需要import
-    const { x, y } = useMouse()
+	// useMouse 被自动按需引入了，不需要import
+	const { x, y } = useMouse()
 </script>
 
 <template>
-    <div>x坐标 {{x}}</div>
-    <div>y坐标 {{y}}</div>
+	<div>x坐标 {{x}}</div>
+	<div>y坐标 {{y}}</div>
 </template>
 ```
 
 具体可见 👉 [VueUse](https://vueuse.org/)
-
 
 <br />
 
 ### [10. TypeScript 的](https://www.tslang.cn/)
 
 不需要重新配置，直接用 `ts` 书写就行了。
-
 
 <br />
 
@@ -650,22 +672,26 @@ npm i @iconify/mdi -D
 
 ```html
 <template>
-    <div class="bg-red-500 text-white">
-        我是红色背景的白色文本
-    </div>
-<template>
+	<div class="bg-red-500 text-white">
+		我是红色背景的白色文本
+	</div>
+	<template></template
+></template>
 ```
+
 上述模板将渲染红色背景白色的字。
 
-同时支持 [属性化模式](https://cn.windicss.org/features/attributify.html#attributify-mode)，即可以用简写。该功能默认关闭，可在 `windi.config.ts` 中 设置 `attributify` 为 `true` 开启。 
+同时支持 [属性化模式](https://cn.windicss.org/features/attributify.html#attributify-mode)，即可以用简写。该功能默认关闭，可在 `windi.config.ts` 中 设置 `attributify` 为 `true` 开启。
 
 ```html
 <template>
-    <div text="white" bg="red-500">
-        我是红色背景的白色文本
-    </div>
-<template>
+	<div text="white" bg="red-500">
+		我是红色背景的白色文本
+	</div>
+	<template></template
+></template>
 ```
+
 这在调整边距尺寸以及等方面可以减少代码量。
 
 同时预设 [排版](https://cn.windicss.org/plugins/official/typography.html) 插件，解决简单的布局困难问题。
@@ -673,13 +699,16 @@ npm i @iconify/mdi -D
 当然也支持 [可视化分析器](https://cn.windicss.org/features/analyzer.html) 生成 `原子css` 报告.
 
 在终端中输入命令，即可看到报告
+
 ```shell
 pnpm analysis
 
 # 或者 npm run analysis
 # 或者 yarn analysis
 ```
+
 或者打包输出该报告
+
 ```shell
 pnpm analysis:build
 
@@ -689,12 +718,11 @@ pnpm analysis:build
 
 具体可见 👉 [Windi CSS](https://cn.windicss.org/)
 
-
 <br />
 
 ### [12. 暗黑模式支持](https://cn.windicss.org/features/dark-mode.html#dark-mode)
 
-暗黑模式由 `Windi CSS` 的 `暗黑模式` 和 `VueUse` 实现。  
+暗黑模式由 `Windi CSS` 的 `暗黑模式` 和 `VueUse` 实现。
 
 `src/composables` 目录用来存储 `composition-api` 模块。
 
@@ -714,29 +742,26 @@ export const useDarks = () => ({ isDark, toggleDark })
 
 ```html
 <script setup lang="ts">
-import { useDarks } from "../composables/useDarks";
+	import { useDarks } from '../composables/useDarks'
 
-const { isDark, toggleDark } = useDarks()
+	const { isDark, toggleDark } = useDarks()
 </script>
 
 <template>
-    <div m="6">
-        Hello，This is the tov template！！
-    </div>
-    <div m="6" cursor="pointer" @click="toggleDark()">
-        light: {{ isDark }} click me!!
-    </div>
+	<div m="6"> Hello，This is the tov template！！ </div>
+	<div m="6" cursor="pointer" @click="toggleDark()">
+		light: {{ isDark }} click me!!
+	</div>
 </template>
 ```
 
 具体可见 👉 [暗黑模式](https://cn.windicss.org/features/dark-mode.html#dark-mode)
 
-
 <br />
 
 ### [13. SWR 请求支持](https://cn.attojs.org/)
 
-SWR 是更现代的请求方式，具体可见文章 👉 [SWR](https://zhuanlan.zhihu.com/p/89570321)。 
+SWR 是更现代的请求方式，具体可见文章 👉 [SWR](https://zhuanlan.zhihu.com/p/89570321)。
 
 而 [vue-request](https://cn.attojs.org/) 是一个 `SWR` 的 `Vue` 版本请求库。
 
@@ -744,16 +769,17 @@ SWR 是更现代的请求方式，具体可见文章 👉 [SWR](https://zhuanlan
 
 ```html
 <script setup lang="ts">
-    import { useRequest } from "vue-request"
-    const { data, loading, error } = useRequest('/api/test')
+	import { useRequest } from 'vue-request'
+	const { data, loading, error } = useRequest('/api/test')
 </script>
 
 <template>
-    <div>data: {{data}}</div>
-    <div>error: {{error}}</div>
-    <div>loading: {{loading}}</div>
+	<div>data: {{data}}</div>
+	<div>error: {{error}}</div>
+	<div>loading: {{loading}}</div>
 </template>
 ```
+
 所有基本的数据，状态和缓存都帮你搞定了，不需要重新封装。
 
 具体可见 👉 [vue-request](https://cn.attojs.org/)
@@ -764,7 +790,7 @@ SWR 是更现代的请求方式，具体可见文章 👉 [SWR](https://zhuanlan
 
 `pinia` 是下一代的状态管理库，比 `vuex` 更简单，`ts` 支持更好。
 
-你可以在 `src/stores` 中进行状态的定义。  
+你可以在 `src/stores` 中进行状态的定义。
 
 例如创建 `src/stores/counter.ts` 👇
 
@@ -773,17 +799,19 @@ SWR 是更现代的请求方式，具体可见文章 👉 [SWR](https://zhuanlan
 import { defineStore } from 'pinia'
 
 export const useCounterStore = defineStore('counter', {
-  state: () => {
-    return { count: 0 }
-  },
-  actions: {
-    inc() {
-      this.count++
-    },
-  },
+	state: () => {
+		return { count: 0 }
+	},
+	actions: {
+		inc() {
+			this.count++
+		}
+	}
 })
 ```
+
 定义完后在 `setup` 中直接使用即可
+
 ```html
 <!-- src/pages/index.vue -->
 <script setup lang="ts">
@@ -795,6 +823,7 @@ export const useCounterStore = defineStore('counter', {
     <div @click="Counter.inc">{{Counter.count}}</div>
 </template>
 ```
+
 更多具体使用可见 👉 [pinia](https://pinia.vuejs.org/)
 
 <br />
@@ -810,22 +839,24 @@ export const useCounterStore = defineStore('counter', {
 ### [16. 跳转进度条支持](https://github.com/rstacruz/nprogress)
 
 跳转进度条由 `nprogress` 实现，可在`src/styles/main.css` 中调整配色。
+
 ```css
 /** src/styles/main.css **/
 
 /** 省略其他样式 **/
 #nprogress .bar {
-    @apply bg-purple-700 bg-opacity-75; /** 配色 **/
+	@apply bg-purple-700 bg-opacity-75; /** 配色 **/
 
-    position: fixed;
-    z-index: 1031;
-    top: 0;
-    left: 0;
+	position: fixed;
+	z-index: 1031;
+	top: 0;
+	left: 0;
 
-    width: 100%;
-    height: 2px;
+	width: 100%;
+	height: 2px;
 }
 ```
+
 关于 `@apply` 由 [Windi Css apply 指令](https://cn.windicss.org/features/directives.html#apply) 实现。
 
 具体可见 👉 [nprogress](https://github.com/rstacruz/nprogress)
@@ -835,12 +866,14 @@ export const useCounterStore = defineStore('counter', {
 ### [17. Inspect 调试支持](https://github.com/antfu/vite-plugin-inspect)
 
 启动项目
+
 ```shell
 pnpm dev
 
 # 或者 npm run dev
 # 或者 yarn dev
 ```
+
 可以看到一个 `url`
 
 ![inspect](public/docs/inspect.png)
@@ -855,13 +888,12 @@ pnpm dev
 
 <br />
 
-### 18. 插件自动加载支持
+### [18. 插件自动加载支持](https://github.com/dishait/vite-plugin-use-modules)
 
-该功能由 `vite` 的 [Global 导入](https://cn.vitejs.dev/guide/features.html#glob-import) 实现。  
-
-只需要在 `src/modules` 中的模块里导出默认函数即可。  
+只需要在 `src/modules` 中的模块里导出默认函数即可。
 
 例如 `pinia`，只需要这样做。
+
 ```ts
 // src/modules/pinia.ts
 
@@ -883,9 +915,10 @@ import { App } from 'vue'
 // 导出 default 接口
 export default (app: App) => app.use(router)
 ```
+
 当然 `pinia` 和 `vue-router` 已经预设好了，你不需要重新关注他们。
 
-具体可见实现 👉 [插件自动加载实现](/src/main.ts)
+具体可见 👉 [vite-plugin-use-modules](https://github.com/dishait/vite-plugin-use-modules)
 
 <br />
 
@@ -897,18 +930,18 @@ export default (app: App) => app.use(router)
 import { it, describe, expect, assert } from 'vitest'
 
 describe('suite name', () => {
-    it('foo', () => {
-        expect(1 + 1).toEqual(2)
-        expect(true).to.be.true
-    })
+	it('foo', () => {
+		expect(1 + 1).toEqual(2)
+		expect(true).to.be.true
+	})
 
-    it('bar', () => {
-        assert.equal(Math.sqrt(4), 2)
-    })
+	it('bar', () => {
+		assert.equal(Math.sqrt(4), 2)
+	})
 
-    it('snapshot', () => {
-        expect({ foo: 'bar' }).toMatchSnapshot()
-    })
+	it('snapshot', () => {
+		expect({ foo: 'bar' }).toMatchSnapshot()
+	})
 })
 ```
 
@@ -936,7 +969,7 @@ pnpm coverage
 
 ### [20. 支持 Markdown 渲染](https://github.com/antfu/vite-plugin-md)
 
-`markdown` 渲染可以用来书写一些简单的说明。  
+`markdown` 渲染可以用来书写一些简单的说明。
 
 只需要把 `src/pages` 目录下的页面后缀由 `.vue` 改为 `.md`，然后再改为 `markdown` 语法即可。
 
@@ -955,8 +988,6 @@ pnpm coverage
 <br />
 <br />
 
-
-
 ### 21. 路径别名 `~` 支持
 
 `~` 路径将被导向项目的 `src` 目录。
@@ -964,10 +995,10 @@ pnpm coverage
 ```html
 <!-- src/pages/index.vue -->
 <script lang="ts" setup>
-    import { useDarks } from "~/composables/dark"
+	import { useDarks } from '~/composables/dark'
 
-// 等价于
-// import { useDarks } from "../composables/dark"
+	// 等价于
+	// import { useDarks } from "../composables/dark"
 </script>
 ```
 
@@ -977,13 +1008,16 @@ pnpm coverage
 ### 22. 命令行自动创建与删除
 
 只要输入 👇，即可创建一个标准的页面或组件
+
 ```shell
 pnpm auto:create
 
 # 或者 npm run auto:create
 # 或者 yarn auto:create
 ```
+
 当然也可以进行删除 👇
+
 ```shell
 pnpm auto:remove
 
@@ -999,6 +1033,7 @@ pnpm auto:remove
 在日常的业务当中，可能会存在一些需要国际化的场景。那么只需要在根目录下的 `locales` 中定义不同语言的 `yml` 即可在项目中做到开箱即用的国际化支持。
 
 比如 `locales/en.yml` 中用来定义需要国际化支持的英文内容。
+
 ```yml
 # locales/en.yml
 # English
@@ -1007,6 +1042,7 @@ index: index
 about: about
 not-found: Notfound
 ```
+
 又如 `locales/zh-CN.yml` 中用来定义需要国际化支持的中文内容。
 
 ```yml
@@ -1019,20 +1055,23 @@ not-found: 未找到页面
 ```
 
 此时在组件中即可这样用 👇
+
 ```html
 <script setup>
-// 该api是全局按需引入的，所以可以直接用
-// t 用来绑定特定的语块
-const { t, locale } = useI18n()
+	// 该api是全局按需引入的，所以可以直接用
+	// t 用来绑定特定的语块
+	const { t, locale } = useI18n()
 
-const toggleLocale = () => {
-     // locale.value 用来表示当前所属语言，可修改进行语言切换
-     locale.value = locale.value === 'zh-CN' ? 'en' : 'zh-CN'
-}
+	const toggleLocale = () => {
+		// locale.value 用来表示当前所属语言，可修改进行语言切换
+		locale.value = locale.value === 'zh-CN' ? 'en' : 'zh-CN'
+	}
 </script>
 
 <template>
-    <div m="6" cursor="pointer" @click="toggleLocale()">language: {{ t('index') }} click me!!</div>
+	<div m="6" cursor="pointer" @click="toggleLocale()"
+		>language: {{ t('index') }} click me!!</div
+	>
 </template>
 ```
 
@@ -1040,14 +1079,15 @@ const toggleLocale = () => {
 
 另外 `yml` 是目前前端中流行的配置文件格式，语法可见阮一峰先生的 👉 [YAML 语言教程](http://www.ruanyifeng.com/blog/2016/07/yaml.html)。
 
-`vscode` 插件推荐: 
+`vscode` 插件推荐:
 
-- 多合一的 `i18n` 支持 [i18n Ally](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally)  
+- 多合一的 `i18n` 支持 [i18n Ally](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally)
 
 <br />
 <br />
 
 ### 24. 漂亮的 `404` 页支持
+
 在日常业务中，当用户访问不存在的页面时，应该给到我们的用户一个不存在的信息提示，而这个提示的页面就是 `404` 页。
 
 你可以随便访问一个不存在的页面，例如 `/bucunzai`
@@ -1063,10 +1103,15 @@ const toggleLocale = () => {
 当然如果这个 `404` 的封面不符合你的口味，那么可以在 `pages/[...notFound].vue` 中修改 `img` 标签的 `src`。默认是 `32.svg`，支持 `1 ~ 33` 的 `svg`。
 
 例如，默认 👇
+
 ```html
 <!-- 省略各种代码 -->
 <template>
-    <img src="/notFound/32.svg" class="cover" alt="page not found" />
+	<img
+		src="/notFound/32.svg"
+		class="cover"
+		alt="page not found"
+	/>
 </template>
 ```
 
@@ -1075,16 +1120,20 @@ const toggleLocale = () => {
 ```html
 <!-- 省略各种代码 -->
 <template>
-    <img src="/notFound/33.svg" class="cover" alt="page not found" />
+	<img
+		src="/notFound/33.svg"
+		class="cover"
+		alt="page not found"
+	/>
 </template>
 ```
+
 即可切换封面为 👇
 
 ![notFound-other](public/docs/notFound-other.png)
 
 <br />
 <br />
-
 
 ### 25. [`tsx` 支持](https://github.com/vitejs/vite/tree/main/packages/plugin-vue-jsx)
 
@@ -1095,15 +1144,15 @@ const toggleLocale = () => {
 ```tsx
 // src/components/foo.tsx
 export default defineComponent({
-    render() {
-        return <div>Test</div>
-    }
+	render() {
+		return <div>Test</div>
+	}
 })
 ```
 
 ```html
 <template>
-    <foo />
+	<foo />
 </template>
 ```
 
@@ -1125,7 +1174,6 @@ export default defineComponent({
 ### 27. [环境变量配置支持](https://cn.vitejs.dev/guide/env-and-mode.html)
 
 根目录下有三个环境变量配置文件 `.env`，`.env.development` 和 `.env.production` 用来对项目进行配置。
-
 
 <br />
 <br />
