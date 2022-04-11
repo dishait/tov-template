@@ -14,7 +14,7 @@ specifiers:
   fast-glob: ^3.2.11
   fs-extra: ^10.0.1
   ityped: ^1.0.3
-  markdown-it-anchor: ^8.5.0
+  markdown-it-anchor: ^8.6.2
   markdown-it-prism: ^2.2.3
   mockjs: ^1.1.0
   nprogress: ^0.2.0
@@ -62,7 +62,7 @@ devDependencies:
   fast-glob: 3.2.11
   fs-extra: 10.0.1
   ityped: 1.0.3
-  markdown-it-anchor: 8.5.0
+  markdown-it-anchor: 8.6.2
   markdown-it-prism: 2.2.3
   mockjs: 1.1.0
   nprogress: 0.2.0
@@ -108,8 +108,8 @@ packages:
       find-up: 5.0.0
     dev: true
 
-  /@antfu/utils/0.5.0:
-    resolution: {integrity: sha512-MrAQ/MrPSxbh1bBrmwJjORfJymw4IqSHFBXqvxaga3ZdDM+/zokYF8DjyJpSjY2QmpmgQrajDUBJOWrYeARfzA==}
+  /@antfu/utils/0.5.1:
+    resolution: {integrity: sha512-8Afo0+xvYe1K8Wm4xHTymfTkpzy36aaqDvhXIayUwl+mecMG9Xzl3XjXa6swG6Bk8FBeQ646RyvmsYt6+2Be9g==}
     dev: true
 
   /@babel/code-frame/7.16.7:
@@ -410,7 +410,7 @@ packages:
     resolution: {integrity: sha512-m+rnw7qKHq/XF7DAi4BcFoEAcXBfqqMgQJh8brGEHeqE/RUvgDMjmxsHgWnVpFsG+VmjGyAiI7nwXdliCwEU0Q==}
     dependencies:
       '@antfu/install-pkg': 0.1.0
-      '@antfu/utils': 0.5.0
+      '@antfu/utils': 0.5.1
       '@iconify/types': 1.1.0
       debug: 4.3.4
       kolorist: 1.5.1
@@ -928,7 +928,7 @@ packages:
   /@windicss/plugin-utils/1.8.3:
     resolution: {integrity: sha512-emlMeDt73uNV1ZofLTDogcxqL9aZ5uIRYkjeHlrWiaDozFbX6Jc+a6eRo9Ieaar3JUryl6AnecTPHAiFDl4IXg==}
     dependencies:
-      '@antfu/utils': 0.5.0
+      '@antfu/utils': 0.5.1
       '@windicss/config': 1.8.3
       debug: 4.3.4
       fast-glob: 3.2.11
@@ -1267,7 +1267,7 @@ packages:
     engines: {node: '>= 6'}
     dependencies:
       cheerio-select: 1.6.0
-      dom-serializer: 1.3.2
+      dom-serializer: 1.4.1
       domhandler: 4.3.1
       htmlparser2: 6.1.0
       parse5: 6.0.1
@@ -1509,8 +1509,8 @@ packages:
       path-type: 4.0.0
     dev: true
 
-  /dom-serializer/1.3.2:
-    resolution: {integrity: sha512-5c54Bk5Dw4qAxNOI1pFEizPSjVsx5+bpJKmL2kPn8JhBUq2q09tTCa3mjijun2NfK78NMouDYNMBkOrPZiS+ig==}
+  /dom-serializer/1.4.1:
+    resolution: {integrity: sha512-VHwB3KfrcOOkelEG2ZOfxqLZdfkil8PtJi4P8N2MMXucZq2yLp75ClViUlOVwyoHEDjYU433Aq+5zWP61+RGag==}
     dependencies:
       domelementtype: 2.3.0
       domhandler: 4.3.1
@@ -1531,7 +1531,7 @@ packages:
   /domutils/2.8.0:
     resolution: {integrity: sha512-w96Cjofp72M5IIhpjgobBimYEfoPjx1Vx0BSX9P30WBdZW2WIKU0T1Bd0kz2eNZ9ikjKgHbEyKx8BB6H1L3h3A==}
     dependencies:
-      dom-serializer: 1.3.2
+      dom-serializer: 1.4.1
       domelementtype: 2.3.0
       domhandler: 4.3.1
     dev: true
@@ -2183,7 +2183,7 @@ packages:
       source-map: 0.6.1
       wordwrap: 1.0.0
     optionalDependencies:
-      uglify-js: 3.15.3
+      uglify-js: 3.15.4
     dev: true
 
   /has-bigints/1.0.1:
@@ -2758,8 +2758,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /markdown-it-anchor/8.5.0:
-    resolution: {integrity: sha512-ii8jRFS4Sxny0nevOOQZqZKswcZyXnD00AlPKctM0PkNRVsT1/2fQMQPXAdWmRz9kYrMupElsEwCikR7Fd2JFQ==}
+  /markdown-it-anchor/8.6.2:
+    resolution: {integrity: sha512-JNaekTlIwwyYGBN3zifZDxgz4bSL8sbEj58fdTZGmPSMMGXBZapFjcZk2I33Jy79c1fvCKHpF7MA/67FOTjvzA==}
     peerDependencies:
       '@types/markdown-it': '*'
       markdown-it: '*'
@@ -3624,8 +3624,8 @@ packages:
     resolution: {integrity: sha512-IT3q0lPvtkqQ8toHQN/BkOi4VIqoqheqM1FnkNWT9y0G8B3xJhwnoKBu5OHx8zHDOvveQzfKuFowJ0VSARiIDg==}
     dev: true
 
-  /uglify-js/3.15.3:
-    resolution: {integrity: sha512-6iCVm2omGJbsu3JWac+p6kUiOpg3wFO2f8lIXjfEb8RrmLjzog1wTPMmwKB7swfzzqxj9YM+sGUM++u1qN4qJg==}
+  /uglify-js/3.15.4:
+    resolution: {integrity: sha512-vMOPGDuvXecPs34V74qDKk4iJ/SN4vL3Ow/23ixafENYvtrNvtbcgUeugTcUGRGsOF/5fU8/NYSL5Hyb3l1OJA==}
     engines: {node: '>=0.8.0'}
     hasBin: true
     requiresBuild: true
@@ -3665,7 +3665,7 @@ packages:
       '@vueuse/core':
         optional: true
     dependencies:
-      '@antfu/utils': 0.5.0
+      '@antfu/utils': 0.5.1
       '@rollup/pluginutils': 4.2.0
       '@vueuse/core': 8.2.5_vue@3.2.31
       local-pkg: 0.4.1
@@ -3697,7 +3697,7 @@ packages:
         optional: true
     dependencies:
       '@antfu/install-pkg': 0.1.0
-      '@antfu/utils': 0.5.0
+      '@antfu/utils': 0.5.1
       '@iconify/utils': 1.0.32
       debug: 4.3.4
       kolorist: 1.5.1
@@ -3724,7 +3724,7 @@ packages:
       '@babel/traverse':
         optional: true
     dependencies:
-      '@antfu/utils': 0.5.0
+      '@antfu/utils': 0.5.1
       '@rollup/pluginutils': 4.2.0
       chokidar: 3.5.3
       debug: 4.3.4
@@ -3880,7 +3880,7 @@ packages:
     peerDependencies:
       vite: ^2.0.0
     dependencies:
-      '@antfu/utils': 0.5.0
+      '@antfu/utils': 0.5.1
       '@rollup/pluginutils': 4.2.0
       '@types/markdown-it': 12.2.3
       '@vue/runtime-core': 3.2.31
