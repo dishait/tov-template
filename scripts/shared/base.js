@@ -5,8 +5,7 @@
  * @returns {string} 扩展名
  */
 const showExt = (type, isMarkdown = false) => {
-	const isTs =
-		type === 'api' || type === 'store' || type === 'module'
+	const isTs = type === 'api' || type === 'store' || type === 'module'
 	const ext = isMarkdown ? 'md' : isTs ? 'ts' : 'vue'
 	return ext
 }
@@ -21,14 +20,14 @@ const moduleTypes = [
 	'layout',
 	'module',
 	'component',
-	'composable'
+	'composable',
 ]
 
 /**
  * 获取目录
  * @param {string} type 类型
  */
-const showDir = type => {
+const showDir = (type) => {
 	if (type === 'api') {
 		return 'api'
 	}
@@ -38,5 +37,5 @@ const showDir = type => {
 module.exports = {
 	showExt,
 	showDir,
-	moduleTypes
+	moduleTypes,
 }

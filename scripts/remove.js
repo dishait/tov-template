@@ -8,7 +8,7 @@ const { showDir, moduleTypes } = require('./shared/base')
  * @param {import('plop').NodePlopAPI} plop
  */
 function remove(plop) {
-	plop.setActionType('remove', (answers, config, plop) => {
+	plop.setActionType('remove', (answers) => {
 		const { name, type, shouldRemove } = answers
 		const dir = showDir(type)
 		const target = `./src/${dir}/${name}`
@@ -28,14 +28,14 @@ function remove(plop) {
 				async choices() {
 					const dirs = await fg('./src/**/*', {
 						deep: 1,
-						onlyDirectories: true
+						onlyDirectories: true,
 					})
-					const types = moduleTypes.filter(type => {
+					const types = moduleTypes.filter((type) => {
 						const dir = showDir(type)
 						return dirs.includes(`./src/${dir}`)
 					})
 					return types
-				}
+				},
 			},
 			{
 				name: 'name',
@@ -47,26 +47,26 @@ function remove(plop) {
 					const dir = showDir(type)
 					let modules = await fg(`./src/${dir}/*.*`, {
 						deep: 1,
-						onlyFiles: true
+						onlyFiles: true,
 					})
-					modules = modules.map(module => {
+					modules = modules.map((module) => {
 						return basename(module)
 					})
 					return modules
-				}
+				},
 			},
 			{
 				name: 'shouldRemove',
 				type: 'confirm',
 				default: false,
-				message: '再次确认是否删除'
-			}
+				message: '再次确认是否删除',
+			},
 		],
 		actions: [
 			{
-				type: 'remove'
-			}
-		]
+				type: 'remove',
+			},
+		],
 	})
 }
 

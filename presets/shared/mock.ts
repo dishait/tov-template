@@ -8,13 +8,8 @@ import Mock from 'mockjs'
 export function createFetchSever(mockList: any[]) {
 	if (!window['originFetch']) {
 		window['originFetch'] = window.fetch
-		window.fetch = function (
-			fetchUrl: string,
-			init: RequestInit
-		) {
-			const currentMock = mockList.find(mi =>
-				fetchUrl.includes(mi.url)
-			)
+		window.fetch = function (fetchUrl: string, init: any) {
+			const currentMock = mockList.find((mi) => fetchUrl.includes(mi.url))
 			if (currentMock) {
 				const result = createFetchReturn(currentMock, init)
 				return result
@@ -41,23 +36,19 @@ function __param2Obj__(url: string) {
 	)
 }
 
-function __Fetch2ExpressReqWrapper__(
-	handle: (d: any) => any
-) {
+function __Fetch2ExpressReqWrapper__(handle: () => any) {
 	return function (options: any) {
 		let result = null
 		if (typeof handle === 'function') {
 			const { body, method, url, headers } = options
 
 			let b = body
-			try {
-				b = JSON.parse(body)
-			} catch {}
+			b = JSON.parse(body)
 			result = handle({
 				method,
 				body: b,
 				query: __param2Obj__(url),
-				headers
+				headers,
 			})
 		} else {
 			result = handle
@@ -69,17 +60,14 @@ function __Fetch2ExpressReqWrapper__(
 
 const sleep = (delay = 0) => {
 	if (delay) {
-		return new Promise(resolve => {
+		return new Promise((resolve) => {
 			setTimeout(resolve, delay)
 		})
 	}
 	return null
 }
 
-async function createFetchReturn(
-	mock: any,
-	init: RequestInit
-) {
+async function createFetchReturn(mock: any, init) {
 	const { timeout, response } = mock
 	const mockFn = __Fetch2ExpressReqWrapper__(response)
 	const data = mockFn(init)
@@ -95,7 +83,7 @@ async function createFetchReturn(
 		},
 		json() {
 			return Promise.resolve(data)
-		}
+		},
 	}
 	return result
 }

@@ -8,10 +8,7 @@ export const GenerateTitle = (): Plugin => {
 			title = config.env.VITE_APP_TITLE
 		},
 		transformIndexHtml(html) {
-			return html.replace(
-				/<title>(.*?)<\/title>/,
-				`<title>${title}</title>`
-			)
-		}
+			return html.replace(/<title>(.*?)<\/title>/, `<title>${title}</title>`)
+		},
 	}
 }

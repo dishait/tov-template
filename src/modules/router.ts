@@ -5,7 +5,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 export const router = createRouter({
 	routes: setupLayouts(fileRoutes),
-	history: createWebHistory()
+	history: createWebHistory(),
 })
 
 export default (app: App) => app.use(router)

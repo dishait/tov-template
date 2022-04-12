@@ -1,8 +1,7 @@
 import { router } from './router'
-import { App } from 'vue'
 import NProgress from 'nprogress'
 
-export default (app: App) => {
+export default () => {
 	router.beforeEach(() => {
 		NProgress.start()
 	})

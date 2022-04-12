@@ -13,7 +13,7 @@ export default () => {
 			wrapperClasses: markdownWrapperClasses,
 			markdownItSetup(md) {
 				md.use(Prism)
-			}
+			},
 		})
 	)
 }

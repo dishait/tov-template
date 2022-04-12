@@ -413,11 +413,11 @@ export default [
 			return {
 				code: 0,
 				data: {
-					name: 'vben'
-				}
+					name: 'vben',
+				},
 			}
-		}
-	}
+		},
+	},
 ] as MockMethod[]
 ```
 
@@ -502,14 +502,14 @@ export default 1000
 export default defineStore('counter', {
 	state() {
 		return {
-			counter: 1
+			counter: 1,
 		}
 	},
 	actions: {
 		inc() {
 			this.counter++
-		}
-	}
+		},
+	},
 })
 ```
 
@@ -672,9 +672,7 @@ npm i @iconify/mdi -D
 
 ```html
 <template>
-	<div class="bg-red-500 text-white">
-		我是红色背景的白色文本
-	</div>
+	<div class="bg-red-500 text-white">我是红色背景的白色文本</div>
 	<template></template
 ></template>
 ```
@@ -685,9 +683,7 @@ npm i @iconify/mdi -D
 
 ```html
 <template>
-	<div text="white" bg="red-500">
-		我是红色背景的白色文本
-	</div>
+	<div text="white" bg="red-500">我是红色背景的白色文本</div>
 	<template></template
 ></template>
 ```
@@ -748,7 +744,7 @@ export const useDarks = () => ({ isDark, toggleDark })
 </script>
 
 <template>
-	<div m="6"> Hello，This is the tov template！！ </div>
+	<div m="6">Hello，This is the tov template！！</div>
 	<div m="6" cursor="pointer" @click="toggleDark()">
 		light: {{ isDark }} click me!!
 	</div>
@@ -805,8 +801,8 @@ export const useCounterStore = defineStore('counter', {
 	actions: {
 		inc() {
 			this.count++
-		}
-	}
+		},
+	},
 })
 ```
 
@@ -1069,9 +1065,9 @@ not-found: 未找到页面
 </script>
 
 <template>
-	<div m="6" cursor="pointer" @click="toggleLocale()"
-		>language: {{ t('index') }} click me!!</div
-	>
+	<div m="6" cursor="pointer" @click="toggleLocale()">
+		language: {{ t('index') }} click me!!
+	</div>
 </template>
 ```
 
@@ -1107,11 +1103,7 @@ not-found: 未找到页面
 ```html
 <!-- 省略各种代码 -->
 <template>
-	<img
-		src="/notFound/32.svg"
-		class="cover"
-		alt="page not found"
-	/>
+	<img src="/notFound/32.svg" class="cover" alt="page not found" />
 </template>
 ```
 
@@ -1120,11 +1112,7 @@ not-found: 未找到页面
 ```html
 <!-- 省略各种代码 -->
 <template>
-	<img
-		src="/notFound/33.svg"
-		class="cover"
-		alt="page not found"
-	/>
+	<img src="/notFound/33.svg" class="cover" alt="page not found" />
 </template>
 ```
 
@@ -1146,7 +1134,7 @@ not-found: 未找到页面
 export default defineComponent({
 	render() {
 		return <div>Test</div>
-	}
+	},
 })
 ```
 

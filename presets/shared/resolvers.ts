@@ -6,16 +6,14 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 type Arrayable<T> = T | Array<T>
 type Resolvers = Arrayable<Arrayable<Resolver>>
 
-export const AutoImportResolvers: Resolvers = [
-	ElementPlusResolver()
-]
+export const AutoImportResolvers: Resolvers = [ElementPlusResolver()]
 
 if (env.VITE_APP_DIR_API_AUTO_IMPORT) {
 	AutoImportResolvers.push(
 		dirResolver({ prefix: 'use' }),
 		dirResolver({
 			target: 'stores',
-			suffix: 'Store'
+			suffix: 'Store',
 		})
 	)
 }

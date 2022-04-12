@@ -1,10 +1,6 @@
 const fse = require('fs-extra')
 
-const {
-	showDir,
-	showExt,
-	moduleTypes
-} = require('./shared/base')
+const { showDir, showExt, moduleTypes } = require('./shared/base')
 
 /**
  * 自动创建
@@ -22,7 +18,7 @@ function create(plop) {
 				type: 'list',
 				default: 'component',
 				message: '您希望生成哪种类型的模块?',
-				choices: moduleTypes
+				choices: moduleTypes,
 			},
 			{
 				name: 'isMarkdown',
@@ -32,14 +28,14 @@ function create(plop) {
 				// 如果是 page 类型需要询问是否为 markdown 类型
 				when({ type }) {
 					return type === 'page'
-				}
+				},
 			},
 			{
 				name: 'name',
 				type: 'input',
 				message({ type }) {
 					return `请输入 ${type} 的命名`
-				}
+				},
 			},
 			{
 				name: 'shouldReset',
@@ -57,24 +53,23 @@ function create(plop) {
 					if (exist) {
 						return true
 					}
-				}
-			}
+				},
+			},
 		],
 		actions(answer) {
 			const { type, shouldReset } = answer
 			if (exist && !shouldReset) {
 				throw new Error(`${type} 创建失败`)
-				return []
 			}
 			return [
 				{
 					type: 'add',
 					force: true,
 					path: `../${modulePath}`,
-					templateFile: `./template/${type}.hbs`
-				}
+					templateFile: `./template/${type}.hbs`,
+				},
 			]
-		}
+		},
 	})
 }
 
