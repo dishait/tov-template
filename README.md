@@ -36,6 +36,7 @@
 25. tsx 支持
 26. gzip 资源压缩支持
 27. 环境变量配置支持
+28. 统一的代码规范与风格支持
 
 <br />
 <br />
@@ -237,6 +238,22 @@ pnpm i
 
 # 或者 npm i
 # 或者 yarn
+```
+
+13. 代码规范校验
+
+```shell
+pnpm lint
+
+# 或者 npm run lint
+# 或者 yarn lint
+
+# 校验时修复
+
+pnpm lint:fix
+
+# 或者 npm run lint:fix
+# 或者 yarn lint:fix
 ```
 
 <br />
@@ -1157,11 +1174,19 @@ export default defineComponent({
 
 <br />
 <br />
-<br />
 
 ### 27. [环境变量配置支持](https://cn.vitejs.dev/guide/env-and-mode.html)
 
 根目录下有三个环境变量配置文件 `.env`，`.env.development` 和 `.env.production` 用来对项目进行配置。
+
+<br />
+<br />
+
+### 28. 统一的代码规范与风格支持
+
+由 [eslint](https://github.com/eslint/eslint) 提供的代码规范校验，使用 [prettier](https://github.com/prettier/prettier) 统一代码风格。
+
+由 [husky](https://github.com/typicode/husky) + [lint-staged](https://github.com/okonet/lint-staged) 提供的 `commit` 时校验。
 
 <br />
 <br />
