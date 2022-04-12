@@ -1,4 +1,35 @@
 {
 	"i18n-ally.localesPaths": ["locales"],
-	"i18n-ally.keystyle": "nested"
+	"i18n-ally.keystyle": "nested",
+	// 开启 eslint
+	"eslint.enable": true,
+	// 开启 prettier
+	"prettier.enable": true,
+	// 开启 eslint 作为格式化工具
+	"eslint.format.enable": true,
+	// 包管理器 pnpm
+	"eslint.packageManager": "pnpm",
+	// 默认格式化选择 prettier,
+	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[vue]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[js]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[ts]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }

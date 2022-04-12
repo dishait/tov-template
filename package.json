@@ -20,7 +20,10 @@
     "preview:open": "vite preview --open",
     "auto:create": "plop --plopfile scripts/create.js",
     "auto:remove": "plop --plopfile scripts/remove.js",
-    "analysis:build": "windicss-analysis --html dist"
+    "analysis:build": "windicss-analysis --html dist",
+		"lint": "eslint --ext .ts,.js,.jsx,.vue .",
+		"lint:fix": "eslint --fix --ext .ts,.js,.jsx,.vue .",
+		"prepare": "husky install"
   },
   "dependencies": {
     "vue": "^3.2.31"
@@ -36,6 +39,7 @@
     "@vueuse/core": "^8.2.5",
     "axios": "^0.26.1",
     "c8": "^7.11.0",
+    "eslint": "^8.13.0",
     "fast-glob": "^3.2.11",
     "fs-extra": "^10.0.1",
     "ityped": "^1.0.3",
@@ -67,7 +71,14 @@
     "vue-router": "^4.0.14",
     "vue-tsc": "^0.33.9",
     "windicss": "^3.5.1",
-    "windicss-analysis": "^0.3.5"
+    "windicss-analysis": "^0.3.5",
+		"@typescript-eslint/parser": "^5.17.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-vue": "^8.5.0",
+		"husky": "^7.0.4",
+		"lint-staged": "^12.3.7",
+		"prettier": "2.5.1"
   },
   "pnpm": {
     "peerDependencyRules": {
@@ -77,5 +88,8 @@
         "@types/markdown-it"
       ]
     }
-  }
+  },
+	"lint-staged": {
+		"*.{js,jsx,vue}": "eslint --cache --fix"
+	}
 }

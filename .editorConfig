@@ -1,0 +1,23 @@
+root = true
+
+# 匹配全部文件
+[*]
+# 设置字符集
+charset = utf-8
+# 缩进风格，可选 space、tab
+indent_style = tab
+# 缩进的空格数，当 indent_style = tab 将使用 tab_width
+# 否则使用 indent_size
+indent_size = 2
+tab_width = 2
+# 结尾换行符，可选 lf、cr、crlf
+end_of_line = crlf
+# 在文件结尾插入新行
+insert_final_newline = true
+# 删除一行中的前后空格
+trim_trailing_whitespace = true
+
+# 匹配 md 结尾的文件
+[*.md]
+insert_final_newline = false
+trim_trailing_whitespace = false

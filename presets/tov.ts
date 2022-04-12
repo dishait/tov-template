@@ -23,7 +23,7 @@ import {
 	NaiveUiResolver,
 	AntDesignVueResolver,
 	ElementPlusResolver,
-	VueUseComponentsResolver
+	VueUseComponentsResolver,
 } from 'unplugin-vue-components/resolvers'
 import Modules from 'vite-plugin-use-modules'
 import { GenerateTitle } from './plugins/html'
@@ -36,31 +36,31 @@ export default () => {
 		GenerateTitle(),
 		// vue 官方插件，用来解析 sfc
 		Vue({
-			include: [/\.vue$/, /\.md$/]
+			include: [/\.vue$/, /\.md$/],
 		}),
 		// markdown 编译插件
 		Markdown(),
 		// 文件路由
 		Pages({
-			extensions: ['vue', 'md', 'tsx']
+			extensions: ['vue', 'md', 'tsx'],
 		}),
 		// 布局系统
 		Layouts(),
 		// 调试工具
 		Inspect({
-			enabled: env.VITE_APP_INSPECT
+			enabled: env.VITE_APP_INSPECT,
 		}),
 		// windicss 插件
 		Windicss({
-			safelist: markdownWrapperClasses
+			safelist: markdownWrapperClasses,
 		}),
 		// mock 服务
 		viteMockServe({
-			prodEnabled: env.VITE_APP_MOCK_IN_PRODUCTION
+			prodEnabled: env.VITE_APP_MOCK_IN_PRODUCTION,
 		}),
 		// https://icones.netlify.app/
 		Icons({
-			autoInstall: true
+			autoInstall: true,
 		}),
 		// 组件自动按需引入
 		Components({
@@ -73,8 +73,8 @@ export default () => {
 				NaiveUiResolver(),
 				ElementPlusResolver(),
 				AntDesignVueResolver(),
-				VueUseComponentsResolver()
-			]
+				VueUseComponentsResolver(),
+			],
 		}),
 		// 目录下 api 按需自动引入辅助插件
 		env.VITE_APP_API_AUTO_IMPORT &&
@@ -84,35 +84,30 @@ export default () => {
 		env.VITE_APP_API_AUTO_IMPORT &&
 			AutoImport({
 				dts: './presets/types/auto-imports.d.ts',
-				imports: [
-					'vue',
-					'pinia',
-					'vue-i18n',
-					'vue-router',
-					'@vueuse/core'
-				],
-				resolvers: AutoImportResolvers
+				imports: ['vue', 'pinia', 'vue-i18n', 'vue-router', '@vueuse/core'],
+				resolvers: AutoImportResolvers,
+				eslintrc: {
+					enabled: true,
+					globalsPropValue: true,
+					filepath: 'presets/eslint/.eslintrc-auto-import.json',
+				},
 			}),
 		// i18n 国际化支持
 		I18n({
 			runtimeOnly: true,
 			compositionOnly: true,
-			include: [resolve(__dirname, '../locales/**')]
+			include: [resolve(__dirname, '../locales/**')],
 		}),
 		// 预设热重启服务
 		ViteRestart({
-			restart: [
-				'.env*',
-				'presets/tov.[jt]s',
-				'presets/shared/**/*'
-			]
+			restart: ['.env*', 'presets/tov.[jt]s', 'presets/shared/**/*'],
 		}),
 		// tsx 支持
 		vueJsx(),
 		// 生产环境资源压缩
 		viteCompression({
 			// @ts-ignore
-			algorithm: env.VITE_APP_COMPRESSINON_ALGORITHM
-		})
+			algorithm: env.VITE_APP_COMPRESSINON_ALGORITHM,
+		}),
 	]
 }
