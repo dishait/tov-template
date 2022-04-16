@@ -31,6 +31,7 @@ import { AutoImportResolvers } from './shared/resolvers'
 
 export default () => {
 	return [
+		// 模块自动加载
 		Modules(),
 		// 生成 title
 		GenerateTitle(),
