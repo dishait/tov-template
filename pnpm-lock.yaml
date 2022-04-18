@@ -34,7 +34,7 @@ specifiers:
   unplugin-icons: ^0.14.1
   unplugin-vue-components: ^0.18.5
   vite: ^2.9.5
-  vite-auto-import-resolvers: ^2.2.3
+  vite-auto-import-resolvers: ^2.3.0
   vite-plugin-compression: ^0.5.1
   vite-plugin-inspect: ^0.4.3
   vite-plugin-md: ^0.12.4
@@ -90,7 +90,7 @@ devDependencies:
   unplugin-icons: 0.14.1_vite@2.9.5
   unplugin-vue-components: 0.18.5_vite@2.9.5+vue@3.2.33
   vite: 2.9.5
-  vite-auto-import-resolvers: 2.2.3_2bc4e8d8b918d81453d454136c831338
+  vite-auto-import-resolvers: 2.3.0_2bc4e8d8b918d81453d454136c831338
   vite-plugin-compression: 0.5.1_vite@2.9.5
   vite-plugin-inspect: 0.4.3_vite@2.9.5
   vite-plugin-md: 0.12.4_vite@2.9.5
@@ -1332,6 +1332,11 @@ packages:
       no-case: 3.0.4
       tslib: 2.3.1
       upper-case-first: 2.0.2
+    dev: true
+
+  /case/1.6.3:
+    resolution: {integrity: sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==}
+    engines: {node: '>= 0.8.0'}
     dev: true
 
   /chai/4.3.6:
@@ -4528,8 +4533,8 @@ packages:
     engines: {node: '>= 10.13.0'}
     dev: true
 
-  /vite-auto-import-resolvers/2.2.3_2bc4e8d8b918d81453d454136c831338:
-    resolution: {integrity: sha512-MhHOL2uE5gx4QIGbYhq291vy+GCthK2IVGz57Vnh5qweF2flo9bCdlJSoPekVkPTIsPeCxlD5m9X/OCWFNSzOg==}
+  /vite-auto-import-resolvers/2.3.0_2bc4e8d8b918d81453d454136c831338:
+    resolution: {integrity: sha512-2/DloHsurAmli/+yzaN3qjwX3f6jnUs1pmBhk2ChFWWuo5haiuNrGZLIG0U3xNPy4610bY6YLWl7pA+dWGWg6Q==}
     engines: {node: '>=16'}
     peerDependencies:
       '@types/node': '>=17.0.23'
@@ -4540,6 +4545,7 @@ packages:
         optional: true
     dependencies:
       '@types/node': 17.0.24
+      case: 1.6.3
       fast-glob: 3.2.11
       local-pkg: 0.4.1
       unplugin-auto-import: 0.6.9_@vueuse+core@8.2.6+vite@2.9.5
