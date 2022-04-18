@@ -17,12 +17,12 @@ specifiers:
   eslint-plugin-prettier: ^4.0.0
   eslint-plugin-vue: ^8.6.0
   fast-glob: ^3.2.11
-  fs-extra: ^10.0.1
+  fs-extra: ^10.1.0
   husky: ^7.0.4
   ityped: ^1.0.3
   lint-staged: ^12.3.8
   markdown-it-anchor: ^8.6.2
-  markdown-it-prism: ^2.2.3
+  markdown-it-prism: ^2.2.4
   mockjs: ^1.1.0
   nprogress: ^0.2.0
   pinia: ^2.0.13
@@ -42,7 +42,7 @@ specifiers:
   vite-plugin-pages: ^0.22.0
   vite-plugin-restart: ^0.1.1
   vite-plugin-use-modules: ^1.1.0
-  vite-plugin-vue-meta-layouts: ^0.0.8
+  vite-plugin-vue-meta-layouts: ^0.0.9
   vite-plugin-windicss: ^1.8.4
   vitest: ^0.8.5
   vue: ^3.2.33
@@ -73,12 +73,12 @@ devDependencies:
   eslint-plugin-prettier: 4.0.0_f526cfa6cd674b35ed3f3e4fea791d6a
   eslint-plugin-vue: 8.6.0_eslint@8.13.0
   fast-glob: 3.2.11
-  fs-extra: 10.0.1
+  fs-extra: 10.1.0
   husky: 7.0.4
   ityped: 1.0.3
   lint-staged: 12.3.8
   markdown-it-anchor: 8.6.2
-  markdown-it-prism: 2.2.3
+  markdown-it-prism: 2.2.4
   mockjs: 1.1.0
   nprogress: 0.2.0
   pinia: 2.0.13_typescript@4.6.3+vue@3.2.33
@@ -98,7 +98,7 @@ devDependencies:
   vite-plugin-pages: 0.22.0_vite@2.9.5
   vite-plugin-restart: 0.1.1_vite@2.9.5
   vite-plugin-use-modules: 1.1.0_vue@3.2.33
-  vite-plugin-vue-meta-layouts: 0.0.8_vue-router@4.0.14
+  vite-plugin-vue-meta-layouts: 0.0.9_vue-router@4.0.14
   vite-plugin-windicss: 1.8.4_vite@2.9.5
   vitest: 0.8.5_c8@7.11.0
   vue-i18n: 9.1.9_vue@3.2.33
@@ -2424,8 +2424,8 @@ packages:
       signal-exit: 3.0.7
     dev: true
 
-  /fs-extra/10.0.1:
-    resolution: {integrity: sha512-NbdoVMZso2Lsrn/QwLXOy6rm0ufY2zEOKCDzJR/0kBsb0E6qed0P3iYK+Ath3BfvXEeu4JhEtXLgILx5psUfag==}
+  /fs-extra/10.1.0:
+    resolution: {integrity: sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==}
     engines: {node: '>=12'}
     dependencies:
       graceful-fs: 4.2.10
@@ -3305,11 +3305,11 @@ packages:
         optional: true
     dev: true
 
-  /markdown-it-prism/2.2.3:
-    resolution: {integrity: sha512-vtiJ1ALGpIg2JPCSv3E8pEwx8Axr9eWu/P4BvCvyXWWM1GEXbr95a7cMuyR4FiEKkZVOXHqqGM6RJoqxra7UGQ==}
+  /markdown-it-prism/2.2.4:
+    resolution: {integrity: sha512-7oQVppKjiZqVQo7s7eLTIs3o/0hdvqAWDW8lvRel6eUCGD4iXjKbSZjvdHZFA2ZnCkQUF47kbvtWZDVQrv7zyQ==}
     engines: {node: '>=6.0.0'}
     dependencies:
-      prismjs: 1.27.0
+      prismjs: 1.28.0
     dev: true
 
   /markdown-it/12.3.2:
@@ -3784,8 +3784,8 @@ packages:
     resolution: {integrity: sha512-EL9ifuU/F8tEldoCa2sspiiLWysCL54xDbf2gN/ubwdtbuJROqOGopG5kSwunapwaioT+jLUQ/Ky+7jnv62xJA==}
     dev: true
 
-  /prismjs/1.27.0:
-    resolution: {integrity: sha512-t13BGPUlFDR7wRB5kQDG4jjl7XeuH6jbJGt11JHPL96qwsEHNX2+68tFXqc1/k+/jALsbSWJKUOT/hcYAZ5LkA==}
+  /prismjs/1.28.0:
+    resolution: {integrity: sha512-8aaXdYvl1F7iC7Xm1spqSaY/OJBpYW3v+KJ+F17iYxvdc8sfjW194COK5wVhMZX45tGteiBQgdvD/nhxcRwylw==}
     engines: {node: '>=6'}
     dev: true
 
@@ -4553,7 +4553,7 @@ packages:
     dependencies:
       chalk: 4.1.2
       debug: 4.3.4
-      fs-extra: 10.0.1
+      fs-extra: 10.1.0
       vite: 2.9.5
     transitivePeerDependencies:
       - supports-color
@@ -4651,8 +4651,8 @@ packages:
       vue: 3.2.33
     dev: true
 
-  /vite-plugin-vue-meta-layouts/0.0.8_vue-router@4.0.14:
-    resolution: {integrity: sha512-YPulbwl1r2i4e3ihmI+kK2Mj24GmUNNwzKehfw2UuY980P9NZGQwQEUadWkT826YOg/MG1MwX+BrNIrmTXraww==}
+  /vite-plugin-vue-meta-layouts/0.0.9_vue-router@4.0.14:
+    resolution: {integrity: sha512-8zc1U6y8MFA4y7GM4Sy63hHaSzW1wlR7dhmub/W0ykxRHVek5HiOXtei5dLQ4EaZGMkpIgE/g1JTxKZK5MS9yg==}
     peerDependencies:
       vue-router: '>=4.0.14'
     dependencies:
@@ -4900,7 +4900,7 @@ packages:
       connect: 3.7.0
       declass: 0.0.1
       fast-glob: 3.2.11
-      fs-extra: 10.0.1
+      fs-extra: 10.1.0
       sirv: 1.0.19
     transitivePeerDependencies:
       - supports-color
