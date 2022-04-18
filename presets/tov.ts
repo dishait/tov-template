@@ -32,7 +32,9 @@ import { AutoImportResolvers } from './shared/resolvers'
 export default () => {
 	return [
 		// 模块自动加载
-		Modules(),
+		Modules({
+			auto: true,
+		}),
 		// 生成 title
 		GenerateTitle(),
 		// vue 官方插件，用来解析 sfc
