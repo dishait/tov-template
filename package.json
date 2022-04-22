@@ -67,7 +67,7 @@
 		"vite-plugin-inspect": "^0.4.3",
 		"vite-plugin-md": "^0.12.4",
 		"vite-plugin-mock": "^2.9.6",
-		"vite-plugin-pages": "^0.22.0",
+		"vite-plugin-pages": "^0.23.0",
 		"vite-plugin-restart": "^0.1.1",
 		"vite-plugin-use-modules": "^1.1.0",
 		"vite-plugin-vue-meta-layouts": "^0.0.9",

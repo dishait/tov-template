@@ -39,7 +39,7 @@ specifiers:
   vite-plugin-inspect: ^0.4.3
   vite-plugin-md: ^0.12.4
   vite-plugin-mock: ^2.9.6
-  vite-plugin-pages: ^0.22.0
+  vite-plugin-pages: ^0.23.0
   vite-plugin-restart: ^0.1.1
   vite-plugin-use-modules: ^1.1.0
   vite-plugin-vue-meta-layouts: ^0.0.9
@@ -95,7 +95,7 @@ devDependencies:
   vite-plugin-inspect: 0.4.3_vite@2.9.5
   vite-plugin-md: 0.12.4_vite@2.9.5
   vite-plugin-mock: 2.9.6_mockjs@1.1.0+vite@2.9.5
-  vite-plugin-pages: 0.22.0_vite@2.9.5
+  vite-plugin-pages: 0.23.0_vite@2.9.5
   vite-plugin-restart: 0.1.1_vite@2.9.5
   vite-plugin-use-modules: 1.1.0_vue@3.2.33
   vite-plugin-vue-meta-layouts: 0.0.9_vue-router@4.0.14
@@ -663,6 +663,12 @@ packages:
     resolution: {integrity: sha512-/zPMqDkzSZ8t3VtxOa4KPq7uzzW978M9Tvh+j7GHKuo6k6GTLxPJ4J5gE5cjfJ26pnXst0N5Hax8Sr0T2Mi9zQ==}
     dev: true
 
+  /@types/debug/4.1.7:
+    resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
+    dependencies:
+      '@types/ms': 0.7.31
+    dev: true
+
   /@types/estree/0.0.39:
     resolution: {integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==}
     dev: true
@@ -710,6 +716,10 @@ packages:
 
   /@types/mockjs/1.0.6:
     resolution: {integrity: sha512-Yu5YlqbYZyqsd6LjO4e8ONJDN9pTSnciHDcRP4teNOh/au2b8helFhgRx+3w8xsTFEnwr9jtfTVJbAx+eYmlHA==}
+    dev: true
+
+  /@types/ms/0.7.31:
+    resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
     dev: true
 
   /@types/node/17.0.25:
@@ -4636,15 +4646,16 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-pages/0.22.0_vite@2.9.5:
-    resolution: {integrity: sha512-OeCtSKoQNjrjtlNgkF4JTU0UdiZsa0cSQJKFyRoUz5KMbGoXR8O29BB2fZx9tMSBPyQJgGvIpzdoofLDaRNcQQ==}
+  /vite-plugin-pages/0.23.0_vite@2.9.5:
+    resolution: {integrity: sha512-KEfW6WBfACCjMXoQY0mLEzfifwCTq6FlvvtXs2XSEe9Pd4QadZTNzHOPKHDsKpVXysRzbYxE8/c/Ao9+nXsQ7w==}
     peerDependencies:
-      '@vue/compiler-sfc': '>=3'
-      vite: '>=2'
+      '@vue/compiler-sfc': ^3.0.0
+      vite: ^2.0.0
     peerDependenciesMeta:
       '@vue/compiler-sfc':
         optional: true
     dependencies:
+      '@types/debug': 4.1.7
       debug: 4.3.4
       deep-equal: 2.0.5
       fast-glob: 3.2.11
