@@ -4,7 +4,7 @@
 		"mikestead.dotenv",
 		"redhat.vscode-yaml",
 		"lokalise.i18n-ally",
-		"johnsoncodehk.volar",
+		"Vue.volar",
 		"steoates.autoimport",
 		"esbenp.prettier-vscode",
 		"formulahendry.auto-close-tag",
