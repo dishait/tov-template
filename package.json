@@ -11,8 +11,8 @@
 		"preview": "vite preview",
 		"deps:fresh": "npx taze -w",
 		"coverage": "vitest --coverage",
-		"analysis": "windicss-analysis",
-		"typecheck": "vue-tsc --noEmit",
+		"analysis": "npx windicss-analysis",
+		"typecheck": "npx vue-tsc --noEmit",
 		"deps:fresh:major": "npx taze major -w",
 		"deps:fresh:minor": "npx taze minor -w",
 		"deps:fresh:patch": "npx taze patch -w",
@@ -20,7 +20,7 @@
 		"preview:open": "vite preview --open",
 		"auto:create": "plop --plopfile scripts/create.js",
 		"auto:remove": "plop --plopfile scripts/remove.js",
-		"analysis:build": "windicss-analysis --html dist",
+		"analysis:build": "npx windicss-analysis --html dist",
 		"lint": "eslint --ext .ts,.js,.jsx,.vue .",
 		"lint:fix": "eslint --fix --ext .ts,.js,.jsx,.vue .",
 		"prepare": "husky install"
@@ -76,9 +76,7 @@
 		"vue-i18n": "^9.1.10",
 		"vue-request": "^1.2.4",
 		"vue-router": "^4.0.15",
-		"vue-tsc": "^0.34.11",
-		"windicss": "^3.5.1",
-		"windicss-analysis": "^0.3.5"
+		"windicss": "^3.5.1"
 	},
 	"pnpm": {
 		"peerDependencyRules": {
