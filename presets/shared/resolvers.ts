@@ -12,7 +12,7 @@ if (env.VITE_APP_DIR_API_AUTO_IMPORT) {
 	AutoImportResolvers.push(
 		dirResolver({ prefix: 'use' }),
 		dirResolver({
-			target: 'stores',
+			target: 'src/stores',
 			suffix: 'Store',
 		})
 	)

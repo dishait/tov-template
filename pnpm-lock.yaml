@@ -34,7 +34,7 @@ specifiers:
   unplugin-icons: ^0.14.3
   unplugin-vue-components: ^0.19.3
   vite: ^2.9.8
-  vite-auto-import-resolvers: ^2.3.0
+  vite-auto-import-resolvers: ^3.0.0
   vite-plugin-compression: ^0.5.1
   vite-plugin-inspect: ^0.5.0
   vite-plugin-md: ^0.13.0
@@ -88,7 +88,7 @@ devDependencies:
   unplugin-icons: 0.14.3_vite@2.9.8
   unplugin-vue-components: 0.19.3_vite@2.9.8+vue@3.2.33
   vite: 2.9.8
-  vite-auto-import-resolvers: 2.3.0_gajvjggzxd2ii5xxhaeuituz6q
+  vite-auto-import-resolvers: 3.0.0_gajvjggzxd2ii5xxhaeuituz6q
   vite-plugin-compression: 0.5.1_vite@2.9.8
   vite-plugin-inspect: 0.5.0_vite@2.9.8
   vite-plugin-md: 0.13.0_vite@2.9.8
@@ -4330,8 +4330,8 @@ packages:
     engines: {node: '>= 10.13.0'}
     dev: true
 
-  /vite-auto-import-resolvers/2.3.0_gajvjggzxd2ii5xxhaeuituz6q:
-    resolution: {integrity: sha512-2/DloHsurAmli/+yzaN3qjwX3f6jnUs1pmBhk2ChFWWuo5haiuNrGZLIG0U3xNPy4610bY6YLWl7pA+dWGWg6Q==}
+  /vite-auto-import-resolvers/3.0.0_gajvjggzxd2ii5xxhaeuituz6q:
+    resolution: {integrity: sha512-1rxVh+uyJ/eCFCsDauMEpU/GcxsXQp54EeHZdbs+xXcyXr8dMwJdkCzDaUml0emXum7Ub/okEQkXRB2csyW1eg==}
     engines: {node: '>=16'}
     peerDependencies:
       '@types/node': '>=17.0.23'
