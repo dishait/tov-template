@@ -1,6 +1,6 @@
 {
 	"name": "tov-template",
-	"version": "1.6.0",
+	"version": "1.7.0",
 	"description": "vite + vue3 + ts 开箱即用现代开发模板",
 	"scripts": {
 		"dev": "vite",
@@ -68,6 +68,7 @@
 		"vite-plugin-md": "^0.13.0",
 		"vite-plugin-mock": "^2.9.6",
 		"vite-plugin-pages": "^0.23.0",
+		"vite-plugin-removelog": "^0.0.1",
 		"vite-plugin-restart": "^0.1.1",
 		"vite-plugin-use-modules": "^1.1.0",
 		"vite-plugin-vue-meta-layouts": "^0.0.9",

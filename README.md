@@ -37,6 +37,7 @@
 26. gzip 资源压缩支持
 27. 环境变量配置支持
 28. 统一的代码规范与风格支持
+29. 生产环境自动移除开发日志
 
 <br />
 <br />
@@ -1185,6 +1186,15 @@ export default defineComponent({
 由 [eslint](https://github.com/eslint/eslint) 提供的代码规范校验，使用 [prettier](https://github.com/prettier/prettier) 统一代码风格。
 
 由 [husky](https://github.com/typicode/husky) + [lint-staged](https://github.com/okonet/lint-staged) 提供的 `commit` 时校验。
+
+<br />
+<br />
+
+### 29. [生产环境自动移除开发日志](https://github.com/dishait/vite-plugin-removelog)
+
+生产环境下 `console.log`，`console.warn` 与 `console.error` 等日志会被自动移除掉，以避免开发时日志的泄漏。
+
+具体可见 👉 [vite-plugin-removelog](https://github.com/dishait/vite-plugin-removelog)
 
 <br />
 <br />
