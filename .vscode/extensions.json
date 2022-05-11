@@ -13,6 +13,7 @@
 		"esbenp.prettier-vscode",
 		"EditorConfig.EditorConfig",
 		"usernamehw.errorlens",
-		"shd101wyy.markdown-preview-enhanced"
+		"shd101wyy.markdown-preview-enhanced",
+		"antfu.goto-alias"
 	]
 }
