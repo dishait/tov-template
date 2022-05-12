@@ -1,4 +1,4 @@
-import { App } from 'vue'
+import type { App } from 'vue'
 import fileRoutes from '~pages'
 import { setupLayouts } from 'virtual:meta-layouts'
 import { createRouter, createWebHistory } from 'vue-router'
