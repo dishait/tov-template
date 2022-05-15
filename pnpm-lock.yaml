@@ -40,7 +40,7 @@ specifiers:
   vite-plugin-md: ^0.13.1
   vite-plugin-mock: ^2.9.6
   vite-plugin-pages: ^0.23.0
-  vite-plugin-removelog: ^0.0.3
+  vite-plugin-removelog: ^0.0.4
   vite-plugin-restart: ^0.1.1
   vite-plugin-use-modules: ^1.1.0
   vite-plugin-vue-meta-layouts: ^0.0.9
@@ -95,7 +95,7 @@ devDependencies:
   vite-plugin-md: 0.13.1_vite@2.9.9
   vite-plugin-mock: 2.9.6_mockjs@1.1.0+vite@2.9.9
   vite-plugin-pages: 0.23.0_vite@2.9.9
-  vite-plugin-removelog: 0.0.3_vue@3.2.33
+  vite-plugin-removelog: 0.0.4_vue@3.2.33
   vite-plugin-restart: 0.1.1_vite@2.9.9
   vite-plugin-use-modules: 1.1.0_vue@3.2.33
   vite-plugin-vue-meta-layouts: 0.0.9_vue-router@4.0.15
@@ -4697,8 +4697,8 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-removelog/0.0.3_vue@3.2.33:
-    resolution: {integrity: sha512-0qM+VOZEH88kqQj2UgYBLaSrFnMhrdOExB+HZkZZruaWbF6MuampGlkxDSnRPKz6meHSZH/jOMUN4Gbyi8E4Lw==}
+  /vite-plugin-removelog/0.0.4_vue@3.2.33:
+    resolution: {integrity: sha512-qoqcHeZQgsNav5Zz3W8j2XRJyNyby4LMMA1pG+wwd4i0uoYOPnJKwEqp4yUGNvMYXiLAN2kCTDYc29y1M0DXhA==}
     dependencies:
       gogocode: 1.0.53_vue@3.2.33
     transitivePeerDependencies:
