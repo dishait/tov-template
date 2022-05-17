@@ -18,14 +18,11 @@
 	"[vue]": {
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
 	},
-	"[js]": {
-		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
-	},
-	"[ts]": {
-		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
-	},
 	"[css]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
 	},
 	"[javascript]": {
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
