@@ -591,11 +591,23 @@ pnpm add naive-ui
 
 目前支持的组件库有:
 
-- [naive ui](https://www.naiveui.com/zh-CN/os-theme)
-- [arco.design](https://arco.design/)
-- [element-plus](https://element-plus.gitee.io/zh-CN/)
-- [ant design of vue](https://next.antdv.com/docs/vue/introduce-cn/)
-- [@vueuse/components](https://vueuse.org/guide/components.html)
+[vant](https://github.com/youzan/vant)
+[idux](https://github.com/IDuxFE/idux)
+[devui](https://github.com/DevCloudFE/vue-devui)
+[quasar](https://github.com/quasarframework/quasar)
+[varlet](https://github.com/varletjs/varlet)
+[inkline](https://github.com/inkline/inkline)
+[vuetify](https://github.com/vuetifyjs/vuetify)
+[naive-ui](https://github.com/TuSimple/naive-ui)
+[primevue](https://github.com/primefaces/primevue)
+[layui-vue](https://gitee.com/layui/layui-vue)
+[view-design](https://iviewui.com/)
+[arco-design](https://github.com/arco-design/arco-design)
+[element-plus](https://github.com/element-plus/element-plus)
+[ant-design-vue](https://github.com/vueComponent/ant-design-vue)
+[@headlessui/vue](https://github.com/tailwindlabs/headlessui)
+[tdesign-vue-next](https://github.com/Tencent/tdesign-vue-next)
+[@vueuse/components](https://github.com/vueuse/vueuse/tree/main/packages/components)
 
 具体可见 👉 [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)
 
