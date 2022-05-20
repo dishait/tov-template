@@ -21,26 +21,14 @@ import { markdownWrapperClasses } from './plugins/markdown'
 import { DirResolverHelper } from 'vite-auto-import-resolvers'
 import {
 	ArcoResolver,
-	IduxResolver,
-	VantResolver,
-	DevUiResolver,
-	QuasarResolver,
-	ViewUiResolver,
-	InklineResolver,
-	TDesignResolver,
 	NaiveUiResolver,
-	Vuetify3Resolver,
-	VarletUIResolver,
-	LayuiVueResolver,
-	PrimeVueResolver,
-	HeadlessUiResolver,
-	ElementPlusResolver,
 	AntDesignVueResolver,
+	ElementPlusResolver,
 	VueUseComponentsResolver,
 } from 'unplugin-vue-components/resolvers'
 import Modules from 'vite-plugin-use-modules'
 import { GenerateTitle } from './plugins/html'
-import { AutoImportResolvers, normalizeResolvers } from './shared/resolvers'
+import { AutoImportResolvers } from './shared/resolvers'
 
 export default () => {
 	return [
@@ -83,45 +71,31 @@ export default () => {
 			extensions: ['vue', 'md', 'tsx'],
 			include: [/\.md$/, /\.vue$/, /\.tsx$/],
 			dts: resolve(__dirname, './types/components.d.ts'),
-			resolvers: normalizeResolvers({
-				onlyExist: [
-					[VantResolver(), 'vant'],
-					[QuasarResolver(), 'quasar'],
-					[DevUiResolver(), 'vue-devui'],
-					[NaiveUiResolver(), 'naive-ui'],
-					[Vuetify3Resolver(), 'vuetify'],
-					[PrimeVueResolver(), 'primevue'],
-					[ViewUiResolver(), 'view-design'],
-					[LayuiVueResolver(), 'layui-vue'],
-					[VarletUIResolver(), '@varlet/ui'],
-					[IduxResolver(), '@idux/components'],
-					[TDesignResolver(), 'tdesign-vue-next'],
-					[InklineResolver(), '@inkline/inkline'],
-					[ElementPlusResolver(), 'element-plus'],
-					[HeadlessUiResolver(), '@headlessui/vue'],
-					[ArcoResolver(), '@arco-design/web-vue'],
-					[AntDesignVueResolver(), 'ant-design-vue'],
-					[VueUseComponentsResolver(), '@vueuse/components'],
-				],
-				include: [IconsResolver()],
-			}),
+			resolvers: [
+				// ArcoResolver(),
+				IconsResolver(),
+				// NaiveUiResolver(),
+				// ElementPlusResolver(),
+				AntDesignVueResolver(),
+				VueUseComponentsResolver(),
+			],
 		}),
 		// 目录下 api 按需自动引入辅助插件
 		env.VITE_APP_API_AUTO_IMPORT &&
-			env.VITE_APP_DIR_API_AUTO_IMPORT &&
-			DirResolverHelper(),
+		env.VITE_APP_DIR_API_AUTO_IMPORT &&
+		DirResolverHelper(),
 		// api 自动按需引入
 		env.VITE_APP_API_AUTO_IMPORT &&
-			AutoImport({
-				dts: './presets/types/auto-imports.d.ts',
-				imports: ['vue', 'pinia', 'vue-i18n', 'vue-router', '@vueuse/core'],
-				resolvers: AutoImportResolvers,
-				eslintrc: {
-					enabled: true,
-					globalsPropValue: true,
-					filepath: 'presets/eslint/.eslintrc-auto-import.json',
-				},
-			}),
+		AutoImport({
+			dts: './presets/types/auto-imports.d.ts',
+			imports: ['vue', 'pinia', 'vue-i18n', 'vue-router', '@vueuse/core'],
+			resolvers: AutoImportResolvers,
+			eslintrc: {
+				enabled: true,
+				globalsPropValue: true,
+				filepath: 'presets/eslint/.eslintrc-auto-import.json',
+			},
+		}),
 		// i18n 国际化支持
 		I18n({
 			runtimeOnly: true,
