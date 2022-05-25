@@ -108,7 +108,10 @@ export default () => {
 		// api 自动按需引入
 		env.VITE_APP_API_AUTO_IMPORT &&
 			AutoImport({
-				dirs: [env.VITE_APP_API_AUTO_IMPORT && 'src/composables'],
+				dirs: [
+					env.VITE_APP_API_AUTO_IMPORT && 'src/stores',
+					env.VITE_APP_API_AUTO_IMPORT && 'src/composables',
+				],
 				dts: './presets/types/auto-imports.d.ts',
 				imports: ['vue', 'pinia', 'vue-i18n', 'vue-router', '@vueuse/core'],
 				resolvers: AutoImportResolvers,
