@@ -282,7 +282,7 @@ pnpm lint:fix
 
 ## 启发 🐃
 
-该模板受 **[vitesse](https://github.com/antfu/vitesse)** 启发，如果你有 SSG 的场景，那么推荐你始终使用 **[vitesse](https://github.com/antfu/vitesse)**。
+该模板受 **[vitesse](https://github.com/antfu/vitesse)** 启发，如果你有 `SSG` 的场景，那么推荐你始终使用 **[vitesse](https://github.com/antfu/vitesse)**。
 
 <br />
 <br />
@@ -488,7 +488,7 @@ const doubled = computed(() => count.value * 2)
 
 当然还有项目中的自动引入，只需要满足以下规范即可。
 
-1. `src/composables` 下凡是 `use` 开头的模块，同时里边有 `default` 导出，该导出就可以被按需自动引入。
+1. `src/composables` 的导出将被按需自动引入。
 
 例如有个 `src/composables/foo.ts`
 
@@ -509,7 +509,7 @@ export default 1000
 </template>
 ```
 
-2. `src/stores` 下凡是 `Store` 结尾的模块，同时里边有 `default` 导出，该导出就可以按需自动引入。
+1. `src/stores` 的导出将被按需自动引入。
 
 例如有个 `src/stores/counterStore.ts`
 
@@ -541,7 +541,7 @@ export default defineStore('counter', {
 </template>
 ```
 
-具体可见 👉 [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import) 与 [vite-auto-import-resolvers](https://github.com/dishait/vite-auto-import-resolvers)
+具体可见 👉 [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import)。
 
 <br />
 
