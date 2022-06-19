@@ -7,8 +7,6 @@
 		"Vue.volar",
 		"steoates.autoimport",
 		"esbenp.prettier-vscode",
-		"formulahendry.auto-close-tag",
-		"formulahendry.auto-rename-tag",
 		"dbaeumer.vscode-eslint",
 		"esbenp.prettier-vscode",
 		"EditorConfig.EditorConfig",
