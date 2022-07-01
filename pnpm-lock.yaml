@@ -25,6 +25,7 @@ specifiers:
   mockjs: ^1.1.0
   nprogress: ^0.2.0
   pinia: ^2.0.14
+  pinia-plugin-persistedstate: ^1.6.1
   plop: ^3.1.1
   prettier: ^2.7.1
   prism-theme-vars: ^0.2.3
@@ -78,6 +79,7 @@ devDependencies:
   mockjs: 1.1.0
   nprogress: 0.2.0
   pinia: 2.0.14_j6bzmzd4ujpabbp5objtwxyjp4
+  pinia-plugin-persistedstate: 1.6.1_pinia@2.0.14
   plop: 3.1.1
   prettier: 2.7.1
   prism-theme-vars: 0.2.3
@@ -3948,6 +3950,14 @@ packages:
     resolution: {integrity: sha512-eG2dWTVw5bzqGRztnHExczNxt5VGsE6OwTeCG3fdUf9KBsZzO3R5OIIIzWR+iZA0NtZ+RDVdaoE2dK1cn6jH4g==}
     engines: {node: '>=0.10'}
     hasBin: true
+    dev: true
+
+  /pinia-plugin-persistedstate/1.6.1_pinia@2.0.14:
+    resolution: {integrity: sha512-4re0ZO5KgqDnSNWX2RhJVIsIYvH+uaEGTN+UOx34mb7fVoE8A3CfB9QhbMT3Zn7ZSBXTfT2cgI/w7cLq2zNQMw==}
+    peerDependencies:
+      pinia: ^2.0.0
+    dependencies:
+      pinia: 2.0.14_j6bzmzd4ujpabbp5objtwxyjp4
     dev: true
 
   /pinia/2.0.14_j6bzmzd4ujpabbp5objtwxyjp4:

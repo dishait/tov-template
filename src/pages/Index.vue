@@ -10,6 +10,8 @@ const toggleLocale = () => {
 const language = computed(() => (locale.value === 'zh-CN' ? '中文' : 'English'))
 
 const theme = computed(() => (isDark.value ? 'dark' : 'light'))
+
+const counter = createCounter()
 </script>
 
 <template>
@@ -20,5 +22,9 @@ const theme = computed(() => (isDark.value ? 'dark' : 'light'))
 		<div>language: {{ language }}</div>
 		<div>base: {{ t('about') }}</div>
 		<div>nesting: {{ t('nesting.sir') }} {{ t('nesting.lady') }}</div>
+	</div>
+
+	<div class="cursor-pointer mt-6 ml-6">
+		<div @click="counter.inc()">counter: {{ counter.count }}</div>
 	</div>
 </template>

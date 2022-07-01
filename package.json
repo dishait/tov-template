@@ -56,6 +56,7 @@
 		"mockjs": "^1.1.0",
 		"nprogress": "^0.2.0",
 		"pinia": "^2.0.14",
+		"pinia-plugin-persistedstate": "^1.6.1",
 		"plop": "^3.1.1",
 		"prettier": "^2.7.1",
 		"prism-theme-vars": "^0.2.3",
