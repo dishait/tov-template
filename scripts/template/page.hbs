@@ -1,3 +1,8 @@
+{{#if isMarkdown}}
+## {{pascalCase name}} Page
+
+> The page is markdown file
+{{else}}
 <script setup lang="ts">
 
 </script>
@@ -9,3 +14,4 @@
 <style>
 
 </style>
+{{/if}}
