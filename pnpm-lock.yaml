@@ -36,6 +36,7 @@ specifiers:
   unplugin-auto-import: ^0.11.1
   unplugin-icons: ^0.14.8
   unplugin-vue-components: ^0.22.4
+  unplugin-vue-router: ^0.1.1
   vite: ^3.0.5
   vite-plugin-compression: ^0.5.1
   vite-plugin-inspect: ^0.6.0
@@ -93,6 +94,7 @@ devDependencies:
   unplugin-auto-import: 0.11.1_ykmcgql4kmtqkatsekrttjacua
   unplugin-icons: 0.14.8_vite@3.0.5
   unplugin-vue-components: 0.22.4_vite@3.0.5+vue@3.2.37
+  unplugin-vue-router: 0.1.1_v3et5vzpkzfpdtkk2vd4p4alge
   vite: 3.0.5
   vite-plugin-compression: 0.5.1_vite@3.0.5
   vite-plugin-inspect: 0.6.0_vite@3.0.5
@@ -4938,6 +4940,31 @@ packages:
       - esbuild
       - rollup
       - supports-color
+      - vite
+      - webpack
+    dev: true
+
+  /unplugin-vue-router/0.1.1_v3et5vzpkzfpdtkk2vd4p4alge:
+    resolution: {integrity: sha512-RSL0iYPF1DD/vGjg9Ld9QnAOido70LbMlGRfEKh3RQxu/yCrlRxnFTWwR2lXqtPH5+Hq1gb0Lwg77oI/u2RhEg==}
+    peerDependencies:
+      vue-router: ^4.1.0
+    peerDependenciesMeta:
+      vue-router:
+        optional: true
+    dependencies:
+      chokidar: 3.5.3
+      fast-glob: 3.2.11
+      json5: 2.2.1
+      local-pkg: 0.4.2
+      mlly: 0.5.7
+      pathe: 0.3.3
+      scule: 0.3.2
+      unplugin: 0.9.0_vite@3.0.5
+      vue-router: 4.1.3_vue@3.2.37
+      yaml: 2.1.1
+    transitivePeerDependencies:
+      - esbuild
+      - rollup
       - vite
       - webpack
     dev: true

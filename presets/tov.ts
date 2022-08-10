@@ -1,7 +1,6 @@
 import { resolve } from 'path'
 import { env } from './shared/env'
 import Vue from '@vitejs/plugin-vue'
-import Pages from 'vite-plugin-pages'
 import Icons from 'unplugin-icons/vite'
 import Inspect from 'vite-plugin-inspect'
 import Markdown from './plugins/markdown'
@@ -11,6 +10,7 @@ import Rmovelog from 'vite-plugin-removelog'
 import ViteRestart from 'vite-plugin-restart'
 import I18n from '@intlify/vite-plugin-vue-i18n'
 import { viteMockServe } from 'vite-plugin-mock'
+import VueRouter from 'unplugin-vue-router/vite'
 import Layouts from 'vite-plugin-vue-meta-layouts'
 import AutoImport from 'unplugin-auto-import/vite'
 import IconsResolver from 'unplugin-icons/resolver'
@@ -39,10 +39,16 @@ import {
 } from 'unplugin-vue-components/resolvers'
 import Modules from 'vite-plugin-use-modules'
 import { GenerateTitle } from './plugins/html'
+import { VueRouterExports } from 'unplugin-vue-router'
 import { AutoImportResolvers, normalizeResolvers } from './shared/resolvers'
 
 export default () => {
 	return [
+		VueRouter({
+			extensions: ['md', 'vue'],
+			routesFolder: 'src/pages',
+			dts: 'presets/types/type-router.d.ts',
+		}),
 		// 模块自动加载
 		Modules({
 			auto: true,
@@ -55,10 +61,6 @@ export default () => {
 		}),
 		// markdown 编译插件
 		Markdown(),
-		// 文件路由
-		Pages({
-			extensions: ['vue', 'md', 'tsx'],
-		}),
 		// 布局系统
 		Layouts(),
 		// 调试工具
@@ -117,7 +119,15 @@ export default () => {
 					env.VITE_APP_API_AUTO_IMPORT && 'src/composables/**/*.ts',
 				],
 				dts: './presets/types/auto-imports.d.ts',
-				imports: ['vue', 'pinia', 'vue-i18n', 'vue-router', '@vueuse/core'],
+				imports: [
+					'vue',
+					'pinia',
+					'vue-i18n',
+					'@vueuse/core',
+					{
+						'vue-router/auto': VueRouterExports,
+					},
+				],
 				resolvers: AutoImportResolvers,
 				eslintrc: {
 					enabled: true,
