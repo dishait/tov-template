@@ -10,6 +10,10 @@
 	font-size: 1rem;
 }
 
+.dark .prose h2 {
+	color: white;
+}
+
 html:not(.dark) {
 	--prism-foreground: #393a34;
 	--prism-background: #f8f8f8;

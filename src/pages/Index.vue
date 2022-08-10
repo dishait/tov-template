@@ -1,13 +1,7 @@
 <script setup lang="ts">
-const { t, locale } = useI18n()
-
 const { isDark, toggleDark } = useDarks()
 
-const toggleLocale = () => {
-	locale.value = locale.value === 'zh-CN' ? 'en' : 'zh-CN'
-}
-
-const language = computed(() => (locale.value === 'zh-CN' ? '中文' : 'English'))
+const { t, toggleLocale, language } = useLanguage()
 
 const theme = computed(() => (isDark.value ? 'dark' : 'light'))
 
