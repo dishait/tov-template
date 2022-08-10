@@ -79,9 +79,13 @@ export default () => {
 		}),
 		// 组件自动按需引入
 		Components({
-			extensions: ['vue', 'md', 'tsx'],
-			include: [/\.md$/, /\.vue$/, /\.tsx$/],
 			dts: resolve(__dirname, './types/components.d.ts'),
+			types: [
+				{
+					from: 'vue-router',
+					names: ['RouterLink', 'RouterView'],
+				},
+			],
 			resolvers: normalizeResolvers({
 				onlyExist: [
 					[VantResolver(), 'vant'],
