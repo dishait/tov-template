@@ -313,7 +313,7 @@ pnpm lint:fix
 
 <br />
 
-### [3. 文件路由](https://github.com/markthree/unplugin-vue-router)
+### [3. 文件路由](https://github.com/posva/unplugin-vue-router)
 
 目录结构即路由。
 
@@ -327,7 +327,7 @@ eg:
 - `src/pages/[user]/settings.vue` => `/:user/settings`
 - `src/pages/[...notFound].vue` => 404 路由
 
-具体可见 👉 [unplugin-vue-router](https://github.com/markthree/unplugin-vue-router)
+具体可见 👉 [unplugin-vue-router](https://github.com/posva/unplugin-vue-router)
 
 <br />
 
