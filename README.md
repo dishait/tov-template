@@ -38,6 +38,7 @@
 27. 环境变量配置支持
 28. 统一的代码规范与风格支持
 29. 生产环境自动移除开发日志
+30. defineOptions 支持
 
 <br />
 <br />
@@ -1207,6 +1208,22 @@ export default defineComponent({
 生产环境下 `console.log`，`console.warn` 与 `console.error` 等日志会被自动移除掉，以避免开发时日志的泄漏。
 
 具体可见 👉 [vite-plugin-removelog](https://github.com/dishait/vite-plugin-removelog)
+
+<br />
+<br />
+
+### 30. [defineOptions 支持](https://github.com/sxzz/unplugin-vue-macros/blob/main/README-zh-CN.md)
+
+```html
+<script setup lang="ts">
+// 定义额外的 options
+defineOptions({
+  name: 'Foo'
+})
+</script>
+```
+
+具体可见 👉 [unplugin-vue-macros](https://github.com/sxzz/unplugin-vue-macros/blob/main/README-zh-CN.md)
 
 <br />
 <br />

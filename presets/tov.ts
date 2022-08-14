@@ -39,11 +39,18 @@ import {
 } from 'unplugin-vue-components/resolvers'
 import Modules from 'vite-plugin-use-modules'
 import { GenerateTitle } from './plugins/html'
+import VueMarcos from 'unplugin-vue-macros/vite'
 import { VueRouterExports } from 'unplugin-vue-router'
 import { AutoImportResolvers, normalizeResolvers } from './shared/resolvers'
 
 export default () => {
 	return [
+		// https://github.com/sxzz/unplugin-vue-macros/blob/main/README-zh-CN.md
+		VueMarcos({
+			hoistStatic: true,
+			defineOptions: true,
+		}),
+		// https://github.com/posva/unplugin-vue-router
 		VueRouter({
 			extensions: ['md', 'vue'],
 			routesFolder: 'src/pages',

@@ -4,8 +4,6 @@ const { isDark, toggleDark } = useDarks()
 const { t, toggleLocale, language } = useLanguage()
 
 const theme = computed(() => (isDark.value ? 'dark' : 'light'))
-
-const counter = createCounter()
 </script>
 
 <template>
@@ -18,7 +16,5 @@ const counter = createCounter()
 		<div>nesting: {{ t('nesting.sir') }} {{ t('nesting.lady') }}</div>
 	</div>
 
-	<div class="cursor-pointer mt-6 ml-6">
-		<div @click="counter.inc()">counter: {{ counter.count }}</div>
-	</div>
+	<Counter />
 </template>
