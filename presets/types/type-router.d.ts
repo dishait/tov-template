@@ -26,8 +26,8 @@ import type {
   UseLinkFnTyped,
 
   // data fetching
-  DataLoader,
-  DefineLoaderOptions,
+  _DataLoader,
+  _DefineLoaderOptions,
 } from 'unplugin-vue-router'
 
 declare module 'vue-router/auto/routes' {
@@ -83,6 +83,8 @@ declare module 'vue-router/auto' {
   export function onBeforeRouteLeave(guard: NavigationGuard<RouteNamedMap>): void
   export function onBeforeRouteUpdate(guard: NavigationGuard<RouteNamedMap>): void
 
+  // Experimental Data Fetching
+
   export function defineLoader<
     P extends Promise<any>,
     Name extends keyof RouteNamedMap = keyof RouteNamedMap,
@@ -90,15 +92,22 @@ declare module 'vue-router/auto' {
   >(
     name: Name,
     loader: (route: RouteLocationNormalizedLoaded<Name>) => P,
-    options?: DefineLoaderOptions<isLazy>,
-  ): DataLoader<Awaited<P>, isLazy>
+    options?: _DefineLoaderOptions<isLazy>,
+  ): _DataLoader<Awaited<P>, isLazy>
   export function defineLoader<
     P extends Promise<any>,
     isLazy extends boolean = false,
   >(
     loader: (route: RouteLocationNormalizedLoaded) => P,
-    options?: DefineLoaderOptions<isLazy>,
-  ): DataLoader<Awaited<P>, isLazy>
+    options?: _DefineLoaderOptions<isLazy>,
+  ): _DataLoader<Awaited<P>, isLazy>
+
+  export {
+    _definePage as definePage,
+    _HasDataLoaderMeta as HasDataLoaderMeta,
+    _setupDataFetchingGuard as setupDataFetchingGuard,
+    _stopDataFetchingScope as stopDataFetchingScope,
+  } from 'unplugin-vue-router/runtime'
 }
 
 declare module 'vue-router' {
