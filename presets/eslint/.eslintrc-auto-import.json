@@ -129,6 +129,7 @@
     "useBrowserLocation": true,
     "useCached": true,
     "useClipboard": true,
+    "useCloned": true,
     "useColorMode": true,
     "useConfirmDialog": true,
     "useCounter": true,
