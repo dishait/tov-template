@@ -26,7 +26,6 @@
     "defineAsyncComponent": true,
     "defineComponent": true,
     "defineLoader": true,
-    "definePage": true,
     "defineStore": true,
     "eagerComputed": true,
     "effectScope": true,
