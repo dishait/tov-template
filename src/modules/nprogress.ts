@@ -1,11 +1,14 @@
 import { router } from './router'
-import NProgress from 'nprogress'
+import { useNProgress } from '@vueuse/integrations/useNProgress'
 
+// https://vueuse.org/integrations/useNProgress/
 export default () => {
+	const { isLoading } = useNProgress()
+
 	router.beforeEach(() => {
-		NProgress.start()
+		isLoading.value = true
 	})
 	router.afterEach(() => {
-		NProgress.done()
+		isLoading.value = false
 	})
 }
