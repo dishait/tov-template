@@ -17,6 +17,7 @@ import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
 import viteCompression from 'vite-plugin-compression'
 import { markdownWrapperClasses } from './plugins/markdown'
+import { VueRouterAutoImports } from 'unplugin-vue-router'
 
 import {
 	ArcoResolver,
@@ -131,9 +132,7 @@ export default () => {
 					'pinia',
 					'vue-i18n',
 					'@vueuse/core',
-					{
-						'vue-router/auto': VueRouterExports,
-					},
+					VueRouterAutoImports
 				],
 				resolvers: AutoImportResolvers,
 				eslintrc: {
