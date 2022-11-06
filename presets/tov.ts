@@ -41,7 +41,6 @@ import {
 import Modules from 'vite-plugin-use-modules'
 import { GenerateTitle } from './plugins/html'
 import VueMarcos from 'unplugin-vue-macros/vite'
-import { VueRouterExports } from 'unplugin-vue-router'
 import { AutoImportResolvers, normalizeResolvers } from './shared/resolvers'
 
 export default () => {
@@ -132,7 +131,7 @@ export default () => {
 					'pinia',
 					'vue-i18n',
 					'@vueuse/core',
-					VueRouterAutoImports
+					VueRouterAutoImports,
 				],
 				resolvers: AutoImportResolvers,
 				eslintrc: {
