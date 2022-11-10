@@ -52,8 +52,8 @@ export default () => {
 		}),
 		// https://github.com/posva/unplugin-vue-router
 		VueRouter({
-			extensions: ['md', 'vue'],
 			routesFolder: 'src/pages',
+			extensions: ['md', 'vue', 'tsx'],
 			dts: 'presets/types/type-router.d.ts',
 		}),
 		// 模块自动加载
@@ -88,6 +88,7 @@ export default () => {
 		}),
 		// 组件自动按需引入
 		Components({
+			extensions: ['md', 'vue', 'tsx'],
 			dts: resolve(__dirname, './types/components.d.ts'),
 			types: [
 				{
