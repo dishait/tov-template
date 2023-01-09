@@ -1,7 +1,7 @@
 const fg = require('fast-glob')
 const fse = require('fs-extra')
 const { basename } = require('path')
-const { showDir, moduleTypes } = require('./shared/base')
+const { showDir, moduleTypes } = require('./shared/base.cjs')
 
 /**
  * 自动删除

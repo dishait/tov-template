@@ -1,6 +1,6 @@
 const fse = require('fs-extra')
 
-const { showDir, showExt, moduleTypes } = require('./shared/base')
+const { showDir, showExt, moduleTypes } = require('./shared/base.cjs')
 
 /**
  * 自动创建

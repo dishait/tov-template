@@ -7,7 +7,6 @@ import Markdown from './plugins/markdown'
 import Windicss from 'vite-plugin-windicss'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import Rmovelog from 'vite-plugin-removelog'
-import ViteRestart from 'vite-plugin-restart'
 import I18n from '@intlify/vite-plugin-vue-i18n'
 import { viteMockServe } from 'vite-plugin-mock'
 import VueRouter from 'unplugin-vue-router/vite'
@@ -53,7 +52,7 @@ export default () => {
 		// https://github.com/posva/unplugin-vue-router
 		VueRouter({
 			routesFolder: 'src/pages',
-			extensions: ['md', 'vue', 'tsx'],
+			extensions: ['.md', '.vue', '.tsx'],
 			dts: 'presets/types/type-router.d.ts',
 		}),
 		// 模块自动加载
@@ -146,10 +145,6 @@ export default () => {
 			runtimeOnly: true,
 			compositionOnly: true,
 			include: [resolve(__dirname, '../locales/**')],
-		}),
-		// 预设热重启服务
-		ViteRestart({
-			restart: ['.env*', 'presets/tov.[jt]s', 'presets/shared/**/*'],
 		}),
 		// tsx 支持
 		vueJsx(),
