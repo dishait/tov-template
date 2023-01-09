@@ -142,7 +142,7 @@ export default () => {
 			}),
 		// i18n 国际化支持
 		I18n({
-			runtimeOnly: true,
+			runtimeOnly: false,
 			compositionOnly: true,
 			include: [resolve(__dirname, '../locales/**')],
 		}),
