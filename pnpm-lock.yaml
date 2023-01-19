@@ -7,6 +7,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.48.0
   '@vitejs/plugin-vue': ^4.0.0
   '@vitejs/plugin-vue-jsx': ^3.0.0
+  '@vue/runtime-core': ^3.2.45
   '@vueuse/core': ^9.10.0
   '@vueuse/integrations': ^9.10.0
   c8: ^7.12.0
@@ -64,6 +65,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.48.0_iukboom6ndih5an6iafl45j2fe
   '@vitejs/plugin-vue': 4.0.0_vite@4.0.4+vue@3.2.45
   '@vitejs/plugin-vue-jsx': 3.0.0_vite@4.0.4+vue@3.2.45
+  '@vue/runtime-core': 3.2.45
   '@vueuse/core': 9.10.0_vue@3.2.45
   '@vueuse/integrations': 9.10.0_nprogress@0.2.0+vue@3.2.45
   c8: 7.12.0
@@ -724,8 +726,8 @@ packages:
       vue-i18n:
         optional: true
     dependencies:
-      '@intlify/message-compiler': 9.3.0-beta.13
-      '@intlify/shared': 9.3.0-beta.13
+      '@intlify/message-compiler': 9.3.0-beta.16
+      '@intlify/shared': 9.3.0-beta.16
       jsonc-eslint-parser: 1.4.1
       source-map: 0.6.1
       vue-i18n: 9.2.2_vue@3.2.45
@@ -757,11 +759,11 @@ packages:
       source-map: 0.6.1
     dev: true
 
-  /@intlify/message-compiler/9.3.0-beta.13:
-    resolution: {integrity: sha512-6vVGAOqzSurfp8leQ+9ySBTxCTTJyucMBVVXxW1/ENWGxZg1SDdIIZG3FcZo+kZEfbm46AWVByCL8FdcHS2QGw==}
+  /@intlify/message-compiler/9.3.0-beta.16:
+    resolution: {integrity: sha512-CGQI3xRcs1ET75eDQ0DUy3MRYOqTauRIIgaMoISKiF83gqRWg93FqN8lGMKcpBqaF4tI0JhsfosCaGiBL9+dnw==}
     engines: {node: '>= 14'}
     dependencies:
-      '@intlify/shared': 9.3.0-beta.13
+      '@intlify/shared': 9.3.0-beta.16
       source-map: 0.6.1
     dev: true
 
@@ -770,8 +772,8 @@ packages:
     engines: {node: '>= 14'}
     dev: true
 
-  /@intlify/shared/9.3.0-beta.13:
-    resolution: {integrity: sha512-94pkO11UTh/7b1B9RGe6iEFG6e89I+qDN8MjA3rhc4dnMt7rGzg7/xhxMmavzGTieYQRfv86jv+EOUmP4cc5Wg==}
+  /@intlify/shared/9.3.0-beta.16:
+    resolution: {integrity: sha512-kXbm4svALe3lX+EjdJxfnabOphqS4yQ1Ge/iIlR8tvUiYRCoNz3hig1M4336iY++Dfx5ytEQJPNjIcknNIuvig==}
     engines: {node: '>= 14'}
     dev: true
 
@@ -792,7 +794,7 @@ packages:
         optional: true
     dependencies:
       '@intlify/bundle-utils': 3.2.1_vue-i18n@9.2.2
-      '@intlify/shared': 9.3.0-beta.13
+      '@intlify/shared': 9.3.0-beta.16
       '@rollup/pluginutils': 4.2.1
       debug: 4.3.4
       fast-glob: 3.2.12
