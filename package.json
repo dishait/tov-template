@@ -20,14 +20,12 @@
 		"deps:fresh:patch": "npx taze patch -w",
 		"preview:host": "vite preview --host",
 		"preview:open": "vite preview --open",
+		"release": "bumpp --commit --push --tag",
 		"lint": "eslint --ext .ts,.js,.jsx,.vue .",
 		"lint:fix": "eslint --fix --ext .ts,.js,.jsx,.vue .",
 		"auto:create": "plop --plopfile scripts/create.cjs",
 		"auto:remove": "plop --plopfile scripts/remove.cjs",
 		"analysis:build": "npx windicss-analysis --html dist"
-	},
-	"dependencies": {
-		"vue": "^3.2.47"
 	},
 	"engines": {
 		"node": ">=16"
@@ -42,6 +40,7 @@
 		"@vue/runtime-core": "^3.2.47",
 		"@vueuse/core": "^9.13.0",
 		"@vueuse/integrations": "^9.13.0",
+		"bumpp": "^9.0.0",
 		"c8": "^7.13.0",
 		"eslint": "^8.36.0",
 		"eslint-config-prettier": "^8.8.0",
@@ -81,6 +80,7 @@
 		"vite-plugin-vue-meta-layouts": "^0.1.1",
 		"vite-plugin-windicss": "^1.8.10",
 		"vitest": "^0.29.7",
+		"vue": "^3.2.47",
 		"vue-i18n": "^9.2.2",
 		"vue-request": "^1.2.4",
 		"vue-router": "^4.1.6",
