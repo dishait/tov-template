@@ -13,12 +13,12 @@ const messages = Object.fromEntries(
 	})
 )
 
-export default (app: App) => {
-	const i18n = createI18n({
-		legacy: false,
-		locale: 'en',
-		messages,
-	})
+export const i18n = createI18n({
+	legacy: false,
+	locale: 'en',
+	messages,
+})
 
+export default (app: App) => {
 	app.use(i18n)
 }
