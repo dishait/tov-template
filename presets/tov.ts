@@ -7,7 +7,6 @@ import Markdown from './plugins/markdown'
 import Windicss from 'vite-plugin-windicss'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import Rmovelog from 'vite-plugin-removelog'
-import I18n from '@intlify/vite-plugin-vue-i18n'
 import { viteMockServe } from 'vite-plugin-mock'
 import VueRouter from 'unplugin-vue-router/vite'
 import Layouts from 'vite-plugin-vue-meta-layouts'
@@ -17,6 +16,7 @@ import Components from 'unplugin-vue-components/vite'
 import viteCompression from 'vite-plugin-compression'
 import { markdownWrapperClasses } from './plugins/markdown'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
+import I18N from '@intlify/unplugin-vue-i18n/vite'
 
 import {
 	ArcoResolver,
@@ -39,6 +39,7 @@ import {
 } from 'unplugin-vue-components/resolvers'
 import Modules from 'vite-plugin-use-modules'
 import { GenerateTitle } from './plugins/html'
+// @ts-ignore
 import VueMarcos from 'unplugin-vue-macros/vite'
 import { AutoImportResolvers, normalizeResolvers } from './shared/resolvers'
 
@@ -141,7 +142,7 @@ export default () => {
 				},
 			}),
 		// i18n 国际化支持
-		I18n({
+		I18N({
 			runtimeOnly: false,
 			compositionOnly: true,
 			include: [resolve(__dirname, '../locales/**')],
