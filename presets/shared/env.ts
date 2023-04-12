@@ -1,12 +1,15 @@
+import { argv } from 'process'
 import { loadEnv } from 'vite'
 
 const { NODE_ENV } = process.env
 
-// 是否是开发环境
-export const isDevelopment = NODE_ENV === 'development'
-
-// 是否是生产环境
-export const isProduction = NODE_ENV === 'production'
+export function detectMode() {
+	const hasModeIndex = argv.findIndex((a) => a === '--mode' || a === '-m')
+	if (hasModeIndex !== -1) {
+		return argv[hasModeIndex + 1]
+	}
+	return NODE_ENV || 'development'
+}
 
 const stringToBoolean = (v: string) => {
 	return Boolean(v === 'true' || false)
@@ -14,9 +17,7 @@ const stringToBoolean = (v: string) => {
 
 // 获取环境变量
 const useEnv = () => {
-	const env = isProduction
-		? loadEnv('production', '.')
-		: loadEnv('development', '.')
+	const env = loadEnv(detectMode(), '.')
 
 	const {
 		VITE_APP_TITLE,

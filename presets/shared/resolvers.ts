@@ -6,7 +6,9 @@ import type { ComponentResolver } from 'unplugin-vue-components/types'
 type Arrayable<T> = T | Array<T>
 type Resolvers = Arrayable<Arrayable<Resolver>>
 
-export const AutoImportResolvers: Resolvers = [ElementPlusResolver()]
+export const AutoImportResolvers: Resolvers = isPackageExists('element-plus')
+	? [ElementPlusResolver()]
+	: []
 
 interface Options {
 	onlyExist?: [Arrayable<ComponentResolver>, string][]

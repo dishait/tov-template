@@ -41,10 +41,15 @@ import Modules from 'vite-plugin-use-modules'
 import { GenerateTitle } from './plugins/html'
 // @ts-ignore
 import VueMarcos from 'unplugin-vue-macros/vite'
+import { warmup } from 'vite-plugin-warmup'
 import { AutoImportResolvers, normalizeResolvers } from './shared/resolvers'
 
 export default () => {
 	return [
+		// https://github.com/bluwy/vite-plugin-warmup (依赖预热，加快渲染，未来可能会内置到 vite 中)
+		warmup({
+			clientFiles: ['./src/**/*.vue']
+		}),
 		// https://github.com/sxzz/unplugin-vue-macros/blob/main/README-zh-CN.md
 		VueMarcos({
 			hoistStatic: true,
