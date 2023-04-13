@@ -48,7 +48,7 @@ export default () => {
 	return [
 		// https://github.com/bluwy/vite-plugin-warmup (依赖预热，加快渲染，未来可能会内置到 vite 中)
 		warmup({
-			clientFiles: ['./src/**/*.vue']
+			clientFiles: ['./src/**/*'],
 		}),
 		// https://github.com/sxzz/unplugin-vue-macros/blob/main/README-zh-CN.md
 		VueMarcos({

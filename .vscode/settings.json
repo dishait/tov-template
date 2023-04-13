@@ -3,6 +3,7 @@
 	"i18n-ally.keystyle": "nested",
 	"i18n-ally.sourceLanguage": "zh-CN",
 	"css.lint.unknownAtRules": "ignore",
+	"volar.inlayHints.eventArgumentInInlineHandlers": false,
 	// 开启 eslint
 	"eslint.enable": true,
 	// 开启 prettier
