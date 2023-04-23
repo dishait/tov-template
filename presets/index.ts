@@ -1,20 +1,28 @@
 import { resolve } from 'path'
 import { argv } from 'process'
 import { loadEnv } from 'vite'
+
 import Vue from '@vitejs/plugin-vue'
+import Prism from 'markdown-it-prism'
+import Markdown from 'vite-plugin-md'
 import Icons from 'unplugin-icons/vite'
+import Jsx from '@vitejs/plugin-vue-jsx'
 import Inspect from 'vite-plugin-inspect'
+import { isPackageExists } from 'local-pkg'
 import Windicss from 'vite-plugin-windicss'
-import vueJsx from '@vitejs/plugin-vue-jsx'
 import Rmovelog from 'vite-plugin-removelog'
-import { viteMockServe } from 'vite-plugin-mock'
-import VueRouter from 'unplugin-vue-router/vite'
+import Modules from 'vite-plugin-use-modules'
+import Router from 'unplugin-vue-router/vite'
+// @ts-ignore
+import Marcos from 'unplugin-vue-macros/vite'
+import Compression from 'vite-plugin-compression'
 import Layouts from 'vite-plugin-vue-meta-layouts'
 import AutoImport from 'unplugin-auto-import/vite'
-import IconsResolver from 'unplugin-icons/resolver'
 import I18N from '@intlify/unplugin-vue-i18n/vite'
+import IconsResolver from 'unplugin-icons/resolver'
+import { warmup as Warmup } from 'vite-plugin-warmup'
 import Components from 'unplugin-vue-components/vite'
-import viteCompression from 'vite-plugin-compression'
+import { viteMockServe as Mock } from 'vite-plugin-mock'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import { AutoGenerateImports } from 'vite-auto-import-resolvers'
 
@@ -37,30 +45,24 @@ import {
 	AntDesignVueResolver,
 	VueUseComponentsResolver,
 } from 'unplugin-vue-components/resolvers'
-import Modules from 'vite-plugin-use-modules'
-import Prism from 'markdown-it-prism'
-import { warmup } from 'vite-plugin-warmup'
-// @ts-ignore
-import VueMarcos from 'unplugin-vue-macros/vite'
-import Markdown from 'vite-plugin-md'
+
 import type { Plugin } from 'vite'
-import { isPackageExists } from 'local-pkg'
 import type { ComponentResolver } from 'unplugin-vue-components/types'
 
 export default function () {
 	const env = useEnv()
 	const plugins: Plugin[] = [
 		// https://github.com/bluwy/vite-plugin-warmup (依赖预热，加快渲染，未来可能会内置到 vite 中)
-		warmup({
+		Warmup({
 			clientFiles: ['./src/**/*'],
 		}),
 		// https://github.com/sxzz/unplugin-vue-macros/blob/main/README-zh-CN.md
-		VueMarcos({
+		Marcos({
 			hoistStatic: true,
 			defineOptions: true,
 		}),
 		// https://github.com/posva/unplugin-vue-router
-		VueRouter({
+		Router({
 			routesFolder: 'src/pages',
 			extensions: ['.md', '.vue', '.tsx'],
 			dts: 'presets/types/type-router.d.ts',
@@ -82,7 +84,7 @@ export default function () {
 			enabled: env.VITE_APP_INSPECT,
 		}),
 		// mock 服务
-		viteMockServe({
+		Mock({
 			prodEnabled: env.VITE_APP_MOCK_IN_PRODUCTION,
 		}),
 		// https://icones.netlify.app/
@@ -127,12 +129,12 @@ export default function () {
 		I18N({
 			runtimeOnly: false,
 			compositionOnly: true,
-			include: [resolve(__dirname, '../locales/**')],
+			include: ['locales/**'],
 		}),
-		// tsx 支持
-		vueJsx(),
+		// jsx 和 tsx 支持
+		Jsx(),
 		// 生产环境资源压缩
-		viteCompression({
+		Compression({
 			// @ts-ignore
 			algorithm: env.VITE_APP_COMPRESSINON_ALGORITHM,
 		}),
