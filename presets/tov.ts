@@ -17,6 +17,7 @@ import viteCompression from 'vite-plugin-compression'
 import { markdownWrapperClasses } from './plugins/markdown'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import I18N from '@intlify/unplugin-vue-i18n/vite'
+import { AutoGenerateImports } from 'vite-auto-import-resolvers'
 
 import {
 	ArcoResolver,
@@ -127,16 +128,12 @@ export default () => {
 		// api 自动按需引入
 		env.VITE_APP_API_AUTO_IMPORT &&
 			AutoImport({
-				dirs: [
-					env.VITE_APP_API_AUTO_IMPORT && 'src/stores/**/*.ts',
-					env.VITE_APP_API_AUTO_IMPORT && 'src/composables/**/*.ts',
-				],
+				dirs: env.VITE_APP_DIR_API_AUTO_IMPORT
+					? ['src/stores/**/*.ts', 'src/composables/**/*.ts']
+					: undefined,
 				dts: './presets/types/auto-imports.d.ts',
 				imports: [
-					'vue',
-					'pinia',
-					'vue-i18n',
-					'@vueuse/core',
+					...AutoGenerateImports({ exclude: ['vue-router'] }),
 					VueRouterAutoImports,
 				],
 				resolvers: AutoImportResolvers,
