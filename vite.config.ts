@@ -1,5 +1,5 @@
+import Tov from './presets'
 import { resolve } from 'path'
-import Tov from './presets/tov'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
