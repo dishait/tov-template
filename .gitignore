@@ -1,2 +1,4 @@
 dist
 node_modules
+.eslintcache
+vite.config.ts.timestamp*

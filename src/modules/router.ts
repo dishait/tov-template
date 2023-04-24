@@ -1,13 +1,11 @@
-import { App } from 'vue'
-import generatedRoutes from 'virtual:generated-pages'
-import { setupLayouts } from 'virtual:generated-layouts'
+import type { App } from 'vue'
+import { setupLayouts } from 'virtual:meta-layouts'
 import { createRouter, createWebHistory } from 'vue-router'
-
-const routes = setupLayouts(generatedRoutes)
+import { routes as fileRoutes } from 'vue-router/auto/routes'
 
 export const router = createRouter({
-	routes,
-	history: createWebHistory()
+	history: createWebHistory(),
+	routes: setupLayouts(fileRoutes),
 })
 
 export default (app: App) => app.use(router)

@@ -1,0 +1,17 @@
+{
+	"recommendations": [
+		"antfu.iconify",
+		"mikestead.dotenv",
+		"redhat.vscode-yaml",
+		"lokalise.i18n-ally",
+		"Vue.volar",
+		"steoates.autoimport",
+		"esbenp.prettier-vscode",
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"EditorConfig.EditorConfig",
+		"usernamehw.errorlens",
+		"shd101wyy.markdown-preview-enhanced",
+		"antfu.goto-alias"
+	]
+}
