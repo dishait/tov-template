@@ -82,6 +82,9 @@ devDependencies:
   mockjs:
     specifier: ^1.1.0
     version: 1.1.0
+  modern-css-reset:
+    specifier: ^1.4.0
+    version: 1.4.0
   nprogress:
     specifier: ^0.2.0
     version: 0.2.0
@@ -4657,6 +4660,10 @@ packages:
     hasBin: true
     dependencies:
       commander: 10.0.0
+    dev: true
+
+  /modern-css-reset@1.4.0:
+    resolution: {integrity: sha512-0crZmSFmrxkI7159rvQWjpDhy0u4+Awg/iOycJdlVn0RSeft/a+6BrQHR3IqvmdK25sqt0o6Z5Ap7cWgUee2rw==}
     dev: true
 
   /mri@1.2.0:

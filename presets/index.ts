@@ -51,7 +51,7 @@ import type { ComponentResolver } from 'unplugin-vue-components/types'
 export default function () {
 	const env = useEnv()
 	const safelist =
-		'prose md:prose-lg lg:prose-lg dark:prose-invert text-left p-10 prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600'
+		'prose md:prose-lg lg:prose-lg dark:prose-invert text-left w-screen prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600'
 	const plugins: Plugin[] = [
 		// https://github.com/bluwy/vite-plugin-warmup (依赖预热，加快渲染，未来可能会内置到 vite 中)
 		Warmup({

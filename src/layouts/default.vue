@@ -1,9 +1,6 @@
-<script setup lang="ts">
-import { SwitchIcon } from 'vue-dark-switch'
-import 'vue-dark-switch/dist/style.css'
-</script>
-
 <template>
-	<SwitchIcon class="fixed right-2 top-2" />
-	<router-view />
+	<Navigation />
+	<div class="w-screen flex flex-col items-center justify-center">
+		<router-view />
+	</div>
 </template>

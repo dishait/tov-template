@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="grid grid-cols-3">
 		<a href="https://github.com/dishait/tov-template" target="_blank">
 			<img src="/logo.png" class="logo" alt="Vite logo" />
 		</a>
@@ -14,44 +14,14 @@
 </template>
 
 <style>
-:root {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-}
-
 a {
-	font-weight: 500;
-	color: #646cff;
-	text-decoration: inherit;
-}
-a:hover {
-	color: #535bf2;
-}
-
-body {
-	margin: 0;
-	display: flex;
-	place-items: center;
-}
-
-h1 {
-	font-size: 3.2em;
-	line-height: 1.1;
-}
-
-.card {
-	padding: 2em;
-}
-
-#app {
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 2rem;
-	text-align: center;
+	color: rgba(37, 99, 235);
 }
 
 .logo {
-	height: 6em;
-	padding: 1.5em;
+	width: 10em;
+	height: 10em;
+	padding: 1.5rem;
 	will-change: filter;
 	transition: filter 300ms;
 }
