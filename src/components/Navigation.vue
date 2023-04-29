@@ -9,7 +9,7 @@ import 'vue-dark-switch/dist/style.css'
 		class="mx-auto max-w-3xl flex items-center justify-between p-4"
 	>
 		<span class="h-10 w-10 flex items-center justify-center">
-			<SwitchIcon />
+			<SwitchIcon unmount-persets />
 		</span>
 
 		<ul class="flex items-center gap-2 text-sm font-medium">

@@ -19,7 +19,7 @@
 8. 图标自动引入
 9. VueUse 支持
 10. TypeScript 的
-11. Windi CSS 的
+11. UnoCss 的
 12. 暗黑模式支持
 13. SWR 请求支持
 14. pinia 状态管理
@@ -71,7 +71,7 @@ npx degit https://github.com/dishait/tov-template#main
 
 ## `node` 版本推荐 🐎
 
-因为该模板完全面向现代，所以推荐大家使用 `node` 当前的长期维护版本 `v16`， 大于 `v16.13.1` 即可。
+因为该模板完全面向现代，所以推荐大家使用 `node` 当前的长期维护版本 `v18`
 
 <br />
 <br />
@@ -79,17 +79,12 @@ npx degit https://github.com/dishait/tov-template#main
 
 ## 使用 🐂
 
-> 该模板不限定大家使用某一特定的包管理器，npm，yarn 和 pnpm 都行。同时注意 npm 的版本应该尽量的新。
-
-强烈推荐大家使用更快更合理的 `pnpm` 包管理器 👉 [安装教程](https://pnpm.io/zh/installation)
+该模板仅支持 `pnpm` 包管理器 👉 [安装教程](https://pnpm.io/zh/installation)
 
 1. 安装依赖
 
 ```shell
 pnpm install
-
-# 或者 npm install
-# 或者 yarn
 ```
 
 2. 开发
@@ -97,20 +92,11 @@ pnpm install
 ```shell
 pnpm dev
 
-# 或者 npm run dev
-# 或者 yarn dev
-
 # 开启 host
 pnpm dev:host
 
-# 或者 npm run dev:host
-# 或者 yarn dev:host
-
 # 自动打开浏览器
 pnpm dev:open
-
-# 或者 npm run dev:open
-# 或者 yarn dev:open
 ```
 
 3. 预览
@@ -118,144 +104,78 @@ pnpm dev:open
 ```shell
 pnpm preview
 
-# 或者 npm run preview
-# 或者 yarn preview
-
 # 开启 host
 pnpm preview:host
 
-# 或者 npm run preview:host
-# 或者 yarn preview:host
-
 # 自动打开浏览器
 pnpm preview:open
-
-# 或者 npm run preview:open
-# 或者 yarn preview:open
 ```
 
 4. 打包
 
 ```shell
 pnpm build
-
-# 或者 npm run build
-# 或者 yarn build
 ```
 
 5. 单元测试
 
 ```shell
 pnpm test
-
-# 或者 npm run test
-# 或者 yarn test
 ```
 
 6. 单元测试报告生成
 
 ```shell
 pnpm coverage
-
-# 或者 npm run coverage
-# 或者 yarn coverage
 ```
 
-7. 样式报告预览
-
-```shell
-pnpm analysis
-
-# 或者 npm run analysis
-# 或者 yarn analysis
-```
-
-8. 样式报告打包
-
-```shell
-pnpm analysis:build
-
-# 或者 npm run analysis:build
-# 或者 yarn analysis:build
-```
-
-9. 类型检查
+7. 类型检查
 
 ```shell
 pnpm typecheck
-
-# 或者 npm run typecheck
-# 或者 yarn typecheck
 ```
 
-10. 自动创建
+8. 自动创建
 
 ```shell
 pnpm auto:create
-
-# 或者 npm run auto:create
-# 或者 yarn auto:create
 ```
 
-11. 自动移除
+9. 自动移除
 
 ```shell
 pnpm auto:remove
-
-# 或者 npm run auto:remove
-# 或者 yarn auto:remove
 ```
 
-12. 依赖更新
+10. 依赖更新
 
 ```shell
 # 安全版本更新
 pnpm deps:fresh
 
-# 或者 npm run deps:fresh
-# 或者 yarn deps:fresh
-
 # 主版本更新，可能是破坏性更新，谨慎使用，做好测试
 pnpm deps:fresh:major
-
-# 或者 npm run deps:fresh:major
-# 或者 yarn deps:fresh:major
 
 # 次版本更新，可能是破坏性更新，谨慎使用，做好测试
 pnpm deps:fresh:minor
 
-# 或者 npm run deps:fresh:minor
-# 或者 yarn deps:fresh:minor
-
 # 补丁版本更新
 pnpm deps:fresh:patch
-
-# 或者 npm run deps:fresh:patch
-# 或者 yarn deps:fresh:patch
 ```
 
 ```shell
 # 以上命令仅对包信息 package.json 进行写入，需要重新执行包安装命令
 pnpm i
-
-# 或者 npm i
-# 或者 yarn
 ```
 
-13. 代码规范校验
+11. 代码规范校验
 
 ```shell
 pnpm lint
 
-# 或者 npm run lint
-# 或者 yarn lint
-
 # 校验时修复
 
 pnpm lint:fix
-
-# 或者 npm run lint:fix
-# 或者 yarn lint:fix
 ```
 
 <br />
@@ -283,7 +203,7 @@ pnpm lint:fix
 
 ## 启发 🐃
 
-该模板受 **[vitesse](https://github.com/antfu/vitesse)** 启发，如果你有 `SSG` 的场景，那么推荐你始终使用 **[vitesse](https://github.com/antfu/vitesse)**。
+该模板受 **[vitesse](https://github.com/antfu/vitesse)** 启发，如果你有 `SSG` 的场景，推荐你使用 **[vitesse](https://github.com/antfu/vitesse)**。
 
 <br />
 <br />
@@ -479,13 +399,7 @@ const doubled = computed(() => count.value * 2)
 
 而且上边的 `api` 是按需自动引入的。
 
-目前模板支持自动引入 `api` 的库列表包括:
-
-1. vue
-2. pinia
-3. vueuse
-4. vue-i18n
-5. vue-router
+目前模板支持自动引入 `api` 的库列表 👉 [vite-auto-import-resolvers](https://github.com/dishait/vite-auto-import-resolvers#%E9%BB%98%E8%AE%A4%E6%94%AF%E6%8C%81%E5%88%97%E8%A1%A8)，只要确保已经安装依赖即可。
 
 当然还有项目中的自动引入，只需要满足以下规范即可。
 
@@ -693,9 +607,9 @@ npm i @iconify/mdi -D
 
 <br />
 
-### [11. Windi CSS 的](https://cn.windicss.org/)
+### [11. unocss 的](https://unocss.dev/)
 
-`Windi CSS` 是一个开发中速度更快的 `原子css` 库。
+`unocss` 是一个开发中速度更快的 `原子css` 库。
 
 直接在模板中用就行了，不需要配置。
 
@@ -708,7 +622,7 @@ npm i @iconify/mdi -D
 
 上述模板将渲染红色背景白色的字。
 
-同时支持 [属性化模式](https://cn.windicss.org/features/attributify.html#attributify-mode)，即可以用简写。该功能默认关闭，可在 `windi.config.ts` 中 设置 `attributify` 为 `true` 开启。
+同时支持 [属性化模式](https://cn.windicss.org/features/attributify.html#attributify-mode)，即可以用简写。
 
 ```html
 <template>
@@ -719,35 +633,13 @@ npm i @iconify/mdi -D
 
 这在调整边距尺寸以及等方面可以减少代码量。
 
-同时预设 [排版](https://cn.windicss.org/plugins/official/typography.html) 插件，解决简单的布局困难问题。
-
-当然也支持 [可视化分析器](https://cn.windicss.org/features/analyzer.html) 生成 `原子css` 报告.
-
-在终端中输入命令，即可看到报告
-
-```shell
-pnpm analysis
-
-# 或者 npm run analysis
-# 或者 yarn analysis
-```
-
-或者打包输出该报告
-
-```shell
-pnpm analysis:build
-
-# 或者 npm run analysis:build
-# 或者 yarn analysis:build
-```
-
-具体可见 👉 [Windi CSS](https://cn.windicss.org/)
+具体可见 👉 [unocss](https://unocss.dev/)
 
 <br />
 
 ### [12. 暗黑模式支持](https://cn.windicss.org/features/dark-mode.html#dark-mode)
 
-暗黑模式由 `Windi CSS` 的 `暗黑模式` 和 `VueUse` 实现。
+暗黑模式由  的 [vue-dark-switch](https://github.com/dishait/vue-dark-switch) 和 `VueUse` 实现。
 
 `src/composables` 目录用来存储 `composition-api` 模块。
 
@@ -780,9 +672,11 @@ export const useDarks = () => ({ isDark, toggleDark })
 </template>
 ```
 
-具体可见 👉 [暗黑模式](https://cn.windicss.org/features/dark-mode.html#dark-mode)
+具体可见 👉 [vue-dark-switch](https://github.com/dishait/vue-dark-switch) 和 [vueuse/usedark](https://vueuse.org/core/usedark/#usedark)
 
 <br />
+
+
 
 ### [13. SWR 请求支持](https://cn.attojs.org/)
 
