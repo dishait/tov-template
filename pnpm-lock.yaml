@@ -82,9 +82,6 @@ devDependencies:
   mockjs:
     specifier: ^1.1.0
     version: 1.1.0
-  modern-css-reset:
-    specifier: ^1.4.0
-    version: 1.4.0
   nprogress:
     specifier: ^0.2.0
     version: 0.2.0
@@ -163,6 +160,9 @@ devDependencies:
   vue:
     specifier: ^3.2.47
     version: 3.2.47
+  vue-dark-switch:
+    specifier: ^0.5.9
+    version: 0.5.9(vite@4.3.3)(vue@3.2.47)
   vue-i18n:
     specifier: ^9.2.2
     version: 9.2.2(vue@3.2.47)
@@ -4659,10 +4659,6 @@ packages:
       commander: 10.0.0
     dev: true
 
-  /modern-css-reset@1.4.0:
-    resolution: {integrity: sha512-0crZmSFmrxkI7159rvQWjpDhy0u4+Awg/iOycJdlVn0RSeft/a+6BrQHR3IqvmdK25sqt0o6Z5Ap7cWgUee2rw==}
-    dev: true
-
   /mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
     engines: {node: '>=4'}
@@ -6551,6 +6547,17 @@ packages:
       - sugarss
       - supports-color
       - terser
+    dev: true
+
+  /vue-dark-switch@0.5.9(vite@4.3.3)(vue@3.2.47):
+    resolution: {integrity: sha512-p58V2vavrUCeJp5zoZ4OC05hVtDs7MA6uzI7b5YpAQpvAIz59jK9SPlcjkCxSsoRzOPZgd4tymbFILfYZPOXww==}
+    engines: {node: '>=16', pnpm: '>=7.0.0'}
+    peerDependencies:
+      vite: '>=4.0.0'
+      vue: '>=3.0.0'
+    dependencies:
+      vite: 4.3.3(@types/node@18.16.2)
+      vue: 3.2.47
     dev: true
 
   /vue-demi@0.13.11(vue@3.2.47):

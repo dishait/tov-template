@@ -30,7 +30,7 @@ html.dark {
 * 全局滚动条
 */
 ::-webkit-scrollbar {
-	width: 11px;
+	width: 8px;
 	height: 11px;
 	background-color: rgb(246, 247, 248);
 }

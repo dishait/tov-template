@@ -1,6 +1,3 @@
-// https://github.com/Andy-set-studio/modern-css-reset 现代 reset css
-import 'modern-css-reset'
-
 // https://unocss.dev/ 原子 css 库
 import 'virtual:uno.css'
 import 'virtual:unocss-devtools'

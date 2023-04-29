@@ -2,12 +2,15 @@
 defineOptions({
 	name: 'counter',
 })
-
 const counter = createCounter()
 </script>
 
 <template>
-	<div class="cursor-pointer mt-6 ml-6">
-		<div @click="counter.inc()">counter: {{ counter.count }}</div>
-	</div>
+	<button
+		class="inline-block cursor-pointer rounded from-pink-500 via-red-500 to-yellow-500 bg-gradient-to-r px-6 py-2 text-sm font-medium text-white transition !border-0 !outline-none"
+		hover="scale-110 shadow-xl"
+		@click="counter.inc()"
+	>
+		{{ counter.count }}
+	</button>
 </template>
