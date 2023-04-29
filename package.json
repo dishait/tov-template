@@ -28,6 +28,7 @@
 	"engines": {
 		"node": ">=18"
 	},
+	"packageManager": "pnpm@8.3.1",
 	"devDependencies": {
 		"@intlify/unplugin-vue-i18n": "^0.10.0",
 		"@types/ityped": "^1.0.1",
