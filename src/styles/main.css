@@ -1,12 +1,5 @@
 @import './md.css';
 
-html,
-body,
-#app {
-	margin: 0;
-	padding: 0;
-}
-
 html.dark {
 	color: #e5e7eb;
 	background: #121212;

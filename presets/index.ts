@@ -1,56 +1,57 @@
+import { isPackageExists } from 'local-pkg'
+import Prism from 'markdown-it-prism'
 import { resolve } from 'path'
 import { argv } from 'process'
-import { loadEnv } from 'vite'
-
-import Vue from '@vitejs/plugin-vue'
-import Prism from 'markdown-it-prism'
-import Markdown from 'vite-plugin-md'
-import Icons from 'unplugin-icons/vite'
-import Jsx from '@vitejs/plugin-vue-jsx'
-import Inspect from 'vite-plugin-inspect'
-import { isPackageExists } from 'local-pkg'
-import Windicss from 'vite-plugin-windicss'
-import Rmovelog from 'vite-plugin-removelog'
-import Modules from 'vite-plugin-use-modules'
-import Router from 'unplugin-vue-router/vite'
-// @ts-ignore
-import Marcos from 'unplugin-vue-macros/vite'
-import Compression from 'vite-plugin-compression'
-import Layouts from 'vite-plugin-vue-meta-layouts'
+import UnoCss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
-import I18N from '@intlify/unplugin-vue-i18n/vite'
 import IconsResolver from 'unplugin-icons/resolver'
-import { warmup as Warmup } from 'vite-plugin-warmup'
-import Components from 'unplugin-vue-components/vite'
-import { viteMockServe as Mock } from 'vite-plugin-mock'
-import { VueRouterAutoImports } from 'unplugin-vue-router'
-import { AutoGenerateImports } from 'vite-auto-import-resolvers'
-
+import Icons from 'unplugin-icons/vite'
 import {
-	ArcoResolver,
-	IduxResolver,
-	VantResolver,
-	DevUiResolver,
-	QuasarResolver,
-	ViewUiResolver,
-	InklineResolver,
-	TDesignResolver,
-	NaiveUiResolver,
-	Vuetify3Resolver,
-	VarletUIResolver,
-	LayuiVueResolver,
-	PrimeVueResolver,
-	HeadlessUiResolver,
-	ElementPlusResolver,
 	AntDesignVueResolver,
+	ArcoResolver,
+	DevUiResolver,
+	ElementPlusResolver,
+	HeadlessUiResolver,
+	IduxResolver,
+	InklineResolver,
+	LayuiVueResolver,
+	NaiveUiResolver,
+	PrimeVueResolver,
+	QuasarResolver,
+	TDesignResolver,
+	VantResolver,
+	VarletUIResolver,
+	ViewUiResolver,
+	Vuetify3Resolver,
 	VueUseComponentsResolver,
 } from 'unplugin-vue-components/resolvers'
+import Components from 'unplugin-vue-components/vite'
+// @ts-ignore
+import Marcos from 'unplugin-vue-macros/vite'
+import { VueRouterAutoImports } from 'unplugin-vue-router'
+import Router from 'unplugin-vue-router/vite'
+import { loadEnv } from 'vite'
+import { AutoGenerateImports } from 'vite-auto-import-resolvers'
+import Compression from 'vite-plugin-compression'
+import Inspect from 'vite-plugin-inspect'
+import Markdown from 'vite-plugin-md'
+import { viteMockServe as Mock } from 'vite-plugin-mock'
+import Rmovelog from 'vite-plugin-removelog'
+import Modules from 'vite-plugin-use-modules'
+import Layouts from 'vite-plugin-vue-meta-layouts'
+import { warmup as Warmup } from 'vite-plugin-warmup'
+
+import I18N from '@intlify/unplugin-vue-i18n/vite'
+import Vue from '@vitejs/plugin-vue'
+import Jsx from '@vitejs/plugin-vue-jsx'
 
 import type { Plugin } from 'vite'
 import type { ComponentResolver } from 'unplugin-vue-components/types'
 
 export default function () {
 	const env = useEnv()
+	const safelist =
+		'prose md:prose-lg lg:prose-lg dark:prose-invert text-left p-10 prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600'
 	const plugins: Plugin[] = [
 		// https://github.com/bluwy/vite-plugin-warmup (依赖预热，加快渲染，未来可能会内置到 vite 中)
 		Warmup({
@@ -167,10 +168,7 @@ export default function () {
 		)
 	}
 
-	let safelist = ''
 	if (env.VITE_APP_MARKDOWN) {
-		safelist =
-			'prose md:prose-lg lg:prose-lg dark:prose-invert text-left p-10 prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600'
 		plugins.push(
 			Markdown({
 				wrapperClasses: safelist,
@@ -180,11 +178,10 @@ export default function () {
 			})
 		)
 	}
-	// windicss 插件 (TODO: windicss -> unocss)
 	plugins.push(
 		// @ts-ignore
-		Windicss({
-			safelist,
+		UnoCss({
+			safelist: env.VITE_APP_MARKDOWN ? safelist.split(' ') : undefined,
 		})
 	)
 

@@ -1,23 +1,13 @@
 <script setup lang="ts">
-const typedRef = useTyped(['is not found!'])
-
-const router = useRouter()
-
-const back = () => router.push('/')
+const typedRef = useTyped([' is not found!'])
 </script>
 
 <template>
-	<div class="flex flex-wrap h-screen text-center justify-around items-center">
-		<div class="font-blod desc">
-			<div class="text-7xl code">404</div>
-			<div ref="typedRef" class="text-3xl content">The Page</div>
-			<button
-				active="scale-90 transform"
-				class="rounded-lg transition btn"
-				@click="back"
-			>
-				👉 Go Home
-			</button>
+	<div class="h-screen flex flex-wrap items-center justify-around text-center">
+		<div class="desc font-blod">
+			<div class="code text-7xl">404</div>
+			<div ref="typedRef" class="content mb-5 text-3xl">The Page</div>
+			<RouterLink to="/" class="text-lg">Go Home</RouterLink>
 		</div>
 
 		<img src="/notFound/32.svg" class="cover" alt="page not found" />
@@ -44,16 +34,6 @@ const back = () => router.push('/')
 .desc {
 	flex: 1;
 	width: 300px;
-}
-
-.btn {
-	font-size: 20px;
-	margin-top: 30px;
-	padding: 12px 20px;
-	--tw-shadow-color: 8, 145, 178;
-	--tw-shadow: 0 4px 6px -1px rgba(var(--tw-shadow-color), 0.1),
-		0 2px 4px -1px rgba(var(--tw-shadow-color), 0.06);
-	box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, var(--tw-shadow);
 }
 </style>
 

@@ -10,10 +10,6 @@
 	font-size: 1rem;
 }
 
-.dark .prose h2 {
-	color: white;
-}
-
 html:not(.dark) {
 	--prism-foreground: #393a34;
 	--prism-background: #f8f8f8;
@@ -78,7 +74,7 @@ html.dark .prose blockquote {
 
 html.dark .prose pre {
 	color: #f8f9fa;
-	background: #495057;
+	background: #2a2f33;
 }
 
 .token.comment {
