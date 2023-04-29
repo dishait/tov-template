@@ -1,6 +1,8 @@
 <div align="center">
     <img width="200px" height="200px" src="https://gitee.com/dishait/tov-template/raw/main/public/logo.png" />
-    <h1>tov-template</h1>
+    <h1>
+		<a href="https://tov-template.netlify.app/" target="_blank">tov-template</a>
+	</h1>
     <p>vite + vue3 + ts 开箱即用现代开发模板</p>
 </div>
 
@@ -639,7 +641,7 @@ npm i @iconify/mdi -D
 
 ### [12. 暗黑模式支持](https://cn.windicss.org/features/dark-mode.html#dark-mode)
 
-暗黑模式由  的 [vue-dark-switch](https://github.com/dishait/vue-dark-switch) 和 `VueUse` 实现。
+暗黑模式由 的 [vue-dark-switch](https://github.com/dishait/vue-dark-switch) 和 `VueUse` 实现。
 
 `src/composables` 目录用来存储 `composition-api` 模块。
 
@@ -675,8 +677,6 @@ export const useDarks = () => ({ isDark, toggleDark })
 具体可见 👉 [vue-dark-switch](https://github.com/dishait/vue-dark-switch) 和 [vueuse/usedark](https://vueuse.org/core/usedark/#usedark)
 
 <br />
-
-
 
 ### [13. SWR 请求支持](https://cn.attojs.org/)
 
@@ -1110,10 +1110,10 @@ export default defineComponent({
 
 ```html
 <script setup lang="ts">
-// 定义额外的 options
-defineOptions({
-  name: 'Foo'
-})
+	// 定义额外的 options
+	defineOptions({
+		name: 'Foo',
+	})
 </script>
 ```
 
