@@ -10,9 +10,8 @@ export function useVisits() {
 		return visits
 	}
 
-	const { data: visits } = useRequest(
-		// @ts-ignore
-		'https://visits-kv.deno.dev/tov-template'
-	)
+	const { data: visits } = useRequest(async function () {
+		return fetch('https://visits-kv.deno.dev/tov-template')
+	})
 	return visits ?? 0
 }
