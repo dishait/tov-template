@@ -16,8 +16,8 @@ const visits = useVisits()
 
 		<p>
 			Check out
-			<a href="https://github.com/dishait/tov-template" target="_blank"
-				>tov-template</a
+			<a href="https://github.com/dishait/tov-template" target="_blank">
+				tov-template </a
 			>, the official Tov + Vue + Vite template
 		</p>
 		<p class="read-the-docs">
@@ -30,5 +30,18 @@ const visits = useVisits()
 <style scoped>
 .read-the-docs {
 	color: #888;
+	font-size: 1.2rem;
+	animation: slide-up 0.5s ease-out;
+}
+
+@keyframes slide-up {
+	from {
+		transform: translateY(20px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
 </style>
