@@ -34,6 +34,9 @@ devDependencies:
   '@vue/runtime-core':
     specifier: ^3.2.47
     version: 3.2.47
+  '@vueuse/components':
+    specifier: ^10.1.0
+    version: 10.1.0(vue@3.2.47)
   '@vueuse/core':
     specifier: ^10.1.0
     version: 10.1.0(vue@3.2.47)
@@ -1942,6 +1945,17 @@ packages:
 
   /@vue/shared@3.3.0-beta.2:
     resolution: {integrity: sha512-AsHYKYiYUnL/LHog6iV/G9tctFZYOsaxHDbSnfeyip94rjndO46XSDbHek7wDlcj3NHGaf8jAQQKfva/7mypjA==}
+    dev: true
+
+  /@vueuse/components@10.1.0(vue@3.2.47):
+    resolution: {integrity: sha512-U3c5tPUAxfwWoBSpFbCNFMEM8/jSZ0+5M1n9YWcahyb+uRNo4UmsofX/Hzs6K56PSm0g+uuhZVwSnMq8ttD8Lw==}
+    dependencies:
+      '@vueuse/core': 10.1.0(vue@3.2.47)
+      '@vueuse/shared': 10.1.0(vue@3.2.47)
+      vue-demi: 0.14.0(vue@3.2.47)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
     dev: true
 
   /@vueuse/core@10.1.0(vue@3.2.47):

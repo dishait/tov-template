@@ -40,6 +40,7 @@
 		"@vitejs/plugin-vue-jsx": "^3.0.1",
 		"@vue-macros/volar": "^0.9.7",
 		"@vue/runtime-core": "^3.2.47",
+		"@vueuse/components": "^10.1.0",
 		"@vueuse/core": "^10.1.0",
 		"@vueuse/integrations": "^10.1.0",
 		"bumpp": "^9.1.0",

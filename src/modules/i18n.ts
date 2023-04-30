@@ -15,7 +15,7 @@ const messages = Object.fromEntries(
 
 export const i18n = createI18n({
 	legacy: false,
-	locale: 'en',
+	locale: 'English', // 默认语言
 	messages,
 })
 

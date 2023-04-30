@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { SwitchIcon } from 'vue-dark-switch'
 import 'vue-dark-switch/dist/style.css'
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -14,12 +16,14 @@ import 'vue-dark-switch/dist/style.css'
 
 		<ul class="flex items-center gap-2 text-sm font-medium">
 			<li class="hidden !block">
-				<RouterLink class="rounded-lg px-3 py-2" to="/"> Home </RouterLink>
+				<RouterLink class="rounded-lg px-3 py-2" to="/">
+					{{ t('home') }}
+				</RouterLink>
 			</li>
 
 			<li>
 				<RouterLink class="rounded-lg px-3 py-2" to="/about">
-					About
+					{{ t('about') }}
 				</RouterLink>
 			</li>
 
@@ -45,6 +49,10 @@ import 'vue-dark-switch/dist/style.css'
 						></path>
 					</svg>
 				</a>
+			</li>
+
+			<li class="hidden !block">
+				<Dropdown />
 			</li>
 		</ul>
 	</nav>
