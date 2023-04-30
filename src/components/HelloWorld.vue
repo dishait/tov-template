@@ -22,7 +22,7 @@ const visits = useVisits()
 		</p>
 		<p class="read-the-docs">
 			The total number of views is
-			<span class="text-gray-800" dark="text-gray-300">{{ visits }}</span>
+			<span class="text-gray-800" dark="text-gray-300">{{ visits ?? 0 }}</span>
 		</p>
 	</div>
 </template>
