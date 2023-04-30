@@ -286,6 +286,7 @@
     "useVModels": true,
     "useVibrate": true,
     "useVirtualList": true,
+    "useVisits": true,
     "useWakeLock": true,
     "useWebNotification": true,
     "useWebSocket": true,

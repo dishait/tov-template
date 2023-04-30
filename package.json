@@ -38,7 +38,7 @@
 		"@unocss/transformer-directives": "^0.51.8",
 		"@vitejs/plugin-vue": "^4.2.1",
 		"@vitejs/plugin-vue-jsx": "^3.0.1",
-		"@vue-macros/volar": "^0.9.6",
+		"@vue-macros/volar": "^0.9.7",
 		"@vue/runtime-core": "^3.2.47",
 		"@vueuse/core": "^10.1.0",
 		"@vueuse/integrations": "^10.1.0",
@@ -70,7 +70,7 @@
 		"unplugin-auto-import": "^0.15.3",
 		"unplugin-icons": "^0.16.1",
 		"unplugin-vue-components": "^0.24.1",
-		"unplugin-vue-macros": "^2.1.0",
+		"unplugin-vue-macros": "^2.1.1",
 		"unplugin-vue-router": "^0.5.5",
 		"vite": "^4.3.3",
 		"vite-auto-import-resolvers": "^3.0.5",
@@ -86,7 +86,7 @@
 		"vue": "^3.2.47",
 		"vue-dark-switch": "^0.5.9",
 		"vue-i18n": "^9.2.2",
-		"vue-request": "^1.2.4",
+		"vue-request": "2.0.0-rc.4",
 		"vue-router": "^4.1.6"
 	},
 	"pnpm": {

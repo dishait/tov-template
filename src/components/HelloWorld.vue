@@ -1,5 +1,7 @@
 <script setup lang="ts">
 defineProps<{ msg: string }>()
+
+const visits = useVisits()
 </script>
 
 <template>
@@ -18,14 +20,10 @@ defineProps<{ msg: string }>()
 				>tov-template</a
 			>, the official Tov + Vue + Vite template
 		</p>
-		<p>
-			Install
-			<a href="https://github.com/vuejs/language-tools" target="_blank"
-				>Volar</a
-			>
-			in your IDE for a better DX
+		<p class="read-the-docs">
+			The total number of views is
+			<span class="text-gray-800" dark="text-gray-300">{{ visits }}</span>
 		</p>
-		<p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 	</div>
 </template>
 

@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^3.0.1
     version: 3.0.1(vite@4.3.3)(vue@3.2.47)
   '@vue-macros/volar':
-    specifier: ^0.9.6
-    version: 0.9.6(@vue-macros/reactivity-transform@0.3.5)(vue@3.2.47)
+    specifier: ^0.9.7
+    version: 0.9.7(@vue-macros/reactivity-transform@0.3.5)(vue@3.2.47)
   '@vue/runtime-core':
     specifier: ^3.2.47
     version: 3.2.47
@@ -125,8 +125,8 @@ devDependencies:
     specifier: ^0.24.1
     version: 0.24.1(vue@3.2.47)
   unplugin-vue-macros:
-    specifier: ^2.1.0
-    version: 2.1.0(@vueuse/core@10.1.0)(vite@4.3.3)(vue@3.2.47)
+    specifier: ^2.1.1
+    version: 2.1.1(@vueuse/core@10.1.0)(vite@4.3.3)(vue@3.2.47)
   unplugin-vue-router:
     specifier: ^0.5.5
     version: 0.5.5(vue-router@4.1.6)(vue@3.2.47)
@@ -173,8 +173,8 @@ devDependencies:
     specifier: ^9.2.2
     version: 9.2.2(vue@3.2.47)
   vue-request:
-    specifier: ^1.2.4
-    version: 1.2.4(vue@3.2.47)
+    specifier: 2.0.0-rc.4
+    version: 2.0.0-rc.4(vue@3.2.47)
   vue-router:
     specifier: ^4.1.6
     version: 4.1.6(vue@3.2.47)
@@ -1559,8 +1559,8 @@ packages:
       vue: 3.2.47
     dev: true
 
-  /@vue-macros/define-props-refs@1.0.1(vue@3.2.47):
-    resolution: {integrity: sha512-oHpEEnT9oE20P2Q2noeWjDJGHE+TuKwQPHMvLRPIRhvvagYmaatGqI/yoFKvNfnOPTcl3glc8PHuMdYz4pQITg==}
+  /@vue-macros/define-props-refs@1.0.2(vue@3.2.47):
+    resolution: {integrity: sha512-va+zznv9oU5Onghw/SlUvTFcLjY6xJV+CtULVBiL6J5G3fC1RbGaElPJ8XfnNKSECUlaQ4ZaLFx03+XDT09NTQ==}
     engines: {node: '>=14.19.0'}
     peerDependencies:
       vue: ^2.7.0 || ^3.2.25
@@ -1736,8 +1736,8 @@ packages:
       - vue
     dev: true
 
-  /@vue-macros/volar@0.9.6(@vue-macros/reactivity-transform@0.3.5)(vue@3.2.47):
-    resolution: {integrity: sha512-uq2T/AQ9cZ3J0ucwGgRfj43D2ZycTvo3vQ+S7inVksQqC6HZ0hcA4dZOwCZ4J7/9LQA6fzd44nGqHOmzIk2lkA==}
+  /@vue-macros/volar@0.9.7(@vue-macros/reactivity-transform@0.3.5)(vue@3.2.47):
+    resolution: {integrity: sha512-x4Fipo1bbJEMBHSVS/sPWMY6gz8PSWra9xMvip8bXmneJLYxjLhTwkSUWR1tWmbiHfQpKQ8YnsJgKFBlRBNVwA==}
     engines: {node: '>=14.19.0'}
     peerDependencies:
       vue-tsc: 1.3.16
@@ -6079,8 +6079,8 @@ packages:
       - vue
     dev: true
 
-  /unplugin-vue-macros@2.1.0(@vueuse/core@10.1.0)(vite@4.3.3)(vue@3.2.47):
-    resolution: {integrity: sha512-VXw/dRfT5IQ64UQ1KgB+DYw+WZda+5d/mb313POfU9DCwF9cjfyHsw+i2DAW5aqqVkPtBUgyDgRdmJgagoTu8A==}
+  /unplugin-vue-macros@2.1.1(@vueuse/core@10.1.0)(vite@4.3.3)(vue@3.2.47):
+    resolution: {integrity: sha512-tWlPzR89W2F9Pd0RsXYtg8liKZ/QISCz/GSHG1TZcGBU6GC/GDk2gnRlt/b0VWfjH2d3B6O9uxCYx8Cq22wnpg==}
     engines: {node: '>=14.19.0'}
     peerDependencies:
       vue: ^2.7.0 || ^3.2.25
@@ -6091,7 +6091,7 @@ packages:
       '@vue-macros/define-models': 1.0.2(@vueuse/core@10.1.0)(vue@3.2.47)
       '@vue-macros/define-prop': 0.1.0(vue@3.2.47)
       '@vue-macros/define-props': 1.0.4(@vue-macros/reactivity-transform@0.3.5)(vue@3.2.47)
-      '@vue-macros/define-props-refs': 1.0.1(vue@3.2.47)
+      '@vue-macros/define-props-refs': 1.0.2(vue@3.2.47)
       '@vue-macros/define-render': 1.3.5(vue@3.2.47)
       '@vue-macros/define-slots': 1.0.1(vue@3.2.47)
       '@vue-macros/devtools': 0.1.2(vite@4.3.3)
@@ -6631,12 +6631,17 @@ packages:
       vue: 3.2.47
     dev: true
 
-  /vue-request@1.2.4(vue@3.2.47):
-    resolution: {integrity: sha512-i+i+6Fog6F8EtYUeueumzKS9Sg06CvjsMXH8TK0YSBxY4sDxIJ+snTEke5rLqiV9d19DTuJOxPQFjTBUpsMtXA==}
+  /vue-request@2.0.0-rc.4(vue@3.2.47):
+    resolution: {integrity: sha512-Nv/CpfKlfwW9SVHakEukeSQpuqSwskeJsHK4gfw8KB8NZogWfR8+EU+XupLe+Dapnm+RAP+wZYzhw89v3Zyx2g==}
     peerDependencies:
-      vue: ^3.0.0
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^2.0.0 || >=3.0.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
     dependencies:
       vue: 3.2.47
+      vue-demi: 0.14.0(vue@3.2.47)
     dev: true
 
   /vue-router@4.1.6(vue@3.2.47):
