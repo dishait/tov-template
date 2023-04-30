@@ -21,7 +21,7 @@
 		".env": ".env.*",
 		"index.html": "LICENSE,.gitignore,README.md",
 		".eslintrc.json": ".eslint*,.prettier*,.editor*",
-		"vite.config.*": "package.json,uno.config.ts,tsconfig.json"
+		"vite.config.*": "package.json,uno.config.ts,tsconfig.json,*.toml"
 	},
 	"[jsonc]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -37,5 +37,8 @@
 	},
 	"[typescript]": {
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[toml]": {
+		"editor.defaultFormatter": "bodil.prettier-toml"
 	}
 }

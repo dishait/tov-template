@@ -13,6 +13,8 @@
 		"shd101wyy.markdown-preview-enhanced",
 		"antfu.goto-alias",
 		"voorjaar.windicss-intellisense",
-		"yoavbls.pretty-ts-errors"
+		"yoavbls.pretty-ts-errors",
+		"bodil.prettier-toml",
+		"bungcip.better-toml"
 	]
 }

@@ -16,7 +16,7 @@ export function useVisits() {
 			const text = await res.text()
 			return Number(text) ?? 0
 		} catch (error) {
-			console.log(error)
+			console.error(error)
 			return 0
 		}
 	})
