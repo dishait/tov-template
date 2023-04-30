@@ -13,7 +13,7 @@ import 'vue-dark-switch/dist/style.css'
 		</span>
 
 		<ul class="flex items-center gap-2 text-sm font-medium">
-			<li class="hidden lg:block">
+			<li class="hidden !block">
 				<RouterLink class="rounded-lg px-3 py-2" to="/"> Home </RouterLink>
 			</li>
 
