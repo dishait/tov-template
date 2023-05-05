@@ -20,6 +20,10 @@ a {
 	color: rgba(37, 99, 235);
 }
 
+p {
+	padding: 0 10px;
+}
+
 .logo {
 	width: 10em;
 	height: 10em;

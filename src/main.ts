@@ -1,7 +1,5 @@
-// 现代 reset css https://github.com/Andy-set-studio/modern-css-reset
-import 'modern-css-reset'
-
 // https://unocss.dev/ 原子 css 库
+import '@unocss/reset/tailwind-compat.css' // unocss reset
 import 'virtual:uno.css'
 import 'virtual:unocss-devtools'
 

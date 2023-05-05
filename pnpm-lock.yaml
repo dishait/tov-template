@@ -19,6 +19,9 @@ devDependencies:
   '@unocss/eslint-config':
     specifier: ^0.51.8
     version: 0.51.8(eslint@8.39.0)(typescript@5.0.4)
+  '@unocss/reset':
+    specifier: ^0.51.8
+    version: 0.51.8
   '@unocss/transformer-directives':
     specifier: ^0.51.8
     version: 0.51.8
