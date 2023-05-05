@@ -38,7 +38,7 @@ const { availableLocales, locale } = useI18n()
 				v-if="visiable"
 				v-on-click-outside.bubble="dropdownHandler"
 				dark="bg-gray-500"
-				class="absolute end-0 z-10 mt-2 w-56 border border-gray-100 rounded-md bg-white shadow-lg divide-y divide-gray-100"
+				class="absolute end-0 z-10 mt-2 w-56 rounded-md bg-white shadow-lg divide-y divide-gray-100"
 			>
 				<div class="p-2">
 					<span
