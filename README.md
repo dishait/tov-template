@@ -117,6 +117,8 @@ pnpm preview:open
 
 ```shell
 pnpm build
+
+pnpm build:debug
 ```
 
 5. 单元测试
@@ -176,7 +178,6 @@ pnpm i
 pnpm lint
 
 # 校验时修复
-
 pnpm lint:fix
 ```
 

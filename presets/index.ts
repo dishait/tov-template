@@ -36,7 +36,7 @@ import Compression from 'vite-plugin-compression'
 import Inspect from 'vite-plugin-inspect'
 import Markdown from 'vite-plugin-md'
 import { viteMockServe as Mock } from 'vite-plugin-mock'
-import Rmovelog from 'vite-plugin-removelog'
+import Removelog from 'vite-plugin-removelog'
 import Modules from 'vite-plugin-use-modules'
 import Layouts from 'vite-plugin-vue-meta-layouts'
 import { HtmlPolyfill } from 'vue-dark-switch/vite'
@@ -141,7 +141,7 @@ export default function () {
 			algorithm: env.VITE_APP_COMPRESSINON_ALGORITHM,
 		}),
 		// 生产环境下移除 console.log, console.warn, console.error
-		Rmovelog(),
+		process.env.NODE_ENV !== 'debug' && Removelog(),
 		// https://github.com/dishait/vue-dark-switch#%E7%BC%96%E8%AF%91%E6%97%B6%E9%A2%84%E8%AE%BE---%E6%8E%A8%E8%8D%90
 		HtmlPolyfill(),
 	]
