@@ -25,6 +25,7 @@ import type {
   // vue-router extensions
   _RouterTyped,
   RouterLinkTyped,
+  RouterLinkPropsTyped,
   NavigationGuard,
   UseLinkFnTyped,
 
@@ -95,6 +96,7 @@ declare module 'vue-router/auto' {
   export function onBeforeRouteUpdate(guard: NavigationGuard<RouteNamedMap>): void
 
   export const RouterLink: RouterLinkTyped<RouteNamedMap>
+  export const RouterLinkProps: RouterLinkPropsTyped<RouteNamedMap>
 
   // Experimental Data Fetching
 
