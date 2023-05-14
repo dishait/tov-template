@@ -12,6 +12,7 @@
 			</a>
 		</div>
 		<HelloWorld msg="Tov + Vite + Vue" />
+		<bar />
 	</div>
 </template>
 

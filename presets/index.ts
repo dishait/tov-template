@@ -88,6 +88,7 @@ export default function () {
 		}),
 		// 组件自动按需引入
 		Components({
+			directoryAsNamespace: true,
 			extensions: ['md', 'vue', 'tsx'],
 			dts: resolve(__dirname, './types/components.d.ts'),
 			types: [

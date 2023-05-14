@@ -463,7 +463,7 @@ export default defineStore('counter', {
 
 <br />
 
-### [7. 组件自动引入](https://github.com/antfu/unplugin-auto-import)
+### [7. 组件自动引入](https://github.com/antfu/unplugin-vue-components)
 
 原来需要 `import`
 
@@ -484,6 +484,15 @@ export default defineStore('counter', {
 <!-- src/pages/index.vue -->
 <template>
 	<Hello />
+</template>
+```
+
+当然也支持嵌套组件，例如 `src/components/foo/bar.vue` 👇
+
+```html
+<!-- src/pages/index.vue -->
+<template>
+	<FooBar />
 </template>
 ```
 
