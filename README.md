@@ -493,9 +493,6 @@ export default defineStore('counter', {
 
 ```shell
 pnpm add naive-ui
-
-# 或者 npm i naive-ui
-# 或者 yarn add naive-ui
 ```
 
 即可在模板中使用。
@@ -560,9 +557,7 @@ pnpm add naive-ui
 图标集名称为 `@iconify/` 加 `:` 前缀，例如上边的图标是 `mdi:account-box-multiple`，图标集名称就为 `@iconify/mdi`。
 
 ```shell
-npm i @iconify/mdi -D
-
-# 或者 yarn add @iconify/mdi -D
+pnpm i @iconify/mdi -D
 ```
 
 同时推荐你使用 `vscode` 插件 [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify)。
@@ -789,9 +784,6 @@ export const useCounterStore = defineStore('counter', {
 
 ```shell
 pnpm dev
-
-# 或者 npm run dev
-# 或者 yarn dev
 ```
 
 可以看到一个 `url`
@@ -869,18 +861,12 @@ describe('suite name', () => {
 
 ```shell
 pnpm test
-
-# 或者 npm run test
-# 或者 yarn test
 ```
 
 或者生成报告
 
 ```shell
 pnpm coverage
-
-# 或者 npm run coverage
-# 或者 yarn coverage
 ```
 
 具体可见 👉 [Vitest](https://vitest.dev/guide/#configuring-vitest)
@@ -931,18 +917,12 @@ pnpm coverage
 
 ```shell
 pnpm auto:create
-
-# 或者 npm run auto:create
-# 或者 yarn auto:create
 ```
 
 当然也可以进行删除 👇
 
 ```shell
 pnpm auto:remove
-
-# 或者 npm run auto:remove
-# 或者 yarn auto:remove
 ```
 
 <br />
