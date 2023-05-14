@@ -26,8 +26,6 @@ import {
 	VueUseComponentsResolver,
 } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
-// @ts-ignore
-import Marcos from 'unplugin-vue-macros/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import Router from 'unplugin-vue-router/vite'
 import { loadEnv } from 'vite'
@@ -53,15 +51,10 @@ export default function () {
 	const env = useEnv()
 	const safelist =
 		'prose px-2 sm:px-0 md:prose-lg lg:prose-lg dark:prose-invert text-left w-screen prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600'
-	const plugins: Plugin[] = [
+	const plugins = [
 		// https://github.com/bluwy/vite-plugin-warmup (依赖预热，加快渲染，未来可能会内置到 vite 中)
 		Warmup({
 			clientFiles: ['./src/**/*'],
-		}),
-		// https://github.com/sxzz/unplugin-vue-macros/blob/main/README-zh-CN.md
-		Marcos({
-			hoistStatic: true,
-			defineOptions: true,
 		}),
 		// https://github.com/posva/unplugin-vue-router
 		Router({
