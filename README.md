@@ -509,23 +509,23 @@ pnpm add naive-ui
 
 目前支持的组件库有:
 
-[vant](https://github.com/youzan/vant)
-[idux](https://github.com/IDuxFE/idux)
-[devui](https://github.com/DevCloudFE/vue-devui)
-[quasar](https://github.com/quasarframework/quasar)
-[varlet](https://github.com/varletjs/varlet)
-[inkline](https://github.com/inkline/inkline)
-[vuetify](https://github.com/vuetifyjs/vuetify)
-[naive-ui](https://github.com/TuSimple/naive-ui)
-[primevue](https://github.com/primefaces/primevue)
-[layui-vue](https://gitee.com/layui/layui-vue)
-[view-design](https://iviewui.com/)
-[arco-design](https://github.com/arco-design/arco-design)
-[element-plus](https://github.com/element-plus/element-plus)
-[ant-design-vue](https://github.com/vueComponent/ant-design-vue)
-[@headlessui/vue](https://github.com/tailwindlabs/headlessui)
-[tdesign-vue-next](https://github.com/Tencent/tdesign-vue-next)
-[@vueuse/components](https://github.com/vueuse/vueuse/tree/main/packages/components)
+- [vant](https://github.com/youzan/vant)
+- [idux](https://github.com/IDuxFE/idux)
+- [devui](https://github.com/DevCloudFE/vue-devui)
+- [quasar](https://github.com/quasarframework/quasar)
+- [varlet](https://github.com/varletjs/varlet)
+- [inkline](https://github.com/inkline/inkline)
+- [vuetify](https://github.com/vuetifyjs/vuetify)
+- [naive-ui](https://github.com/TuSimple/naive-ui)
+- [primevue](https://github.com/primefaces/primevue)
+- [layui-vue](https://gitee.com/layui/layui-vue)
+- [view-design](https://iviewui.com/)
+- [arco-design](https://github.com/arco-design/arco-design)
+- [element-plus](https://github.com/element-plus/element-plus)
+- [ant-design-vue](https://github.com/vueComponent/ant-design-vue)
+- [@headlessui/vue](https://github.com/tailwindlabs/headlessui)
+- [tdesign-vue-next](https://github.com/Tencent/tdesign-vue-next)
+- [@vueuse/components](https://github.com/vueuse/vueuse/tree/main/packages/components)
 
 具体可见 👉 [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)
 
@@ -765,7 +765,7 @@ export const useCounterStore = defineStore('counter', {
 
 /** 省略其他样式 **/
 #nprogress .bar {
-	@apply bg-purple-700 bg-opacity-75; /** 配色 **/
+	@apply bg-blue-700 bg-opacity-75; /** 配色 **/
 
 	position: fixed;
 	z-index: 1031;
@@ -777,7 +777,7 @@ export const useCounterStore = defineStore('counter', {
 }
 ```
 
-关于 `@apply` 由 [Windi Css apply 指令](https://cn.windicss.org/features/directives.html#apply) 实现。
+关于 `@apply` 由 [@unocss/transformer-directives](https://www.npmjs.com/package/@unocss/transformer-directives) 实现。
 
 具体可见 👉 [nprogress](https://github.com/rstacruz/nprogress)
 
@@ -1107,7 +1107,7 @@ export default defineComponent({
 <br />
 <br />
 
-### 30. [defineOptions 支持](https://github.com/sxzz/unplugin-vue-macros/blob/main/README-zh-CN.md)
+### 30. [defineOptions 支持](https://vuejs.org/api/sfc-script-setup.html#defineoptions)
 
 ```html
 <script setup lang="ts">
@@ -1118,7 +1118,7 @@ export default defineComponent({
 </script>
 ```
 
-具体可见 👉 [unplugin-vue-macros](https://github.com/sxzz/unplugin-vue-macros/blob/main/README-zh-CN.md)
+[unplugin-vue-macros](https://github.com/sxzz/unplugin-vue-macros) 已经被集成进 [vue3.3](https://blog.vuejs.org/posts/vue-3-3) 中
 
 <br />
 <br />
