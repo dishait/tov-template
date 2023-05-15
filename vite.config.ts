@@ -15,8 +15,5 @@ export default defineConfig({
 			'~/': resolve(_dirname, 'src'),
 		},
 	},
-	define: {
-		__VUE_OPTIONS_API__: false, // 明确不使用 options api
-	},
 	plugins: [Tov()],
 })
