@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 defineOptions({
-	name: 'counter',
+	name: 'Counter',
 })
 const counter = createCounter()
 </script>
