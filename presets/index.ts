@@ -142,7 +142,7 @@ export default function () {
 
 	if (env.VITE_APP_API_AUTO_IMPORT) {
 		const dirs = env.VITE_APP_DIR_API_AUTO_IMPORT
-			? ['src/stores/**/*', 'src/composables/**/*']
+			? ['src/stores/**', 'src/composables/**']
 			: undefined
 		// api 自动按需引入
 		plugins.push(

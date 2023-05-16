@@ -122,8 +122,8 @@ devDependencies:
     specifier: ^0.51.13
     version: 0.51.13(postcss@8.4.23)(vite@4.3.6)
   unplugin-auto-import:
-    specifier: ^0.15.3
-    version: 0.15.3(@vueuse/core@10.1.2)
+    specifier: ^0.16.0
+    version: 0.16.0(@vueuse/core@10.1.2)
   unplugin-icons:
     specifier: ^0.16.1
     version: 0.16.1
@@ -138,7 +138,7 @@ devDependencies:
     version: 4.3.6(@types/node@18.16.10)
   vite-auto-import-resolvers:
     specifier: ^3.0.5
-    version: 3.0.5(@types/node@18.16.10)(unplugin-auto-import@0.15.3)(vite@4.3.6)
+    version: 3.0.5(@types/node@18.16.10)(unplugin-auto-import@0.16.0)(vite@4.3.6)
   vite-plugin-compression:
     specifier: ^0.5.1
     version: 0.5.1(vite@4.3.6)
@@ -5748,8 +5748,8 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /unplugin-auto-import@0.15.3(@vueuse/core@10.1.2):
-    resolution: {integrity: sha512-RLT8SqbPn4bT7yBshZId0uPSofKWnwr66RyDaxWaFb/+f7OTDOWAsVNz+hOQLBWSjvbekr2xZY9ccS8TDHJbCQ==}
+  /unplugin-auto-import@0.16.0(@vueuse/core@10.1.2):
+    resolution: {integrity: sha512-AbeGl3kzoGyqh2uWwwSVYCXy2ouvSbHfBc2u7xmNBpOosWa7SIAz+nQx3f1JpMXunEZ9TTChXkor4WcGrpkc7Q==}
     engines: {node: '>=14'}
     peerDependencies:
       '@nuxt/kit': ^3.2.2
@@ -5962,7 +5962,7 @@ packages:
     resolution: {integrity: sha512-aLEIZKv/oxuCDZ8lkJGhuhztf/BW4M+iHdCwglA/eWc+vtuRFJj8EtgceYFX4LRjOhCAAiNHsKGssC6onJ+jbA==}
     dev: true
 
-  /vite-auto-import-resolvers@3.0.5(@types/node@18.16.10)(unplugin-auto-import@0.15.3)(vite@4.3.6):
+  /vite-auto-import-resolvers@3.0.5(@types/node@18.16.10)(unplugin-auto-import@0.16.0)(vite@4.3.6):
     resolution: {integrity: sha512-/rQNg/BsDXYB/aTmTP0Eyf4HCGSSZdUM6L9+2L7XchU1tTzTdcipHUmnd/rrT1Fl3S8OV7IK0ASVZulIWQx2oA==}
     engines: {node: '>=16'}
     peerDependencies:
@@ -5976,7 +5976,7 @@ packages:
       '@types/node': 18.16.10
       file-computed: 0.2.2
       local-pkg: 0.4.3
-      unplugin-auto-import: 0.15.3(@vueuse/core@10.1.2)
+      unplugin-auto-import: 0.16.0(@vueuse/core@10.1.2)
       vite: 4.3.6(@types/node@18.16.10)
     transitivePeerDependencies:
       - '@azure/app-configuration'
