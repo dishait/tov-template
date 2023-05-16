@@ -59,7 +59,7 @@ export default function () {
 		// https://github.com/posva/unplugin-vue-router
 		Router({
 			routesFolder: 'src/pages',
-			extensions: ['.md', '.vue', '.tsx'],
+			extensions: ['.md', '.vue', '.tsx', '.jsx'],
 			dts: 'presets/types/type-router.d.ts',
 		}),
 		// 模块自动加载
@@ -89,7 +89,7 @@ export default function () {
 		// 组件自动按需引入
 		Components({
 			directoryAsNamespace: true,
-			extensions: ['md', 'vue', 'tsx'],
+			extensions: ['md', 'vue', 'tsx', 'jsx'],
 			dts: resolve(__dirname, './types/components.d.ts'),
 			types: [
 				{
@@ -142,7 +142,7 @@ export default function () {
 
 	if (env.VITE_APP_API_AUTO_IMPORT) {
 		const dirs = env.VITE_APP_DIR_API_AUTO_IMPORT
-			? ['src/stores/**/*.ts', 'src/composables/**/*.ts']
+			? ['src/stores/**/*', 'src/composables/**/*']
 			: undefined
 		// api 自动按需引入
 		plugins.push(
