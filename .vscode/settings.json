@@ -21,7 +21,7 @@
 		".env": ".env.*",
 		"index.html": "LICENSE,.gitignore,README.md",
 		".eslintrc.json": ".eslint*,.prettier*,.editor*",
-		"vite.config.*": "package.json,uno.config.ts,tsconfig.json,*.toml"
+		"vite.config.*": "package.json,uno.config.ts,tsconfig.json,*.toml,.npmrc"
 	},
 	"[jsonc]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
