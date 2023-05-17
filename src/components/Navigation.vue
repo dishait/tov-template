@@ -1,8 +1,24 @@
 <script setup lang="ts">
+import { getRoutes } from '../modules/router'
 import { SwitchIcon } from 'vue-dark-switch'
 import 'vue-dark-switch/dist/style.css'
 
 const { t } = useI18n()
+
+const routes = getRoutes()
+	.filter((r) => !r.path.includes('notFound'))
+	.map((r) => {
+		let { path, name } = r
+		if (path === '/') {
+			return { path, name: 'home' }
+		}
+
+		if (!name) {
+			name = path
+		}
+
+		return { path, name: name.toString().slice(1).replaceAll('/', ' · ') }
+	})
 </script>
 
 <template>
@@ -15,15 +31,9 @@ const { t } = useI18n()
 		</span>
 
 		<ul class="flex items-center gap-2 text-sm font-medium">
-			<li class="hidden !block">
-				<RouterLink class="rounded-lg px-3 py-2" to="/">
-					{{ t('home') }}
-				</RouterLink>
-			</li>
-
-			<li>
-				<RouterLink class="rounded-lg px-3 py-2" to="/about">
-					{{ t('about') }}
+			<li v-for="r of routes" :key="r.path" class="hidden !block">
+				<RouterLink class="rounded-lg px-3 py-2" :to="r.path">
+					{{ t(r.name) }}
 				</RouterLink>
 			</li>
 

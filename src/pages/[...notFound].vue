@@ -45,7 +45,10 @@ const typedRef = useTyped([' is not found!'])
 }
 </style>
 
-<route lang="yaml">
-meta:
-  layout: notFound
+<route lang="json">
+{
+	"meta": {
+		"layout": "notFound"
+	}
+}
 </route>
