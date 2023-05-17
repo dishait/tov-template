@@ -1,5 +1,7 @@
 {
-	"i18n-ally.localesPaths": ["locales"],
+	"i18n-ally.localesPaths": [
+		"locales"
+	],
 	"i18n-ally.keystyle": "nested",
 	"i18n-ally.sourceLanguage": "zh-CN",
 	"css.lint.unknownAtRules": "ignore",
@@ -24,7 +26,7 @@
 		"vite.config.*": "package.json,uno.config.ts,tsconfig.json,*.toml,.npmrc"
 	},
 	"[jsonc]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "vscode.json-language-features"
 	},
 	"[vue]": {
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"

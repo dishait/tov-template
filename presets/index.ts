@@ -74,9 +74,7 @@ export default function () {
 		// 布局系统
 		Layouts(),
 		// 调试工具
-		Inspect({
-			enabled: env.VITE_APP_INSPECT,
-		}),
+		env.VITE_APP_INSPECT && Inspect(),
 		// mock 服务
 		Mock({
 			prodEnabled: env.VITE_APP_MOCK_IN_PRODUCTION,
