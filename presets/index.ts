@@ -66,6 +66,7 @@ export default function () {
 		// 模块自动加载
 		Modules({
 			auto: true,
+			target: 'src/plugins',
 		}),
 		// vue 官方插件，用来解析 sfc
 		Vue({
@@ -141,7 +142,7 @@ export default function () {
 
 	if (env.VITE_APP_API_AUTO_IMPORT) {
 		const dirs = env.VITE_APP_DIR_API_AUTO_IMPORT
-			? ['src/stores/**', 'src/composables/**']
+			? ['src/stores/**', 'src/composables/**', 'src/api/**']
 			: undefined
 		// api 自动按需引入
 		plugins.push(

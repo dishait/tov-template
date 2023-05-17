@@ -818,12 +818,12 @@ pnpm dev
 
 ### [18. 插件自动加载支持](https://github.com/dishait/vite-plugin-use-modules)
 
-只需要在 `src/modules` 中的模块里导出默认函数即可。
+只需要在 `src/plugins` 中的模块里导出默认函数即可。
 
 例如 `pinia`，只需要这样做。
 
 ```ts
-// src/modules/pinia.ts
+// src/plugins/pinia.ts
 
 import { App } from 'vue'
 
@@ -834,7 +834,7 @@ export default (app: App) => app.use(createPinia())
 或者 `vue-router`
 
 ```ts
-// src/modules/router.ts
+// src/plugins/router.ts
 
 import { App } from 'vue'
 
