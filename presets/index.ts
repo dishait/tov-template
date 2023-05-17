@@ -44,7 +44,6 @@ import I18N from '@intlify/unplugin-vue-i18n/vite'
 import Vue from '@vitejs/plugin-vue'
 import Jsx from '@vitejs/plugin-vue-jsx'
 
-import type { Plugin } from 'vite'
 import type { ComponentResolver } from 'unplugin-vue-components/types'
 
 export default function () {
@@ -66,8 +65,6 @@ export default function () {
 		Modules({
 			auto: true,
 		}),
-		// 生成 title
-		GenerateTitle(),
 		// vue 官方插件，用来解析 sfc
 		Vue({
 			include: [/\.vue$/, /\.md$/],
@@ -222,20 +219,6 @@ function useEnv() {
 		VITE_APP_DIR_API_AUTO_IMPORT: stringToBoolean(VITE_APP_DIR_API_AUTO_IMPORT),
 	}
 	return newEnv
-}
-
-export function GenerateTitle(): Plugin {
-	let title: string
-	const reg = /<title>(.*?)<\/title>/
-	return {
-		name: 'vite-plugin-env-to-generate-title',
-		configResolved(config) {
-			title = config.env.VITE_APP_TITLE
-		},
-		transformIndexHtml(html) {
-			return html.replace(reg, `<title>${title}</title>`)
-		},
-	}
 }
 
 type Arrayable<T> = T | Array<T>
