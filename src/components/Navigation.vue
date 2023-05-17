@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getRoutes } from '../modules/router'
+import { getRoutes } from '~/modules/router'
 import { SwitchIcon } from 'vue-dark-switch'
 import 'vue-dark-switch/dist/style.css'
 

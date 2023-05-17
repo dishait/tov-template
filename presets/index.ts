@@ -1,6 +1,6 @@
 import { isPackageExists } from 'local-pkg'
 import Prism from 'markdown-it-prism'
-import { resolve } from 'path'
+import { dirname, resolve } from 'path'
 import { argv } from 'process'
 import UnoCss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -28,6 +28,7 @@ import {
 import Components from 'unplugin-vue-components/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import Router from 'unplugin-vue-router/vite'
+import { fileURLToPath } from 'url'
 import { loadEnv } from 'vite'
 import { AutoGenerateImports } from 'vite-auto-import-resolvers'
 import Compression from 'vite-plugin-compression'
@@ -37,13 +38,14 @@ import { viteMockServe as Mock } from 'vite-plugin-mock'
 import Removelog from 'vite-plugin-removelog'
 import Modules from 'vite-plugin-use-modules'
 import Layouts from 'vite-plugin-vue-meta-layouts'
-import { HtmlPolyfill } from 'vue-dark-switch/vite'
 import { warmup as Warmup } from 'vite-plugin-warmup'
+import { HtmlPolyfill } from 'vue-dark-switch/vite'
 
 import I18N from '@intlify/unplugin-vue-i18n/vite'
 import Vue from '@vitejs/plugin-vue'
 import Jsx from '@vitejs/plugin-vue-jsx'
 
+import type { Plugin } from 'vite'
 import type { ComponentResolver } from 'unplugin-vue-components/types'
 
 export default function () {
@@ -135,6 +137,8 @@ export default function () {
 		process.env.NODE_ENV !== 'debug' && Removelog(),
 		// https://github.com/dishait/vue-dark-switch#%E7%BC%96%E8%AF%91%E6%97%B6%E9%A2%84%E8%AE%BE---%E6%8E%A8%E8%8D%90
 		HtmlPolyfill(),
+		// 别名插件
+		Alias(),
 	]
 
 	if (env.VITE_APP_API_AUTO_IMPORT) {
@@ -241,4 +245,27 @@ export const normalizeResolvers = (options: Options = {}) => {
 	existedResolvers.push(...include)
 
 	return existedResolvers
+}
+
+export const _dirname =
+	typeof __dirname !== 'undefined'
+		? __dirname
+		: dirname(fileURLToPath(import.meta.url))
+
+// 别名插件
+function Alias(): Plugin {
+	const src = resolve(_dirname, '../src')
+	return {
+		name: 'vite-alias',
+		enforce: 'pre',
+		config(config) {
+			config.resolve ??= {}
+			config.resolve.alias = [
+				{
+					find: /^~/,
+					replacement: src,
+				},
+			]
+		},
+	}
 }
