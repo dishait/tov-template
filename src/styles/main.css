@@ -1,8 +1,8 @@
 @import './md.css';
 
+
 html.dark {
-	color: #e5e7eb;
-	background: #121212;
+	background: #100c2a;
 }
 
 .prose {

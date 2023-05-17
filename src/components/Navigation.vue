@@ -24,7 +24,7 @@ const routes = getRoutes()
 <template>
 	<nav
 		aria-label="Site Nav"
-		class="mx-auto max-w-3xl flex items-center justify-between p-4"
+		class="mx-auto h-80px max-w-3xl flex items-center justify-between p-4"
 	>
 		<span class="h-10 w-10 flex items-center justify-center">
 			<SwitchIcon unmount-persets />
