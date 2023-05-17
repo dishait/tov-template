@@ -41,6 +41,7 @@
 28. 统一的代码规范与风格支持
 29. 生产环境自动移除开发日志
 30. defineOptions 支持
+31. echarts 支持
 
 <br />
 <br />
@@ -324,7 +325,13 @@ eg:
 </template>
 
 <!-- 添加自定义块 👇 -->
-<route lang="yaml"> meta: layout: custom </route>
+<route lang="json">
+{
+	"meta": {
+		"layout": "custom"
+	}
+}
+</route>
 ```
 
 此时路由到 `/`, 页面将渲染
@@ -1107,7 +1114,13 @@ export default defineComponent({
 </script>
 ```
 
-[unplugin-vue-macros](https://github.com/sxzz/unplugin-vue-macros) 已经被集成进 [vue3.3](https://blog.vuejs.org/posts/vue-3-3) 中
+<br />
+<br />
+
+### 31. [echarts 支持](https://github.com/ecomfe/vue-echarts)
+
+简单集成了 [vue-echarts](https://github.com/ecomfe/vue-echarts)，具体可见 [echarts](https://github.com/apache/echarts) 和 [vue-echarts](https://github.com/ecomfe/vue-echarts) 文档
+
 
 <br />
 <br />
