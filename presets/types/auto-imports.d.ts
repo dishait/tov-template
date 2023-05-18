@@ -113,6 +113,7 @@ declare global {
   const syncRefs: typeof import('@vueuse/core')['syncRefs']
   const templateRef: typeof import('@vueuse/core')['templateRef']
   const test: typeof import('vitest')['test']
+  const testRequest: typeof import('../../src/api/test')['testRequest']
   const throttledRef: typeof import('@vueuse/core')['throttledRef']
   const throttledWatch: typeof import('@vueuse/core')['throttledWatch']
   const toRaw: typeof import('vue')['toRaw']
