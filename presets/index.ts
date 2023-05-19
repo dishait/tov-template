@@ -43,17 +43,20 @@ import { warmup as Warmup } from 'vite-plugin-warmup'
 import { HtmlPolyfill } from 'vue-dark-switch/vite'
 
 import I18N from '@intlify/unplugin-vue-i18n/vite'
+import Legacy from '@vitejs/plugin-legacy'
 import Vue from '@vitejs/plugin-vue'
 import Jsx from '@vitejs/plugin-vue-jsx'
 
 import type { Plugin } from 'vite'
 import type { ComponentResolver } from 'unplugin-vue-components/types'
-
 export default function () {
 	const env = useEnv()
 	const safelist =
 		'prose px-2 sm:px-0 md:prose-lg lg:prose-lg dark:prose-invert text-left w-screen prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600'
 	const plugins = [
+		Legacy({
+			targets: ['defaults', 'not IE 11'],
+		}),
 		EnvDts({
 			dts: 'presets/types/env.d.ts',
 		}),
