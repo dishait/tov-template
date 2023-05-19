@@ -12,9 +12,8 @@ export function useVisits() {
 
 	const { data: visits } = useRequest(async function () {
 		try {
-			const res = await fetch('https://visits-kv.deno.dev/tov-template')
-			const text = await res.text()
-			return Number(text) ?? 0
+			const n = await http.get('https://visits-kv.deno.dev/tov-template')
+			return Number(n) ?? 0
 		} catch (error) {
 			console.error(error)
 			return 0

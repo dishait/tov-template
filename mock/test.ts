@@ -1,30 +1,30 @@
 import { MockMethod } from 'vite-plugin-mock'
 export default [
 	{
-		url: '/api/get',
+		url: '/api/mock/get',
 		method: 'get',
 		response: () => {
 			return {
 				code: 0,
 				data: {
-					name: 'vben',
+					name: 'mock',
 				},
 			}
 		},
 	},
 	{
-		url: '/api/post',
+		url: '/api/mock/post',
 		method: 'post',
 		timeout: 2000,
 		response: {
 			code: 0,
 			data: {
-				name: 'vben',
+				name: 'mock',
 			},
 		},
 	},
 	{
-		url: '/api/text',
+		url: '/api/mock/text',
 		method: 'post',
 		rawResponse: async (req, res) => {
 			let reqbody = ''

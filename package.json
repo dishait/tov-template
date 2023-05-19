@@ -44,6 +44,7 @@
     "@vueuse/components": "^10.1.2",
     "@vueuse/core": "^10.1.2",
     "@vueuse/integrations": "^10.1.2",
+    "axios": "^1.4.0",
     "bumpp": "^9.1.0",
     "c8": "^7.13.0",
     "cross-env": "^7.0.3",
@@ -88,7 +89,8 @@
     "vue-echarts": "^6.5.5",
     "vue-i18n": "^9.2.2",
     "vue-request": "2.0.0-rc.4",
-    "vue-router": "^4.2.1"
+    "vue-router": "^4.2.1",
+    "vue-toastification": "2.0.0-rc.5"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,vue}": "eslint --cache --fix"

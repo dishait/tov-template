@@ -313,6 +313,10 @@
     "watchTriggerable": true,
     "watchWithFilter": true,
     "whenever": true,
-    "testRequest": true
+    "testRequest": true,
+    "$http": true,
+    "toast": true,
+    "axios": true,
+    "http": true
   }
 }

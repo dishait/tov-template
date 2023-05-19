@@ -1,3 +1,4 @@
+import { writeFile } from 'fs/promises'
 import { isPackageExists } from 'local-pkg'
 import Prism from 'markdown-it-prism'
 import { dirname, resolve } from 'path'
@@ -44,7 +45,6 @@ import { HtmlPolyfill } from 'vue-dark-switch/vite'
 import I18N from '@intlify/unplugin-vue-i18n/vite'
 import Vue from '@vitejs/plugin-vue'
 import Jsx from '@vitejs/plugin-vue-jsx'
-import { writeFile } from 'fs/promises'
 
 import type { Plugin } from 'vite'
 import type { ComponentResolver } from 'unplugin-vue-components/types'
@@ -204,8 +204,6 @@ function useEnv() {
 		return Boolean(v === 'true' || false)
 	}
 
-	const env = loadEnv(detectMode(), '.')
-
 	const {
 		VITE_APP_TITLE,
 		VITE_APP_DEV_TOOLS,
@@ -214,7 +212,7 @@ function useEnv() {
 		VITE_APP_MOCK_IN_PRODUCTION,
 		VITE_APP_DIR_API_AUTO_IMPORT,
 		VITE_APP_COMPRESSINON_ALGORITHM,
-	} = env
+	} = loadEnv(detectMode(), '.')
 
 	return {
 		VITE_APP_TITLE,
