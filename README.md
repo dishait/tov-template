@@ -42,6 +42,7 @@
 29. 生产环境自动移除开发日志
 30. defineOptions 支持
 31. echarts 支持
+32. 全局通用 toast 通知
 
 <br />
 <br />
@@ -1142,6 +1143,24 @@ export default defineComponent({
 简单集成了 [vue-echarts](https://github.com/ecomfe/vue-echarts)，具体可见
 [echarts](https://github.com/apache/echarts) 和
 [vue-echarts](https://github.com/ecomfe/vue-echarts) 文档
+
+
+<br />
+<br />
+
+### 32. [全局通用 toast 通知](https://github.com/euvl/vue-notification)
+
+集成了 [vue-toastification](https://github.com/euvl/vue-notification)，你可以在 `src` 目录下所有文件中使用它 👇
+
+```ts
+// src 下任何文件都是可用的
+toast.info('信息')
+toast.error('失败')
+toast.warning('警告')
+toast.success('成功')
+```
+
+具体可见 👉 [全局通用 toast 通知](https://github.com/euvl/vue-notification)
 
 <br />
 <br />
