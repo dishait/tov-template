@@ -43,6 +43,7 @@
 30. defineOptions 支持
 31. echarts 支持
 32. 全局通用 toast 通知
+33. 全局通用 axios 请求封装
 
 <br />
 <br />
@@ -360,7 +361,7 @@ eg:
 import { MockMethod } from "vite-plugin-mock";
 export default [
   {
-    url: "/api/get",
+    url: "/api/mock/get",
     method: "get",
     response: () => {
       return {
@@ -380,7 +381,7 @@ export default [
 <script setup lang="ts">
 	import { useRequest } from 'vue-request'
 	// 请求接口 /api/get
-	const { data, loading, error } = useRequest('/api/get')
+	const { data, loading, error } = useRequest('/api/mock/get')
 </script>
 
 <template>
@@ -1144,23 +1145,61 @@ export default defineComponent({
 [echarts](https://github.com/apache/echarts) 和
 [vue-echarts](https://github.com/ecomfe/vue-echarts) 文档
 
-
 <br />
 <br />
 
 ### 32. [全局通用 toast 通知](https://github.com/euvl/vue-notification)
 
-集成了 [vue-toastification](https://github.com/euvl/vue-notification)，你可以在 `src` 目录下所有文件中使用它 👇
+集成了 [vue-toastification](https://github.com/euvl/vue-notification)，你可以在
+`src` 目录下所有文件中使用它 👇
 
 ```ts
 // src 下任何文件都是可用的
-toast.info('信息')
-toast.error('失败')
-toast.warning('警告')
-toast.success('成功')
+toast.info("信息");
+toast.error("失败");
+toast.warning("警告");
+toast.success("成功");
 ```
 
 具体可见 👉 [全局通用 toast 通知](https://github.com/euvl/vue-notification)
+
+<br />
+<br />
+
+### 33. [全局通用 axios 请求封装](https://www.axios-http.cn/)
+
+封装了 [axios](https://www.axios-http.cn/)，你可以在 `src`
+目录下所有文件中使用它 👇
+
+```ts
+// src 下任何文件都是可用的
+http.get("...");
+http.post("...", { name: "张三", age: 20 });
+// ... 以此类推
+```
+
+上述 `http` 是 `axios`
+单独创建的实例，具有简单错误提示，以及响应数据转换。具体可见
+`src/composables/http.ts`。
+
+如果你喜欢响应式风格和 `swr`，可以跟
+[vue-request](https://github.com/attojs/vue-request) 一起使用
+
+```ts
+import { useRequest } from "vue-request";
+
+const { data, error, loading } = useRequest(() => http.get("..."));
+
+loading.value // 是否加载中
+
+error.value // 错误内容
+
+data.value // 响应数据
+```
+
+该 `http` 实例的 `baseURL` 取自环境变量文件 `.env` 的 `VITE_API_BASE_URL`，默认为 `/api`，可以按自己需求更改。 
+
+具体可见 👉 [axios](https://www.axios-http.cn/)
 
 <br />
 <br />
