@@ -27,7 +27,7 @@
 14. pinia 状态管理
 15. pnpm 包管理器
 16. 跳转进度条支持
-17. Inspect 调试支持
+17. 开发面板支持
 18. 插件自动加载支持
 19. Vitest 单元测试支持
 20. 支持 Markdown 渲染
@@ -794,25 +794,11 @@ export const useCounterStore = defineStore('counter', {
 
 <br />
 
-### [17. Inspect 调试支持](https://github.com/antfu/vite-plugin-inspect)
+### [17. 开发面板支持](https://github.com/webfansplz/vite-plugin-vue-devtools)
 
-启动项目
+该面板可以让你在开发过程中，了解项目的方方面面，目前仅在开发环境下有效
 
-```shell
-pnpm dev
-```
-
-可以看到一个 `url`
-
-![inspect](public/docs/inspect.png)
-
-先进入 `http://localhost:3000`，再进入 `http://localhost:3000/__inspect/` 即可获得依赖图谱。
-
-![inspect-atlas](public/docs/inspect-atlas.png)
-
-通过顶部的一些按钮还可以调整依赖呈现。
-
-具体可见 👉 [vite-plugin-inspect](https://github.com/antfu/vite-plugin-inspect)
+具体可见 👉 [vite-plugin-vue-devtools](https://github.com/webfansplz/vite-plugin-vue-devtools)
 
 <br />
 
