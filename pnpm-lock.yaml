@@ -1,8 +1,5 @@
 lockfileVersion: '6.0'
 
-overrides:
-  sourcemap-codec: npm:@jridgewell/sourcemap-codec
-
 devDependencies:
   '@intlify/unplugin-vue-i18n':
     specifier: ^0.10.0
@@ -67,12 +64,6 @@ devDependencies:
   eslint-plugin-vue:
     specifier: ^9.13.0
     version: 9.13.0(eslint@8.40.0)
-  fast-glob:
-    specifier: ^3.2.12
-    version: 3.2.12
-  fs-extra:
-    specifier: ^11.1.1
-    version: 11.1.1
   husky:
     specifier: ^8.0.3
     version: 8.0.3
@@ -94,9 +85,6 @@ devDependencies:
   mockjs:
     specifier: ^1.1.0
     version: 1.1.0
-  modern-css-reset:
-    specifier: ^1.4.0
-    version: 1.4.0
   nprogress:
     specifier: ^0.2.0
     version: 0.2.0
@@ -145,9 +133,6 @@ devDependencies:
   vite-plugin-compression:
     specifier: ^0.5.1
     version: 0.5.1(vite@4.3.8)
-  vite-plugin-inspect:
-    specifier: ^0.7.26
-    version: 0.7.26(vite@4.3.8)
   vite-plugin-md:
     specifier: ^0.22.5
     version: 0.22.5(@vitejs/plugin-vue@4.2.3)(vite@4.3.8)
@@ -4504,10 +4489,6 @@ packages:
     hasBin: true
     dependencies:
       commander: 10.0.0
-    dev: true
-
-  /modern-css-reset@1.4.0:
-    resolution: {integrity: sha512-0crZmSFmrxkI7159rvQWjpDhy0u4+Awg/iOycJdlVn0RSeft/a+6BrQHR3IqvmdK25sqt0o6Z5Ap7cWgUee2rw==}
     dev: true
 
   /mri@1.2.0:

@@ -52,8 +52,6 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.13.0",
-    "fast-glob": "^3.2.12",
-    "fs-extra": "^11.1.1",
     "husky": "^8.0.3",
     "ityped": "^1.0.3",
     "lint-staged": "^13.2.2",
@@ -61,7 +59,6 @@
     "markdown-it": "^13.0.1",
     "markdown-it-prism": "^2.3.0",
     "mockjs": "^1.1.0",
-    "modern-css-reset": "^1.4.0",
     "nprogress": "^0.2.0",
     "pinia": "^2.1.3",
     "pinia-plugin-persistedstate": "^3.1.0",
@@ -78,7 +75,6 @@
     "vite": "^4.3.8",
     "vite-auto-import-resolvers": "^3.0.5",
     "vite-plugin-compression": "^0.5.1",
-    "vite-plugin-inspect": "^0.7.26",
     "vite-plugin-md": "^0.22.5",
     "vite-plugin-mock": "^2.9.8",
     "vite-plugin-removelog": "^0.2.1",
@@ -93,24 +89,6 @@
     "vue-i18n": "^9.2.2",
     "vue-request": "2.0.0-rc.4",
     "vue-router": "^4.2.1"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "fp-ts",
-        "rollup",
-        "markdown-it",
-        "inferred-types",
-        "@types/markdown-it",
-        "@vueuse/core@^9.0.0",
-        "@rollup/pluginutils",
-        "@yankeeinlondon/builder-api",
-        "@yankeeinlondon/happy-wrapper"
-      ]
-    }
-  },
-  "resolutions": {
-    "sourcemap-codec": "npm:@jridgewell/sourcemap-codec"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,vue}": "eslint --cache --fix"

@@ -1,4 +1,4 @@
-const fse = require('fs-extra')
+const { existsSync } = require('fs')
 
 const { showDir, showExt, moduleTypes } = require('./shared/base.cjs')
 
@@ -49,7 +49,7 @@ function create(plop) {
 					const dir = showDir(type)
 					const ext = showExt(type, isMarkdown)
 					modulePath = `src/${dir}/${name}.${ext}`
-					exist = fse.pathExistsSync(modulePath)
+					exist = existsSync(modulePath)
 					if (exist) {
 						return true
 					}

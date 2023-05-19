@@ -1,5 +1,5 @@
-const fg = require('fast-glob')
-const fse = require('fs-extra')
+const { unlinkSync } = require('fs')
+const { readdir } = require('fs/promises')
 const { basename } = require('path')
 const { showDir, moduleTypes } = require('./shared/base.cjs')
 
@@ -13,7 +13,7 @@ function remove(plop) {
 		const dir = showDir(type)
 		const target = `./src/${dir}/${name}`
 		if (shouldRemove) {
-			return fse.removeSync(target)
+			return unlinkSync(target)
 		}
 		throw new Error(`删除 ${target} 失败`)
 	})
@@ -26,10 +26,11 @@ function remove(plop) {
 				type: 'list',
 				message: '请选择您要删除的类型',
 				async choices() {
-					const dirs = await fg('./src/**/*', {
-						deep: 1,
-						onlyDirectories: true,
+					const entrys = await readdir('./src', {
+						recursive: false,
+						withFileTypes: true,
 					})
+					const dirs = entrys.filter((e) => e.isDirectory())
 					const types = moduleTypes.filter((type) => {
 						const dir = showDir(type)
 						return dirs.includes(`./src/${dir}`)
@@ -45,10 +46,11 @@ function remove(plop) {
 				},
 				async choices({ type }) {
 					const dir = showDir(type)
-					let modules = await fg(`./src/${dir}/*.*`, {
-						deep: 1,
-						onlyFiles: true,
+					const entrys = await readdir(`src/${dir}`, {
+						recursive: false,
+						withFileTypes: true,
 					})
+					let modules = entrys.filter((e) => e.isFile())
 					modules = modules.map((module) => {
 						return basename(module)
 					})
