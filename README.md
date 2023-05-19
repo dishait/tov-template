@@ -444,7 +444,7 @@ export default 1000;
 </template>
 ```
 
-1. `src/stores` 的导出将被按需自动引入。
+2. `src/stores` 的导出将被按需自动引入。
 
 例如有个 `src/stores/counterStore.ts`
 
@@ -475,6 +475,8 @@ export default defineStore("counter", {
 	<div @click="store.inc()">{{store.counter}}</div>
 </template>
 ```
+
+3. `src/api` 也是自动按需导入，与上述类似
 
 具体可见 👉
 [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import)。
