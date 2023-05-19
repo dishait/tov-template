@@ -32,11 +32,11 @@ import { fileURLToPath } from 'url'
 import { loadEnv } from 'vite'
 import { AutoGenerateImports } from 'vite-auto-import-resolvers'
 import Compression from 'vite-plugin-compression'
-import Inspect from 'vite-plugin-inspect'
 import Markdown from 'vite-plugin-md'
 import { viteMockServe as Mock } from 'vite-plugin-mock'
 import Removelog from 'vite-plugin-removelog'
 import Modules from 'vite-plugin-use-modules'
+import VueDevTools from 'vite-plugin-vue-devtools'
 import Layouts from 'vite-plugin-vue-meta-layouts'
 import { warmup as Warmup } from 'vite-plugin-warmup'
 import { HtmlPolyfill } from 'vue-dark-switch/vite'
@@ -75,7 +75,7 @@ export default function () {
 		// 布局系统
 		Layouts(),
 		// 调试工具
-		env.VITE_APP_INSPECT && Inspect(),
+		env.VITE_APP_DEV_TOOLS && VueDevTools(),
 		// mock 服务
 		Mock({
 			prodEnabled: env.VITE_APP_MOCK_IN_PRODUCTION,
@@ -204,7 +204,7 @@ function useEnv() {
 
 	const {
 		VITE_APP_TITLE,
-		VITE_APP_INSPECT,
+		VITE_APP_DEV_TOOLS,
 		VITE_APP_MARKDOWN,
 		VITE_APP_API_AUTO_IMPORT,
 		VITE_APP_MOCK_IN_PRODUCTION,
@@ -212,16 +212,15 @@ function useEnv() {
 		VITE_APP_COMPRESSINON_ALGORITHM,
 	} = env
 
-	const newEnv = {
+	return {
 		VITE_APP_TITLE,
 		VITE_APP_COMPRESSINON_ALGORITHM,
-		VITE_APP_INSPECT: stringToBoolean(VITE_APP_INSPECT),
+		VITE_APP_DEV_TOOLS: stringToBoolean(VITE_APP_DEV_TOOLS),
 		VITE_APP_MARKDOWN: stringToBoolean(VITE_APP_MARKDOWN),
 		VITE_APP_API_AUTO_IMPORT: stringToBoolean(VITE_APP_API_AUTO_IMPORT),
 		VITE_APP_MOCK_IN_PRODUCTION: stringToBoolean(VITE_APP_MOCK_IN_PRODUCTION),
 		VITE_APP_DIR_API_AUTO_IMPORT: stringToBoolean(VITE_APP_DIR_API_AUTO_IMPORT),
 	}
-	return newEnv
 }
 
 type Arrayable<T> = T | Array<T>
