@@ -47,6 +47,7 @@ import Jsx from '@vitejs/plugin-vue-jsx'
 
 import type { Plugin } from 'vite'
 import type { ComponentResolver } from 'unplugin-vue-components/types'
+
 export default function () {
 	const env = useEnv()
 	const safelist =
