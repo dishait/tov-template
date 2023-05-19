@@ -5,8 +5,6 @@ import { dirname, resolve } from 'path'
 import { argv } from 'process'
 import UnoCss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
-import IconsResolver from 'unplugin-icons/resolver'
-import Icons from 'unplugin-icons/vite'
 import {
 	AntDesignVueResolver,
 	ArcoResolver,
@@ -87,10 +85,7 @@ export default function () {
 		Mock({
 			prodEnabled: env.VITE_APP_MOCK_IN_PRODUCTION,
 		}),
-		// https://icones.netlify.app/
-		Icons({
-			autoInstall: true,
-		}),
+
 		// 组件自动按需引入
 		Components({
 			directoryAsNamespace: true,
@@ -122,10 +117,8 @@ export default function () {
 					[AntDesignVueResolver(), 'ant-design-vue'],
 					[VueUseComponentsResolver(), '@vueuse/components'],
 				],
-				include: [IconsResolver()],
 			}),
 		}),
-
 		// i18n 国际化支持
 		I18N({
 			runtimeOnly: false,
