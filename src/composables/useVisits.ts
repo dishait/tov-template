@@ -12,7 +12,9 @@ export function useVisits() {
 
 	const { data: visits } = useRequest(async function () {
 		try {
-			const n = await http.get('https://visits-kv.deno.dev/tov-template')
+			const n = await http.get('https://visits-kv.deno.dev/tov-template', {
+				baseURL: '',
+			})
 			return Number(n) ?? 0
 		} catch (error) {
 			console.error(error)
