@@ -1,17 +1,15 @@
 /// <reference types="vite/client" />
-/// <reference types="vite-plugin-pages/client" />
-/// <reference types="vite-plugin-use-modules/client" />
-/// <reference types="vite-plugin-vue-meta-layouts/client" />
-/// <reference types="@intlify/vite-plugin-vue-i18n/client" />
 
-declare module '*.vue' {
-	import type { DefineComponent } from 'vue'
-	const component: DefineComponent<{}, {}, any>
-	export default component
+interface ImportMetaEnv {
+	readonly VITE_APP_TITLE: string
+	readonly VITE_APP_MARKDOWN: string
+	readonly VITE_APP_DEV_TOOLS: string
+	readonly VITE_APP_MOCK_IN_PRODUCTION: string
+	readonly VITE_APP_COMPRESSINON_ALGORITHM: string
+	readonly VITE_APP_API_AUTO_IMPORT: string
+	readonly VITE_APP_DIR_API_AUTO_IMPORT: string 
 }
 
-declare module '*.md' {
-	import { ComponentOptions } from 'vue'
-	const Component: ComponentOptions
-	export default Component
+interface ImportMeta {
+	readonly env: ImportMetaEnv
 }

@@ -44,6 +44,7 @@ import { HtmlPolyfill } from 'vue-dark-switch/vite'
 import I18N from '@intlify/unplugin-vue-i18n/vite'
 import Vue from '@vitejs/plugin-vue'
 import Jsx from '@vitejs/plugin-vue-jsx'
+import { writeFile } from 'fs/promises'
 
 import type { Plugin } from 'vite'
 import type { ComponentResolver } from 'unplugin-vue-components/types'
@@ -53,6 +54,9 @@ export default function () {
 	const safelist =
 		'prose px-2 sm:px-0 md:prose-lg lg:prose-lg dark:prose-invert text-left w-screen prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600'
 	const plugins = [
+		EnvDts({
+			dts: 'presets/types/env.d.ts',
+		}),
 		// https://github.com/bluwy/vite-plugin-warmup (依赖预热，加快渲染，未来可能会内置到 vite 中)
 		Warmup({
 			clientFiles: ['./src/**/*'],
@@ -264,6 +268,41 @@ function Alias(): Plugin {
 					replacement: src,
 				},
 			]
+		},
+	}
+}
+
+interface EnvOptions {
+	/**
+	 * @default "env.d.ts"
+	 */
+	dts?: string
+}
+
+// 自动生成环境变量类型声明文件
+function EnvDts(options: EnvOptions = {}): Plugin {
+	const { dts = 'env.d.ts' } = options
+	const ignoreKeys = ['BASE_URL', 'MODE', 'DEV', 'PROD']
+	return {
+		name: 'vite-plugin-env-dts',
+		enforce: 'post',
+		apply: 'serve',
+		async configResolved(config) {
+			const { env } = config
+
+			const keys = Object.keys(env).filter((k) => !ignoreKeys.includes(k))
+			await writeFile(
+				dts,
+				`/// <reference types="vite/client" />
+
+interface ImportMetaEnv {
+	${keys.map((k) => `readonly ${k}: string`).join('\n	')} 
+}
+
+interface ImportMeta {
+	readonly env: ImportMetaEnv
+}`
+			)
 		},
 	}
 }
