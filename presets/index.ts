@@ -31,11 +31,11 @@ import { loadEnv } from 'vite'
 import { AutoGenerateImports } from 'vite-auto-import-resolvers'
 import Compression from 'vite-plugin-compression'
 import EnvTypes from 'vite-plugin-env-types'
-import Markdown from 'vite-plugin-md'
 import { viteMockServe as Mock } from 'vite-plugin-mock'
 import Removelog from 'vite-plugin-removelog'
 import Modules from 'vite-plugin-use-modules'
 import VueDevTools from 'vite-plugin-vue-devtools'
+import Markdown from 'vite-plugin-vue-markdown'
 import Layouts from 'vite-plugin-vue-meta-layouts'
 import { warmup as Warmup } from 'vite-plugin-warmup'
 import { HtmlPolyfill } from 'vue-dark-switch/vite'
@@ -90,6 +90,7 @@ export default function () {
 		// 组件自动按需引入
 		Components({
 			directoryAsNamespace: true,
+			include: [/\.vue$/, /\.[tj]sx$/, /\.md$/],
 			extensions: ['md', 'vue', 'tsx', 'jsx'],
 			dts: resolve(__dirname, './types/components.d.ts'),
 			types: [
