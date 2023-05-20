@@ -1,4 +1,3 @@
-import { writeFile } from 'fs/promises'
 import { isPackageExists } from 'local-pkg'
 import Prism from 'markdown-it-prism'
 import { dirname, resolve } from 'path'
@@ -31,6 +30,7 @@ import { fileURLToPath } from 'url'
 import { loadEnv } from 'vite'
 import { AutoGenerateImports } from 'vite-auto-import-resolvers'
 import Compression from 'vite-plugin-compression'
+import EnvTypes from 'vite-plugin-env-types'
 import Markdown from 'vite-plugin-md'
 import { viteMockServe as Mock } from 'vite-plugin-mock'
 import Removelog from 'vite-plugin-removelog'
@@ -56,7 +56,7 @@ export default function () {
 		Legacy({
 			targets: ['defaults', 'not IE 11'],
 		}),
-		EnvDts({
+		EnvTypes({
 			dts: 'presets/types/env.d.ts',
 		}),
 		// https://github.com/bluwy/vite-plugin-warmup (依赖预热，加快渲染，未来可能会内置到 vite 中)
@@ -263,41 +263,6 @@ function Alias(): Plugin {
 					replacement: src,
 				},
 			]
-		},
-	}
-}
-
-interface EnvOptions {
-	/**
-	 * @default "env.d.ts"
-	 */
-	dts?: string
-}
-
-// 自动生成环境变量类型声明文件
-function EnvDts(options: EnvOptions = {}): Plugin {
-	const { dts = 'env.d.ts' } = options
-	const ignoreKeys = ['BASE_URL', 'MODE', 'DEV', 'PROD']
-	return {
-		name: 'vite-plugin-env-dts',
-		enforce: 'post',
-		apply: 'serve',
-		async configResolved(config) {
-			const { env } = config
-
-			const keys = Object.keys(env).filter((k) => !ignoreKeys.includes(k))
-			await writeFile(
-				dts,
-				`/// <reference types="vite/client" />
-
-interface ImportMetaEnv {
-	${keys.map((k) => `readonly ${k}: string`).join('\n	')} 
-}
-
-interface ImportMeta {
-	readonly env: ImportMetaEnv
-}`
-			)
 		},
 	}
 }

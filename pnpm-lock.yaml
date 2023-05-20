@@ -136,6 +136,9 @@ devDependencies:
   vite-plugin-compression:
     specifier: ^0.5.1
     version: 0.5.1(vite@4.3.8)
+  vite-plugin-env-types:
+    specifier: ^0.1.3
+    version: 0.1.3(vite@4.3.8)
   vite-plugin-md:
     specifier: ^0.22.5
     version: 0.22.5(@vitejs/plugin-vue@4.2.3)(terser@5.17.4)(vite@4.3.8)
@@ -7137,6 +7140,15 @@ packages:
       vite: 4.3.8(@types/node@20.2.1)(terser@5.17.4)
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /vite-plugin-env-types@0.1.3(vite@4.3.8):
+    resolution: {integrity: sha512-QeAUJl12WjL5mLPp3xoUw2UEDt0Xbu3NsthiezS7RvQrQOtf+Dlwri5qFcO5zfxZSJRnR3z8WIxRFEsH/d2FRA==}
+    peerDependencies:
+      vite: '>=2.0.0'
+    dependencies:
+      fast-glob: 3.2.12
+      vite: 4.3.8(@types/node@20.2.1)(terser@5.17.4)
     dev: true
 
   /vite-plugin-inspect@0.7.26(vite@4.3.8):
