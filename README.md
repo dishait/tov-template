@@ -44,6 +44,7 @@
 31. echarts 支持
 32. 全局通用 toast 通知
 33. 全局通用 axios 请求封装
+34. 自动生成环境变量类型声明
 
 <br />
 <br />
@@ -1204,6 +1205,16 @@ data.value // 响应数据
 该 `http` 实例的 `baseURL` 取自环境变量文件 `.env` 的 `VITE_API_BASE_URL`，默认为 `/api`，可以按自己需求更改。 
 
 具体可见 👉 [axios](https://www.axios-http.cn/)
+
+
+<br />
+<br />
+
+### 34. [自动生成环境变量类型声明](https://github.com/dishait/vite-plugin-env-types)
+
+在 `vite` 项目中，我们虽然可以在 `.env` 中设置环境变量，并在前端源码中通过 `import.meta.env` 来使用它们，但是类型提示是糟糕的。这个功能可以自动生成类型声明以达到实时的类型提示，让你不需要关心和手动管理它们。
+
+具体可见 👉 [vite-plugin-env-types](https://github.com/dishait/vite-plugin-env-types)
 
 <br />
 <br />
