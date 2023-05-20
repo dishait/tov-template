@@ -899,7 +899,7 @@ pnpm coverage
 
 <br />
 
-### [20. 支持 Markdown 渲染](https://github.com/antfu/vite-plugin-md)
+### [20. 支持 Markdown 渲染](https://github.com/antfu/vite-plugin-vue-markdown)
 
 `markdown` 渲染可以用来书写一些简单的说明。
 
@@ -916,14 +916,16 @@ pnpm coverage
 
 当你路由到 `/about` 后即可看到对应的 `markdown` 渲染。
 
-具体可见 👉 [vite-plugin-md](https://github.com/antfu/vite-plugin-md)
+当然也支持在 `markdown` 中嵌入 `vue` 组件
+
+具体可见 👉 [vite-plugin-vue-markdown](https://github.com/antfu/vite-plugin-vue-markdown)
 
 <br />
 <br />
 
 ### 21. 路径别名 `~` 支持
 
-`~` 路径将被导向项目的 `src` 目录。
+`~` 路径将被导向项目的 `src` 目录，同时有更好的类型提示
 
 ```html
 <!-- src/pages/index.vue -->
