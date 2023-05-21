@@ -1,4 +1,3 @@
-import type { App } from 'vue'
 import { createI18n } from 'vue-i18n'
 
 const messages = Object.fromEntries(
@@ -19,6 +18,4 @@ export const i18n = createI18n({
 	messages,
 })
 
-export default (app: App) => {
-	app.use(i18n)
-}
+export default i18n

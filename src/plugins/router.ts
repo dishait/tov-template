@@ -1,4 +1,3 @@
-import type { App } from 'vue'
 import { setupLayouts, createGetRoutes } from 'virtual:meta-layouts'
 import { createRouter, createWebHistory } from 'vue-router'
 import { routes as fileRoutes } from 'vue-router/auto/routes'
@@ -10,4 +9,4 @@ export const router = createRouter({
 
 export const getRoutes = createGetRoutes(router)
 
-export default (app: App) => app.use(router)
+export default router
