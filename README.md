@@ -834,24 +834,18 @@ export const useCounterStore = defineStore("counter", {
 
 ```ts
 // src/plugins/pinia.ts
-
-import { App } from "vue";
-
 // 导出 default 接口
-export default (app: App) => app.use(createPinia());
+export default createPinia() // pinia 将被自动安装
 ```
 
 或者 `vue-router`
 
 ```ts
 // src/plugins/router.ts
-
-import { App } from "vue";
-
 // 省略各种配置
 
 // 导出 default 接口
-export default (app: App) => app.use(router);
+export default router // 路由将被自动安装
 ```
 
 当然 `pinia` 和 `vue-router` 已经预设好了，你不需要重新关注他们。
