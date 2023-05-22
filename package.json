@@ -78,7 +78,7 @@
     "vite-plugin-env-types": "^0.1.3",
     "vite-plugin-mock": "^2.9.8",
     "vite-plugin-removelog": "^0.2.1",
-    "vite-plugin-use-modules": "^1.4.2",
+    "vite-plugin-use-modules": "^1.4.3",
     "vite-plugin-vue-devtools": "^0.0.16",
     "vite-plugin-vue-markdown": "^0.23.5",
     "vite-plugin-vue-meta-layouts": "^0.2.2",
