@@ -146,8 +146,8 @@ devDependencies:
     specifier: ^0.2.1
     version: 0.2.1(vue@3.3.4)
   vite-plugin-use-modules:
-    specifier: ^1.4.3
-    version: 1.4.3(vite@4.3.8)(vue@3.3.4)
+    specifier: ^1.4.4
+    version: 1.4.4(vite@4.3.8)(vue@3.3.4)
   vite-plugin-vue-devtools:
     specifier: ^0.0.16
     version: 0.0.16(vite@4.3.8)(vue@3.3.4)
@@ -7030,8 +7030,8 @@ packages:
       - vue
     dev: true
 
-  /vite-plugin-use-modules@1.4.3(vite@4.3.8)(vue@3.3.4):
-    resolution: {integrity: sha512-7nff3cwn9gA+gQxtdE9L0FTyM4m4NlHr1TK0DjlhYUooEmhIJJQu9f0xP2gRyWPPXNyt7Zm/0mSwfktTkBDJDw==}
+  /vite-plugin-use-modules@1.4.4(vite@4.3.8)(vue@3.3.4):
+    resolution: {integrity: sha512-VCpP6I2RC+bcF2ZEZ6VPYFiDOXEEW/4URUfnSLwVJSqrqYPZ10+43ygB20nrMLhWaSHOBwlPA1ES+0bhWl+Gww==}
     peerDependencies:
       vite: '>=2.0.0'
       vue: '>=3.0.0'
