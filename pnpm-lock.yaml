@@ -17,8 +17,8 @@ devDependencies:
     specifier: ^5.59.6
     version: 5.59.6(eslint@8.41.0)(typescript@5.0.4)
   '@unocss/eslint-config':
-    specifier: ^0.51.13
-    version: 0.51.13(eslint@8.41.0)(typescript@5.0.4)
+    specifier: ^0.52.0
+    version: 0.52.0(eslint@8.41.0)(typescript@5.0.4)
   '@unocss/reset':
     specifier: ^0.52.0
     version: 0.52.0
@@ -2144,28 +2144,40 @@ packages:
       unconfig: 0.3.7
     dev: true
 
+  /@unocss/config@0.52.0:
+    resolution: {integrity: sha512-RbkFTAoPXPa0oXB/MuS+d0FOF4jXQHA7lm9D4zmKyrlTyPGBlzO/o4aPF9Z9tJUVjG0SRaSU3ZBQ2ZqTZK9P3Q==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@unocss/core': 0.52.0
+      unconfig: 0.3.7
+    dev: true
+
   /@unocss/core@0.51.13:
     resolution: {integrity: sha512-SclWkqY2c+p5+PiqrbQkhJNEExPdeo71/aGFye10tpBkgPJWd5xC7dhg5F8M4VPNBtuNCrvBWyqNnunMyuz/WQ==}
     dev: true
 
-  /@unocss/eslint-config@0.51.13(eslint@8.41.0)(typescript@5.0.4):
-    resolution: {integrity: sha512-x5wmPi112y0LeYgNFWA3E1ZERho2WvMVkX4G2VwKVTJNJuADfR2QY1Syax1nWef2K1DFmKijsE/MmG93SJXIUw==}
+  /@unocss/core@0.52.0:
+    resolution: {integrity: sha512-MGyG1LpiVtyrHmWmXiDRnf7j+JaJua14K058FGBAhNSLaG37dG6xIfwPuVDBOqEI8EgICmNTJs1T/ImQJYWxtw==}
+    dev: true
+
+  /@unocss/eslint-config@0.52.0(eslint@8.41.0)(typescript@5.0.4):
+    resolution: {integrity: sha512-tV73r+lgq3kZq7ARkS9UCj6AyuLKiGkGW7s8Wli0UmXlidU8I8W8L/NbkAPXRvD+j8Xlo66U/bLeqgv8UOkDOA==}
     engines: {node: '>=14'}
     dependencies:
-      '@unocss/eslint-plugin': 0.51.13(eslint@8.41.0)(typescript@5.0.4)
+      '@unocss/eslint-plugin': 0.52.0(eslint@8.41.0)(typescript@5.0.4)
     transitivePeerDependencies:
       - eslint
       - supports-color
       - typescript
     dev: true
 
-  /@unocss/eslint-plugin@0.51.13(eslint@8.41.0)(typescript@5.0.4):
-    resolution: {integrity: sha512-SEMiwkvLa5V8FCeYQL5iCSPUUQHKJUQs6mD1AhCsp8/rbZQZZIyjfCnvFhlfoENXDQjuzm1NmdLR6V9P4ZhT8w==}
+  /@unocss/eslint-plugin@0.52.0(eslint@8.41.0)(typescript@5.0.4):
+    resolution: {integrity: sha512-wQp9G406iitThrre89fVvy0iSLZetQpEZshbSCpZkEv1n0SMqP8gYgD+wLl8Ns0m3koNt4FGKI13WDoodfea6Q==}
     engines: {node: '>=14'}
     dependencies:
       '@typescript-eslint/utils': 5.59.6(eslint@8.41.0)(typescript@5.0.4)
-      '@unocss/config': 0.51.13
-      '@unocss/core': 0.51.13
+      '@unocss/config': 0.52.0
+      '@unocss/core': 0.52.0
       magic-string: 0.30.0
       synckit: 0.8.5
     transitivePeerDependencies:
