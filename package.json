@@ -97,5 +97,8 @@
   },
   "resolutions": {
     "sourcemap-codec": "npm:@jridgewell/sourcemap-codec"
+  },
+  "repository": {
+    "url": "https://github.com/dishait/tov-template"
   }
 }
