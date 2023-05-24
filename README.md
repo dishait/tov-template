@@ -45,6 +45,8 @@
 32. 全局通用 toast 通知
 33. 全局通用 axios 请求封装
 34. 自动生成环境变量类型声明
+35. `renovate` 自动更新依赖
+36. 自动版本更新并生成 `CHANGELOG`
 
 <br />
 <br />
@@ -835,7 +837,7 @@ export const useCounterStore = defineStore("counter", {
 ```ts
 // src/plugins/pinia.ts
 // 导出 default 接口
-export default createPinia() // pinia 将被自动安装
+export default createPinia(); // pinia 将被自动安装
 ```
 
 或者 `vue-router`
@@ -845,7 +847,7 @@ export default createPinia() // pinia 将被自动安装
 // 省略各种配置
 
 // 导出 default 接口
-export default router // 路由将被自动安装
+export default router; // 路由将被自动安装
 ```
 
 当然 `pinia` 和 `vue-router` 已经预设好了，你不需要重新关注他们。
@@ -913,7 +915,8 @@ pnpm coverage
 
 当然也支持在 `markdown` 中嵌入 `vue` 组件
 
-具体可见 👉 [vite-plugin-vue-markdown](https://github.com/antfu/vite-plugin-vue-markdown)
+具体可见 👉
+[vite-plugin-vue-markdown](https://github.com/antfu/vite-plugin-vue-markdown)
 
 <br />
 <br />
@@ -971,7 +974,7 @@ not-found: Notfound
 又如 `locales/zh-CN.yml` 中用来定义需要国际化支持的中文内容。
 
 ```yml
-# locales/zh-CN.yml
+# locales/简体中文.yml
 # 中文
 
 index: 主页
@@ -989,7 +992,7 @@ not-found: 未找到页面
 
 	const toggleLocale = () => {
 		// locale.value 用来表示当前所属语言，可修改进行语言切换
-		locale.value = locale.value === 'zh-CN' ? 'en' : 'zh-CN'
+		locale.value = locale.value === 'zh-CN' ? 'en' : '简体中文'
 	}
 </script>
 
@@ -1189,26 +1192,50 @@ import { useRequest } from "vue-request";
 
 const { data, error, loading } = useRequest(() => http.get("..."));
 
-loading.value // 是否加载中
+loading.value; // 是否加载中
 
-error.value // 错误内容
+error.value; // 错误内容
 
-data.value // 响应数据
+data.value; // 响应数据
 ```
 
-该 `http` 实例的 `baseURL` 取自环境变量文件 `.env` 的 `VITE_API_BASE_URL`，默认为 `/api`，可以按自己需求更改。 
+该 `http` 实例的 `baseURL` 取自环境变量文件 `.env` 的
+`VITE_API_BASE_URL`，默认为 `/api`，可以按自己需求更改。
 
 具体可见 👉 [axios](https://www.axios-http.cn/)
-
 
 <br />
 <br />
 
 ### 34. [自动生成环境变量类型声明](https://github.com/dishait/vite-plugin-env-types)
 
-在 `vite` 项目中，我们虽然可以在 `.env` 中设置环境变量，并在前端源码中通过 `import.meta.env` 来使用它们，但是类型提示是糟糕的。这个功能可以自动生成类型声明以达到实时的类型提示，让你不需要关心和手动管理它们。
+在 `vite` 项目中，我们虽然可以在 `.env` 中设置环境变量，并在前端源码中通过
+`import.meta.env`
+来使用它们，但是类型提示是糟糕的。这个功能可以自动生成类型声明以达到实时的类型提示，让你不需要关心和手动管理它们。
 
-具体可见 👉 [vite-plugin-env-types](https://github.com/dishait/vite-plugin-env-types)
+具体可见 👉
+[vite-plugin-env-types](https://github.com/dishait/vite-plugin-env-types)
+
+<br />
+<br />
+
+35. [`renovate` 自动更新依赖](https://github.com/renovatebot/renovate)
+
+`github` 的 [renovate](https://github.com/marketplace/renovate) 机器人会定期对
+`github` 检查依赖，并向仓库提起 `pr`，更新策略 👉
+[unjs/renovate-config](https://github.com/unjs/renovate-config)
+
+具体可见 👉 [renovate](https://github.com/renovatebot/renovate)
+
+<br />
+<br />
+
+36. [自动版本更新并生成 `CHANGELOG`](https://github.com/unjs/changelogen)
+
+当我们执行 `pnpm run release` 时，会自动进行版本更新，并更新
+[CHANGELOG.md](./CHANGELOG.md)。
+
+具体可见 👉 [unjs/changelogen](https://github.com/unjs/changelogen)
 
 <br />
 <br />
