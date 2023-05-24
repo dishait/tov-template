@@ -20,8 +20,8 @@ devDependencies:
     specifier: ^0.51.13
     version: 0.51.13(eslint@8.41.0)(typescript@5.0.4)
   '@unocss/reset':
-    specifier: ^0.51.13
-    version: 0.51.13
+    specifier: ^0.52.0
+    version: 0.52.0
   '@unocss/transformer-directives':
     specifier: ^0.51.13
     version: 0.51.13
@@ -2261,6 +2261,10 @@ packages:
 
   /@unocss/reset@0.51.13:
     resolution: {integrity: sha512-xwYJW6vNbHIpBtlFcW93fZxILZpWatcCc9nclSgsl0YlFUz9w4/aoV9KqwU62Y4VUteJxCZCCXa3pSiPO8h5KA==}
+    dev: true
+
+  /@unocss/reset@0.52.0:
+    resolution: {integrity: sha512-hRdgzpxWkDriRneLCv8cRNWBVNJ9FQVLY6jLk7C3MMaab0FH9JufdNwRw/yiqtEEhnnT2GF8IfN3HY69T01tNw==}
     dev: true
 
   /@unocss/scope@0.51.13:
