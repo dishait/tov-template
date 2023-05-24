@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.15.9
+
+[compare changes](https://github.com/dishait/tov-template/compare/v1.15.8...v1.15.9)
+
+
+### 🩹 Fixes
+
+  - 修复自动发布 ([da44e4e](https://github.com/dishait/tov-template/commit/da44e4e))
+
+### ❤️  Contributors
+
+- Markthree ([@markthree](http://github.com/markthree))
+
 ## v1.15.5...v1.15.7
 
 [compare changes](https://github.com/dishait/tov-template/compare/v1.15.5...v1.15.7)
