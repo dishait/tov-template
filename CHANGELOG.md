@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v1.15.11
+
+[compare changes](https://github.com/dishait/tov-template/compare/v1.15.10...v1.15.11)
+
+
+### 📖 Documentation
+
+  - 更新 features ([bee7ca4](https://github.com/dishait/tov-template/commit/bee7ca4))
+
+### 🏡 Chore
+
+  - Vscode 配置文件合并 ([4fb57ac](https://github.com/dishait/tov-template/commit/4fb57ac))
+
+### ❤️  Contributors
+
+- Markthree ([@markthree](http://github.com/markthree))
+
 ## v1.15.10
 
 [compare changes](https://github.com/dishait/tov-template/compare/v1.15.9...v1.15.10)
