@@ -85,7 +85,7 @@
     "vite-plugin-warmup": "^0.1.0",
     "vitest": "^0.31.1",
     "vue": "^3.3.4",
-    "vue-dark-switch": "^0.5.9",
+    "vue-dark-switch": "^1.0.0",
     "vue-echarts": "^6.5.5",
     "vue-i18n": "^9.2.2",
     "vue-request": "2.0.0-rc.4",

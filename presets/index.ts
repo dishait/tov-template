@@ -38,7 +38,6 @@ import VueDevTools from 'vite-plugin-vue-devtools'
 import Markdown from 'vite-plugin-vue-markdown'
 import Layouts from 'vite-plugin-vue-meta-layouts'
 import { warmup as Warmup } from 'vite-plugin-warmup'
-import { HtmlPolyfill } from 'vue-dark-switch/vite'
 
 import I18N from '@intlify/unplugin-vue-i18n/vite'
 import Legacy from '@vitejs/plugin-legacy'
@@ -136,8 +135,6 @@ export default function () {
 		}),
 		// 生产环境下移除 console.log, console.warn, console.error
 		process.env.NODE_ENV !== 'debug' && Removelog(),
-		// https://github.com/dishait/vue-dark-switch#%E7%BC%96%E8%AF%91%E6%97%B6%E9%A2%84%E8%AE%BE---%E6%8E%A8%E8%8D%90
-		HtmlPolyfill(),
 		// 别名插件
 		Alias(),
 	]

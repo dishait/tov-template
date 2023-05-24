@@ -167,8 +167,8 @@ devDependencies:
     specifier: ^3.3.4
     version: 3.3.4
   vue-dark-switch:
-    specifier: ^0.5.9
-    version: 0.5.9(vite@4.3.8)(vue@3.3.4)
+    specifier: ^1.0.0
+    version: 1.0.0(vite@4.3.8)(vue@3.3.4)
   vue-echarts:
     specifier: ^6.5.5
     version: 6.5.5(echarts@5.4.2)(vue@3.3.4)
@@ -7194,8 +7194,8 @@ packages:
       - terser
     dev: true
 
-  /vue-dark-switch@0.5.9(vite@4.3.8)(vue@3.3.4):
-    resolution: {integrity: sha512-p58V2vavrUCeJp5zoZ4OC05hVtDs7MA6uzI7b5YpAQpvAIz59jK9SPlcjkCxSsoRzOPZgd4tymbFILfYZPOXww==}
+  /vue-dark-switch@1.0.0(vite@4.3.8)(vue@3.3.4):
+    resolution: {integrity: sha512-EGYKJqvkQJAd3Kw2x3lXwwdpdNJT9DrzUMy2S+OsHk9lwqss1UWH4CWyu8Fbn0GLrSUKVTljFTRTLSJKZukPXQ==}
     engines: {node: '>=16', pnpm: '>=7.0.0'}
     peerDependencies:
       vite: '>=4.0.0'

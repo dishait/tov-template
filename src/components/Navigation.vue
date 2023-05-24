@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { getRoutes } from '~/plugins/router'
 import { SwitchIcon } from 'vue-dark-switch'
-import 'vue-dark-switch/dist/style.css'
 
 const { t } = useI18n()
 
