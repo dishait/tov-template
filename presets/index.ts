@@ -90,7 +90,7 @@ export default function () {
 		// 组件自动按需引入
 		Components({
 			directoryAsNamespace: true,
-			include: [/\.vue$/, /\.[tj]sx$/, /\.md$/],
+			include: [/\.vue$/, /\.vue\?vue/, /\.[tj]sx$/, /\.md$/],
 			extensions: ['md', 'vue', 'tsx', 'jsx'],
 			dts: resolve(__dirname, './types/components.d.ts'),
 			types: [
