@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.15.10
+
+[compare changes](https://github.com/dishait/tov-template/compare/v1.15.9...v1.15.10)
+
+
+### 🤖 CI
+
+  - 移除发布 action ([a3929f2](https://github.com/dishait/tov-template/commit/a3929f2))
+
+### ❤️  Contributors
+
+- Markthree ([@markthree](http://github.com/markthree))
+
 ## v1.15.9
 
 [compare changes](https://github.com/dishait/tov-template/compare/v1.15.8...v1.15.9)
