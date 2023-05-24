@@ -19,12 +19,12 @@
     "deps:fresh:patch": "npx taze patch -w",
     "preview:host": "vite preview --host",
     "preview:open": "vite preview --open",
-    "release": "bumpp --commit --push --tag",
     "lint": "eslint --ext .ts,.js,.jsx,.vue .",
     "build:debug": "cross-env NODE_ENV=debug vite build",
     "lint:fix": "eslint --fix --ext .ts,.js,.jsx,.vue .",
     "auto:create": "plop --plopfile scripts/create.cjs",
-    "auto:remove": "plop --plopfile scripts/remove.cjs"
+    "auto:remove": "plop --plopfile scripts/remove.cjs",
+    "release": "changelogen --outout && bumpp --commit --push --tag --all"
   },
   "engines": {
     "node": ">=18"
@@ -47,6 +47,7 @@
     "axios": "^1.4.0",
     "bumpp": "^9.1.0",
     "c8": "^7.13.0",
+    "changelogen": "^0.5.3",
     "cross-env": "^7.0.3",
     "echarts": "^5.4.2",
     "eslint": "^8.41.0",
