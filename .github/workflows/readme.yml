@@ -1,0 +1,20 @@
+name: 翻译中文 README
+
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages  
+      - name: 添加 README - English 
+        uses: dephraiim/translate-readme@main
+        with:
+          LANG: en
