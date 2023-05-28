@@ -1,6 +1,28 @@
 # Changelog
 
 
+## v1.16.0
+
+[compare changes](https://github.com/dishait/tov-template/compare/v1.15.11...v1.16.0)
+
+
+### 🔥 Performance
+
+  - 移除暗黑 switch 的 polyfill ([eb9dc17](https://github.com/dishait/tov-template/commit/eb9dc17))
+
+### 🩹 Fixes
+
+  - 修复暗黑模式样式 ([266a011](https://github.com/dishait/tov-template/commit/266a011))
+  - 更精确的 release ([d5b0663](https://github.com/dishait/tov-template/commit/d5b0663))
+
+### 🏡 Chore
+
+  - Vscode 配置文件合并 ([9c9252d](https://github.com/dishait/tov-template/commit/9c9252d))
+
+### ❤️  Contributors
+
+- Markthree <1801982702@qq.com>
+
 ## v1.15.11
 
 [compare changes](https://github.com/dishait/tov-template/compare/v1.15.10...v1.15.11)
