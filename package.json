@@ -20,11 +20,11 @@
     "preview:host": "vite preview --host",
     "preview:open": "vite preview --open",
     "lint": "eslint --ext .ts,.js,.jsx,.vue .",
-    "build:debug": "cross-env NODE_ENV=debug vite build",
-    "lint:fix": "eslint --fix --ext .ts,.js,.jsx,.vue .",
-    "auto:create": "plop --plopfile scripts/create.cjs",
+    "release": "plop --plopfile scripts/release.cjs",
     "auto:remove": "plop --plopfile scripts/remove.cjs",
-    "release": "changelogen --release && git push --follow-tags"
+    "auto:create": "plop --plopfile scripts/create.cjs",
+    "build:debug": "cross-env NODE_ENV=debug vite build",
+    "lint:fix": "eslint --fix --ext .ts,.js,.jsx,.vue ."
   },
   "engines": {
     "node": ">=v18.16.0"
