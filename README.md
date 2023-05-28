@@ -161,17 +161,8 @@ pnpm auto:remove
 10. 依赖更新
 
 ```shell
-# 安全版本更新
+# 依赖版本更新
 pnpm deps:fresh
-
-# 主版本更新，可能是破坏性更新，谨慎使用，做好测试
-pnpm deps:fresh:major
-
-# 次版本更新，可能是破坏性更新，谨慎使用，做好测试
-pnpm deps:fresh:minor
-
-# 补丁版本更新
-pnpm deps:fresh:patch
 ```
 
 ```shell
@@ -1224,6 +1215,12 @@ data.value; // 响应数据
 `github` 的 [renovate](https://github.com/marketplace/renovate) 机器人会定期对
 `github` 检查依赖，并向仓库提起 `pr`，更新策略 👉
 [unjs/renovate-config](https://github.com/unjs/renovate-config)
+
+当然你也可以执行，来手动更新 👇
+
+```shell
+pnpm deps:fresh
+```
 
 具体可见 👉 [renovate](https://github.com/renovatebot/renovate)
 
