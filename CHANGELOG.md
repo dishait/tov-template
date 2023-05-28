@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v1.16.1
+
+[compare changes](https://github.com/dishait/tov-template/compare/v1.16.0...v1.16.1)
+
+
+### 📖 Documentation
+
+  - 更新自动依赖更新说明 ([85fe5ef](https://github.com/dishait/tov-template/commit/85fe5ef))
+
+### 🏡 Chore
+
+  - ⚠️  更精简的自动依赖更新 ([255488a](https://github.com/dishait/tov-template/commit/255488a))
+
+#### ⚠️  Breaking Changes
+
+  - ⚠️  更精简的自动依赖更新 ([255488a](https://github.com/dishait/tov-template/commit/255488a))
+
+### ❤️  Contributors
+
+- Markthree ([@markthree](http://github.com/markthree))
+
 ## v1.16.0
 
 [compare changes](https://github.com/dishait/tov-template/compare/v1.15.11...v1.16.0)
