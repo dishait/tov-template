@@ -11,20 +11,17 @@
     "dev:host": "vite --host",
     "dev:open": "vite --open",
     "preview": "vite preview",
-    "deps:fresh": "npx taze -w",
     "coverage": "vitest --coverage",
     "typecheck": "npx vue-tsc --noEmit",
-    "deps:fresh:major": "npx taze major -w",
-    "deps:fresh:minor": "npx taze minor -w",
-    "deps:fresh:patch": "npx taze patch -w",
     "preview:host": "vite preview --host",
     "preview:open": "vite preview --open",
     "lint": "eslint --ext .ts,.js,.jsx,.vue .",
     "release": "plop --plopfile scripts/release.cjs",
     "auto:remove": "plop --plopfile scripts/remove.cjs",
     "auto:create": "plop --plopfile scripts/create.cjs",
+    "lint:fix": "eslint --fix --ext .ts,.js,.jsx,.vue .",
     "build:debug": "cross-env NODE_ENV=debug vite build",
-    "lint:fix": "eslint --fix --ext .ts,.js,.jsx,.vue ."
+    "deps:fresh": "plop --plopfile scripts/deps-fresh.cjs"
   },
   "engines": {
     "node": ">=v18.16.0"
@@ -67,6 +64,7 @@
     "prettier": "^2.8.8",
     "prism-theme-vars": "^0.2.4",
     "prismjs": "^1.29.0",
+    "taze": "^0.10.1",
     "typescript": "^5.0.4",
     "unocss": "^0.52.4",
     "unplugin-auto-import": "^0.16.2",
