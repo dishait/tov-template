@@ -83,9 +83,6 @@ devDependencies:
   local-pkg:
     specifier: ^0.4.3
     version: 0.4.3
-  markdown-it:
-    specifier: ^13.0.1
-    version: 13.0.1
   markdown-it-prism:
     specifier: ^2.3.0
     version: 2.3.0
@@ -110,9 +107,6 @@ devDependencies:
   prism-theme-vars:
     specifier: ^0.2.4
     version: 0.2.4
-  prismjs:
-    specifier: ^1.29.0
-    version: 1.29.0
   taze:
     specifier: ^0.10.1
     version: 0.10.1
