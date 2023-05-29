@@ -94,6 +94,7 @@
     "*.{js,jsx,ts,tsx,vue}": "eslint --cache --fix"
   },
   "resolutions": {
+    "vue-demi": "npm:vue-demi@v0.14.5",
     "sourcemap-codec": "npm:@jridgewell/sourcemap-codec"
   },
   "repository": {
