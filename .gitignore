@@ -1,4 +1,8 @@
 dist
+env.d.ts
 node_modules
 .eslintcache
+components.d.ts
+type-router.d.ts
+auto-imports.d.ts
 vite.config.ts.timestamp*
