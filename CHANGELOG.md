@@ -1,6 +1,35 @@
 # Changelog
 
 
+## v1.17.0
+
+[compare changes](https://github.com/dishait/tov-template/compare/v1.16.1...v1.17.0)
+
+
+### 🔥 Performance
+
+  - 合并重复依赖 ([6799ff8](https://github.com/dishait/tov-template/commit/6799ff8))
+  - 清理非必要依赖 ([aa76ee3](https://github.com/dishait/tov-template/commit/aa76ee3))
+
+### 🩹 Fixes
+
+  - Tdesign 组件库与包自动引入冲突，close #71 ([#71](https://github.com/dishait/tov-template/issues/71))
+
+### 📖 Documentation
+
+  - 更新库 api 引入列表 ([0c9ae91](https://github.com/dishait/tov-template/commit/0c9ae91))
+
+### 🏡 Chore
+
+  - Git 忽略生成的类型 ([8423012](https://github.com/dishait/tov-template/commit/8423012))
+  - Git 忽略自动引入的 eslint 变量 ([856ee27](https://github.com/dishait/tov-template/commit/856ee27))
+  - 更新依赖 ([bf3f3b2](https://github.com/dishait/tov-template/commit/bf3f3b2))
+  - 保存自动格式化 ([35df5cd](https://github.com/dishait/tov-template/commit/35df5cd))
+
+### ❤️  Contributors
+
+- Markthree ([@markthree](http://github.com/markthree))
+
 ## v1.16.1
 
 [compare changes](https://github.com/dishait/tov-template/compare/v1.16.0...v1.16.1)
