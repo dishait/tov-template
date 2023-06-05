@@ -413,7 +413,18 @@ const doubled = computed(() => count.value * 2);
 而且上边的 `api` 是按需自动引入的。
 
 目前模板支持自动引入 `api` 的库列表 👉
-[vite-auto-import-resolvers](https://github.com/dishait/vite-auto-import-resolvers#%E9%BB%98%E8%AE%A4%E6%94%AF%E6%8C%81%E5%88%97%E8%A1%A8)，只要确保已经安装依赖即可。
+
+- `vue`
+- `vuex`
+- `pinia`
+- `vue-i18n`
+- `vue-router`
+- `@vueuse/core`
+- `@vueuse/head`
+- `@vueuse/math`
+
+只要确保已经安装依赖即可，具体可见 👉
+[vite-auto-import-resolvers](https://github.com/dishait/vite-auto-import-resolvers#%E9%BB%98%E8%AE%A4%E6%94%AF%E6%8C%81%E5%88%97%E8%A1%A8)，
 
 当然还有项目中的自动引入，只需要满足以下规范即可。
 
