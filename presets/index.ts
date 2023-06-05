@@ -28,7 +28,7 @@ import { VueRouterAutoImports } from 'unplugin-vue-router'
 import Router from 'unplugin-vue-router/vite'
 import { fileURLToPath } from 'url'
 import { loadEnv } from 'vite'
-import { AutoGenerateImports } from 'vite-auto-import-resolvers'
+import { AutoGenerateImports, vue3Presets } from 'vite-auto-import-resolvers'
 import Compression from 'vite-plugin-compression'
 import EnvTypes from 'vite-plugin-env-types'
 import { viteMockServe as Mock } from 'vite-plugin-mock'
@@ -110,13 +110,13 @@ export default function () {
 					[LayuiVueResolver(), 'layui-vue'],
 					[VarletUIResolver(), '@varlet/ui'],
 					[IduxResolver(), '@idux/components'],
-					[TDesignResolver(), 'tdesign-vue-next'],
 					[InklineResolver(), '@inkline/inkline'],
 					[ElementPlusResolver(), 'element-plus'],
 					[HeadlessUiResolver(), '@headlessui/vue'],
 					[ArcoResolver(), '@arco-design/web-vue'],
 					[AntDesignVueResolver(), 'ant-design-vue'],
 					[VueUseComponentsResolver(), '@vueuse/components'],
+					[TDesignResolver({ library: 'vue-next' }), 'tdesign-vue-next'],
 				],
 			}),
 		}),
@@ -149,12 +149,18 @@ export default function () {
 				dirs,
 				dts: './presets/types/auto-imports.d.ts',
 				imports: [
-					...AutoGenerateImports({ exclude: ['vue-router'] }),
+					...AutoGenerateImports({
+						include: [...vue3Presets],
+						exclude: ['vue-router'],
+					}),
 					VueRouterAutoImports,
 				],
-				resolvers: isPackageExists('element-plus')
-					? [ElementPlusResolver()]
-					: [],
+				resolvers: normalizeResolvers({
+					onlyExist: [
+						[ElementPlusResolver(), 'element-plus'],
+						[TDesignResolver({ library: 'vue-next' }), 'tdesign-vue-next'],
+					],
+				}),
 				eslintrc: {
 					enabled: true,
 					globalsPropValue: true,
