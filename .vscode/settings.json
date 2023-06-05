@@ -4,6 +4,13 @@
 	],
 	"i18n-ally.keystyle": "nested",
 	"i18n-ally.sourceLanguage": "zh-CN",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"files.associations": {
+		"*.css": "postcss"
+	},
+	"editor.formatOnSave": false,
 	"css.lint.unknownAtRules": "ignore",
 	// 开启 eslint
 	"eslint.enable": true,
