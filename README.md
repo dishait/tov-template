@@ -650,8 +650,7 @@ pnpm add naive-ui
 ```html
 <template>
 	<div class="bg-red-500 text-white">我是红色背景的白色文本</div>
-	<template></template
-></template>
+</template>
 ```
 
 上述模板将渲染红色背景白色的字。
@@ -662,8 +661,7 @@ pnpm add naive-ui
 ```html
 <template>
 	<div text="white" bg="red-500">我是红色背景的白色文本</div>
-	<template></template
-></template>
+</template>
 ```
 
 这在调整边距尺寸以及等方面可以减少代码量。
