@@ -670,45 +670,22 @@ pnpm add naive-ui
 
 <br />
 
-### [12. 暗黑模式支持](https://cn.windicss.org/features/dark-mode.html#dark-mode)
+### [12. 暗黑模式支持](https://github.com/dishait/vue-dark-switch)
 
-暗黑模式由 的 [vue-dark-switch](https://github.com/dishait/vue-dark-switch) 和
-`VueUse` 实现。
-
-`src/composables` 目录用来存储 `composition-api` 模块。
-
-该目录下预设了`useDarks` 模块，该模块导出 `isDark` 和 `toggleDark`
-用来显示和切换暗黑模式。
-
-```ts
-// src/composables/useDarks.ts
-
-// vueuse的 api 会自动按需引入，无需import
-export const isDark = useDark();
-export const toggleDark = useToggle(isDark);
-
-export const useDarks = () => ({ isDark, toggleDark });
-```
-
-模板中即可直接用
+暗黑模式由 [vue-dark-switch](https://github.com/dishait/vue-dark-switch) 实现。
 
 ```html
-<script setup lang="ts">
-	import { useDarks } from '../composables/useDarks'
-
-	const { isDark, toggleDark } = useDarks()
+<script setup>
+import { SwitchIcon } from "vue-dark-swicth"
 </script>
 
 <template>
-	<div m="6">Hello，This is the tov template！！</div>
-	<div m="6" cursor="pointer" @click="toggleDark()">
-		light: {{ isDark }} click me!!
-	</div>
+	<!-- 暗黑 switch，一键切换暗黑模式 -->
+	<SwitchIcon /> 
 </template>
 ```
 
-具体可见 👉 [vue-dark-switch](https://github.com/dishait/vue-dark-switch) 和
-[vueuse/usedark](https://vueuse.org/core/usedark/#usedark)
+具体可见 👉 [vue-dark-switch](https://github.com/dishait/vue-dark-switch)
 
 <br />
 

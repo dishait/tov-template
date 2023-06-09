@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { use } from 'echarts/core'
+import { isDark } from 'vue-dark-switch'
 import { PieChart } from 'echarts/charts'
 import { CanvasRenderer } from 'echarts/renderers'
 import {
@@ -16,8 +17,6 @@ use([
 	TooltipComponent,
 	LegendComponent,
 ])
-
-const { isDark } = useDarks()
 
 provide(
 	THEME_KEY,
