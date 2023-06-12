@@ -26,7 +26,7 @@
   "engines": {
     "node": ">=v18.16.0"
   },
-  "packageManager": "pnpm@8.6.1",
+  "packageManager": "pnpm@8.6.2",
   "devDependencies": {
     "@intlify/unplugin-vue-i18n": "^0.11.0",
     "@types/ityped": "^1.0.1",
@@ -75,13 +75,13 @@
     "vite-plugin-mock": "^2.9.8",
     "vite-plugin-removelog": "^0.2.1",
     "vite-plugin-use-modules": "^1.4.5",
-    "vite-plugin-vue-devtools": "^0.1.1",
+    "vite-plugin-vue-devtools": "^0.1.7",
     "vite-plugin-vue-markdown": "^0.23.5",
     "vite-plugin-vue-meta-layouts": "^0.2.2",
     "vite-plugin-warmup": "^0.1.0",
     "vitest": "^0.32.0",
     "vue": "^3.3.4",
-    "vue-dark-switch": "^1.0.0",
+    "vue-dark-switch": "^1.0.1",
     "vue-echarts": "^6.5.5",
     "vue-i18n": "^9.2.2",
     "vue-request": "2.0.2",
