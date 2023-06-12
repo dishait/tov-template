@@ -54,5 +54,8 @@
 	},
 	"[javascript]": {
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[plaintext]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	}
 }

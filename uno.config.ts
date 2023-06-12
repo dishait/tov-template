@@ -6,6 +6,7 @@ import {
 	presetUno,
 } from 'unocss'
 
+import presetAutoprefixer from 'unocss-preset-autoprefixer'
 import transformerDirectives from '@unocss/transformer-directives'
 
 export default defineConfig({
@@ -17,5 +18,6 @@ export default defineConfig({
 		}),
 		presetUno(),
 		presetTypography(),
+		presetAutoprefixer(['defaults', 'not IE 11']),
 	],
 })
