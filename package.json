@@ -35,6 +35,7 @@
     "@unocss/eslint-config": "^0.53.1",
     "@unocss/reset": "^0.53.1",
     "@unocss/transformer-directives": "^0.53.1",
+    "@unocss/transformer-variant-group": "^0.53.1",
     "@vitejs/plugin-legacy": "^4.0.4",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vitejs/plugin-vue-jsx": "^3.0.1",

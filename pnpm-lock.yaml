@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 overrides:
   vue-demi: npm:vue-demi@v0.14.5
   sourcemap-codec: npm:@jridgewell/sourcemap-codec
@@ -28,6 +24,9 @@ devDependencies:
     specifier: ^0.53.1
     version: 0.53.1
   '@unocss/transformer-directives':
+    specifier: ^0.53.1
+    version: 0.53.1
+  '@unocss/transformer-variant-group':
     specifier: ^0.53.1
     version: 0.53.1
   '@vitejs/plugin-legacy':
@@ -10004,3 +10003,7 @@ packages:
     dependencies:
       tslib: 2.3.0
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
