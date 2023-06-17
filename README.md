@@ -656,7 +656,7 @@ pnpm add naive-ui
 上述模板将渲染红色背景白色的字。
 
 同时支持
-[属性化模式](https://cn.windicss.org/features/attributify.html#attributify-mode)，即可以用简写。
+[属性化模式](https://unocss.dev/presets/attributify)，即可以用简写。
 
 ```html
 <template>
@@ -730,7 +730,7 @@ SWR 是更现代的请求方式，具体可见文章 👉
 import { defineStore } from "pinia";
 
 export const useCounterStore = defineStore("counter", {
-  state: () => {
+  state() {
     return { count: 0 };
   },
   actions: {
@@ -746,7 +746,6 @@ export const useCounterStore = defineStore("counter", {
 ```html
 <!-- src/pages/index.vue -->
 <script setup lang="ts">
-    import { useCounterStore } from "../stores/counter"
     const Counter = useCounterStore()
 <script>
 
@@ -948,7 +947,7 @@ about: about
 not-found: Notfound
 ```
 
-又如 `locales/zh-CN.yml` 中用来定义需要国际化支持的中文内容。
+又如 `locales/简体中文.yml` 中用来定义需要国际化支持的中文内容。
 
 ```yml
 # locales/简体中文.yml
@@ -969,7 +968,7 @@ not-found: 未找到页面
 
 	const toggleLocale = () => {
 		// locale.value 用来表示当前所属语言，可修改进行语言切换
-		locale.value = locale.value === 'zh-CN' ? 'en' : '简体中文'
+		locale.value = locale.value === '简体中文' ? 'en' : '简体中文'
 	}
 </script>
 
