@@ -1,6 +1,44 @@
 # Changelog
 
 
+## v1.17.1
+
+[compare changes](https://github.com/dishait/tov-template/compare/v1.17.0...v1.17.1)
+
+### 🚀 Enhancements
+
+- **unocss:** 前缀组支持 ([0390f99](https://github.com/dishait/tov-template/commit/0390f99))
+- 最小最快的 dockerfile 静态服务 ([c7fb036](https://github.com/dishait/tov-template/commit/c7fb036))
+
+### 🩹 Fixes
+
+- 更好的 css 兼容 ([71f6f68](https://github.com/dishait/tov-template/commit/71f6f68))
+
+### 📖 Documentation
+
+- 移除错误模板 ([bb51a1a](https://github.com/dishait/tov-template/commit/bb51a1a))
+- 修复 README 描述 ([b242e25](https://github.com/dishait/tov-template/commit/b242e25))
+- **README:** 添加最快最小的 dockerfile 静态 go 服务说明 ([06dd689](https://github.com/dishait/tov-template/commit/06dd689))
+
+### 📦 Build
+
+- ⚠️  移除非必要低兼容性的 css 预设 ([0452560](https://github.com/dishait/tov-template/commit/0452560))
+
+### 🏡 Chore
+
+- 暗黑模式全由 vue-dark-switch 实现 ([370488a](https://github.com/dishait/tov-template/commit/370488a))
+- Update deps ([6caffee](https://github.com/dishait/tov-template/commit/6caffee))
+- 更新依赖 ([b2281eb](https://github.com/dishait/tov-template/commit/b2281eb))
+- 美化 github 图标 ([fa60044](https://github.com/dishait/tov-template/commit/fa60044))
+
+#### ⚠️  Breaking Changes
+
+- ⚠️  移除非必要低兼容性的 css 预设 ([0452560](https://github.com/dishait/tov-template/commit/0452560))
+
+### ❤️  Contributors
+
+- Markthree ([@markthree](http://github.com/markthree))
+
 ## v1.17.0
 
 [compare changes](https://github.com/dishait/tov-template/compare/v1.16.1...v1.17.0)
