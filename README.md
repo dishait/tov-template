@@ -47,6 +47,7 @@
 34. 自动生成环境变量类型声明
 35. `renovate` 自动更新依赖
 36. 自动版本更新并生成 `CHANGELOG`
+37. 最快最小的 `dockerfile` 静态 `go` 服务
 
 <br />
 <br />
@@ -1218,6 +1219,15 @@ pnpm deps:fresh
 [CHANGELOG.md](./CHANGELOG.md)。
 
 具体可见 👉 [unjs/changelogen](https://github.com/unjs/changelogen)
+
+<br />
+<br />
+
+37. [最快最小的 `dockerfile` 静态 `go` 服务](https://github.com/PierreZ/goStatic)
+
+根目录下的 `dockerfile` 配置最小最快的静态 `go` 服务容器，更方便云容器服务
+
+具体可见 👉 [PierreZ/goStatic](https://github.com/PierreZ/goStatic)
 
 <br />
 <br />
