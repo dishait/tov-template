@@ -1,0 +1,11 @@
+dist
+.husky
+.gitee
+.github
+.vscode
+LICENSE
+.gitignore
+netlify.toml
+CHANGELOG.md
+node_modules
+renovate.json

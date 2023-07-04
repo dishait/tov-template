@@ -29,7 +29,7 @@
 		".env": ".env.*",
 		"index.html": "LICENSE,.gitignore,README.md",
 		".eslintrc.json": ".eslint*,.prettier*,.editor*",
-		"vite.config.*": "package.json,uno.config.ts,tsconfig.json,*.toml,.npmrc,renovate.json,CHANGELOG.md"
+		"vite.config.*": "package.json,uno.config.ts,tsconfig.json,*.toml,.npmrc,renovate.json,CHANGELOG.md,.dockerignore,dockerfile"
 	},
 	"[jsonc]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
