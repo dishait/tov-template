@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "edge debug",
+            "request": "launch",
+            "type": "msedge",
+            "url": "http://localhost:5173",
+            "webRoot": "${workspaceFolder}/src"
+        },
+        {
+            "name": "chrome debug",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:5173",
+            "webRoot": "${workspaceFolder}/src"
+        }
+    ]
+}
