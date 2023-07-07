@@ -9,3 +9,4 @@ netlify.toml
 CHANGELOG.md
 node_modules
 renovate.json
+.devcontainer
