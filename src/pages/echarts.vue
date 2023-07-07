@@ -20,7 +20,7 @@ use([
 
 provide(
 	THEME_KEY,
-	computed(() => (isDark.value ? 'dark' : ''))
+	computed(() => (isDark.value ? 'dark' : '')),
 )
 
 const option = ref({

@@ -5,7 +5,7 @@ export default () => {
 	}
 
 	const language = computed(() =>
-		locale.value === 'zh-CN' ? '中文' : 'English'
+		locale.value === 'zh-CN' ? '中文' : 'English',
 	)
 
 	return { t, language, toggleLocale }

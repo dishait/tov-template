@@ -10,5 +10,5 @@ useTitle(
 	},
 	{
 		titleTemplate: `${import.meta.env.VITE_APP_TITLE} %s`,
-	}
+	},
 )

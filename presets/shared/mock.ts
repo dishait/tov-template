@@ -32,7 +32,7 @@ function __param2Obj__(url: string) {
 				.replace(/&/g, '","')
 				.replace(/=/g, '":"')
 				.replace(/\+/g, ' ') +
-			'"}'
+			'"}',
 	)
 }
 

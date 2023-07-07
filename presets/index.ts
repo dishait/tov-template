@@ -166,7 +166,7 @@ export default function () {
 					globalsPropValue: true,
 					filepath: 'presets/eslint/.eslintrc-auto-import.json',
 				},
-			})
+			}),
 		)
 	}
 
@@ -177,14 +177,14 @@ export default function () {
 				markdownItSetup(md) {
 					md.use(Prism)
 				},
-			})
+			}),
 		)
 	}
 	plugins.push(
 		// @ts-ignore
 		UnoCss({
 			safelist: env.VITE_APP_MARKDOWN ? safelist.split(' ') : undefined,
-		})
+		}),
 	)
 
 	return plugins
