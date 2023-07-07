@@ -28,7 +28,7 @@
   },
   "packageManager": "pnpm@8.6.6",
   "devDependencies": {
-    "@intlify/unplugin-vue-i18n": "^0.12.0",
+    "@intlify/unplugin-vue-i18n": "^0.12.1",
     "@types/ityped": "^1.0.1",
     "@types/node": "^18.16.19",
     "@typescript-eslint/parser": "^5.61.0",
@@ -69,7 +69,7 @@
     "unplugin-auto-import": "^0.16.6",
     "unplugin-vue-components": "^0.25.1",
     "unplugin-vue-router": "^0.6.4",
-    "vite": "^4.4.1",
+    "vite": "^4.4.2",
     "vite-auto-import-resolvers": "^3.1.0",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-env-types": "^0.1.3",
