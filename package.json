@@ -12,6 +12,7 @@
     "dev:open": "vite --open",
     "preview": "vite preview",
     "coverage": "vitest --coverage",
+    "preinstall": "npx only-allow pnpm",
     "typecheck": "npx vue-tsc --noEmit",
     "preview:host": "vite preview --host",
     "preview:open": "vite preview --open",
