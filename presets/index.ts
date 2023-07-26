@@ -52,8 +52,16 @@ export default function () {
 	const safelist =
 		'prose px-2 sm:px-0 md:prose-lg lg:prose-lg dark:prose-invert text-left w-screen prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600'
 	const plugins = [
+		// 兼容不支持 esmModule 的浏览器
 		Legacy({
-			targets: ['defaults', 'not IE 11'],
+			targets: [
+				'>= 0.25%',
+				'last 2 versions',
+				'not dead',
+				'not ie <= 11',
+				'Android >= 4.0',
+				'iOS >= 8',
+			],
 		}),
 		EnvTypes({
 			dts: 'presets/types/env.d.ts',
