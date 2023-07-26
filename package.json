@@ -67,6 +67,7 @@
     "prettier": "^3.0.0",
     "prism-theme-vars": "^0.2.4",
     "taze": "^0.11.2",
+    "terser": "^5.19.2",
     "typescript": "^5.1.6",
     "unocss": "^0.53.5",
     "unplugin-auto-import": "^0.16.6",

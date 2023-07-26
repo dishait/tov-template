@@ -123,6 +123,9 @@ devDependencies:
   taze:
     specifier: ^0.11.2
     version: 0.11.2
+  terser:
+    specifier: ^5.19.2
+    version: 5.19.2
   typescript:
     specifier: ^5.1.6
     version: 5.1.6
