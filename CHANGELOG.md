@@ -1,6 +1,34 @@
 # Changelog
 
 
+## v1.17.2
+
+[compare changes](https://github.com/dishait/tov-template/compare/v1.17.1...v1.17.2)
+
+### 🚀 Enhancements
+
+- 添加 vscode debug 配置，close #47 ([#47](https://github.com/dishait/tov-template/issues/47))
+- Devcontainer 容器开发支持 ([5a94e4f](https://github.com/dishait/tov-template/commit/5a94e4f))
+
+### 🩹 Fixes
+
+- 修复 lint:fix 命令 ([2354815](https://github.com/dishait/tov-template/commit/2354815))
+- 更好的 css 兼容 ([910d648](https://github.com/dishait/tov-template/commit/910d648))
+
+### 📦 Build
+
+- 限制包管理器为 pnpm ([10c03f8](https://github.com/dishait/tov-template/commit/10c03f8))
+
+### 🏡 Chore
+
+- Update deps ([49bf8c2](https://github.com/dishait/tov-template/commit/49bf8c2))
+- 更新依赖 ([7c1dd04](https://github.com/dishait/tov-template/commit/7c1dd04))
+- 兼容更多不支持 esmModule 的浏览器 ([8ab5f9f](https://github.com/dishait/tov-template/commit/8ab5f9f))
+
+### ❤️  Contributors
+
+- Markthree ([@markthree](http://github.com/markthree))
+
 ## v1.17.1
 
 [compare changes](https://github.com/dishait/tov-template/compare/v1.17.0...v1.17.1)
