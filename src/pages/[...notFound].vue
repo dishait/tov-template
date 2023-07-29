@@ -48,6 +48,7 @@ const typedRef = useTyped([' is not found!'])
 <route lang="json">
 {
 	"meta": {
+		"title": "404",
 		"layout": "notFound"
 	}
 }

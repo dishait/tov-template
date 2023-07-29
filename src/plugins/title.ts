@@ -2,7 +2,10 @@ import { router } from './router'
 
 useTitle(
 	() => {
-		const { path } = router.currentRoute.value
+		const { path, meta } = router.currentRoute.value
+		if (meta.title) {
+			return `· ${meta.title}`
+		}
 		if (path === '/') {
 			return '· home'
 		}
