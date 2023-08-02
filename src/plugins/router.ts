@@ -1,4 +1,4 @@
-import { setupLayouts, createGetRoutes } from 'virtual:meta-layouts'
+import { createGetRoutes, setupLayouts } from 'virtual:meta-layouts'
 import { createRouter, createWebHistory } from 'vue-router'
 import { routes as fileRoutes } from 'vue-router/auto/routes'
 

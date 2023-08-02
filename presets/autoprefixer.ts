@@ -1,6 +1,6 @@
 import type { Preset } from 'unocss'
 import browserslist from 'browserslist'
-import { transformStyleAttribute, browserslistToTargets } from 'lightningcss'
+import { browserslistToTargets, transformStyleAttribute } from 'lightningcss'
 
 export default function autoprefixerPreset(
 	targets: string[] = [

@@ -1,20 +1,20 @@
 {
-	"recommendations": [
-		"antfu.iconify",
-		"mikestead.dotenv",
-		"redhat.vscode-yaml",
-		"lokalise.i18n-ally",
-		"Vue.volar",
-		"steoates.autoimport",
-		"dbaeumer.vscode-eslint",
-		"esbenp.prettier-vscode",
-		"EditorConfig.EditorConfig",
-		"usernamehw.errorlens",
-		"shd101wyy.markdown-preview-enhanced",
-		"antfu.goto-alias",
-		"voorjaar.windicss-intellisense",
-		"yoavbls.pretty-ts-errors",
-		"bodil.prettier-toml",
-		"bungcip.better-toml"
-	]
+  "recommendations": [
+    "antfu.iconify",
+    "mikestead.dotenv",
+    "redhat.vscode-yaml",
+    "lokalise.i18n-ally",
+    "Vue.volar",
+    "steoates.autoimport",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "EditorConfig.EditorConfig",
+    "usernamehw.errorlens",
+    "shd101wyy.markdown-preview-enhanced",
+    "antfu.goto-alias",
+    "voorjaar.windicss-intellisense",
+    "yoavbls.pretty-ts-errors",
+    "bodil.prettier-toml",
+    "bungcip.better-toml"
+  ]
 }

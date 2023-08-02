@@ -656,8 +656,7 @@ pnpm add naive-ui
 
 上述模板将渲染红色背景白色的字。
 
-同时支持
-[属性化模式](https://unocss.dev/presets/attributify)，即可以用简写。
+同时支持 [属性化模式](https://unocss.dev/presets/attributify)，即可以用简写。
 
 ```html
 <template>

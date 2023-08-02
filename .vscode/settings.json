@@ -1,61 +1,61 @@
 {
-	"i18n-ally.localesPaths": [
-		"locales"
-	],
-	"i18n-ally.keystyle": "nested",
-	"i18n-ally.sourceLanguage": "zh-CN",
-	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true
-	},
-	"files.associations": {
-		"*.css": "postcss"
-	},
-	"editor.formatOnSave": false,
-	"css.lint.unknownAtRules": "ignore",
-	// 开启 eslint
-	"eslint.enable": true,
-	// 开启 prettier
-	"prettier.enable": true,
-	"editor.linkedEditing": true,
-	// 开启 eslint 作为格式化工具
-	"eslint.format.enable": true,
-	// 包管理器 pnpm
-	"eslint.packageManager": "pnpm",
-	// 默认格式化选择 prettier,
-	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
-	"explorer.fileNesting.enabled": true,
-	"explorer.fileNesting.expand": false,
-	"explorer.fileNesting.patterns": {
-		".env": ".env.*",
-		"index.html": "LICENSE,.gitignore,README.md",
-		".eslintrc.json": ".eslint*,.prettier*,.editor*",
-		"vite.config.*": "package.json,uno.config.ts,tsconfig.json,*.toml,.npmrc,renovate.json,CHANGELOG.md,.dockerignore,dockerfile"
-	},
-	"[jsonc]": {
-		"editor.defaultFormatter": "vscode.json-language-features"
-	},
-	"[vue]": {
-		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
-	},
-	"[html]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[css]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[typescript]": {
-		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
-	},
-	"[toml]": {
-		"editor.defaultFormatter": "bodil.prettier-toml"
-	},
-	"[yaml]": {
-		"editor.defaultFormatter": "redhat.vscode-yaml"
-	},
-	"[javascript]": {
-		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
-	},
-	"[plaintext]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	}
+  "i18n-ally.localesPaths": [
+    "locales"
+  ],
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.sourceLanguage": "zh-CN",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "files.associations": {
+    "*.css": "postcss"
+  },
+  "editor.formatOnSave": false,
+  "css.lint.unknownAtRules": "ignore",
+  // 开启 eslint
+  "eslint.enable": true,
+  // 开启 prettier
+  "prettier.enable": true,
+  "editor.linkedEditing": true,
+  // 开启 eslint 作为格式化工具
+  "eslint.format.enable": true,
+  // 包管理器 pnpm
+  "eslint.packageManager": "pnpm",
+  // 默认格式化选择 prettier,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    ".env": ".env.*",
+    "index.html": "LICENSE,.gitignore,README.md",
+    ".eslintrc.json": ".eslint*,.prettier*,.editor*",
+    "vite.config.*": "package.json,uno.config.ts,tsconfig.json,*.toml,.npmrc,renovate.json,CHANGELOG.md,.dockerignore,dockerfile"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "bodil.prettier-toml"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[plaintext]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
