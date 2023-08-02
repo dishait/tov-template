@@ -1,6 +1,8 @@
+import { utimes } from 'fs/promises'
 import { isPackageExists } from 'local-pkg'
 import Prism from 'markdown-it-prism'
 import { dirname, resolve } from 'path'
+import { debounce } from 'perfect-debounce'
 import { argv } from 'process'
 import UnoCss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -145,6 +147,7 @@ export default function () {
 		process.env.NODE_ENV !== 'debug' && Removelog(),
 		// 别名插件
 		Alias(),
+		ForceRestart(),
 	]
 
 	if (env.VITE_APP_API_AUTO_IMPORT) {
@@ -279,6 +282,27 @@ function Alias(): Plugin {
 					replacement: src + '/',
 				},
 			]
+		},
+	}
+}
+
+/**
+ * 强制重启
+ */
+function ForceRestart(paths = ['package.json', 'pnpm-lock.yaml']): Plugin {
+	const restart = debounce(async function touch() {
+		const time = new Date()
+		await utimes('vite.config.ts', time, time)
+	}, 1000)
+	return {
+		name: 'vite-plugin-force-restart',
+		apply: 'serve',
+		configureServer({ watcher }) {
+			watcher.add(paths).on('all', async (_, path) => {
+				if (paths.includes(path)) {
+					await restart()
+				}
+			})
 		},
 	}
 }
