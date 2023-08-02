@@ -275,8 +275,8 @@ function Alias(): Plugin {
 					replacement: src,
 				},
 				{
-					find: /^@/,
-					replacement: src,
+					find: /^@\//,
+					replacement: src + '/',
 				},
 			]
 		},

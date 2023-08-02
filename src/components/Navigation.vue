@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getRoutes } from '~/plugins/router'
+import { getRoutes } from '@/plugins/router'
 import { SwitchIcon } from 'vue-dark-switch'
 
 const { t } = useI18n()
