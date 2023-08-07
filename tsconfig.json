@@ -7,6 +7,7 @@
     "sourceMap": true,
     "skipLibCheck": true,
     "isolatedModules": true,
+    "jsxImportSource": "vue",
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
     "resolveJsonModule": true,
