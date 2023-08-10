@@ -25,7 +25,7 @@
     "deps:fresh": "plop --plopfile scripts/deps-fresh.cjs"
   },
   "engines": {
-    "node": ">=v18.16.1"
+    "node": ">=v18.17.1"
   },
   "packageManager": "pnpm@8.6.12",
   "devDependencies": {
@@ -33,10 +33,10 @@
     "@types/ityped": "^1.0.1",
     "@types/node": "^18.17.4",
     "@typescript-eslint/parser": "^6.3.0",
-    "@unocss/eslint-config": "^0.54.2",
-    "@unocss/reset": "^0.54.2",
-    "@unocss/transformer-directives": "^0.54.2",
-    "@unocss/transformer-variant-group": "^0.54.2",
+    "@unocss/eslint-config": "^0.55.0",
+    "@unocss/reset": "^0.55.0",
+    "@unocss/transformer-directives": "^0.55.0",
+    "@unocss/transformer-variant-group": "^0.55.0",
     "@vitejs/plugin-legacy": "^4.1.1",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
@@ -52,7 +52,7 @@
     "eslint": "^8.46.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-vue": "^9.16.1",
+    "eslint-plugin-vue": "^9.17.0",
     "husky": "^8.0.3",
     "ityped": "^1.0.3",
     "lightningcss": "^1.21.5",
@@ -70,7 +70,7 @@
     "taze": "^0.11.2",
     "terser": "^5.19.2",
     "typescript": "^5.1.6",
-    "unocss": "^0.54.2",
+    "unocss": "^0.55.0",
     "unplugin-auto-import": "^0.16.6",
     "unplugin-vue-components": "^0.25.1",
     "unplugin-vue-router": "^0.6.4",
