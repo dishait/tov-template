@@ -872,7 +872,7 @@ pnpm coverage
 
 <br />
 
-### [20. 支持 Markdown 渲染](https://github.com/antfu/vite-plugin-vue-markdown)
+### [20. 支持 Markdown 渲染](https://github.com/antfu/unplugin-vue-markdown)
 
 `markdown` 渲染可以用来书写一些简单的说明。
 
@@ -892,7 +892,7 @@ pnpm coverage
 当然也支持在 `markdown` 中嵌入 `vue` 组件
 
 具体可见 👉
-[vite-plugin-vue-markdown](https://github.com/antfu/vite-plugin-vue-markdown)
+[unplugin-vue-markdown](https://github.com/antfu/unplugin-vue-markdown)
 
 <br />
 <br />

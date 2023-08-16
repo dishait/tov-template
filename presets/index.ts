@@ -37,7 +37,7 @@ import { viteMockServe as Mock } from 'vite-plugin-mock'
 import Removelog from 'vite-plugin-removelog'
 import Modules from 'vite-plugin-use-modules'
 import VueDevTools from 'vite-plugin-vue-devtools'
-import Markdown from 'vite-plugin-vue-markdown'
+import Markdown from 'unplugin-vue-markdown/vite'
 import Layouts from 'vite-plugin-vue-meta-layouts'
 import { warmup as Warmup } from 'vite-plugin-warmup'
 
