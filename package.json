@@ -115,5 +115,13 @@
   },
   "repository": {
     "url": "https://github.com/dishait/tov-template"
-  }
+  },
+  "browserslist": [
+    ">= 0.25%",
+		"last 2 versions",
+		"not dead",
+		"not ie <= 11",
+		"Android >= 4.0",
+		"iOS >= 8"
+  ]
 }

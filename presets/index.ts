@@ -58,16 +58,7 @@ export default function () {
 		 * 兼容不支持 esmModule 的浏览器
 		 * https://www.npmjs.com/package/@vitejs/plugin-legacy
 		 */
-		Legacy({
-			targets: [
-				'>= 0.25%',
-				'last 2 versions',
-				'not dead',
-				'not ie <= 11',
-				'Android >= 4.0',
-				'iOS >= 8',
-			],
-		}),
+		Legacy(),
 		/**
 		 * 环境变量类型提示
 		 * https://github.com/dishait/vite-plugin-env-types

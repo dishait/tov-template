@@ -2,15 +2,14 @@ import type { Preset } from 'unocss'
 import browserslist from 'browserslist'
 import { browserslistToTargets, transformStyleAttribute } from 'lightningcss'
 
+const { loadConfig: browserslistLoadConfig } = browserslist
+
+const defaultTargets = browserslistLoadConfig({ path: process.cwd() }) || [
+	'last 2 versions and not dead, > 0.3%, Firefox ESR',
+]
+
 export default function autoprefixerPreset(
-	targets: string[] = [
-		'>= 0.25%',
-		'last 2 versions',
-		'not dead',
-		'not ie <= 11',
-		'Android >= 4.0',
-		'iOS >= 8',
-	],
+	targets?: string[] = defaultTargets,
 ): Preset {
 	return {
 		name: 'unocss-preset-autoprefixer',
