@@ -1,6 +1,6 @@
 {
   "name": "tov-template",
-  "version": "1.17.2",
+  "version": "1.18.0",
   "description": "vite + vue3 + ts 开箱即用现代开发模板",
   "type": "module",
   "scripts": {
@@ -118,10 +118,10 @@
   },
   "browserslist": [
     ">= 0.25%",
-		"last 2 versions",
-		"not dead",
-		"not ie <= 11",
-		"Android >= 4.0",
-		"iOS >= 8"
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11",
+    "Android >= 4.0",
+    "iOS >= 8"
   ]
 }
