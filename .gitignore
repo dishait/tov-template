@@ -1,4 +1,6 @@
 dist
+.nitro
+.output
 env.d.ts
 node_modules
 .eslintcache
