@@ -49,6 +49,11 @@ import Jsx from '@vitejs/plugin-vue-jsx'
 import type { Plugin } from 'vite'
 import type { ComponentResolver } from 'unplugin-vue-components/types'
 
+export const _dirname =
+	typeof __dirname !== 'undefined'
+		? __dirname
+		: dirname(fileURLToPath(import.meta.url))
+
 export default function () {
 	const env = useEnv()
 	const safelist =
@@ -122,7 +127,7 @@ export default function () {
 			directoryAsNamespace: true,
 			include: [/\.vue$/, /\.vue\?vue/, /\.[tj]sx$/, /\.md$/],
 			extensions: ['md', 'vue', 'tsx', 'jsx'],
-			dts: resolve(__dirname, './types/components.d.ts'),
+			dts: resolve(_dirname, './types/components.d.ts'),
 			types: [
 				{
 					from: 'vue-router',
@@ -309,11 +314,6 @@ export const normalizeResolvers = (options: Options = {}) => {
 
 	return existedResolvers
 }
-
-export const _dirname =
-	typeof __dirname !== 'undefined'
-		? __dirname
-		: dirname(fileURLToPath(import.meta.url))
 
 /**
  * 别名插件
