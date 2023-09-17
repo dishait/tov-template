@@ -27,11 +27,11 @@
   "engines": {
     "node": ">=v18.17.1"
   },
-  "packageManager": "pnpm@8.7.5",
+  "packageManager": "pnpm@8.7.6",
   "devDependencies": {
     "@intlify/unplugin-vue-i18n": "^1.2.0",
     "@types/ityped": "^1.0.1",
-    "@types/node": "^18.17.15",
+    "@types/node": "^18.17.17",
     "@typescript-eslint/parser": "^6.7.0",
     "@unocss/eslint-config": "^0.55.7",
     "@unocss/reset": "^0.55.7",
@@ -55,7 +55,7 @@
     "eslint-plugin-vue": "^9.17.0",
     "husky": "^8.0.3",
     "ityped": "^1.0.3",
-    "lightningcss": "^1.21.8",
+    "lightningcss": "^1.22.0",
     "lint-staged": "^14.0.1",
     "local-pkg": "^0.4.3",
     "markdown-it-prism": "^2.3.0",
