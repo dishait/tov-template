@@ -106,12 +106,13 @@
     "array.prototype.flatmap": "npm:@nolyfill/array.prototype.flatmap@latest",
     "arraybuffer.prorotype.slice": "npm:@nolyfill/arraybuffer.prorotype.slice@latest",
     "function.prototype.name": "npm:@nolyfill/function.prototype.name@latest",
-    "has": "npm:@nolyfill/has@latest",
     "object-keys": "npm:@nolyfill/object-keys@latest",
     "object.assign": "npm:@nolyfill/object.assign@latest",
     "object.entries": "npm:@nolyfill/object.entries@latest",
     "object.fromentries": "npm:@nolyfill/object.fromentries@latest",
-    "object.values": "npm:@nolyfill/object.values@latest"
+    "object.values": "npm:@nolyfill/object.values@latest",
+    "has": "npm:@nolyfill/has@latest",
+    "is-regex": "npm:@nolyfill/is-regex@latest"
   },
   "repository": {
     "url": "https://github.com/dishait/tov-template"
@@ -123,11 +124,5 @@
     "not ie <= 11",
     "Android >= 4.0",
     "iOS >= 8"
-  ],
-  "pnpm": {
-    "overrides": {
-      "has": "npm:@nolyfill/has@latest",
-      "is-regex": "npm:@nolyfill/is-regex@latest"
-    }
-  }
+  ]
 }
