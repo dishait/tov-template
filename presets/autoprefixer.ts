@@ -1,15 +1,16 @@
+import { cwd } from 'process'
 import type { Preset } from 'unocss'
 import browserslist from 'browserslist'
 import { browserslistToTargets, transformStyleAttribute } from 'lightningcss'
 
 const { loadConfig: browserslistLoadConfig } = browserslist
 
-const defaultTargets = browserslistLoadConfig({ path: process.cwd() }) || [
+const defaultTargets = browserslistLoadConfig({ path: cwd() }) || [
 	'last 2 versions and not dead, > 0.3%, Firefox ESR',
 ]
 
 export default function autoprefixerPreset(
-	targets?: string[] = defaultTargets,
+	targets: string[] = defaultTargets,
 ): Preset {
 	return {
 		name: 'unocss-preset-autoprefixer',

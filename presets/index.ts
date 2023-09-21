@@ -22,8 +22,8 @@ import {
 	VantResolver,
 	VarletUIResolver,
 	ViewUiResolver,
-	Vuetify3Resolver,
 	VueUseComponentsResolver,
+	Vuetify3Resolver,
 } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 import Markdown from 'unplugin-vue-markdown/vite'
@@ -46,8 +46,8 @@ import Legacy from '@vitejs/plugin-legacy'
 import Vue from '@vitejs/plugin-vue'
 import Jsx from '@vitejs/plugin-vue-jsx'
 
-import type { Plugin } from 'vite'
 import type { ComponentResolver } from 'unplugin-vue-components/types'
+import type { Plugin } from 'vite'
 
 export const _dirname =
 	typeof __dirname !== 'undefined'
@@ -248,7 +248,6 @@ export default function () {
 	 * https://github.com/unocss/unocss
 	 */
 	plugins.push(
-		// @ts-ignore
 		UnoCss({
 			safelist: env.VITE_APP_MARKDOWN ? safelist.split(' ') : undefined,
 		}),
@@ -268,7 +267,7 @@ function useEnv() {
 		return NODE_ENV || 'development'
 	}
 
-	const stringToBoolean = (v: string) => {
+	function stringToBoolean(v: string) {
 		return Boolean(v === 'true' || false)
 	}
 
@@ -299,7 +298,11 @@ interface Options {
 	onlyExist?: [Arrayable<ComponentResolver>, string][]
 	include?: ComponentResolver[]
 }
-export const normalizeResolvers = (options: Options = {}) => {
+
+/**
+ * 规范化 resolvers
+ */
+export function normalizeResolvers(options: Options = {}) {
 	const { onlyExist = [], include = [] } = options
 
 	const existedResolvers = []
@@ -309,7 +312,6 @@ export const normalizeResolvers = (options: Options = {}) => {
 			existedResolvers.push(resolver)
 		}
 	}
-
 	existedResolvers.push(...include)
 
 	return existedResolvers
