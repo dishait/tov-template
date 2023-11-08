@@ -2,7 +2,7 @@
 import { getRoutes } from '@/plugins/router'
 import { SwitchIcon } from 'vue-dark-switch'
 
-const { t } = useI18n()
+const { te, t } = useI18n()
 
 const routes = getRoutes()
 	.filter((r) => !r.path.includes('notFound'))
@@ -32,7 +32,7 @@ const routes = getRoutes()
 		<ul class="flex items-center gap-2 text-sm font-medium">
 			<li v-for="r of routes" :key="r.path" class="hidden !block">
 				<RouterLink class="rounded-lg px-3 py-2" :to="r.path">
-					{{ t(r.name) }}
+					{{ te(r.name) ? t(r.name) : r.name }}
 				</RouterLink>
 			</li>
 
