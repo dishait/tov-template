@@ -162,8 +162,8 @@ devDependencies:
     specifier: ^0.2.2
     version: 0.2.2(vue@3.3.8)
   vite-plugin-use-modules:
-    specifier: ^1.4.5
-    version: 1.4.5(vite@5.0.2)(vue@3.3.8)
+    specifier: ^1.4.6
+    version: 1.4.6(vite@5.0.2)(vue@3.3.8)
   vite-plugin-vue-devtools:
     specifier: 1.0.0-rc.5
     version: 1.0.0-rc.5(pug@3.0.2)(vite@5.0.2)
@@ -8123,13 +8123,13 @@ packages:
       - vue
     dev: true
 
-  /vite-plugin-use-modules@1.4.5(vite@5.0.2)(vue@3.3.8):
-    resolution: {integrity: sha512-QEAQDJIpqgdvz3PP2oslLIjtPWmFDD1vwsEiDXRefo3jrMDAlKYIiqu22kjSidTLsjK5uyV44h6v/hj6iF+N1Q==}
+  /vite-plugin-use-modules@1.4.6(vite@5.0.2)(vue@3.3.8):
+    resolution: {integrity: sha512-QQn2UNqUsYeit9j+AqgWQr84ClvggC8uXNOyaE9K6MuLVTPpllcbpBUUbbBH00qqhrh5KahZU5DozWMWKu4t+A==}
     peerDependencies:
       vite: '>=2.0.0'
       vue: '>=3.0.0'
     dependencies:
-      local-pkg: 0.4.3
+      local-pkg: 0.5.0
       vite: 5.0.2(@types/node@18.18.12)(lightningcss@1.22.1)(terser@5.24.0)
       vue: 3.3.8(typescript@5.3.2)
     dev: true
