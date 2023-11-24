@@ -150,7 +150,7 @@ export default function () {
 					[ElementPlusResolver(), 'element-plus'],
 					[HeadlessUiResolver(), '@headlessui/vue'],
 					[ArcoResolver(), '@arco-design/web-vue'],
-					[AntDesignVueResolver(), 'ant-design-vue'],
+					[AntDesignVueResolver({ importStyle: false }), 'ant-design-vue'],
 					[VueUseComponentsResolver(), '@vueuse/components'],
 					[TDesignResolver({ library: 'vue-next' }), 'tdesign-vue-next'],
 				],
