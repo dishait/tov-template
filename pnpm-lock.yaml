@@ -23,12 +23,6 @@ devDependencies:
   '@unocss/reset':
     specifier: ^0.57.7
     version: 0.57.7
-  '@unocss/transformer-directives':
-    specifier: ^0.57.7
-    version: 0.57.7
-  '@unocss/transformer-variant-group':
-    specifier: ^0.57.7
-    version: 0.57.7
   '@vitejs/plugin-legacy':
     specifier: ^5.2.0
     version: 5.2.0(terser@5.24.0)(vite@5.0.2)
