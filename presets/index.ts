@@ -49,10 +49,7 @@ import Jsx from '@vitejs/plugin-vue-jsx'
 import type { ComponentResolver } from 'unplugin-vue-components/types'
 import type { Plugin } from 'vite'
 
-export const _dirname =
-	typeof __dirname !== 'undefined'
-		? __dirname
-		: dirname(fileURLToPath(import.meta.url))
+export const _dirname = dirname(fileURLToPath(import.meta.url))
 
 export default function () {
 	const env = useEnv()
