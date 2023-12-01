@@ -1,5 +1,46 @@
 # Changelog
 
+## v1.18.1
+
+[compare changes](https://github.com/dishait/tov-template/compare/v1.18.0...v1.18.1)
+
+### 🩹 Fixes
+
+- 使用同构的 _dirname ([f367d1a](https://github.com/dishait/tov-template/commit/f367d1a))
+- **i18n:** I18n 持久化 ([444d887](https://github.com/dishait/tov-template/commit/444d887))
+- **components/Navigation:** 不存在 i18n key 时回滚 ([5879e94](https://github.com/dishait/tov-template/commit/5879e94))
+- 修复 vite-plugin-use-modules ([284a11f](https://github.com/dishait/tov-template/commit/284a11f))
+- **antd:** 使用 css in js, close #124 ([#124](https://github.com/dishait/tov-template/issues/124))
+- 修复 vite-plugin-vue-meta-layouts 依赖 ([f837c71](https://github.com/dishait/tov-template/commit/f837c71))
+- Base 安全的路径解析，close #128 ([#128](https://github.com/dishait/tov-template/issues/128))
+- 拉平重定向 BASE_URL 路由 ([339be8c](https://github.com/dishait/tov-template/commit/339be8c))
+
+### 📖 Documentation
+
+- 添加赞助商链接 ([454f746](https://github.com/dishait/tov-template/commit/454f746))
+- **README:** 添加 base 安全的路径解析 ([7c08be3](https://github.com/dishait/tov-template/commit/7c08be3))
+
+### 📦 Build
+
+- **package.json:** 规范 overrides ([2e71012](https://github.com/dishait/tov-template/commit/2e71012))
+
+### 🏡 Chore
+
+- 更新依赖 ([bc78c67](https://github.com/dishait/tov-template/commit/bc78c67))
+- 更新依赖 ([00440c9](https://github.com/dishait/tov-template/commit/00440c9))
+- 更新依赖 ([956546b](https://github.com/dishait/tov-template/commit/956546b))
+- 更新依赖 ([25e26ca](https://github.com/dishait/tov-template/commit/25e26ca))
+- **presets:** 规范函数定义 ([4e20163](https://github.com/dishait/tov-template/commit/4e20163))
+- 更新依赖 ([45a263b](https://github.com/dishait/tov-template/commit/45a263b))
+- 更新依赖 ([17b2dd6](https://github.com/dishait/tov-template/commit/17b2dd6))
+- 添加赞助商链接 ([2f8e740](https://github.com/dishait/tov-template/commit/2f8e740))
+- Remove '@unocss/transformer-directives' and '@unocss/transformer-variant-group' ([#125](https://github.com/dishait/tov-template/pull/125))
+
+### ❤️ Contributors
+
+- Markthree <1801982702@qq.com>
+- API MAN <w2606662632@gmail.com>
+
 ## v1.18.0
 
 [compare changes](https://github.com/dishait/tov-template/compare/v1.17.2...v1.18.0)
