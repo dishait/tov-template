@@ -8,7 +8,7 @@ const routes = getRoutes()
 	.filter((r) => !r.path.includes('notFound'))
 	.map((r) => {
 		let { path, name } = r
-		if (path === '/') {
+		if (path === safeResolve('/')) {
 			return { path, name: 'home' }
 		}
 

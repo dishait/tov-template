@@ -84,8 +84,8 @@ export default function () {
 		 */
 		Router({
 			routesFolder: 'src/pages',
-			extensions: ['.md', '.vue', '.tsx', '.jsx'],
 			dts: 'presets/types/type-router.d.ts',
+			extensions: ['.md', '.vue', '.tsx', '.jsx'],
 		}),
 		/**
 		 * 自动安装 vue 插件
@@ -206,6 +206,7 @@ export default function () {
 		plugins.push(
 			AutoImport({
 				dirs,
+				vueTemplate: true,
 				dts: './presets/types/auto-imports.d.ts',
 				imports: [
 					...AutoGenerateImports({

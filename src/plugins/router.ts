@@ -11,6 +11,11 @@ declare module 'vue-router' {
 	}
 }
 
+// 重定向 BASE_URL
+fileRoutes.forEach((route) => {
+	route.path = safeResolve(route.path)
+})
+
 export const router = createRouter({
 	history: createWebHistory(),
 	routes: setupLayouts(fileRoutes),
