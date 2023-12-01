@@ -52,6 +52,7 @@
 35. `renovate` 自动更新依赖
 36. 自动版本更新并生成 `CHANGELOG`
 37. 最快最小的 `dockerfile` 静态 `go` 服务
+38. `base` 安全的路径解析
 
 <br />
 <br />
@@ -1231,6 +1232,24 @@ pnpm deps:fresh
 根目录下的 `dockerfile` 配置最小最快的静态 `go` 服务容器，更方便云容器服务
 
 具体可见 👉 [PierreZ/goStatic](https://github.com/PierreZ/goStatic)
+
+<br />
+<br />
+
+38. base 安全的路径解析
+
+在 `vite` 中，如果我们改了 `vite.config.ts` 中的 `base`，这导致资源路径和路由路径失效，使用 `safeResolve` 可以保证在开发环境和生产环境下都是统一的 `base`.
+
+```html
+<script setup lang="ts">
+const path = safeResolve("你的路由路径")
+</script>
+
+<template>
+	<!-- 模板中应用也是允许的 -->
+	<img :src="safeResolve('/notFound/32.svg')"/>
+</template>
+```
 
 <br />
 <br />

@@ -1,4 +1,3 @@
-// TODO README 文档
 /**
  * base 安全的路径解析
  * @param path 路径
