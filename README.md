@@ -1200,7 +1200,7 @@ data.value; // 响应数据
 <br />
 <br />
 
-35. [`renovate` 自动更新依赖](https://github.com/renovatebot/renovate)
+### 35. [`renovate` 自动更新依赖](https://github.com/renovatebot/renovate)
 
 `github` 的 [renovate](https://github.com/marketplace/renovate) 机器人会定期对
 `github` 检查依赖，并向仓库提起 `pr`，更新策略 👉
@@ -1217,7 +1217,7 @@ pnpm deps:fresh
 <br />
 <br />
 
-36. [自动版本更新并生成 `CHANGELOG`](https://github.com/unjs/changelogen)
+### 36. [自动版本更新并生成 `CHANGELOG`](https://github.com/unjs/changelogen)
 
 当我们执行 `pnpm run release` 时，会自动进行版本更新，并更新
 [CHANGELOG.md](./CHANGELOG.md)。
@@ -1227,7 +1227,7 @@ pnpm deps:fresh
 <br />
 <br />
 
-37. [最快最小的 `dockerfile` 静态 `go` 服务](https://github.com/PierreZ/goStatic)
+### 37. [最快最小的 `dockerfile` 静态 `go` 服务](https://github.com/PierreZ/goStatic)
 
 根目录下的 `dockerfile` 配置最小最快的静态 `go` 服务容器，更方便云容器服务
 
@@ -1236,7 +1236,7 @@ pnpm deps:fresh
 <br />
 <br />
 
-38. base 安全的路径解析
+### 38. base 安全的路径解析
 
 在 `vite` 中，如果我们改了 `vite.config.ts` 中的 `base`，这导致资源路径和路由路径失效，使用 `safeResolve` 可以保证在开发环境和生产环境下都是统一的 `base`.
 
