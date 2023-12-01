@@ -12,7 +12,7 @@ declare module 'vue-router' {
 }
 
 // 重定向 BASE_URL
-fileRoutes.forEach((route) => {
+fileRoutes.flat(Infinity).forEach((route) => {
 	route.path = safeResolve(route.path)
 })
 
