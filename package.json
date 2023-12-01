@@ -20,9 +20,9 @@
     "release": "plop --plopfile scripts/release.cjs",
     "auto:remove": "plop --plopfile scripts/remove.cjs",
     "auto:create": "plop --plopfile scripts/create.cjs",
-    "lint:fix": "eslint --fix --ext .ts,.js,.jsx,.vue .",
     "build:debug": "cross-env NODE_ENV=debug vite build",
-    "deps:fresh": "plop --plopfile scripts/deps-fresh.cjs"
+    "deps:fresh": "plop --plopfile scripts/deps-fresh.cjs",
+    "lint:fix": "eslint --fix --ext .ts,.js,.jsx,.vue,.cjs ."   
   },
   "engines": {
     "node": ">=18.18.2"
