@@ -82,7 +82,6 @@
     "vite-plugin-use-modules": "^1.4.6",
     "vite-plugin-vue-devtools": "1.0.0-rc.6",
     "vite-plugin-vue-meta-layouts": "^0.3.3",
-    "vite-plugin-warmup": "^0.1.0",
     "vue": "^3.3.10",
     "vitest": "^1.0.1",
     "vue-dark-switch": "^1.0.6",
