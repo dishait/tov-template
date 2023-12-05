@@ -72,6 +72,7 @@ const option = ref<EChartsOption>({
 
 <style>
 .chart {
+	width: 100vw;
 	height: calc(100vh - 82px);
 }
 </style>
