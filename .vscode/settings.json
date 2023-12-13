@@ -19,8 +19,6 @@
   "editor.linkedEditing": true,
   // 开启 eslint 作为格式化工具
   "eslint.format.enable": true,
-  // 包管理器 pnpm
-  "eslint.packageManager": "pnpm",
   // 默认格式化选择 prettier,
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "explorer.fileNesting.enabled": true,
