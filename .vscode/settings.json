@@ -5,7 +5,7 @@
   "i18n-ally.keystyle": "nested",
   "i18n-ally.sourceLanguage": "zh-CN",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "files.associations": {
     "*.css": "postcss"
