@@ -19,6 +19,8 @@ const storageLocale = useStorage('locale', '简体中文')
 export const i18n = createI18n({
 	messages,
 	legacy: false,
+	globalInjection: true,
+	allowComposition: true,
 })
 
 // 同步本地 localStorage 和 i18n
