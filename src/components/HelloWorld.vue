@@ -17,6 +17,9 @@ const { t } = useI18n()
 		</p>
 
 		<p>
+			{{ t('test.module') }}
+		</p>
+		<p>
 			{{ t('check out') }}
 			<a href="https://github.com/dishait/tov-template" target="_blank">
 				tov-template </a
