@@ -25,18 +25,18 @@
     "lint:fix": "eslint --fix --ext .ts,.js,.jsx,.vue,.cjs ."
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=18.19.0"
   },
   "packageManager": "pnpm@8.12.1",
   "devDependencies": {
     "@intlify/unplugin-vue-i18n": "^2.0.0",
     "@types/ityped": "^1.0.3",
     "@types/node": "^20.10.5",
-    "@typescript-eslint/parser": "^6.15.0",
+    "@typescript-eslint/parser": "^6.16.0",
     "@unocss/eslint-config": "^0.58.0",
     "@unocss/reset": "^0.58.0",
     "@vitejs/plugin-legacy": "^5.2.0",
-    "@vitejs/plugin-vue": "^4.5.2",
+    "@vitejs/plugin-vue": "^4.6.0",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "@vueuse/components": "^10.7.0",
     "@vueuse/core": "^10.7.0",
@@ -50,7 +50,7 @@
     "echarts": "^5.4.3",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-vue": "^9.19.2",
     "husky": "^8.0.3",
     "ityped": "^1.0.3",
@@ -63,7 +63,7 @@
     "perfect-debounce": "^1.0.0",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
-    "plop": "^4.0.0",
+    "plop": "^4.0.1",
     "prettier": "^3.1.1",
     "prism-theme-vars": "^0.2.4",
     "taze": "^0.13.0",
@@ -81,7 +81,7 @@
     "vite-plugin-mock": "2.9.8",
     "vite-plugin-removelog": "^0.2.2",
     "vite-plugin-use-modules": "^1.4.6",
-    "vite-plugin-vue-devtools": "1.0.0-rc.6",
+    "vite-plugin-vue-devtools": "1.0.0-rc.8",
     "vite-plugin-vue-meta-layouts": "^0.3.4",
     "vitest": "^1.1.0",
     "vue": "^3.3.13",
