@@ -36,7 +36,7 @@
     "@unocss/eslint-config": "^0.58.0",
     "@unocss/reset": "^0.58.0",
     "@vitejs/plugin-legacy": "^5.2.0",
-    "@vitejs/plugin-vue": "^4.6.0",
+    "@vitejs/plugin-vue": "^5.0.0",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "@vueuse/components": "^10.7.0",
     "@vueuse/core": "^10.7.0",
