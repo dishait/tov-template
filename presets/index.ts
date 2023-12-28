@@ -365,6 +365,7 @@ function ForceRestart(paths = ['package.json', 'pnpm-lock.yaml']): Plugin {
 function Warmup(): Plugin {
 	return {
 		name: 'vite-plugin-warmup',
+		apply: 'serve',
 		config(config) {
 			config?.server?.warmup?.clientFiles?.push('./src/**/*')
 		},
