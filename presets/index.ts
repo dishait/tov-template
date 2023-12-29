@@ -102,7 +102,9 @@ export default function () {
 		 * 布局系统
 		 * https://github.com/dishait/vite-plugin-vue-meta-layouts
 		 */
-		Layouts(),
+		Layouts({
+			skipTopLevelRouteLayout: true,
+		}),
 		/**
 		 * 开发面板
 		 * https://github.com/webfansplz/vite-plugin-vue-devtools
