@@ -81,7 +81,7 @@
     "vite-plugin-mock": "2.9.8",
     "vite-plugin-removelog": "^0.2.2",
     "vite-plugin-use-modules": "^1.4.6",
-    "vite-plugin-vue-devtools": "1.0.0-rc.8",
+    "vite-plugin-vue-devtools": "7.0.0",
     "vite-plugin-vue-meta-layouts": "^0.3.4",
     "vitest": "^1.1.0",
     "vue": "^3.4.0",
