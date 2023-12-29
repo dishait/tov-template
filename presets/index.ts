@@ -47,6 +47,7 @@ import type { ComponentResolver } from 'unplugin-vue-components/types'
 
 // 内置插件
 import { Alias, Restart, Warmup } from './plugins'
+import { defaultBuildTargets } from './shared/detect'
 
 export const _dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -59,7 +60,9 @@ export default function () {
 		 * 兼容不支持 esmModule 的浏览器
 		 * https://www.npmjs.com/package/@vitejs/plugin-legacy
 		 */
-		Legacy(),
+		Legacy({
+			targets: defaultBuildTargets,
+		}),
 		/**
 		 * 环境变量类型提示
 		 * https://github.com/dishait/vite-plugin-env-types
