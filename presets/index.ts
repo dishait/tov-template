@@ -1,8 +1,6 @@
-import { utimes } from 'fs/promises'
 import { isPackageExists } from 'local-pkg'
 import Prism from 'markdown-it-prism'
 import { dirname, resolve } from 'path'
-import { debounce } from 'perfect-debounce'
 import { argv } from 'process'
 import UnoCss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -46,7 +44,9 @@ import Vue from '@vitejs/plugin-vue'
 import Jsx from '@vitejs/plugin-vue-jsx'
 
 import type { ComponentResolver } from 'unplugin-vue-components/types'
-import type { Plugin } from 'vite'
+
+// 内置插件
+import { Alias, Restart, Warmup } from './plugins'
 
 export const _dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -185,7 +185,7 @@ export default function () {
 		 * 强制重启 (内置)
 		 * 如果 package.json 或 pnpm-lock.yaml 更新的话，强制重启
 		 */
-		ForceRestart(),
+		Restart(),
 	]
 
 	if (env.VITE_APP_API_AUTO_IMPORT) {
@@ -309,65 +309,4 @@ export function normalizeResolvers(options: Options = {}) {
 	existedResolvers.push(...include)
 
 	return existedResolvers
-}
-
-/**
- * 别名插件
- * @description 支持 `~` 和 `@` 别名到 `src`
- */
-function Alias(): Plugin {
-	const src = resolve(_dirname, '../src')
-	return {
-		name: 'vite-alias',
-		enforce: 'pre',
-		config(config) {
-			config.resolve ??= {}
-			config.resolve.alias = [
-				{
-					find: /^~/,
-					replacement: src,
-				},
-				{
-					find: /^@\//,
-					replacement: src + '/',
-				},
-			]
-		},
-	}
-}
-
-/**
- * 强制重启
- * @description 如果 package.json 或 pnpm-lock.yaml 更新的话，强制重启项目
- */
-function ForceRestart(paths = ['package.json', 'pnpm-lock.yaml']): Plugin {
-	const restart = debounce(async function touch() {
-		const time = new Date()
-		await utimes('vite.config.ts', time, time)
-	}, 1000)
-	return {
-		name: 'vite-plugin-force-restart',
-		apply: 'serve',
-		configureServer({ watcher }) {
-			watcher.add(paths).on('all', async (_, path) => {
-				if (paths.includes(path)) {
-					await restart()
-				}
-			})
-		},
-	}
-}
-
-/**
- * 预热
- * @description 内置的预热，可以加快冷启动
- */
-function Warmup(): Plugin {
-	return {
-		name: 'vite-plugin-warmup',
-		apply: 'serve',
-		config(config) {
-			config?.server?.warmup?.clientFiles?.push('./src/**/*')
-		},
-	}
 }
