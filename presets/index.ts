@@ -44,7 +44,7 @@ import Jsx from '@vitejs/plugin-vue-jsx'
 import type { ComponentResolver } from 'unplugin-vue-components/types'
 
 // 内置插件
-import { Alias, Restart, Warmup } from './plugins'
+import { Alias, Restart, Warmup, Lightningcss } from './plugins'
 import { r } from './shared/path'
 import { defaultBuildTargets } from './shared/detect'
 
@@ -60,6 +60,10 @@ export default function () {
 		Legacy({
 			targets: defaultBuildTargets,
 		}),
+		/**
+		 * 智能启动 lightningcss
+		 */
+		Lightningcss(),
 		/**
 		 * 环境变量类型提示
 		 * https://github.com/dishait/vite-plugin-env-types

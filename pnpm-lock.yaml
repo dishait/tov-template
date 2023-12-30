@@ -53,6 +53,9 @@ devDependencies:
   changelogen:
     specifier: ^0.5.5
     version: 0.5.5
+  consola:
+    specifier: ^3.2.3
+    version: 3.2.3
   cross-env:
     specifier: ^7.0.3
     version: 7.0.3
@@ -80,6 +83,9 @@ devDependencies:
   ityped:
     specifier: ^1.0.3
     version: 1.0.3
+  kolorist:
+    specifier: ^1.8.0
+    version: 1.8.0
   lightningcss:
     specifier: ^1.22.1
     version: 1.22.1
