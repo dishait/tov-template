@@ -1,6 +1,5 @@
 import { isPackageExists } from 'local-pkg'
 import Prism from 'markdown-it-prism'
-import { dirname, resolve } from 'path'
 import { argv } from 'process'
 import UnoCss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -27,7 +26,6 @@ import Components from 'unplugin-vue-components/vite'
 import Markdown from 'unplugin-vue-markdown/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import Router from 'unplugin-vue-router/vite'
-import { fileURLToPath } from 'url'
 import { loadEnv } from 'vite'
 import { AutoGenerateImports, vue3Presets } from 'vite-auto-import-resolvers'
 import Compression from 'vite-plugin-compression'
@@ -47,9 +45,8 @@ import type { ComponentResolver } from 'unplugin-vue-components/types'
 
 // 内置插件
 import { Alias, Restart, Warmup } from './plugins'
+import { r } from './shared/path'
 import { defaultBuildTargets } from './shared/detect'
-
-export const _dirname = dirname(fileURLToPath(import.meta.url))
 
 export default function () {
 	const env = useEnv()
@@ -68,7 +65,7 @@ export default function () {
 		 * https://github.com/dishait/vite-plugin-env-types
 		 */
 		EnvTypes({
-			dts: 'presets/types/env.d.ts',
+			dts: r('presets/types/env.d.ts'),
 		}),
 		/**
 		 * 内置的预热，可以加快冷启动
@@ -79,8 +76,8 @@ export default function () {
 		 * https://github.com/posva/unplugin-vue-router
 		 */
 		Router({
-			routesFolder: 'src/pages',
-			dts: 'presets/types/type-router.d.ts',
+			routesFolder: r('src/pages'),
+			dts: r('presets/types/type-router.d.ts'),
 			extensions: ['.md', '.vue', '.tsx', '.jsx'],
 		}),
 		/**
@@ -89,6 +86,7 @@ export default function () {
 		 */
 		Modules({
 			auto: true,
+			// 内部使用虚拟模块，运行在前端，所以不需要 r 重写路径
 			target: 'src/plugins',
 		}),
 		/**
@@ -125,7 +123,7 @@ export default function () {
 			directoryAsNamespace: true,
 			include: [/\.vue$/, /\.vue\?vue/, /\.[tj]sx$/, /\.md$/],
 			extensions: ['md', 'vue', 'tsx', 'jsx'],
-			dts: resolve(_dirname, './types/components.d.ts'),
+			dts: r('presets/types/components.d.ts'),
 			types: [
 				{
 					from: 'vue-router',
@@ -196,7 +194,7 @@ export default function () {
 	if (env.VITE_APP_API_AUTO_IMPORT) {
 		const dirs = env.VITE_APP_DIR_API_AUTO_IMPORT
 			? ['src/stores/**', 'src/composables/**', 'src/api/**']
-			: undefined
+			: []
 		/**
 		 * api 自动按需引入
 		 * https://github.com/antfu/unplugin-auto-import
@@ -205,7 +203,7 @@ export default function () {
 			AutoImport({
 				dirs,
 				vueTemplate: true,
-				dts: './presets/types/auto-imports.d.ts',
+				dts: r('presets/types/auto-imports.d.ts'),
 				imports: [
 					...AutoGenerateImports({
 						include: [...vue3Presets],
@@ -222,7 +220,7 @@ export default function () {
 				eslintrc: {
 					enabled: true,
 					globalsPropValue: true,
-					filepath: 'presets/eslint/.eslintrc-auto-import.json',
+					filepath: r('presets/eslint/.eslintrc-auto-import.json'),
 				},
 			}),
 		)
@@ -307,7 +305,11 @@ export function normalizeResolvers(options: Options = {}) {
 	const existedResolvers = []
 	for (let i = 0; i < onlyExist.length; i++) {
 		const [resolver, packageName] = onlyExist[i]
-		if (isPackageExists(packageName)) {
+		if (
+			isPackageExists(packageName, {
+				paths: [r('./')],
+			})
+		) {
 			existedResolvers.push(resolver)
 		}
 	}

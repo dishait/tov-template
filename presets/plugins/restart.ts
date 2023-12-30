@@ -1,5 +1,6 @@
 import type { Plugin } from 'vite'
 import { utimes } from 'fs/promises'
+import { r } from '../shared/path'
 import { debounce } from 'perfect-debounce'
 
 const defaultPaths = ['package.json', 'pnpm-lock.yaml']
@@ -12,7 +13,7 @@ const defaultPaths = ['package.json', 'pnpm-lock.yaml']
 export function Restart(paths = defaultPaths): Plugin {
 	const restart = debounce(async function touch() {
 		const time = new Date()
-		await utimes('vite.config.ts', time, time)
+		await utimes(r('vite.config.ts'), time, time)
 	}, 1000)
 	return {
 		name: 'vite-plugin-force-restart',

@@ -1,12 +1,12 @@
-import { resolve } from 'path'
 import type { Plugin } from 'vite'
+import { r } from '../shared/path'
 
 /**
  * 别名插件
  * @description 支持 `~` 和 `@` 别名到 `src`
  */
-export function Alias(root = '.'): Plugin {
-	const src = resolve(root, './src')
+export function Alias(): Plugin {
+	const src = r('./src')
 	return {
 		name: 'vite-alias',
 		enforce: 'pre',
