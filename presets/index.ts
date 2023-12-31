@@ -40,7 +40,7 @@ import Vue from '@vitejs/plugin-vue'
 import Jsx from '@vitejs/plugin-vue-jsx'
 
 // 内置插件
-import { Alias, Lightningcss, Restart, Warmup } from './plugins'
+import { Alias, Lightningcss, Restart, Warmup, Layers } from './plugins'
 import { defaultBuildTargets, detectResolvers, useEnv } from './shared/detect'
 import { r } from './shared/path'
 import type { PluginOption } from 'vite'
@@ -51,6 +51,11 @@ export default function () {
 		'prose px-2 sm:px-0 md:prose-lg lg:prose-lg dark:prose-invert text-left w-screen prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600'
 
 	const plugins: PluginOption[] = [
+		/**
+		 * vite 配置层
+		 * 通过 mode 区分 vite 配置文件 (experimental)
+		 */
+		Layers(),
 		/**
 		 * 兼容不支持 esmModule 的浏览器
 		 * https://www.npmjs.com/package/@vitejs/plugin-legacy
