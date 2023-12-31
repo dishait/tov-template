@@ -2,6 +2,8 @@ import type { Plugin } from 'vite'
 import { utimes } from 'fs/promises'
 import { r } from '../shared/path'
 import { debounce } from 'perfect-debounce'
+import { resolve } from 'path'
+import { slash } from 'vite-layers'
 
 const defaultPaths = ['package.json', 'pnpm-lock.yaml']
 
@@ -11,6 +13,7 @@ const defaultPaths = ['package.json', 'pnpm-lock.yaml']
  * @param  paths 监听重启路径，默认为 ['package.json', 'pnpm-lock.yaml']
  */
 export function Restart(paths = defaultPaths): Plugin {
+	paths = paths.map((path) => slash(resolve(path)))
 	const restart = debounce(async function touch() {
 		const time = new Date()
 		await utimes(r('vite.config.ts'), time, time)
@@ -18,12 +21,10 @@ export function Restart(paths = defaultPaths): Plugin {
 	return {
 		name: 'vite-plugin-force-restart',
 		apply: 'serve',
-		configureServer({ watcher }) {
-			watcher.add(paths).on('all', async (_, path) => {
-				if (paths.includes(path)) {
-					await restart()
-				}
-			})
+		async watchChange(id) {
+			if (paths.includes(id)) {
+				await restart()
+			}
 		},
 	}
 }
