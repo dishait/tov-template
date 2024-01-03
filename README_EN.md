@@ -3,12 +3,11 @@
     <div>
         <a href="README.md" target="_blank">中文</a> | <a href="README_EN.md" target="_blank">English</a>
     </div>
-    <div style="margin-top: 10px">
-        <a href="https://pc.dishait.cn/" target="_blank">
+	<br />
+    <a href="https://pc.dishait.cn/" target="_blank">
             <span style="color: white; font-size: 14px; border-radius: 3px 0 0 3px; padding: 4px 4px 4px 4px; background: #00b894">dishait</span>
             <span style="border-radius: 0 3px 3px 0; padding: 5px 10px 5px 2px; background: #00DC8220;font-size: 13px"> https://pc.dishait.cn/ </span>
-        </a>
-    </div>
+    </a>
     <h1 style="margin: 10px">
         <a href="https://tov-template.netlify.app/" target="_blank">tov-template</a>
     </h1>
@@ -1006,7 +1005,7 @@ You can use it in components like this at this time &#128071;
 ```html
 <script setup>
 	// This API is globally imported on demand, so it can be used directly.
-// t is used to bind specific language blocks.
+	// t is used to bind specific language blocks.
 	const { t, locale } = useI18n()
 
 	const toggleLocale = () => {
