@@ -1,5 +1,68 @@
 # Changelog
 
+## v1.19.0
+
+[compare changes](https://github.com/dishait/tov-template/compare/v1.18.1...v1.19.0)
+
+### 🚀 Enhancements
+
+- 多文件加载多语言配置 ([#135](https://github.com/dishait/tov-template/pull/135))
+
+### 🔥 Performance
+
+- 简化 i18n 模块逻辑，使用 defu 替换 lodash/merge ([71e792c](https://github.com/dishait/tov-template/commit/71e792c))
+- ⚠️  自动检测是否使用 Lightning CSS 来加快 css 处理 ([e311f7a](https://github.com/dishait/tov-template/commit/e311f7a))
+
+### 🩹 Fixes
+
+- **pages/echarts:** 简单的修复类型 ([e95ae61](https://github.com/dishait/tov-template/commit/e95ae61))
+- **pages/echarts:** 修复样式 ([2ef3b3b](https://github.com/dishait/tov-template/commit/2ef3b3b))
+- 全局注入 i18n，close #134 ([#134](https://github.com/dishait/tov-template/issues/134))
+- **vite-plugin-warmup:** 仅服务时开启 ([48afba2](https://github.com/dishait/tov-template/commit/48afba2))
+- **presets:** 同步打包目标 ([3e72542](https://github.com/dishait/tov-template/commit/3e72542))
+- ⚠️  统一预设中的所有路径为绝对路径, close #142 ([#142](https://github.com/dishait/tov-template/issues/142))
+- **presets:** 更精准的 vite 重启 ([6cb1999](https://github.com/dishait/tov-template/commit/6cb1999))
+
+### 💅 Refactors
+
+- **presets:** 纯 esm _dirname ([bb80120](https://github.com/dishait/tov-template/commit/bb80120))
+- **presets:** 抽离内置插件 ([2d51141](https://github.com/dishait/tov-template/commit/2d51141))
+- **preset:** 美化插件逻辑 ([576acae](https://github.com/dishait/tov-template/commit/576acae))
+
+### 📖 Documentation
+
+- **README:** 规范化 feature 标题 ([97b3903](https://github.com/dishait/tov-template/commit/97b3903))
+- **README:** 添加 lightningcss 支持 ([b23d1b9](https://github.com/dishait/tov-template/commit/b23d1b9))
+- **README:** 添加 vite 配置层支持 (实验性) ([8f86abb](https://github.com/dishait/tov-template/commit/8f86abb))
+
+### 📦 Build
+
+- 使用内置 Warmup 预热 ([75ae48e](https://github.com/dishait/tov-template/commit/75ae48e))
+
+### 🏡 Chore
+
+- 添加 scripts 到 lint 规则中 ([70b6ab4](https://github.com/dishait/tov-template/commit/70b6ab4))
+- 更新最小版本引擎 ([b350698](https://github.com/dishait/tov-template/commit/b350698))
+- 更新依赖 ([f2792ee](https://github.com/dishait/tov-template/commit/f2792ee))
+- **.vscode/settings.json:** 移除能自动检测的配置 ([61c7af9](https://github.com/dishait/tov-template/commit/61c7af9))
+- 更新依赖 ([0f732b5](https://github.com/dishait/tov-template/commit/0f732b5))
+- 更新依赖 ([94b7412](https://github.com/dishait/tov-template/commit/94b7412))
+- ⚠️  更新依赖 ([3355d19](https://github.com/dishait/tov-template/commit/3355d19))
+- 更新依赖 ([5de32a6](https://github.com/dishait/tov-template/commit/5de32a6))
+- ⚠️  更新 node 推荐版本为 v20 ([61569c3](https://github.com/dishait/tov-template/commit/61569c3))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  自动检测是否使用 Lightning CSS 来加快 css 处理 ([e311f7a](https://github.com/dishait/tov-template/commit/e311f7a))
+- ⚠️  统一预设中的所有路径为绝对路径, close #142 ([#142](https://github.com/dishait/tov-template/issues/142))
+- ⚠️  更新依赖 ([3355d19](https://github.com/dishait/tov-template/commit/3355d19))
+- ⚠️  更新 node 推荐版本为 v20 ([61569c3](https://github.com/dishait/tov-template/commit/61569c3))
+
+### ❤️ Contributors
+
+- Markthree ([@markthree](http://github.com/markthree))
+- Luoqiz ([@luoqiz](http://github.com/luoqiz))
+
 ## v1.18.1
 
 [compare changes](https://github.com/dishait/tov-template/compare/v1.18.0...v1.18.1)
