@@ -54,6 +54,7 @@
 37. 最快最小的 `dockerfile` 静态 `go` 服务
 38. `base` 安全的路径解析
 39. `lightningcss` 支持
+40. `vite` 配置层支持 (实验性)
 
 <br />
 <br />
@@ -1239,7 +1240,9 @@ pnpm deps:fresh
 
 ### 38. base 安全的路径解析
 
-在 `vite` 中，如果我们改了 `vite.config.ts` 中的 `base`，这导致资源路径和路由路径失效，使用 `safeResolve` 可以保证在开发环境和生产环境下都是统一的 `base`.
+在 `vite` 中，如果我们改了 `vite.config.ts` 中的
+`base`，这导致资源路径和路由路径失效，使用 `safeResolve`
+可以保证在开发环境和生产环境下都是统一的 `base`.
 
 ```html
 <script setup lang="ts">
@@ -1257,8 +1260,27 @@ const path = safeResolve("你的路由路径")
 
 ### 39. `lightningcss` 支持
 
-现在会默认检测当前项目是否支持 [lightningcss](https://cn.vitejs.dev/guide/features.html#lightning-css) 并智能开启
+现在会默认检测当前项目是否支持
+[lightningcss](https://cn.vitejs.dev/guide/features.html#lightning-css)
+并智能开启
 
+<br />
+<br />
+
+### 40. `vite` 配置层支持 (实验性)
+
+现在在 `tov-template` 中，我们可以使用 `vite.config.[mode].ts`
+的形式来支持不同环境下的配置文件。
+
+1. 仅 vite.config.ts 时，通用选择该配置
+2. vite.config.ts + vite.config.dev.ts，开发时合并两者的配置，同时
+   vite.config.dev.ts 的配置优先级更高
+3. vite.config.ts + vite.config.prod.ts 生产时合并两者的配置，同时
+   vite.config.prod.ts 的配置优先级更高
+
+以此类推，支持不同的 `mode`
+
+该特性由 [vite-layers](https://github.com/markthree/vite-layers) 提供支持 🥰
 
 <br />
 <br />
