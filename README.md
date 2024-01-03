@@ -86,7 +86,7 @@ npx degit https://github.com/dishait/tov-template#main
 
 ## `node` 版本推荐 🐎
 
-因为该模板完全面向现代，所以推荐大家使用 `node` 当前的长期维护版本 `v18`
+因为该模板完全面向现代，所以推荐大家使用 `node` 当前的长期维护版本 `v20`
 
 <br />
 <br />
