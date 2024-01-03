@@ -25,7 +25,7 @@
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
     ".env": ".env.*",
-    "index.html": "LICENSE,.gitignore,README.md",
+    "index.html": "LICENSE,.gitignore,README*.md",
     ".eslintrc.json": ".eslint*,.prettier*,.editor*",
     "vite.config.ts": "package.json,uno.config.ts,tsconfig.json,*.toml,.npmrc,renovate.json,CHANGELOG.md,.dockerignore,dockerfile,vite.config.*.ts"
   },
