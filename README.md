@@ -53,6 +53,7 @@
 36. 自动版本更新并生成 `CHANGELOG`
 37. 最快最小的 `dockerfile` 静态 `go` 服务
 38. `base` 安全的路径解析
+39. `lightningcss` 支持
 
 <br />
 <br />
@@ -1250,6 +1251,14 @@ const path = safeResolve("你的路由路径")
 	<img :src="safeResolve('/notFound/32.svg')"/>
 </template>
 ```
+
+<br />
+<br />
+
+### 39. `lightningcss` 支持
+
+现在会默认检测当前项目是否支持 [lightningcss](https://cn.vitejs.dev/guide/features.html#lightning-css) 并智能开启
+
 
 <br />
 <br />
