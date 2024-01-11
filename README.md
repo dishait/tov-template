@@ -191,6 +191,12 @@ pnpm lint
 pnpm lint:fix
 ```
 
+12. 安全初始化
+
+```shell
+pnpm safe:init
+```
+
 <br />
 <br />
 

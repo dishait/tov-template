@@ -195,6 +195,12 @@ pnpm lint
 pnpm lint:fix
 ```
 
+12. Safe Init
+
+```shell
+pnpm safe:init
+```
+
 <br />
 <br />
 
