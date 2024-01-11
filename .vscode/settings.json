@@ -8,7 +8,7 @@
     "source.fixAll.eslint": "explicit"
   },
   "files.associations": {
-    "*.css": "postcss"
+    "*.css": "css"
   },
   "editor.formatOnSave": false,
   "css.lint.unknownAtRules": "ignore",
