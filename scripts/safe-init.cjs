@@ -51,19 +51,20 @@ function safeInit(plop) {
 				return []
 			}
 
+			console.log()
 			// 这里不用异步是因为 plop action 只支持同步
 			resolvedEntrys.forEach((e) => {
 				if (!existsSync(e)) {
 					return
 				}
-				const { isFile, isDirectory } = lstatSync(e)
-				if (isFile()) {
+				const entry = lstatSync(e)
+				if (entry.isFile()) {
 					removeSync(e)
 					logClean(e)
 					return
 				}
 
-				if (isDirectory()) {
+				if (entry.isDirectory()) {
 					emptyDirSync(e)
 					logClean(e)
 				}
