@@ -45,13 +45,24 @@ function safeInit(plop) {
 				message: '是否安全的初始化?',
 				default: false,
 			},
+			{
+				name: 'cleanStyles',
+				type: 'confirm',
+				message: '是否清理 styles?',
+				default: false,
+			},
 		],
 		actions(answer) {
 			if (!answer.yes) {
 				return []
 			}
 
+			if (answer.cleanStyles) {
+				resolvedEntrys.push(r('src/styles'))
+			}
+
 			console.log()
+
 			// 这里不用异步是因为 plop action 只支持同步
 			resolvedEntrys.forEach((e) => {
 				if (!existsSync(e)) {
