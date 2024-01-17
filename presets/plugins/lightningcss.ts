@@ -3,6 +3,8 @@ import { gray } from 'kolorist'
 import type { Plugin } from 'vite'
 import { createConsola } from 'consola'
 import { isPackageExists } from 'local-pkg'
+import { browserslistToTargets } from 'lightningcss'
+import { defaultBuildTargets } from '../shared/detect'
 
 const name = 'vite-plugin-fire-lightningcss'
 
@@ -42,6 +44,12 @@ export function Lightningcss(): Plugin {
 				if (isUndefined(config.build.cssMinify)) {
 					config.build.cssMinify = 'lightningcss'
 					tip = `${transformer} ${gray('(transformer + cssMinify)')}`
+				}
+
+				if (isUndefined(config.css.lightningcss?.targets)) {
+					config.css.lightningcss ??= {}
+					config.css.lightningcss.targets =
+						browserslistToTargets(defaultBuildTargets)
 				}
 				logger.success(tip)
 			}
