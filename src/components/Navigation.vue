@@ -18,6 +18,8 @@ const routes = getRoutes()
 
 		return { path, name: name.toString().slice(1).replaceAll('/', ' · ') }
 	})
+
+const $route = useRoute()
 </script>
 
 <template>
@@ -44,6 +46,7 @@ const routes = getRoutes()
 						padding: 5px 10px 5px 2px;
 						background: #00dc8220;
 						font-size: 13px;
+						color: rgba(37, 99, 235);
 					"
 				>
 					https://pc.dishait.cn/
@@ -53,7 +56,11 @@ const routes = getRoutes()
 
 		<ul class="flex items-center gap-2 text-sm font-medium">
 			<li v-for="r of routes" :key="r.path" class="hidden !block">
-				<RouterLink class="rounded-lg px-3 py-2" :to="r.path">
+				<RouterLink
+					class="rounded-lg px-3 py-2 hover:text-blue-700"
+					:class="$route.path === r.path ? 'text-blue-700' : ''"
+					:to="r.path"
+				>
 					{{ te(r.name) ? t(r.name) : r.name }}
 				</RouterLink>
 			</li>
