@@ -2,7 +2,7 @@ const { createConsola } = require('consola')
 const { execSync } = require('child_process')
 const { repository } = require('../package.json')
 const { gray } = require('kolorist')
-
+const { simpleGit } = require('simple-git')
 const logger = createConsola().withTag('release')
 
 /**
@@ -10,11 +10,25 @@ const logger = createConsola().withTag('release')
  * @param {import('plop').NodePlopAPI} plop
  */
 async function release(plop) {
-	// TODO 从 git 中获取仓库 url
-	const release = await logger.prompt(`是否发布到 ${gray(repository.url)}`, {
-		type: 'confirm',
+	const git = simpleGit()
+
+	const remotes = await git.getRemotes(true)
+
+	const urls = remotes.map((r) => {
+		return r.refs.push
+			.replace('git@github.com:', 'https://github.com/')
+			.replace('.git', '')
 	})
-	if (release) {
+	let allowRelease = false
+	if (!urls.includes(repository.url)) {
+		allowRelease = await logger.prompt(`是否发布到 ${gray(repository.url)}`, {
+			type: 'confirm',
+		})
+	} else {
+		allowRelease = true
+	}
+
+	if (allowRelease) {
 		plop.setGenerator('controller', {
 			description: '自动发版',
 			prompts: [

@@ -69,6 +69,7 @@
     "plop": "^4.0.1",
     "prettier": "^3.2.5",
     "prism-theme-vars": "^0.2.4",
+    "simple-git": "^3.22.0",
     "taze": "^0.13.3",
     "terser": "^5.27.0",
     "typescript": "^5.3.3",
