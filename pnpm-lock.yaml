@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@intlify/unplugin-vue-i18n':
-    specifier: ^2.0.0
-    version: 2.0.0(vue-i18n@9.9.1)
+    specifier: ^3.0.1
+    version: 3.0.1(vue-i18n@9.9.1)
   '@types/ityped':
     specifier: ^1.0.3
     version: 1.0.3
@@ -933,8 +933,8 @@ packages:
     engines: {node: '>= 16'}
     dev: true
 
-  /@intlify/unplugin-vue-i18n@2.0.0(vue-i18n@9.9.1):
-    resolution: {integrity: sha512-1oKvm92L9l2od2H9wKx2ZvR4tzn7gUtd7bPLI7AWUmm7U9H1iEypndt5d985ypxGsEs0gToDaKTrytbBIJwwSg==}
+  /@intlify/unplugin-vue-i18n@3.0.1(vue-i18n@9.9.1):
+    resolution: {integrity: sha512-q1zJhA/WpoLBzAAuKA5/AEp0e+bMOM10ll/HxT4g1VAw/9JhC4TTobP9KobKH90JMZ4U2daLFlYQfKNd29lpqw==}
     engines: {node: '>= 14.16'}
     peerDependencies:
       petite-vue-i18n: '*'
@@ -951,7 +951,7 @@ packages:
       '@intlify/bundle-utils': 7.5.0(vue-i18n@9.9.1)
       '@intlify/shared': 9.9.1
       '@rollup/pluginutils': 5.1.0
-      '@vue/compiler-sfc': 3.4.16
+      '@vue/compiler-sfc': 3.4.17
       debug: 4.3.4
       fast-glob: 3.3.2
       js-yaml: 4.1.0
@@ -2053,7 +2053,7 @@ packages:
     dependencies:
       '@babel/types': 7.23.9
       '@rollup/pluginutils': 5.1.0
-      '@vue/compiler-sfc': 3.4.16
+      '@vue/compiler-sfc': 3.4.17
       ast-kit: 0.11.3
       local-pkg: 0.5.0
       magic-string-ast: 0.3.0
@@ -2100,7 +2100,7 @@ packages:
       '@babel/helper-module-imports': 7.22.15
       '@babel/helper-plugin-utils': 7.22.5
       '@babel/parser': 7.23.9
-      '@vue/compiler-sfc': 3.4.16
+      '@vue/compiler-sfc': 3.4.17
     dev: true
 
   /@vue/compiler-core@3.0.11:
@@ -2154,20 +2154,6 @@ packages:
       '@vue/shared': 3.4.17
     dev: true
 
-  /@vue/compiler-sfc@3.4.16:
-    resolution: {integrity: sha512-zVYC42Q/NmbB4nigGcQeIvsLpBlq6K9wJP5jTFCqfpXWnkodxfLFQHDu2GntZ7yKOgwAjxuvLwrPx+I6LPL2vg==}
-    dependencies:
-      '@babel/parser': 7.23.9
-      '@vue/compiler-core': 3.4.16
-      '@vue/compiler-dom': 3.4.16
-      '@vue/compiler-ssr': 3.4.16
-      '@vue/shared': 3.4.16
-      estree-walker: 2.0.2
-      magic-string: 0.30.7
-      postcss: 8.4.35
-      source-map-js: 1.0.2
-    dev: true
-
   /@vue/compiler-sfc@3.4.17:
     resolution: {integrity: sha512-rYWyfugylV69bFzWuyCS2VgQY9XpY1yfWRQrykct1dORhA57ppss1LtIo9pAzMf+XIe+ZZV8IPGSw6fbV+8SYg==}
     dependencies:
@@ -2187,13 +2173,6 @@ packages:
     dependencies:
       '@vue/compiler-dom': 3.0.11
       '@vue/shared': 3.0.11
-    dev: true
-
-  /@vue/compiler-ssr@3.4.16:
-    resolution: {integrity: sha512-1kNF+fHdEB+5aTcPZ0hh/gzi9Ezq5IBO4bl/hV4Dg4fub6t12W6VGlsERtvdUaEowL35M3pojv0hOvLaq0FbdQ==}
-    dependencies:
-      '@vue/compiler-dom': 3.4.16
-      '@vue/shared': 3.4.16
     dev: true
 
   /@vue/compiler-ssr@3.4.17:
