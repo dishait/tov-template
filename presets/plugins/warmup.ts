@@ -9,7 +9,13 @@ export function Warmup(): Plugin {
 		name: 'vite-plugin-warmup',
 		apply: 'serve',
 		config(config) {
-			config?.server?.warmup?.clientFiles?.push('./src/**/*')
+			const src = './src/**/*'
+			config.server ??= {}
+			config.server.warmup ??= {}
+			config.server.warmup.clientFiles ??= []
+			if (!config.server.warmup.clientFiles.includes(src)) {
+				config.server.warmup.clientFiles.push(src)
+			}
 		},
 	}
 }
