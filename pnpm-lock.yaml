@@ -12,7 +12,7 @@ devDependencies:
     specifier: ^1.0.3
     version: 1.0.3
   '@types/node':
-    specifier: ^20.11.29
+    specifier: ^20.11.30
     version: 20.11.30
   '@typescript-eslint/parser':
     specifier: ^7.3.1
@@ -132,7 +132,7 @@ devDependencies:
     specifier: ^5.29.2
     version: 5.29.2
   typescript:
-    specifier: ^5.4.2
+    specifier: ^5.4.3
     version: 5.4.3
   unocss:
     specifier: ^0.58.6
@@ -147,10 +147,10 @@ devDependencies:
     specifier: ^0.26.0
     version: 0.26.0(vite@5.2.3)
   unplugin-vue-router:
-    specifier: ^0.7.0
-    version: 0.7.0(vue-router@4.3.0)(vue@3.4.21)
+    specifier: ^0.8.5
+    version: 0.8.5(vue-router@4.3.0)(vue@3.4.21)
   vite:
-    specifier: ^5.1.6
+    specifier: ^5.2.3
     version: 5.2.3(@types/node@20.11.30)(lightningcss@1.24.1)(terser@5.29.2)
   vite-auto-import-resolvers:
     specifier: ^3.2.1
@@ -177,7 +177,7 @@ devDependencies:
     specifier: ^1.4.8
     version: 1.4.8(vite@5.2.3)(vue@3.4.21)
   vite-plugin-vue-devtools:
-    specifier: ^7.0.18
+    specifier: ^7.0.20
     version: 7.0.20(vite@5.2.3)(vue@3.4.21)
   vite-plugin-vue-meta-layouts:
     specifier: ^0.4.2
@@ -2449,15 +2449,12 @@ packages:
       - rollup
     dev: true
 
-  /ast-kit@0.9.5:
-    resolution: {integrity: sha512-kbL7ERlqjXubdDd+szuwdlQ1xUxEz9mCz1+m07ftNVStgwRb2RWw+U6oKo08PAvOishMxiqz1mlJyLl8yQx2Qg==}
+  /ast-kit@0.12.1:
+    resolution: {integrity: sha512-O+33g7x6irsESUcd47KdfWUrS2F6aGp9KeVJFGj0YjIznfXpBxVGjA0w+y/1OKqX4mFOfmZ9Xpf1ixPT4n9xxw==}
     engines: {node: '>=16.14.0'}
     dependencies:
       '@babel/parser': 7.24.1
-      '@rollup/pluginutils': 5.1.0
       pathe: 1.1.2
-    transitivePeerDependencies:
-      - rollup
     dev: true
 
   /ast-types-yx@0.14.2:
@@ -2467,14 +2464,12 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /ast-walker-scope@0.5.0:
-    resolution: {integrity: sha512-NsyHMxBh4dmdEHjBo1/TBZvCKxffmZxRYhmclfu0PP6Aftre47jOHYaYaNqJcV0bxihxFXhDkzLHUwHc0ocd0Q==}
+  /ast-walker-scope@0.6.1:
+    resolution: {integrity: sha512-0ZdQEsSfH3mX4BFbRCc3xOBjx5bDbm73+aAdQOHerPQNf8K0XFMAv79ucd2BpnSc4UMyvBDixiroT8yjm2Y6bw==}
     engines: {node: '>=16.14.0'}
     dependencies:
       '@babel/parser': 7.24.1
-      ast-kit: 0.9.5
-    transitivePeerDependencies:
-      - rollup
+      ast-kit: 0.12.1
     dev: true
 
   /asynckit@0.4.0:
@@ -7012,10 +7007,10 @@ packages:
       - rollup
     dev: true
 
-  /unplugin-vue-router@0.7.0(vue-router@4.3.0)(vue@3.4.21):
-    resolution: {integrity: sha512-ddRreGq0t5vlSB7OMy4e4cfU1w2AwBQCwmvW3oP/0IHQiokzbx4hd3TpwBu3eIAFVuhX2cwNQwp1U32UybTVCw==}
+  /unplugin-vue-router@0.8.5(vue-router@4.3.0)(vue@3.4.21):
+    resolution: {integrity: sha512-OBoHV24JXSiYH6qEEYT2YayoXh3C0Ma0rDX06+H9fmYXgwcBhEAZVfFt/lbJcBH7f86wCNti59pM4+E/3PjzBA==}
     peerDependencies:
-      vue-router: ^4.1.0
+      vue-router: ^4.3.0
     peerDependenciesMeta:
       vue-router:
         optional: true
@@ -7023,11 +7018,11 @@ packages:
       '@babel/types': 7.24.0
       '@rollup/pluginutils': 5.1.0
       '@vue-macros/common': 1.10.1(vue@3.4.21)
-      ast-walker-scope: 0.5.0
+      ast-walker-scope: 0.6.1
       chokidar: 3.6.0
       fast-glob: 3.3.2
       json5: 2.2.3
-      local-pkg: 0.4.3
+      local-pkg: 0.5.0
       mlly: 1.6.1
       pathe: 1.1.2
       scule: 1.3.0
