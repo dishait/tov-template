@@ -30,7 +30,7 @@
   },
   "packageManager": "pnpm@8.15.5",
   "devDependencies": {
-    "@intlify/unplugin-vue-i18n": "^3.0.1",
+    "@intlify/unplugin-vue-i18n": "^4.0.0",
     "@types/ityped": "^1.0.3",
     "@types/node": "^20.11.30",
     "@typescript-eslint/parser": "^7.3.1",
