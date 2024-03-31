@@ -32,7 +32,7 @@
   "devDependencies": {
     "@intlify/unplugin-vue-i18n": "^3.0.1",
     "@types/ityped": "^1.0.3",
-    "@types/node": "^20.11.30",
+    "@types/node": "^20.12.2",
     "@typescript-eslint/parser": "^7.4.0",
     "@unocss/eslint-config": "^0.58.8",
     "@unocss/reset": "^0.58.8",
