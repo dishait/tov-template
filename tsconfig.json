@@ -11,8 +11,11 @@
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
     "resolveJsonModule": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "useDefineForClassFields": true,
+    "noImplicitThis": true,
+    "verbatimModuleSyntax": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["src/*"],
