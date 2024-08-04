@@ -136,7 +136,7 @@ devDependencies:
     version: 5.5.4
   unocss:
     specifier: ^0.61.9
-    version: 0.61.9(postcss@8.4.39)(vite@5.3.5)
+    version: 0.61.9(postcss@8.4.40)(vite@5.3.5)
   unplugin-auto-import:
     specifier: ^0.18.2
     version: 0.18.2(@vueuse/core@10.11.0)
@@ -192,8 +192,8 @@ devDependencies:
     specifier: ^1.0.6
     version: 1.0.6(vite@5.3.5)(vue@3.4.35)
   vue-echarts:
-    specifier: ^6.7.3
-    version: 6.7.3(echarts@5.5.1)(vue@3.4.35)
+    specifier: ^7.0.1
+    version: 7.0.1(echarts@5.5.1)(vue@3.4.35)
   vue-i18n:
     specifier: ^9.13.1
     version: 9.13.1(vue@3.4.35)
@@ -2012,7 +2012,7 @@ packages:
       sirv: 2.0.4
     dev: true
 
-  /@unocss/postcss@0.61.9(postcss@8.4.39):
+  /@unocss/postcss@0.61.9(postcss@8.4.40):
     resolution: {integrity: sha512-HuFE/TUH6tt5f/AwiKNhQ/FO/lvFeW0JHPkx9SCURcKKoD3rpJUbhTqVv7c0zlCVQnRFX0hxpimoetp5Dh8qdA==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -2024,7 +2024,7 @@ packages:
       css-tree: 2.3.1
       fast-glob: 3.3.2
       magic-string: 0.30.11
-      postcss: 8.4.39
+      postcss: 8.4.40
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -6453,10 +6453,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /resize-detector@0.3.0:
-    resolution: {integrity: sha512-R/tCuvuOHQ8o2boRP6vgx8hXCCy87H1eY9V5imBYeVNyNVpuL9ciReSccLj2gDcax9+2weXy3bc8Vv+NRXeEvQ==}
-    dev: true
-
   /resolve-dir@1.0.1:
     resolution: {integrity: sha512-R7uiTjECzvOsWSfdM0QKFNBVFcK27aHOUwdvK53BcW8zqnGdYp0Fbj82cy54+2A4P2tFM22J5kRfe1R+lM/1yg==}
     engines: {node: '>=0.10.0'}
@@ -7155,7 +7151,7 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /unocss@0.61.9(postcss@8.4.39)(vite@5.3.5):
+  /unocss@0.61.9(postcss@8.4.40)(vite@5.3.5):
     resolution: {integrity: sha512-D7nEObT1lhCUwXU5MoQ2Msh5S5g1EHVVSqDNM2ODs6dqWSboDCsRTPZQiyQmV9vCobrjYcvAFno9ZAgO7pvurw==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -7171,7 +7167,7 @@ packages:
       '@unocss/cli': 0.61.9
       '@unocss/core': 0.61.9
       '@unocss/extractor-arbitrary-variants': 0.61.9
-      '@unocss/postcss': 0.61.9(postcss@8.4.39)
+      '@unocss/postcss': 0.61.9(postcss@8.4.40)
       '@unocss/preset-attributify': 0.61.9
       '@unocss/preset-icons': 0.61.9
       '@unocss/preset-mini': 0.61.9
@@ -7765,24 +7761,21 @@ packages:
       vue: 3.4.35(typescript@5.5.4)
     dev: true
 
-  /vue-echarts@6.7.3(echarts@5.5.1)(vue@3.4.35):
-    resolution: {integrity: sha512-vXLKpALFjbPphW9IfQPOVfb1KjGZ/f8qa/FZHi9lZIWzAnQC1DgnmEK3pJgEkyo6EP7UnX6Bv/V3Ke7p+qCNXA==}
-    requiresBuild: true
+  /vue-echarts@7.0.1(echarts@5.5.1)(vue@3.4.35):
+    resolution: {integrity: sha512-P+u6mwAtHuPKC3uDQ+sqIhwBBTvrvEFvgHYzV2Ba1/7+rSzRd6o3Dv/A8PuLP24hB1zPPNfu6BvNyD139X1qbg==}
     peerDependencies:
-      '@vue/composition-api': ^1.0.5
       '@vue/runtime-core': ^3.0.0
-      echarts: ^5.4.1
-      vue: ^2.6.12 || ^3.1.1
+      echarts: ^5.5.1
+      vue: ^2.7.0 || ^3.1.1
     peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
       '@vue/runtime-core':
         optional: true
     dependencies:
       echarts: 5.5.1
-      resize-detector: 0.3.0
       vue: 3.4.35(typescript@5.5.4)
       vue-demi: 0.13.11(vue@3.4.35)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
     dev: true
 
   /vue-eslint-parser@9.4.3(eslint@8.57.0):
