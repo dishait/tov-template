@@ -89,7 +89,7 @@
     "vite-plugin-use-modules": "^1.4.8",
     "vite-plugin-vue-devtools": "^7.4.4",
     "vite-plugin-vue-meta-layouts": "^0.4.3",
-    "vitest": "^1.6.0",
+    "vitest": "^2.0.5",
     "vue": "^3.5.3",
     "vue-dark-switch": "^1.0.6",
     "vue-echarts": "^6.7.3",
