@@ -65,7 +65,7 @@
     "nprogress": "^0.2.0",
     "perfect-debounce": "^1.0.0",
     "pinia": "^2.2.2",
-    "pinia-plugin-persistedstate": "^3.2.3",
+    "pinia-plugin-persistedstate": "^4.0.0",
     "plop": "^4.0.1",
     "prettier": "^3.3.3",
     "prism-theme-vars": "^0.2.5",
