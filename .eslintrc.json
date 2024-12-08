@@ -30,6 +30,7 @@
     "no-var": "error"
   },
   "globals": {
-    "defineOptions": true
+    "defineOptions": true,
+    "definePage": true
   }
 }
