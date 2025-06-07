@@ -1296,6 +1296,14 @@ const path = safeResolve("你的路由路径")
 <br />
 <br />
 
+## 🏢 Powered by DartNode
+
+[![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")
+
+
+<br />
+<br />
+
 ## License
 
 Made with [markthree](./LICENSE)
